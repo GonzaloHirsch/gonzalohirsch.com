@@ -1,4 +1,4 @@
-name: S3 Deploy to bucket & invalidation
+name: S3 Deploy - Main
 on:
   push:
     branches:
@@ -26,11 +26,11 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
-        - name: Deploy static site to S3 bucket
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/_nuxt" --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}' --delete
+        - name: Deploy cached files
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "_nuxt/*" --include --include "api/*" "favicon*" --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}' --delete
         
-        - name: Deploy static site to S3 bucket
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/api" --include "./.output/public/favicon*" --include "./.output/public/index.html" --metadata '{"Cache-Control":"public, max-age=0, must-revalidate"}'
+        - name: Deploy non-cached files
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "index.html" --metadata '{"Cache-Control":"public, max-age=0, must-revalidate"}'
 
         - name: Invalidate dashboard cloudfront
           run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
