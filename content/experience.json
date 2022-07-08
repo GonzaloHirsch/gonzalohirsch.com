@@ -1,6 +1,6 @@
 [
     {
-        "position": "Full-Stack Developer",
+        "position": "Full-Stack Developer (freelance)",
         "company": {
             "short": "TWP",
             "name": "The Winston Project (via Toptal)",
@@ -17,6 +17,21 @@
             "Analyzed SEO performance of live sites and improved SEO scores by more than 40%.",
             "Architected features and technologies during the design and development of a CMS front end and back end.",
             "Analyzed the accessibility of live sites to comply with WCAG 2 guidelines and improved overall accessibility by more than 50%."
+        ]
+    },
+    {
+        "position": "Game Developer (freelance)",
+        "company": {
+            "short": "NONCO",
+            "name": "Nonconformist Ducks",
+            "url": "https://nonconformistducks.com/"
+        },
+        "volunteer": false,
+        "time": "January 2022 - April 2022",
+        "description": "NFT Collection of Nonconformist Ducks. Games were developed as a means to generate content for the Discord community.",
+        "items": [
+            "Designed and developed two standalone 2D games for content creation.",
+            "Deployed Unity WebGL games on AWS S3 as standalone pages."
         ]
     },
     {
