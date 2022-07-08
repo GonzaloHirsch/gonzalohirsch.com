@@ -40,7 +40,6 @@ onMounted(() => {
         //  `true` if the user has set theme to `dark` on browser/OS
         const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const targetTheme = !cachedTheme ? (userPrefersDark ? 'dark' : 'light') : cachedTheme;
-        console.log(targetTheme);
         updatePageTheme(targetTheme);
         updateStoredTheme(targetTheme);
     }

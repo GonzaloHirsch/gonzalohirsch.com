@@ -1,9 +1,9 @@
 <template>
-    <SectionsHero/>
-    <SectionsAbout/>
-    <SectionsPassion/>
+    <main>
+        <SectionsHero />
+        <SectionsAbout />
+        <SectionsExperience />
+        <SectionsProjects />
+        <SectionsPassion />
+    </main>
 </template>
-
-<script setup>
-</script>
-

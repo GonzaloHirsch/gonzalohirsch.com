@@ -1,0 +1,95 @@
+[
+    {
+        "position": "Full-Stack Developer",
+        "company": {
+            "short": "TWP",
+            "name": "The Winston Project (via Toptal)",
+            "url": "https://www.linkedin.com/company/winstonproject/"
+        },
+        "volunteer": false,
+        "time": "February 2021 - Present",
+        "description": "The Winston Project is a digital marketing consulting company based in New York, United States.",
+        "items": [
+            "Built multiple websites using Gridsome's SSR for Vue.js and styled websites for various universities in the United States using Tailwind CSS.",
+            "Developed end-user applications for content discovery and community management clients, reaching more than 1,000,000 impressions.",
+            "Engineered and implemented architecture for application back ends, reducing Time To Market by 65%.",
+            "Studied the feasibility of features and created MVPs that guided back-end development.",
+            "Analyzed SEO performance of live sites and improved SEO scores by more than 40%.",
+            "Architected features and technologies during the design and development of a CMS front end and back end.",
+            "Analyzed the accessibility of live sites to comply with WCAG 2 guidelines and improved overall accessibility by more than 50%."
+        ]
+    },
+    {
+        "position": "Full-Stack Freelancer",
+        "company": {
+            "short": "Toptal",
+            "name": "Toptal",
+            "url": "https://www.toptal.com/"
+        },
+        "volunteer": false,
+        "time": "January 2021 - Present",
+        "description": "Member of the Toptal community under the Core (Full-Stack) specialization."
+    },
+    {
+        "position": "Co-Founder and Vice President",
+        "company": {
+            "short": "CS ITBA",
+            "name": "IEEE Computer Society ITBA",
+            "url": "https://csitba.web.app/"
+        },
+        "volunteer": false,
+        "time": "September 2019 - July 2021",
+        "description": "Technology-focused organization made up of students and alumni of ITBA, dedicated to inspiring and educating in various areas of technology related to software engineering and technology. It's an academic sub-branch of the IEEE Computer Society, one of the largest networks connecting professionals in the world.",
+        "items": [
+            "Founded the organization and grew the team, with the other co-founder, from 2 to 20 people.",
+            "Managed teams to ensure acceptable performance and quality, leading to a 100% increase in production.",
+            "Implemented optimized work tools, leading to a decrease in downtime by 50%."
+        ]
+    },
+    {
+        "position": "Full-Stack Developer",
+        "company": {
+            "short": "NewCombin",
+            "name": "NewCombin",
+            "url": "https://newcombin.com/"
+        },
+        "volunteer": false,
+        "time": "December 2018 - August 2020",
+        "items": [
+            "Developed, engineered, and refactored an API for a digital payments platform using Java and multiple AWS services (Lambda, Serverless, S3, DynamoDB, and CloudFront), reducing development time by more than 50%.",
+            "Created a companion app for a digital payments client using Apache Cordova and Vue.js.",
+            "Developed a simple eCommerce app for a subscription magazine using C#, .NET, and ASP, resulting in 60% more conversions.",
+            "Designed amobile application for a proof-of-worksystem, using location-based techniques to determine whether an individual was inside the premises."
+        ]
+    },
+    {
+        "position": "Teacher",
+        "company": {
+            "short": "APIs Teacher",
+            "name": "Programming REST APIs in Python with Django",
+            "url": "https://csitba.github.io/curso-web-backend/"
+        },
+        "volunteer": true,
+        "time": "March 2021 - April 2021",
+        "description": "The course was produced along with the members of the Computer Society ITBA and taught in ITBA.",
+        "items": [
+            "Designed and taught a course on how to create and develop REST APIs using Python and Django.",
+            "Classes reached approximately 100 attendants."
+        ]
+    },
+    {
+        "position": "Teacher",
+        "company": {
+            "short": "Python Teacher",
+            "name": "Introduction to Programming in Python",
+            "url": "https://github.com/IEEESBITBA/Curso-python"
+        },
+        "volunteer": true,
+        "time": "June 2019 - October 2019",
+        "description": "The course was produced along with the members of the Computer Society ITBA and IEEE ITBA and taught in ITBA.",
+        "items": [
+            "Curated and taught a course that introduced programming in Python.",
+            "Classes reached approximately 200 attendants."
+        ]
+    }
+]

@@ -62,3 +62,13 @@ p {
 .vertical-content:hover {
     @apply -translate-y-1;
 }
+
+/* Section */
+
+.section-title {
+    @apply text-brand_primary_light;
+}
+
+.dark .section-title {
+    @apply text-brand_primary_dark;
+}

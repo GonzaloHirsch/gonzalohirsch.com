@@ -3,7 +3,7 @@
         <div class="grid grid-cols-10 gap-8">
             <div class="col-span-full lg:col-span-6">
                 <div class="flex flex-col justify-center h-full">
-                    <h2 class="about-title text-brand_primary_light dark:text-brand_primary_dark relative mb-6">About Me</h2>
+                    <h2 class="about-title section-title relative mb-6">About Me</h2>
                     <p class="about-text">
                         I'm a full-stack developer with more than three years of professional experience working on front-end and back-end projects. I
                         have a passion for technology, incredible ideas, and teaching programming.
@@ -85,7 +85,7 @@ import imageBL from '../../assets/img/edinburgh.jpg';
     @apply bg-typography_primary_dark;
 }
 .about-text {
-    @apply text-h4 leading-h4 relative text-typography_primary_light;
+    @apply text-h4 leading-h3 relative text-typography_primary_light;
 }
 .about-text:not(:last-of-type) {
     @apply mb-6;
