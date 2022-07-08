@@ -19,26 +19,18 @@ jobs:
         - name: Build
           run: npm run generate
 
-        - name: Deploy Cached
-          uses: reggionick/s3-deploy@v3
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v1
           with:
-            folder: .output/public
-            bucket: ${{ secrets.S3_BUCKET }}
-            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-            delete-removed: true
-            cache: "31536000, immutable, public"
-            private: true
-            filesToInclude: "_nuxt/*"
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ${{ secrets.S3_BUCKET_REGION }}
+
+        - name: Deploy static site to S3 bucket
+          run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/_nuxt" --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}' --delete
         
-        - name: Deploy non-cached
-          uses: reggionick/s3-deploy@v3
-          with:
-            folder: .output/public
-            bucket: ${{ secrets.S3_BUCKET }}
-            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-            dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-            invalidation: /
-            delete-removed: false
-            cache: "0, must-revalidate, public"
-            private: true
-            filesToInclude: "api/*,favicon.png,index.html"
+        - name: Deploy static site to S3 bucket
+          run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/api" --include "./.output/public/favicon*" --include "./.output/public/index.html" --metadata '{"Cache-Control":"public, max-age=0, must-revalidate"}'
+
+        - name: Invalidate dashboard cloudfront
+          run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
