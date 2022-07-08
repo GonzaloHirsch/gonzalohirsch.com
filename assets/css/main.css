@@ -1,0 +1,64 @@
+@import url('./inter.css');
+@import url('./open_sans.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    @apply font-highlight text-h1-sm leading-h1-sm mb-6;
+}
+
+h2 {
+    @apply font-highlight text-h2-sm leading-h2-sm mb-4;
+}
+
+h3 {
+    @apply font-highlight text-h3-sm leading-h3-sm mb-4;
+}
+
+h4 {
+    @apply font-highlight text-h4-sm leading-h4-sm mb-2;
+}
+
+h5 {
+    @apply font-highlight text-h5-sm leading-h5-sm mb-1;
+}
+
+@screen md {
+    h1 {
+        @apply text-h1 leading-h1;
+    }
+
+    h2 {
+        @apply text-h2 leading-h2;
+    }
+
+    h3 {
+        @apply text-h3 leading-h3;
+    }
+
+    h4 {
+        @apply text-h4 leading-h4;
+    }
+
+    h5 {
+        @apply text-h5 leading-h5;
+    }
+}
+
+/* Body Text */
+
+p {
+    @apply font-text text-base leading-base;
+}
+
+/* Vertical Icons */
+
+.vertical-content:hover {
+    @apply -translate-y-1;
+}
