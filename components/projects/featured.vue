@@ -1,6 +1,6 @@
 <template>
     <div :class="['flex w-full', isLeft ? 'justify-start flex-row' : 'justify-end flex-row-reverse', isLeft ? 'project-featured-left' : 'project-featured-right']">
-        <div class="md:w-6/12 z-[2]">
+        <div class="w-full md:w-6/12 z-[2]">
             <h3 class="text-typography_primary_light dark:text-typography_primary_dark">{{ project.title }}</h3>
             <div class="project-featured-description bg-brand_secondary_light dark:bg-brand_secondary_dark p-4 rounded-md">
                 <ContentDoc :path="project._path" class="project-featured-content" />
@@ -9,7 +9,7 @@
                 <li
                     v-for="tag in project.tags"
                     :key="tag"
-                    class="px-2 py-1 text-sm leading-sm rounded-md bg-brand_secondary_light/75 dark:bg-brand_secondary_dark/75 text-typography_primary_light dark:text-typography_primary_dark mr-2 last:mr-0"
+                    class="px-2 py-1 mt-2 text-sm leading-sm rounded-md bg-brand_secondary_light/75 dark:bg-brand_secondary_dark/75 text-typography_primary_light dark:text-typography_primary_dark"
                 >
                     {{ tag }}
                 </li>
@@ -90,13 +90,19 @@ const getImage = (url) => {
     direction: rtl;
 }
 .project-featured-tags {
-    @apply flex flex-row list-none mt-2;
+    @apply flex flex-row flex-wrap list-none;
 }
 .project-featured-right .project-featured-tags {
     @apply justify-end;
 }
 .project-featured-left .project-featured-tags {
     @apply justify-start;
+}
+.project-featured-right .project-featured-tags li {
+    @apply ml-2;
+}
+.project-featured-left .project-featured-tags li {
+    @apply mr-2;
 }
 /* LINK */
 .project-featured-left .feature-project-image-link {

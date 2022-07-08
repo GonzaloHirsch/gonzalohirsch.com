@@ -42,7 +42,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-span-6 col-start-3 lg:col-start-auto lg:col-span-4">
+            <div class="col-span-7 col-start-2 lg:col-start-auto lg:col-span-4">
                 <ImagesGrid
                     :imageTR="{
                         src: imageTR,

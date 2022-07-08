@@ -2,7 +2,7 @@
     <div>
         <ContentRenderer :value="data">
             <template v-for="(project, index) in data" :key="project._path">
-                <ProjectsFeatured :isLeft="index % 2 === 0" :project="project" class="last:mb-0 my-20 md:my-32"/>
+                <ProjectsFeatured :isLeft="index % 2 === 0" :project="project" class="last:mb-0 first:mt-0 my-20 md:my-32"/>
             </template>
         </ContentRenderer>
     </div>
