@@ -27,4 +27,7 @@ jobs:
             aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
         - name: Deploy static site to S3 bucket
-          run: aws s3 sync ./.output/public/_nuxt/* s3://${{ secrets.S3_BUCKET }} --delete --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}'
+          run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/_nuxt" --delete --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}'
+        
+        - name: Deploy static site to S3 bucket
+          run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "./.output/public/api" --include "./.output/public/favicon*" --include "./.output/public/index.html" --delete --metadata '{"Cache-Control":"public, max-age=31536000, inmmutable"}'
