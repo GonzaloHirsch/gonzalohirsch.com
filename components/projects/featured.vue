@@ -40,8 +40,10 @@ const props = defineProps({
 });
 
 import SmartNfts from '../../assets/img/projects/smart-nfts.jpg';
+import Snippit from '../../assets/img/projects/snippit.jpg';
 const assets = {
-    'smart-nfts.jpg': SmartNfts
+    'smart-nfts.jpg': SmartNfts,
+    'snippit.jpg': Snippit
 };
 const getImage = (url) => {
     console.log(assets[url]);
