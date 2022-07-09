@@ -1,6 +1,6 @@
 <template>
-    <Section id="projects">
-        <h2 class="section-title projects-title text-left mb-16 relative">Featured Projects</h2>
+    <Section id="projects" class="mt-6 md:mt-16">
+        <h2 class="section-title projects-title text-left mb-16 md:mb-24 relative">Featured Projects</h2>
         <ProjectsFeaturedList/>
         <h3 class="section-title text-center mb-12 relative">More Projects</h3>
     </Section>
