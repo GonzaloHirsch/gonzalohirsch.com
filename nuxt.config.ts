@@ -65,6 +65,11 @@ const jsonLds = [webpage, website, person];
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
     css: ['/assets/css/main.css'],
+    target: 'server',
+    ssr: true,
+    generate: {
+        routes: ['/404']
+    },
     app: {
         head: {
             title: 'Gonzalo Hirsch | Software Engineer and Freelancer',
