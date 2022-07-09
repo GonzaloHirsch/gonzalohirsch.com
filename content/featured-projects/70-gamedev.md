@@ -1,7 +1,7 @@
 ---
 title: 'Game Development'
 image: {
-    url: 'gamedev.jpg',
+    url: 'gamedev.webp',
     alt: "Multiple games."
 }
 tags: [

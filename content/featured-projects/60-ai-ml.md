@@ -1,7 +1,7 @@
 ---
 title: 'AI and ML'
 image: {
-    url: 'ai-ml.jpeg',
+    url: 'ai-ml.webp',
     alt: "AI & ML repository."
 }
 github: 'https://github.com/GonzaloHirsch/ai-ml'

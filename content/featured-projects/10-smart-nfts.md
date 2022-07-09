@@ -5,7 +5,7 @@ tags: [
 ]
 url: 'https://smart-nfts.gonzalohirsch.com/'
 image: {
-    url: 'smart-nfts.jpg',
+    url: 'smart-nfts.webp',
     alt: "Smart NFTs editor."
 }
 ---

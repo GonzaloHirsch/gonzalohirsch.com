@@ -67,10 +67,10 @@
 </template>
 
 <script setup>
-import imageTR from '../../assets/img/mountain.jpg';
-import imageBR from '../../assets/img/park.jpg';
-import imageTL from '../../assets/img/cambridge.jpg';
-import imageBL from '../../assets/img/edinburgh.jpg';
+import imageTR from '../../assets/img/mountain.webp';
+import imageBR from '../../assets/img/park.webp';
+import imageTL from '../../assets/img/cambridge.webp';
+import imageBL from '../../assets/img/edinburgh.webp';
 </script>
 
 <style scoped>

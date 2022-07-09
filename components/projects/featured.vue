@@ -64,17 +64,17 @@ const props = defineProps({
     }
 });
 
-import SmartNfts from '../../assets/img/projects/smart-nfts.jpg';
-import Snippit from '../../assets/img/projects/snippit.jpg';
-import AIML from '../../assets/img/projects/ai-ml.jpeg';
-import RedirectAPI from '../../assets/img/projects/redirect-api.jpg';
-import Gamedev from '../../assets/img/projects/gamedev.jpg';
+import SmartNfts from '../../assets/img/projects/smart-nfts.webp';
+import Snippit from '../../assets/img/projects/snippit.webp';
+import AIML from '../../assets/img/projects/ai-ml.webp';
+import RedirectAPI from '../../assets/img/projects/redirect-api.webp';
+import Gamedev from '../../assets/img/projects/gamedev.webp';
 const assets = {
-    'smart-nfts.jpg': SmartNfts,
-    'snippit.jpg': Snippit,
-    'ai-ml.jpeg': AIML,
-    'redirect-api.jpg': RedirectAPI,
-    'gamedev.jpg': Gamedev,
+    'smart-nfts.webp': SmartNfts,
+    'snippit.webp': Snippit,
+    'ai-ml.webp': AIML,
+    'redirect-api.webp': RedirectAPI,
+    'gamedev.webp': Gamedev,
 };
 const getImage = (url) => {
     return assets[url];

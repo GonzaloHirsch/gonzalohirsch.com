@@ -1,7 +1,7 @@
 ---
 title: 'Redirect API'
 image: {
-    url: 'redirect-api.jpg',
+    url: 'redirect-api.webp',
     alt: "Redirect API."
 }
 tags: [
