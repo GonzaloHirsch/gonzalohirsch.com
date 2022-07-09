@@ -42,7 +42,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-span-7 col-start-2 lg:col-start-auto lg:col-span-4">
+            <div class="col-span-full sm:col-span-6 sm:col-start-3 lg:col-start-auto lg:col-span-4">
                 <ImagesGrid
                     :imageTR="{
                         src: imageTR,
@@ -79,13 +79,18 @@ import imageBL from '../../assets/img/edinburgh.jpg';
     content: '';
     width: 15%;
     height: 2px;
-    top: -50px;
+    top: -25px;
+}
+@screen md {
+    .about-title::before {
+        top: -50px;
+    }
 }
 .dark .about-title::before {
     @apply bg-typography_primary_dark;
 }
 .about-text {
-    @apply text-h4 leading-h3 relative text-typography_primary_light;
+    @apply text-h5 leading-h4 relative text-typography_primary_light;
 }
 .about-text:not(:last-of-type) {
     @apply mb-6;

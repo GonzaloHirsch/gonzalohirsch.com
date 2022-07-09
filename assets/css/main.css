@@ -77,7 +77,12 @@ p {
 
 body.menu-open {
     @apply overflow-hidden;
-    padding-right: 15px;
+}
+
+@screen sm {
+    body.menu-open {
+        padding-right: 15px;
+    }
 }
 
 body {
