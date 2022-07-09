@@ -61,27 +61,27 @@
 // Link rendering
 const links = [
     {
-        href: '#about',
+        href: '/#about',
         text: 'About',
         alt: 'Check out the About section.'
     },
     {
-        href: '#experience',
+        href: '/#experience',
         text: 'Experience',
         alt: 'Check out the Experience section.'
     },
     {
-        href: '#projects',
+        href: '/#projects',
         text: 'Projects',
         alt: 'Check out the Projects section.'
     },
     {
-        href: '#passion',
+        href: '/#passion',
         text: 'Passion',
         alt: 'Check out the Passion section.'
     },
     {
-        href: '#contact',
+        href: '/#contact',
         text: 'Contact',
         alt: 'Check out the Contact section.'
     }
