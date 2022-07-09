@@ -12,7 +12,7 @@
 const title = 'Gonzalo Hirsch | Software Engineer and Freelancer';
 const description =
     "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.";
-const image = '/meta-img.jpg';
+const image = 'meta-img.jpg';
 const url = 'https://gonzalohirsch.com/';
 
 useHead({
