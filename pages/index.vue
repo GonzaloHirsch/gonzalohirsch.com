@@ -24,8 +24,8 @@ useHead({
         { hid: 'og:image', property: 'og:image', content: url + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpeg' },
-        { hid: 'og:image:width', property: 'og:image:width', content: '190' },
-        { hid: 'og:image:height', property: 'og:image:height', content: '190' },
+        { hid: 'og:image:width', property: 'og:image:width', content: '800' },
+        { hid: 'og:image:height', property: 'og:image:height', content: '418' },
         { hid: 'og:image:alt', property: 'og:image:alt', content: 'Gonzalo Hirsch' },
 
         // Twitter card
