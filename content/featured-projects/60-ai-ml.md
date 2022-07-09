@@ -1,8 +1,13 @@
 ---
 title: 'AI and ML'
+image: {
+    url: 'ai-ml.jpeg',
+    alt: "AI & ML repository."
+}
+github: 'https://github.com/GonzaloHirsch/ai-ml'
 tags: [
-    'AI', 'ML', 'Python'
+    'AI', 'ML', 'Python', 'Perceptron', 'Autoencoders', 'CNN'
 ]
 ---
 
-This [repository](https://github.com/GonzaloHirsch/sia-tps) contains implementations of multiple Neural Network designs and some search algorithms such as A*. Each codebase focuses on solving a particular problem. Neural Network designs are single perceptron, multilayer perceptron, Kohonen network, Oja network, and Autoencoders.
+This [repository](https://github.com/GonzaloHirsch/ai-ml) contains implementations of multiple Neural Network designs and some search algorithms such as A*. Each codebase focuses on solving a particular problem. Neural Network designs are single perceptron, multilayer perceptron, Kohonen network, Oja network, and Autoencoders.

@@ -1,5 +1,9 @@
 ---
 title: 'Redirect API'
+image: {
+    url: 'redirect-api.jpg',
+    alt: "Redirect API."
+}
 tags: [
     'AWS', 'S3', 'Serverless', 'CloudFront', 'DynamoDB', 'Lambda'
 ]

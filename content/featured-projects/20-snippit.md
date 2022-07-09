@@ -4,6 +4,7 @@ tags: [
     'React', 'Java', 'Spring', 'Jersey', 'Apache', 'PostgreSQL', 'REST'
 ]
 url: 'http://pawserver.it.itba.edu.ar/paw-2020a-2/#/'
+github: 'https://github.com/GonzaloHirsch/paw-snippit'
 image: {
     url: 'snippit.jpg',
     alt: "Snippit site."

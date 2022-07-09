@@ -15,7 +15,7 @@
                     <ContentDoc :path="project._path" class="project-featured-content" />
                 </div>
                 <NuxtLink
-                    :to="project.url"
+                    :to="project.url || project.github"
                     class="hidden lg:block group feature-project-image-link absolute top-0 bottom-0 h-fit w-6/12 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark z-[1] overflow-hidden my-auto"
                     target="_blank"
                     rel="noopener noreferer"
@@ -40,15 +40,14 @@
                     {{ tag }}
                 </li>
             </ul>
-            <NuxtLink
-                v-if="project.url"
-                class="project-featured-external mt-2 w-fit flex text-typography_primary_light dark:text-typography_primary_dark hover:scale-125 hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200"
-                :to="project.url"
-                target="_blank"
-                rel="noopener noreferer"
-            >
-                <IconsExternal class="w-6 h-6" />
-            </NuxtLink>
+            <div class="flex flex-row project-featured-external mt-2">
+                <NuxtLink v-if="project.url" class="project-featured-external-link" :to="project.url" target="_blank" rel="noopener noreferer">
+                    <IconsExternal class="w-7 h-7" />
+                </NuxtLink>
+                <NuxtLink v-if="project.github" class="project-featured-external-link" :to="project.github" target="_blank" rel="noopener noreferer">
+                    <IconsGithub class="w-6 h-6" />
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>
@@ -67,9 +66,15 @@ const props = defineProps({
 
 import SmartNfts from '../../assets/img/projects/smart-nfts.jpg';
 import Snippit from '../../assets/img/projects/snippit.jpg';
+import AIML from '../../assets/img/projects/ai-ml.jpeg';
+import RedirectAPI from '../../assets/img/projects/redirect-api.jpg';
+import Gamedev from '../../assets/img/projects/gamedev.jpg';
 const assets = {
     'smart-nfts.jpg': SmartNfts,
-    'snippit.jpg': Snippit
+    'snippit.jpg': Snippit,
+    'ai-ml.jpeg': AIML,
+    'redirect-api.jpg': RedirectAPI,
+    'gamedev.jpg': Gamedev,
 };
 const getImage = (url) => {
     return assets[url];
@@ -142,5 +147,24 @@ const getImage = (url) => {
 }
 .project-featured-left .project-featured-external {
     @apply justify-start mr-auto;
+}
+/* EXTERNAL LINK */
+.project-featured-external-link {
+    @apply w-fit flex text-typography_primary_light duration-200;
+}
+.project-featured-right .project-featured-external-link {
+    @apply ml-2;
+}
+.project-featured-left .project-featured-external-link {
+    @apply mr-2;
+}
+.dark .project-featured-external-link {
+    @apply text-typography_primary_dark;
+}
+.project-featured-external-link:hover {
+    @apply scale-125 text-brand_primary_light;
+}
+.dark .project-featured-external-link:hover {
+    @apply text-brand_primary_dark ;
 }
 </style>
