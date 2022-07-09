@@ -2,7 +2,7 @@
     <div :class="['flex w-full', isLeft ? 'justify-start flex-row' : 'justify-end flex-row-reverse', isLeft ? 'project-featured-left' : 'project-featured-right']">
         <div class="w-full md:w-6/12 z-[2]">
             <h3 class="text-typography_primary_light dark:text-typography_primary_dark">{{ project.title }}</h3>
-            <div class="project-featured-description bg-brand_secondary_light dark:bg-brand_secondary_dark p-4 rounded-md">
+            <div class="project-featured-description bg-brand_secondary_light dark:bg-brand_secondary_dark p-4 rounded-md shadow-lg">
                 <ContentDoc :path="project._path" class="project-featured-content" />
             </div>
             <ul v-if="project.tags && project.tags.length > 0" class="project-featured-tags">
@@ -46,7 +46,6 @@ const assets = {
     'snippit.jpg': Snippit
 };
 const getImage = (url) => {
-    console.log(assets[url]);
     return assets[url];
 };
 </script>
@@ -54,6 +53,7 @@ const getImage = (url) => {
 <style>
 .project-featured-content {
     @apply text-typography_primary_light;
+    word-break: break-word;
 }
 .dark .project-featured-content {
     @apply text-typography_primary_dark;

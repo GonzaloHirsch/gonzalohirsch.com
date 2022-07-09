@@ -72,3 +72,18 @@ p {
 .dark .section-title {
     @apply text-brand_primary_dark;
 }
+
+/* Menu & Body */
+
+body.menu-open {
+    @apply overflow-hidden;
+    padding-right: 15px;
+}
+
+body {
+    @apply bg-background_light;
+}
+
+.dark body {
+    @apply bg-background_dark;
+}

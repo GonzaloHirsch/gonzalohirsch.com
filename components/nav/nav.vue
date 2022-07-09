@@ -2,8 +2,8 @@
     <nav
         :class="[
             'sticky top-0 px-section-x-sm sm:px-section-x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition duration-[.4s]',
-            isUp ? '' : 'md:transform md:-translate-y-full',
-            'bg-white dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
+            isUp ? '' : 'lg:transform lg:-translate-y-full',
+            'bg-background_light dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
         ]"
     >
         <a
@@ -22,20 +22,38 @@
             </template>
         </ul>
         <Menu
-            :class="['w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark', isMenuVisible ? 'hidden' : '']"
+            :class="[
+                'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
+                isMenuVisible ? 'hidden' : ''
+            ]"
             @click="toggleMenu"
         />
         <Close
-            :class="['w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark', isMenuVisible ? '' : 'hidden']"
+            :class="[
+                'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
+                isMenuVisible ? '' : 'hidden'
+            ]"
             @click="toggleMenu"
         />
-        <div
-            :class="[
-                'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light bg-white dark:border-typography_primary_dark dark:bg-background_dark duration-200',
-                isMenuVisible ? '' : 'translate-x-full'
-            ]"
-        ></div>
     </nav>
+    <div
+        :class="[
+            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex flex-col items-center duration-200',
+            isMenuVisible ? '' : 'translate-x-full'
+        ]"
+    >
+        <ul class="flex flex-col items-center mt-4">
+            <template v-for="link in links" :key="link.href">
+                <li class="mobile-nav-item">
+                    <a :href="link.href" :alt="link.alt" target="_self">
+                        {{ link.text }}
+                    </a>
+                </li>
+            </template>
+        </ul>
+        <ButtonsButton text="CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mt-6"/>
+        <NavHorizontalIcons class="mt-auto mb-6"/>
+    </div>
     <div v-if="isMenuVisible" class="z-[5] absolute bottom-0 top-0 right-0 left-0 w-full h-full bg-gray-400 bg-opacity-25" @click="toggleMenu" />
 </template>
 
@@ -75,6 +93,11 @@ import Close from '../icons/close.vue';
 const isMenuVisible = ref(false);
 const toggleMenu = () => {
     isMenuVisible.value = !isMenuVisible.value;
+    if (isMenuVisible.value) {
+        document.body.classList.add('menu-open');
+    } else {
+        document.body.classList.remove('menu-open');
+    }
 };
 
 // Scroll handling
@@ -106,20 +129,39 @@ onUnmounted(() => {
 
 <style scoped>
 .side-menu {
-    height: calc(100vh - theme('spacing.nav'));
+    @apply z-50;
+    height: calc(100% - theme('spacing.nav'));
     width: 250px;
 }
 
 .large-nav-item {
-    @apply list-none mx-2 text-h5 rounded-md px-2 py-1 duration-200 text-typography_primary_light;
+    @apply cursor-pointer list-none mx-2 text-h5 rounded-md duration-200 text-typography_primary_light;
+}
+.large-nav-item a {
+    @apply px-2 py-1;
 }
 .large-nav-item:hover {
+    @apply bg-brand_primary_light text-typography_primary_dark;
+}
+.mobile-nav-item {
+    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 duration-200 text-typography_primary_light;
+}
+.mobile-nav-item a {
+    @apply px-2 py-1;
+}
+.mobile-nav-item:hover {
     @apply bg-brand_primary_light text-typography_primary_dark;
 }
 .dark .large-nav-item {
     @apply text-typography_primary_dark;
 }
 .dark .large-nav-item:hover {
+    @apply bg-brand_primary_dark text-typography_primary_light;
+}
+.dark .mobile-nav-item {
+    @apply text-typography_primary_dark;
+}
+.dark .mobile-nav-item:hover {
     @apply bg-brand_primary_dark text-typography_primary_light;
 }
 </style>
