@@ -1,20 +1,13 @@
-# Nuxt 3 Minimal Starter
+# Personal Website
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+URL for this site is [gonzalohirsch.com](https://gonzalohirsch.com).
 
 ## Setup
 
-Make sure to install the dependencies:
+Installing dependencies with:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
 ## Development Server
@@ -30,13 +23,17 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+npm run generate
 ```
 
-Locally preview production build:
+The result of `.output/public` can be uploaded to any static hosting.
 
-```bash
-npm run preview
-```
+## CI/CD
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+It includes Github Actions workflows for CI/CD that can be run automatically on push to Main.
+
+*Note:* The environment variables must be set.
+
+## Usage
+
+Feel free to use this but please tag me in the credits, this took time to set up and build.
