@@ -103,7 +103,7 @@ export default defineNuxtConfig({
             ],
             script: jsonLds.map((elem) => {
                 return {
-                    type: 'application/ld-json',
+                    type: 'application/ld+json',
                     children: JSON.stringify(elem)
                 };
             })
