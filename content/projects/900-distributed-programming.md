@@ -3,8 +3,8 @@ title: 'Distributed Programming'
 github: 'https://github.com/GonzaloHirsch/Programacion-de-Objetos-Distribuidos'
 url: 'https://gonzalohirsch.github.io/Programacion-de-Objetos-Distribuidos/'
 tags: [
-    'Java', 'Cloud', 'Distributed', 'Github Pages'
+    'Java', 'Cloud', 'Distributed', 'GH Pages'
 ]
 ---
 
-These are implementations for distributed programming schemes and a summary hosted in Github Pages with distributed programming theory.
+Implementations for distributed programming schemes and a summary hosted on Github with the theory behind it.

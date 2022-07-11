@@ -51,7 +51,7 @@
                 </li>
             </template>
         </ul>
-        <ButtonsButton text="CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mt-6"/>
+        <ButtonsButton text="CV" @click="trackCVClick" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mt-6"/>
         <NavHorizontalIcons class="mt-auto mb-6"/>
     </nav>
     <div v-if="isMenuVisible" class="z-[5] absolute bottom-0 top-0 right-0 left-0 w-full h-full bg-gray-400 bg-opacity-25" @click="toggleMenu" />
@@ -109,11 +109,7 @@ const handleScroll = () => {
     // Only run the code if we are on the client
     if (typeof window !== 'undefined') {
         const st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > previousScroll.value) {
-            isUp.value = false;
-        } else {
-            isUp.value = true;
-        }
+        isUp.value = !(st > previousScroll.value);
         previousScroll.value = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }
 };
@@ -125,6 +121,15 @@ onUnmounted(() => {
         window.removeEventListener('scroll', handleScroll);
     }
 });
+
+// Gtag tracking
+import { useGtag } from 'vue-gtag-next';
+const { event } = useGtag();
+const trackCVClick = () => {
+    event('event', 'cv_view', {
+        event_label: 'Hero',
+    });
+};
 </script>
 
 <style scoped>

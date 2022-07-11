@@ -53,7 +53,7 @@ const props = defineProps({
 
 <style>
 .project-simple-wrapper {
-    height: 250px;
+    height: 300px;
 }
 .project-simple-content {
     @apply text-typography_primary_light mb-auto;
