@@ -1,0 +1,36 @@
+name: S3 Deploy - Main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    environment: Main
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+        - uses: actions/checkout@v3
+
+        - name: Install dependencies
+          run: npm i
+
+        - name: Build
+          run: npm run generate
+
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ${{ secrets.S3_BUCKET_REGION }}
+
+        - name: Deploy cached files
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "index.html" --exclude "*/*.html" --exclude "sitemap.xml" --exclude "Gonzalo-Hirsch-CV.pdf" --cache-control max-age=31536000,public,immutable --delete
+        
+        - name: Deploy non-cached files
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "index.html" --include "*/*.html" --include "sitemap.xml" --include "Gonzalo-Hirsch-CV.pdf" --cache-control max-age=0,public,must-revalidate
+
+        - name: Invalidate dashboard cloudfront
+          run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
