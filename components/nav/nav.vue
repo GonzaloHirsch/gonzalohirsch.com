@@ -1,7 +1,7 @@
 <template>
     <nav
         :class="[
-            'sticky top-0 px-section-x-sm sm:px-section-x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition duration-[.4s]',
+            'sticky top-0 px-section-x-sm sm:px-section-x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition-transform duration-[.4s]',
             isUp ? '' : 'lg:transform lg:-translate-y-full',
             'bg-background_light dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
         ]"

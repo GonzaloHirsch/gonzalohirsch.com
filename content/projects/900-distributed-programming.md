@@ -7,4 +7,4 @@ tags: [
 ]
 ---
 
-These are implementations for distributed programming schemes. It includes a summary hosted in Github Pages with distributed programming theory.
+These are implementations for distributed programming schemes and a summary hosted in Github Pages with distributed programming theory.

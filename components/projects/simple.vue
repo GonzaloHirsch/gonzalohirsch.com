@@ -66,7 +66,7 @@ const props = defineProps({
 }
 @screen lg {
     .project-simple-wrapper {
-        height: 290px;
+        height: 300px;
     }
 }
 .dark .project-simple-content {
