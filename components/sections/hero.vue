@@ -12,10 +12,21 @@
                 <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Full-Stack Developer</span> focused on developing clean,
                 user-friendly, and fast experiences.
             </h2>
-            <ButtonsButton text="CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
+            <ButtonsButton text="CV" @click="trackCVClick" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
         </div>
     </Section>
 </template>
+
+<script setup>
+import { useGtag } from 'vue-gtag-next';
+const { query } = useGtag();
+
+const trackCVClick = () => {
+    query('event', 'cv_view', {
+        label: 'Hero',
+    });
+};
+</script>
 
 <style scoped>
 .home-title::before {
