@@ -19,11 +19,11 @@
 
 <script setup>
 import { useGtag } from 'vue-gtag-next';
-const { query } = useGtag();
+const { event } = useGtag();
 
 const trackCVClick = () => {
-    query('event', 'cv_view', {
-        label: 'Hero',
+    event('event', 'cv_view', {
+        event_label: 'Hero',
     });
 };
 </script>
