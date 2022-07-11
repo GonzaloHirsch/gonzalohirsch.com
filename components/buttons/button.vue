@@ -1,5 +1,5 @@
 <template>
-    <a
+    <component :is="href ? 'a' : 'div'"
         :class="[
             extraClass,
             format === 'white'
@@ -20,7 +20,7 @@
         :href="href"
         :target="target"
         :aria-disabled="format === 'disabled'"
-        >{{ text }}</a
+        >{{ text }}</component
     >
 </template>
 

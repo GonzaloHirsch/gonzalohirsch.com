@@ -14,7 +14,7 @@
                 >
                     <ContentDoc :path="project._path" class="project-featured-content" />
                 </div>
-                <NuxtLink
+                <component :is="project.url || project.github ? 'NuxtLink' : 'div'"
                     :to="project.url || project.github"
                     class="hidden lg:block group feature-project-image-link absolute top-0 bottom-0 h-fit w-6/12 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark z-[1] overflow-hidden my-auto"
                     target="_blank"
@@ -29,7 +29,7 @@
                     <div
                         class="absolute top-0 left-0 right-0 bottom-0 duration-200 group-hover:opacity-100 opacity-0 bg-brand_primary_light/20 dark:bg-brand_primary_dark/20"
                     ></div>
-                </NuxtLink>
+                </component >
             </div>
             <ul v-if="project.tags && project.tags.length > 0" class="project-featured-tags">
                 <li
