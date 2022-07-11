@@ -7,7 +7,7 @@
                 rel="noopener noreferer"
                 class="hover:scale-125 mx-2 text-typography_primary_light dark:text-typography_primary_dark hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200"
             >
-                <component :is="icon.icon" :alt="icon.alt" class="w-6 h-6" />
+                <component :is="icon.icon" :alt="icon.alt" :aria-label="icon.alt" class="w-6 h-6" />
             </NuxtLink>
         </template>
     </div>

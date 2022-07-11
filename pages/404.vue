@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main id="main">
         <SectionsError />
     </main>
 </template>

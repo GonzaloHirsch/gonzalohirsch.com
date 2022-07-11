@@ -41,11 +41,31 @@
                 </li>
             </ul>
             <div class="flex flex-row project-featured-external mt-2">
-                <NuxtLink v-if="project.url" class="project-featured-external-link" :to="project.url" target="_blank" rel="noopener noreferer">
-                    <IconsExternal class="w-7 h-7" />
+                <NuxtLink
+                    v-if="project.url"
+                    class="project-featured-external-link"
+                    :to="project.url"
+                    :alt="`See ${project.title} on an external URL.`"
+                    :aria-label="`See ${project.title} on an external URL.`"
+                    target="_blank"
+                    rel="noopener noreferer"
+                >
+                    <IconsExternal
+                        class="w-7 h-7"
+                        :alt="`See ${project.title} on an external URL.`"
+                        :aria-label="`See ${project.title} on an external URL.`"
+                    />
                 </NuxtLink>
-                <NuxtLink v-if="project.github" class="project-featured-external-link" :to="project.github" target="_blank" rel="noopener noreferer">
-                    <IconsGithub class="w-6 h-6" />
+                <NuxtLink
+                    v-if="project.github"
+                    class="project-featured-external-link"
+                    :to="project.github"
+                    :alt="`See ${project.title} on Github.`"
+                    :aria-label="`See ${project.title} on Github.`"
+                    target="_blank"
+                    rel="noopener noreferer"
+                >
+                    <IconsGithub class="w-6 h-6" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
                 </NuxtLink>
             </div>
         </div>
@@ -74,7 +94,7 @@ const assets = {
     'snippit.webp': Snippit,
     'ai-ml.webp': AIML,
     'redirect-api.webp': RedirectAPI,
-    'gamedev.webp': Gamedev,
+    'gamedev.webp': Gamedev
 };
 const getImage = (url) => {
     return assets[url];
@@ -165,6 +185,6 @@ const getImage = (url) => {
     @apply scale-125 text-brand_primary_light;
 }
 .dark .project-featured-external-link:hover {
-    @apply text-brand_primary_dark ;
+    @apply text-brand_primary_dark;
 }
 </style>

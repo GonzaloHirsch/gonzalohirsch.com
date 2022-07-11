@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main id="main">
         <SectionsHero />
         <SectionsAbout />
         <SectionsExperience />

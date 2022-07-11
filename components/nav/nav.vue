@@ -36,9 +36,9 @@
             @click="toggleMenu"
         />
     </nav>
-    <div
+    <nav
         :class="[
-            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex flex-col items-center duration-200',
+            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex lg:hidden flex-col items-center duration-200',
             isMenuVisible ? '' : 'translate-x-full'
         ]"
     >
@@ -53,7 +53,7 @@
         </ul>
         <ButtonsButton text="CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mt-6"/>
         <NavHorizontalIcons class="mt-auto mb-6"/>
-    </div>
+    </nav>
     <div v-if="isMenuVisible" class="z-[5] absolute bottom-0 top-0 right-0 left-0 w-full h-full bg-gray-400 bg-opacity-25" @click="toggleMenu" />
 </template>
 

@@ -6,17 +6,37 @@
             <li
                 v-for="tag in project.tags"
                 :key="tag"
-                class="mr-4 mt-2 text-sm leading-sm rounded-md text-typography_primary_light/75 dark:text-typography_primary_dark/75"
+                class="mr-4 mt-2 text-sm leading-sm rounded-md text-typography_primary_light/90 dark:text-typography_primary_dark/90"
             >
                 {{ tag }}
             </li>
         </ul>
         <div class="flex flex-row project-simple-external mt-4">
-            <NuxtLink v-if="project.url" class="project-simple-external-link" :to="project.url" target="_blank" rel="noopener noreferer">
-                <IconsExternal class="w-7 h-7" />
+            <NuxtLink
+                v-if="project.url"
+                class="project-simple-external-link"
+                :to="project.url"
+                :alt="`See ${project.title} on an external URL.`"
+                :aria-label="`See ${project.title} on an external URL.`"
+                target="_blank"
+                rel="noopener noreferer"
+            >
+                <IconsExternal
+                    class="w-7 h-7"
+                    :alt="`See ${project.title} on an external URL.`"
+                    :aria-label="`See ${project.title} on an external URL.`"
+                />
             </NuxtLink>
-            <NuxtLink v-if="project.github" class="project-simple-external-link" :to="project.github" target="_blank" rel="noopener noreferer">
-                <IconsGithub class="w-6 h-6" />
+            <NuxtLink
+                v-if="project.github"
+                class="project-simple-external-link"
+                :to="project.github"
+                :alt="`See ${project.title} on Github.`"
+                :aria-label="`See ${project.title} on Github.`"
+                target="_blank"
+                rel="noopener noreferer"
+            >
+                <IconsGithub class="w-6 h-6" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
             </NuxtLink>
         </div>
     </div>

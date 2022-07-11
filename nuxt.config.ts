@@ -72,6 +72,9 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
+            htmlAttrs: {
+                lang: 'en'
+            },
             title: 'Gonzalo Hirsch | Software Engineer and Freelancer',
             meta: [
                 { charset: 'utf-8' },
