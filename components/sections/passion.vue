@@ -1,8 +1,11 @@
 <template>
     <Section id="passion" :fullHeight="true" :forcedHeight="true">
-        <div class="flex flex-row items-center justify-center h-full bg-brand_primary_light/10 dark:bg-brand_primary_dark/10 rounded-md group hover:border-4 hover:shadow-lg border-brand_primary_light dark:border-brand_primary_dark duration-300">
+        <div
+            class="flex flex-row items-center justify-center h-full bg-brand_primary_light/10 dark:bg-brand_primary_dark/10 rounded-md group hover:border-4 hover:shadow-lg border-brand_primary_light dark:border-brand_primary_dark duration-300"
+        >
             <p class="passion-text w-10/12 group-hover:scale-[115%] duration-300 transition-transform">
-                My passion is building <strong>reliable</strong>, <strong>efficient software</strong>, and <strong>experiences</strong>.
+                My passion is building <strong>reliable</strong> and <strong>efficient</strong> <strong>software</strong>,
+                <strong>algorithms</strong>, and <strong>experiences</strong>.
             </p>
         </div>
     </Section>

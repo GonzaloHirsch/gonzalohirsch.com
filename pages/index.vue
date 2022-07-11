@@ -3,8 +3,9 @@
         <SectionsHero />
         <SectionsAbout />
         <SectionsExperience />
-        <SectionsProjects />
         <SectionsPassion />
+        <SectionsProjects />
+        <SectionsContact />
     </main>
 </template>
 

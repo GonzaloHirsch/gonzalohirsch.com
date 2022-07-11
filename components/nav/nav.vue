@@ -71,14 +71,14 @@ const links = [
         alt: 'Check out the Experience section.'
     },
     {
-        href: '/#projects',
-        text: 'Projects',
-        alt: 'Check out the Projects section.'
-    },
-    {
         href: '/#passion',
         text: 'Passion',
         alt: 'Check out the Passion section.'
+    },
+    {
+        href: '/#projects',
+        text: 'Projects',
+        alt: 'Check out the Projects section.'
     },
     {
         href: '/#contact',

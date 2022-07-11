@@ -7,7 +7,7 @@
         ]"
     >
         <div class="w-full z-[2]">
-            <h3 class="text-typography_primary_light dark:text-typography_primary_dark">{{ project.title }}</h3>
+            <h3 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.title }}</h3>
             <div class="relative w-full z-[2]">
                 <div
                     class="project-featured-description bg-brand_secondary_light dark:bg-brand_secondary_dark p-4 rounded-md shadow-lg z-[2] lg:w-6/12 relative"
