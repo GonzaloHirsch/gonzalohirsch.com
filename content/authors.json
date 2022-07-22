@@ -1,0 +1,41 @@
+{
+    "Gonzalo Hirsch": {
+        "@context": "http://www.schema.org",
+        "@type": "Person",
+        "@id": "https://gonzalohirsch.com/#about",
+        "name": "Gonzalo Hirsch",
+        "alternateName": "Gonzalo Hirsch",
+        "nationality": "Argentinian",
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Instituto Tecnológico de Buenos Aires",
+                "sameAs": "http://itba.edu.ar/"
+            }
+        ],
+        "gender": "Male",
+        "jobTitle": "Software Engineer",
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "Toptal",
+                "sameAs": [
+                    "https://www.toptal.com/",
+                    "https://www.linkedin.com/company/toptal",
+                    "https://twitter.com/toptal",
+                    "https://www.facebook.com/toptal",
+                    "https://www.instagram.com/toptal/"
+                ]
+            }
+        ],
+        "url": "https://gonzalohirsch.com/",
+        "image": "https://gonzalohirsch.com/meta-img.jpg",
+        "sameAs": [
+            "https://gonzalohirsch.com/",
+            "https://github.com/GonzaloHirsch",
+            "https://www.linkedin.com/in/gonzalo-hirsch/",
+            "https://www.instagram.com/gonzalohirsch/?hl=en",
+            "https://www.toptal.com/resume/gonzalo-hirsch"
+        ]
+    }
+}

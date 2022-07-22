@@ -16,6 +16,18 @@ const description =
 const image = 'meta-img.jpg';
 const url = 'https://gonzalohirsch.com/';
 
+// Get the authors
+const { data: authorData } = await useAsyncData('home', () => queryContent('/authors').findOne());
+const webpage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
+    url: baseUrl,
+    description:
+        "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.",
+    publisher: authorData.value['Gonzalo Hirsch'],
+    license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
+};
 useHead({
     meta: [
         // OG Card
@@ -30,12 +42,25 @@ useHead({
         { hid: 'og:image:alt', property: 'og:image:alt', content: 'Gonzalo Hirsch' },
 
         // Twitter card
-        { hid: 'twitter:card', name: 'twitter:card', content: "Summary" },
+        { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
         { hid: 'twitter:url', name: 'twitter:url', content: url },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: url + image },
-        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: "Gonzalo Hirsch" }
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
+    ],
+    link: [
+        {
+            hid: 'canonical',
+            rel: 'canonical',
+            href: url
+        }
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify(webpage)
+        }
     ]
 });
 </script>

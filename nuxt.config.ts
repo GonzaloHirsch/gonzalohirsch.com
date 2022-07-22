@@ -1,19 +1,5 @@
 import { defineNuxtConfig } from 'nuxt';
 
-const webpage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
-    description:
-        "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.",
-    publisher: {
-        '@type': 'Person',
-        jobTitle: 'Software Engineer',
-        name: 'Gonzalo Hirsch',
-        url: 'https://gonzalohirsch.com/'
-    },
-    license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
-};
 const website = {
     '@context': 'http://schema.org',
     '@type': 'WebSite',
@@ -60,7 +46,7 @@ const person = {
     ]
 };
 
-const jsonLds = [webpage, website, person];
+const jsonLds = [website, person];
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
@@ -68,7 +54,8 @@ export default defineNuxtConfig({
     target: 'server',
     ssr: true,
     generate: {
-        routes: ['/', '/404', '/blog']
+        routes: ['/', '/404', '/blog'],
+        fallback: '404.html'
     },
     // Sitemap
     // https://content.nuxtjs.org/guide/recipes/sitemap/
@@ -104,12 +91,7 @@ export default defineNuxtConfig({
                 }
             ],
             link: [
-                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-                {
-                    hid: 'canonical',
-                    rel: 'canonical',
-                    href: `https://gonzalohirsch.com/`
-                }
+                { rel: 'icon', type: 'image/png', href: '/favicon.png' }
             ],
             script: jsonLds.map((elem) => {
                 return {

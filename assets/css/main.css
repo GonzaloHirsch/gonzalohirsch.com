@@ -92,3 +92,25 @@ body {
 .dark body {
     @apply bg-background_dark;
 }
+
+/* Blog Breadcrumbs */
+
+.blog-breadcrumb {
+    @apply flex flex-row font-light;
+}
+
+.blog-breadcrumb > span {
+    @apply mx-1;
+}
+
+.blog-breadcrumb > li a {
+    @apply text-brand_primary_light;
+}
+
+.dark .blog-breadcrumb > li a {
+    @apply text-brand_primary_dark;
+}
+
+.blog-breadcrumb > li a:hover {
+    @apply underline;
+}
