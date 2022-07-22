@@ -29,6 +29,34 @@ h5 {
     @apply font-highlight text-h5-sm leading-h5-sm mb-1;
 }
 
+.blog-content > :first-child {
+    @apply mt-0;
+}
+
+.blog-content > p + p {
+    @apply mt-4;
+}
+
+.blog-content h1 {
+    @apply mt-16;
+}
+
+.blog-content h2 {
+    @apply mt-4;
+}
+
+.blog-content h3 {
+    @apply mt-4;
+}
+
+.blog-content h4 {
+    @apply mt-2;
+}
+
+.blog-content h5 {
+    @apply mt-2;
+}
+
 @screen md {
     h1 {
         @apply text-h1 leading-h1;
