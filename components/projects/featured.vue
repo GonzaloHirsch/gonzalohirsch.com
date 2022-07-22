@@ -14,8 +14,8 @@
                 >
                     <ContentDoc :path="project._path" class="project-featured-content" />
                 </div>
-                <component :is="project.url || project.github ? 'NuxtLink' : 'div'"
-                    :to="project.url || project.github"
+                <component :is="project.url || project.github ? 'a' : 'div'"
+                    :href="project.url || project.github"
                     class="hidden lg:block group feature-project-image-link absolute top-0 bottom-0 h-fit w-6/12 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark z-[1] overflow-hidden my-auto"
                     target="_blank"
                     rel="noopener noreferer"
