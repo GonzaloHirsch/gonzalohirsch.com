@@ -3,9 +3,9 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 import minimatch from 'minimatch';
 
 // Exclusion patterns
-const exclude = ['/experience**', '/featured-projects/**', '/projects/**'];
+const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/projects/**'];
 // URLs to include
-const include = ['/', '/Gonzalo-Hirsch-CV.pdf'];
+const include = ['/', '/Gonzalo-Hirsch-CV.pdf', '/blog'];
 
 export default defineEventHandler(async (event) => {
     // Fetch all documents
@@ -15,8 +15,9 @@ export default defineEventHandler(async (event) => {
     });
 
     const inclusionMap = {};
-    let excludeFromList = false;
+    let excludeFromList;
     for (const doc of docs) {
+        excludeFromList = false;
         // Verify if the URL matches any of the exclusion patterns
         exclude.forEach((pattern) => {
             if (minimatch(doc._path, pattern)) {
