@@ -68,7 +68,14 @@ export default defineNuxtConfig({
     target: 'server',
     ssr: true,
     generate: {
-        routes: ['/404']
+        routes: ['/', '/404', '/blog']
+    },
+    // Sitemap
+    // https://content.nuxtjs.org/guide/recipes/sitemap/
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml']
+        }
     },
     app: {
         head: {
@@ -115,5 +122,12 @@ export default defineNuxtConfig({
     tailwindcss: {
         // This is the option that works
         darkMode: 'class'
+    },
+    // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
+    content: {
+        // https://content.nuxtjs.org/api/configuration
+        highlight: {
+            theme: 'github-dark'
+        }
     }
 });
