@@ -28,10 +28,10 @@
             <ContentQuery
                 path="/blog"
                 :query="{
-                    only: ['headline', 'excerpt', 'publishDate', 'tags', '_path', 'image']
+                    only: ['headline', 'excerpt', 'date', 'tags', '_path', 'image']
                 }"
                 :sort="{
-                    publishDate: -1
+                    date: -1
                 }"
                 v-slot="{ data }"
             >
@@ -52,7 +52,7 @@
                                         {{ article.headline }}
                                     </h2>
                                     <p class="text-sm leading-sm mb-4 text-typography_primary_light/75 dark:text-typography_primary_dark/75">
-                                        {{ $formatDate(article.publishDate) }}
+                                        {{ $formatDate(article.date) }}
                                     </p>
                                     <p>{{ article.excerpt }}</p>
                                     <!-- <ul class="article-tags">
