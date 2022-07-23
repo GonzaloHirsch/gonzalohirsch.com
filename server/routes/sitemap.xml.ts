@@ -5,7 +5,12 @@ import minimatch from 'minimatch';
 // Exclusion patterns
 const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/projects/**'];
 // URLs to include
-const include = ['/', '/Gonzalo-Hirsch-CV.pdf', '/blog'];
+const include = ['/', '/Gonzalo-Hirsch-CV.pdf', '/blog/'];
+// Adding blog pages
+const blogPageCount = 1;
+for (let i = 1; i <= blogPageCount; i++){
+    include.push(`/blog/page/${i}/`);
+}
 
 export default defineEventHandler(async (event) => {
     // Fetch all documents

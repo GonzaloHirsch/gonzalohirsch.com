@@ -5,7 +5,7 @@
             <li v-if="other" class="first:mt-0 mt-4 md:mt-1">
                 <NuxtLink
                     :to="other._path"
-                    class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200"
+                    class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-100"
                     :aria-label="other.headline"
                 >
                     {{ other.headline }}

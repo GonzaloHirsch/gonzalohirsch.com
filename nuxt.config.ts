@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt';
+import axios from 'axios';
 
 const website = {
     '@context': 'http://schema.org',
@@ -45,8 +46,13 @@ const person = {
         'https://www.toptal.com/resume/gonzalo-hirsch'
     ]
 };
-
 const jsonLds = [website, person];
+
+const blogPageCount = 1;
+const routes = ['/', '/404', '/blog'];
+for (let i = 1; i <= blogPageCount; i++){
+    routes.push(`/blog/page/${i}`);
+}
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
@@ -54,7 +60,7 @@ export default defineNuxtConfig({
     target: 'server',
     ssr: true,
     generate: {
-        routes: ['/', '/404', '/blog'],
+        routes: routes,
         fallback: '404.html'
     },
     // Sitemap

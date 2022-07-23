@@ -27,7 +27,7 @@
                         class="w-full h-full object-cover"
                     />
                     <div
-                        class="absolute top-0 left-0 right-0 bottom-0 duration-200 group-hover:opacity-100 opacity-0 bg-brand_primary_light/20 dark:bg-brand_primary_dark/20"
+                        class="absolute top-0 left-0 right-0 bottom-0 duration-100 group-hover:opacity-100 opacity-0 bg-brand_primary_light/20 dark:bg-brand_primary_dark/20"
                     ></div>
                 </component >
             </div>
@@ -116,7 +116,7 @@ const getImage = (url) => {
     @apply mt-4;
 }
 .project-featured-content a {
-    @apply duration-200 font-bold;
+    @apply duration-100 font-bold;
 }
 .project-featured-content a:hover {
     @apply bg-brand_primary_light text-typography_primary_dark;
@@ -170,7 +170,7 @@ const getImage = (url) => {
 }
 /* EXTERNAL LINK */
 .project-featured-external-link {
-    @apply w-fit flex text-typography_primary_light duration-200;
+    @apply w-fit flex text-typography_primary_light duration-100;
 }
 .project-featured-right .project-featured-external-link {
     @apply ml-2;

@@ -57,7 +57,7 @@ const props = defineProps({
 
 <style scoped>
 .button {
-    @apply px-4 py-2 rounded-lg duration-200;
+    @apply px-4 py-2 rounded-lg duration-100;
     width: fit-content;
 }
 
