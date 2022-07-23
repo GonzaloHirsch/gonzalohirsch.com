@@ -48,7 +48,7 @@ onMounted(() => {
 
 <style scoped>
 .theme-icon {
-    @apply w-7 h-7 cursor-pointer duration-200;
+    @apply w-7 h-7 cursor-pointer duration-100;
 }
 .theme-icon:hover {
     @apply scale-125;

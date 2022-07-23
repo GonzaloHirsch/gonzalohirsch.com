@@ -99,7 +99,7 @@ import imageBL from '../../assets/img/edinburgh.webp';
     @apply text-typography_primary_dark;
 }
 .about-text .link {
-    @apply font-bold duration-200;
+    @apply font-bold duration-100;
 }
 .about-text .link:hover {
     @apply bg-brand_primary_light text-typography_primary_dark;

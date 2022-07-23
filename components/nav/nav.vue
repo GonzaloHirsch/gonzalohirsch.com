@@ -1,7 +1,7 @@
 <template>
     <nav
         :class="[
-            'sticky top-0 px-section-x-sm sm:px-section-x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition-transform duration-[.4s]',
+            'sticky top-0 px-section_x_sm sm:px-section_x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition-transform duration-[.4s]',
             isUp ? '' : 'lg:transform lg:-translate-y-full',
             'bg-background_light dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
         ]"
@@ -15,9 +15,9 @@
         <ul class="hidden lg:flex flex-row">
             <template v-for="link in links" :key="link.href">
                 <li class="large-nav-item">
-                    <a :href="link.href" :alt="link.alt" target="_self">
+                    <NuxtLink :to="link.href" :alt="link.alt" target="_self">
                         {{ link.text }}
-                    </a>
+                    </NuxtLink>
                 </li>
             </template>
         </ul>
@@ -38,7 +38,7 @@
     </nav>
     <nav
         :class="[
-            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex lg:hidden flex-col items-center duration-200',
+            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex lg:hidden flex-col items-center duration-100',
             isMenuVisible ? '' : 'translate-x-full'
         ]"
     >
@@ -84,6 +84,11 @@ const links = [
         href: '/#contact',
         text: 'Contact',
         alt: 'Check out the Contact section.'
+    },
+    {
+        href: '/blog/',
+        text: 'Blog',
+        alt: 'Check out the blog.'
     }
 ];
 
@@ -140,7 +145,7 @@ const trackCVClick = () => {
 }
 
 .large-nav-item {
-    @apply cursor-pointer list-none mx-2 text-h5 rounded-md duration-200 text-typography_primary_light;
+    @apply cursor-pointer list-none mx-2 text-h5 rounded-md duration-100 text-typography_primary_light;
 }
 .large-nav-item a {
     @apply px-2 py-1;
@@ -149,7 +154,7 @@ const trackCVClick = () => {
     @apply bg-brand_primary_light text-typography_primary_dark;
 }
 .mobile-nav-item {
-    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 duration-200 text-typography_primary_light;
+    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 duration-100 text-typography_primary_light;
 }
 .mobile-nav-item a {
     @apply px-2 py-1;

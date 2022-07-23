@@ -1,12 +1,12 @@
 <template>
     <div class="w-full">
-        <h3 class="experience-item-title text-h4-sm leading-h4-sm md:text-h4 md:leading-h4 mb-2 text-typography_primary_light dark:text-typography_primary_dark">
+        <h3 class="experience-item-title text-h4_sm leading-h4_sm md:text-h4 md:leading-h4 mb-2 text-typography_primary_light dark:text-typography_primary_dark">
             {{ data.position }}<span class="text-brand_primary_light dark:text-brand_primary_dark mx-1 inline-block">@</span> 
             <NuxtLink
                 :to="data.company.url"
                 target="_blank"
                 rel="noopener noreferer"
-                class="text-brand_primary_light dark:text-brand_primary_dark hover:underline inline-block transition duration-200"
+                class="text-brand_primary_light dark:text-brand_primary_dark hover:underline inline-block transition duration-100"
                 >{{ data.company.name }}</NuxtLink
             >
         </h3>

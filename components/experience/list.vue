@@ -11,7 +11,7 @@
                                 <li
                                     @click="() => toggleIndex(index)"
                                     :class="[
-                                        'cursor-pointer flex flex-col items-center justify-center md:text-lg md:leading-lg text-center py-2 px-4 hover:bg-brand_primary_light hover:text-typography_primary_dark dark:hover:bg-brand_primary_dark dark:hover:text-typography_primary_light duration-200',
+                                        'cursor-pointer flex flex-col items-center justify-center md:text-lg md:leading-lg text-center py-2 px-4 hover:bg-brand_primary_light hover:text-typography_primary_dark dark:hover:bg-brand_primary_dark dark:hover:text-typography_primary_light duration-100',
                                         currentIndex === index
                                             ? 'bg-brand_primary_light text-background_light dark:text-typography_primary_light dark:bg-brand_primary_dark'
                                             : 'text-typography_primary_light dark:text-typography_primary_dark'

@@ -10,23 +10,51 @@ html {
 }
 
 h1 {
-    @apply font-highlight text-h1-sm leading-h1-sm mb-6;
+    @apply font-highlight text-h1_sm leading-h1_sm mb-6;
 }
 
 h2 {
-    @apply font-highlight text-h2-sm leading-h2-sm mb-4;
+    @apply font-highlight text-h2_sm leading-h2_sm mb-4;
 }
 
 h3 {
-    @apply font-highlight text-h3-sm leading-h3-sm mb-4;
+    @apply font-highlight text-h3_sm leading-h3_sm mb-4;
 }
 
 h4 {
-    @apply font-highlight text-h4-sm leading-h4-sm mb-2;
+    @apply font-highlight text-h4_sm leading-h4_sm mb-2;
 }
 
 h5 {
-    @apply font-highlight text-h5-sm leading-h5-sm mb-1;
+    @apply font-highlight text-h5_sm leading-h5_sm mb-1;
+}
+
+.blog-content > :first-child {
+    @apply mt-0;
+}
+
+.blog-content > p + p {
+    @apply mt-4;
+}
+
+.blog-content h1 {
+    @apply mt-16;
+}
+
+.blog-content h2 {
+    @apply mt-4;
+}
+
+.blog-content h3 {
+    @apply mt-4;
+}
+
+.blog-content h4 {
+    @apply mt-2;
+}
+
+.blog-content h5 {
+    @apply mt-2;
 }
 
 @screen md {
@@ -91,4 +119,101 @@ body {
 
 .dark body {
     @apply bg-background_dark;
+}
+
+/* Blog Breadcrumbs */
+
+.blog-breadcrumb {
+    @apply flex flex-row font-light;
+}
+
+.blog-breadcrumb > span {
+    @apply mx-1;
+}
+
+.blog-breadcrumb > li a {
+    @apply text-brand_primary_light;
+}
+
+.dark .blog-breadcrumb > li a {
+    @apply text-brand_primary_dark;
+}
+
+.blog-breadcrumb > li a:hover {
+    @apply underline;
+}
+
+/* Blog Aside */
+
+.blog-aside-title {
+    @apply uppercase font-extrabold text-xs leading-xs font-highlight;
+}
+
+/* Blog Code */
+
+.blog-content pre {
+    @apply w-full overflow-x-auto my-6 border rounded-md border-brand_primary_light/50 p-2 bg-background_dark;
+}
+
+.dark .blog-content pre {
+    @apply border-brand_primary_dark/50;
+}
+
+.blog-content pre > code .line {
+    @apply break-words;
+}
+
+/* .blog-content :not(pre) code {
+    @apply bg-background_dark text-typography_primary_dark;
+}
+
+.dark .blog-content :not(pre) code {
+    @apply bg-background_light text-typography_primary_light;
+} */
+
+/* Blog Links */
+
+.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
+    @apply underline font-bold duration-100;
+}
+
+.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
+    @apply text-brand_primary_light;
+}
+
+.dark .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
+    @apply text-brand_primary_dark;
+}
+
+/* Blog Headings */
+
+.blog-content h2:hover ::after,
+.blog-content h3:hover ::after,
+.blog-content h4:hover ::after,
+.blog-content h5:hover ::after {
+    @apply ml-2 opacity-40 text-brand_secondary_light;
+    content: "#"
+}
+
+.dark .blog-content h2:hover ::after,
+.dark .blog-content h3:hover ::after,
+.dark .blog-content h4:hover ::after,
+.dark .blog-content h5:hover ::after {
+    @apply text-brand_secondary_dark;
+    content: "#"
+}
+
+/* Blog Lists */
+
+.blog-content ul,
+.blog-content ol {
+    @apply pl-4;
+}
+
+.blog-content ul {
+    @apply list-disc;
+}
+
+.blog-content ol {
+    @apply list-decimal;
 }

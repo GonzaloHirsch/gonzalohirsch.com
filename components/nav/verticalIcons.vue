@@ -1,7 +1,7 @@
 <template>
     <NavVerticalNav :left="true">
         <template v-for="icon in icons" :key="icon.href">
-            <NuxtLink :to="icon.href" target="_blank" rel="noopener noreferer" class="vertical-content my-2 text-typography_primary_light dark:text-typography_primary_dark hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200">
+            <NuxtLink :to="icon.href" target="_blank" rel="noopener noreferer" class="vertical-content my-2 text-typography_primary_light dark:text-typography_primary_dark hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-100">
                 <component :is="icon.icon" :alt="icon.alt" :aria-label="icon.alt" class="w-6 h-6"/>
             </NuxtLink>
         </template>

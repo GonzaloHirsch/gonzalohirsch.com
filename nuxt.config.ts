@@ -1,19 +1,6 @@
 import { defineNuxtConfig } from 'nuxt';
+import axios from 'axios';
 
-const webpage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
-    description:
-        "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.",
-    publisher: {
-        '@type': 'Person',
-        jobTitle: 'Software Engineer',
-        name: 'Gonzalo Hirsch',
-        url: 'https://gonzalohirsch.com/'
-    },
-    license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
-};
 const website = {
     '@context': 'http://schema.org',
     '@type': 'WebSite',
@@ -59,8 +46,13 @@ const person = {
         'https://www.toptal.com/resume/gonzalo-hirsch'
     ]
 };
+const jsonLds = [website, person];
 
-const jsonLds = [webpage, website, person];
+const blogPageCount = 1;
+const routes = ['/', '/404', '/blog'];
+for (let i = 1; i <= blogPageCount; i++){
+    routes.push(`/blog/page/${i}`);
+}
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
@@ -68,7 +60,15 @@ export default defineNuxtConfig({
     target: 'server',
     ssr: true,
     generate: {
-        routes: ['/404']
+        routes: routes,
+        fallback: '404.html'
+    },
+    // Sitemap
+    // https://content.nuxtjs.org/guide/recipes/sitemap/
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml']
+        }
     },
     app: {
         head: {
@@ -96,14 +96,7 @@ export default defineNuxtConfig({
                     content: 'Gonzalo Hirsch'
                 }
             ],
-            link: [
-                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-                {
-                    hid: 'canonical',
-                    rel: 'canonical',
-                    href: `https://gonzalohirsch.com/`
-                }
-            ],
+            link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
             script: jsonLds.map((elem) => {
                 return {
                     type: 'application/ld+json',
@@ -115,5 +108,12 @@ export default defineNuxtConfig({
     tailwindcss: {
         // This is the option that works
         darkMode: 'class'
+    },
+    // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
+    content: {
+        // https://content.nuxtjs.org/api/configuration
+        highlight: {
+            theme: 'github-dark'
+        }
     }
 });
