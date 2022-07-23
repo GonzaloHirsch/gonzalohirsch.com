@@ -149,6 +149,14 @@ body {
     @apply uppercase font-extrabold text-xs leading-xs font-highlight;
 }
 
+/* Blog Body */
+
+.blog-content p,
+.blog-content ol,
+.blog-content ul {
+    @apply text-lg leading-h5;
+}
+
 /* Blog Code */
 
 .blog-content pre {
