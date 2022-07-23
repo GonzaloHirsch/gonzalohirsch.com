@@ -1,90 +1,83 @@
 <template>
-    <main>
-        <article class="prose text-typography_primary_light dark:text-typography_primary_dark">
-            <Section id="blog-title">
-                <div
-                    class="border-t-2 pt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right mb-12 md:mb-8"
-                >
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="blog-breadcrumb">
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://gonzalohirsch.com/"> <span itemprop="name">Home</span></a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <span>/</span>
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a
-                                itemscope
-                                itemtype="https://schema.org/WebPage"
-                                itemprop="item"
-                                itemid="https://gonzalohirsch.com/blog/"
-                                href="https://gonzalohirsch.com/blog/"
-                            >
-                                <span itemprop="name">Blog</span></a
-                            >
-                            <meta itemprop="position" content="2" />
-                        </li>
-                        <span>/</span>
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">{{ data.article.headline }}</span>
-                            <meta itemprop="position" content="3" />
-                        </li>
-                    </ol>
-                    <span class="font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75 mt-2 md:mt-0">{{
-                        $formatDate(data.article.date)
-                    }}</span>
-                </div>
-                <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">
-                    {{ data.article.headline }}
-                </h1>
-                <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data.article.excerpt }}</p>
-                <div
-                    class="border-b-2 pb-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between mt-12 md:mt-4"
-                >
-                    <div class="flex flex-row items-center justify-center">
-                        <img
-                            :src="getImage(data.article.author)"
-                            :alt="`Image of ${data.article.author}`"
-                            class="w-8 h-8 object-cover rounded-full mr-2"
-                        />
-                        <span class="text-lg leading-lg font-light"
-                            >By
-                            <a class="hover:underline italic" :href="data.article.authorUrl" target="_blank" rel="noopener noreferrer">{{
-                                data.article.author
-                            }}</a></span
+    <main class="text-typography_primary_light dark:text-typography_primary_dark">
+        <Section id="blog-title" type="header">
+            <div
+                class="border-t-2 pt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right mb-12 md:mb-8"
+            >
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="blog-breadcrumb">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://gonzalohirsch.com/"> <span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <span>/</span>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a
+                            itemscope
+                            itemtype="https://schema.org/WebPage"
+                            itemprop="item"
+                            itemid="https://gonzalohirsch.com/blog/"
+                            href="https://gonzalohirsch.com/blog/"
                         >
-                    </div>
-                    <div class="mt-6 md:mt-0">
-                        <NavShareIcons :headline="data.article.headline" :excerpt="data.article.excerpt" :path="data.article._path" />
-                    </div>
-                </div>
-            </Section>
-            <Section id="main" class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12">
-                <div class="col-span-full md:col-span-7">
-                    <ContentDoc class="blog-content" />
-                </div>
-                <div class="col-span-full md:col-span-3 relative">
-                    <div
-                        class="related-posts flex flex-col border-t-2 border-b-2 border-typography_primary_light dark:border-typography_primary_dark py-4"
+                            <span itemprop="name">Blog</span></a
+                        >
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    <span>/</span>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">{{ data.article.headline }}</span>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                </ol>
+                <span class="font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75 mt-2 md:mt-0">{{
+                    $formatDate(data.article.date)
+                }}</span>
+            </div>
+            <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">
+                {{ data.article.headline }}
+            </h1>
+            <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data.article.excerpt }}</p>
+            <div
+                class="border-b-2 pb-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between mt-12 md:mt-4"
+            >
+                <div class="flex flex-row items-center justify-center">
+                    <img
+                        :src="getImage(data.article.author)"
+                        :alt="`Image of ${data.article.author}`"
+                        class="w-8 h-8 object-cover rounded-full mr-2"
+                    />
+                    <span class="text-lg leading-lg font-light"
+                        >By
+                        <a class="hover:underline italic" :href="data.article.authorUrl" target="_blank" rel="noopener noreferrer">{{
+                            data.article.author
+                        }}</a></span
                     >
-                        <span class="uppercase font-extrabold text-xs leading-xs font-highlight mb-2">Continue Reading</span>
-                        <ul class="list-none">
-                            <template v-for="(other, index) in data.surround" :key="index">
-                                <li v-if="other" class="first:mt-0 mt-4">
-                                    <a
-                                        :href="other._path"
-                                        class="underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200"
-                                        :aria-label="other.headline"
-                                    >
-                                        {{ other.headline }}
-                                    </a>
-                                    <p class="!no-underline text-sm leading-sm mt-1">{{ other.excerpt }}</p>
-                                </li>
-                            </template>
-                        </ul>
-                    </div>
                 </div>
-            </Section>
-        </article>
+                <div class="mt-6 md:mt-0">
+                    <NavShareIcons :headline="data.article.headline" :excerpt="data.article.excerpt" :path="data.article._path" />
+                </div>
+            </div>
+        </Section>
+        <Section id="main" class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12">
+            <aside class="col-span-full md:col-span-3 md:hidden">
+                <div class="blog-aside-wrapper mb-2">
+                    <BlogTableOfContents :links="data.article.body.toc.links"/>
+                </div>
+            </aside>
+            <article class="prose col-span-full md:col-span-7">
+                <ContentDoc class="blog-content" />
+            </article>
+            <aside class="col-span-full md:col-span-3 blog-aside h-fit">
+                <div class="!hidden blog-aside-wrapper md:!flex mb-4">
+                    <BlogTableOfContents :links="data.article.body.toc.links"/>
+                </div>
+                <div
+                    class="blog-aside-wrapper"
+                >
+                    <BlogRelatedArticles :surround="data.surround"/>
+                </div>
+            </aside>
+        </Section>
+    <NavScrollTopIcon/>
     </main>
 </template>
 
@@ -96,7 +89,7 @@ const { data } = await useAsyncData(`content-${path}`, async () => {
     let article = queryContent().where({ _path: path }).findOne();
     // get the surround information,
     // which is an array of documeents that come before and after the current document
-    let surround = queryContent('/blog').sort({ date: -1 }).findSurround(path, { before: 2, after: 1 });
+    let surround = queryContent('/blog').sort({ date: -1 }).findSurround(path, { before: 1, after: 1 });
     return {
         article: await article,
         surround: await surround
@@ -172,8 +165,14 @@ const getImage = (name) => {
 </script>
 
 <style scoped>
-.related-posts {
+.blog-aside {
     @apply sticky;
     top: calc(theme('spacing.nav') + 0.25rem);
+}
+.blog-aside-wrapper {
+    @apply flex flex-col border-t-2 border-b-2 border-typography_primary_light py-4;
+}
+.dark .blog-aside-wrapper {
+    @apply border-typography_primary_dark;
 }
 </style>

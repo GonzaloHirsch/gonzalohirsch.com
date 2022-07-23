@@ -26,7 +26,7 @@ I'm currently building it using the following:
 - TailwindCSS
     - TailwindCSS typography
 
-## Nuxt.js
+### Nuxt.js
 \[Nuxt\](https://nuxtjs.org/) is a powerful Vue framework that offers excellent development features such as server-side rendering.
 
 ```bash
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 })
 ```
 
-## Nuxt content module
+#### Nuxt content module
 Empower your NuxtJS application with \[@nuxt/content module\](https://content.nuxtjs.org/): write in a content/ directory and fetch your Markdown, JSON, YAML, XML, and CSV files through a MongoDB-like API, acting as a Git-based Headless CMS.
 
 You can get started with Nuxt Content by installing a new project.
@@ -53,7 +53,7 @@ You can get started with Nuxt Content by installing a new project.
 npx nuxi init content-app -t content
 ```
 
-## TailwindCSS
+##### TailwindCSS
 Rapidly build modern websites without ever leaving your HTML. \[TailwindCSS\](https://tailwindcss.com/) is A utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center`, and `rotate-90` that can be composed to build any design directly in your markup.
 
 ### TailwindCSS Typography

@@ -18,7 +18,8 @@
             </div>
             <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">Blog</h1>
             <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">
-                A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry.
+                A personal blog where I write about programming and insights I gain on software engineering and different technologies from the
+                industry.
             </p>
             <div
                 class="border-t-2 mt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right"
@@ -36,14 +37,12 @@
                 v-slot="{ data }"
             >
                 <!-- Default list slot -->
-                <!-- <template v-slot="{ list }"> -->
                 <ul class="grid grid-cols-10 gap-4 text-typography_primary_light dark:text-typography_primary_dark">
-                    <li
-                        v-for="article in data"
-                        :key="article._path"
-                        class="col-span-full md:col-span-5 rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group duration-200 p-4"
-                    >
-                        <a :href="article._path">
+                    <li v-for="article in data" :key="article._path" class="col-span-full md:col-span-5 relative rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group duration-200">
+                        <NuxtLink
+                            :to="article._path"
+                            class="p-4 block relative"
+                        >
                             <div class="wrapper">
                                 <header>
                                     <h2
@@ -60,10 +59,9 @@
                                         </ul> -->
                                 </header>
                             </div>
-                        </a>
+                        </NuxtLink>
                     </li>
                 </ul>
-                <!-- </template> -->
             </ContentQuery>
         </Section>
     </main>
@@ -86,7 +84,7 @@ const webpage = {
     name: title,
     url: baseUrl + 'blog/',
     description: description,
-    publisher: authorData.value["Gonzalo Hirsch"],
+    publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
 };
 useHead({

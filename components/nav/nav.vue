@@ -1,7 +1,7 @@
 <template>
     <nav
         :class="[
-            'sticky top-0 px-section-x-sm sm:px-section-x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition-transform duration-[.4s]',
+            'sticky top-0 px-section_x_sm sm:px-section_x py-4 h-nav flex flex-row items-center justify-between z-50 w-full transition-transform duration-[.4s]',
             isUp ? '' : 'lg:transform lg:-translate-y-full',
             'bg-background_light dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
         ]"
@@ -15,9 +15,9 @@
         <ul class="hidden lg:flex flex-row">
             <template v-for="link in links" :key="link.href">
                 <li class="large-nav-item">
-                    <a :href="link.href" :alt="link.alt" target="_self">
+                    <NuxtLink :to="link.href" :alt="link.alt" target="_self">
                         {{ link.text }}
-                    </a>
+                    </NuxtLink>
                 </li>
             </template>
         </ul>

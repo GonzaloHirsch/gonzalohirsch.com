@@ -5,7 +5,7 @@
                 Hi! My name is <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Gonzalo Hirsch</span>
             </h1>
             <h2
-                class="text-h3-sm leading-h3-sm md:text-h3 md:leading-h3 md:w-9/12 mx-auto mt-2 md:mt-8 text-typography_primary_light dark:text-typography_primary_dark"
+                class="text-h3_sm leading-h3_sm md:text-h3 md:leading-h3 md:w-9/12 mx-auto mt-2 md:mt-8 text-typography_primary_light dark:text-typography_primary_dark"
             >
                 I'm an Argentina-based
                 <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Software Engineering Student</span> and
@@ -45,10 +45,10 @@ const trackCVClick = () => {
     @apply bg-typography_primary_dark;
 }
 .home-title {
-    @apply text-h3-sm leading-h3-sm relative;
+    @apply text-h3_sm leading-h3_sm relative;
 }
 .home-title .impact {
-    @apply text-h1-sm leading-h1-sm block mt-3;
+    @apply text-h1_sm leading-h1_sm block mt-3;
 }
 
 @screen md {
