@@ -1,14 +1,14 @@
 <template>
-    <section
+    <component :is="props.type"
         :class="[
-            'px-section-x-sm py-section-y-sm sm:px-section-x sm:py-section-y relative',
+            'px-section_x_sm py-section_y_sm sm:px-section_x sm:py-section_y relative',
             props.fullHeight ? 'full-height' : '',
             props.forcedHeight ? 'full-height--forced' : ''
         ]"
+        :id="props.id"
     >
-        <span :id="props.id" class="invisible-id" />
         <slot />
-    </section>
+    </component>
 </template>
 
 <script setup>
@@ -16,6 +16,10 @@ const props = defineProps({
     id: {
         type: String,
         required: true
+    },
+    type: {
+        type: String,
+        default: 'section'
     },
     fullHeight: {
         type: Boolean,
@@ -31,9 +35,6 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.invisible-id {
-    @apply absolute left-0 -top-nav w-0 h-0;
-}
 .full-height.full-height--forced {
     height: calc(100vh - theme('spacing.nav'));
 }

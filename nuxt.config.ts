@@ -90,9 +90,7 @@ export default defineNuxtConfig({
                     content: 'Gonzalo Hirsch'
                 }
             ],
-            link: [
-                { rel: 'icon', type: 'image/png', href: '/favicon.png' }
-            ],
+            link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
             script: jsonLds.map((elem) => {
                 return {
                     type: 'application/ld+json',

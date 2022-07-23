@@ -1,15 +1,5 @@
 <template>
     <div class="flex flex-row">
-        <!-- :href="
-                                        'https://twitter.com/share?text=' +
-                                            encodeURI($page.post.headline) +
-                                            '&url=' +
-                                            encodeURI($page.metadata.siteUrl + $page.post.path)
-                                    "
-                                    rel="noreferrer"
-                                    aria-label="Share this article on Twitter"
-                                    target="_blank"
-                                    class="post__social-link" -->
         <template v-for="icon in icons" :key="icon.href">
             <a
                 :href="icon.getHref()"

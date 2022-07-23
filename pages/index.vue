@@ -22,7 +22,7 @@ const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
-    url: baseUrl,
+    url: url,
     description:
         "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.",
     publisher: authorData.value['Gonzalo Hirsch'],
