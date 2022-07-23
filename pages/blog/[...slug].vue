@@ -63,7 +63,8 @@
                     <BlogTableOfContents :links="data.article.body.toc.links"/>
                 </div>
             </aside>
-            <article class="prose col-span-full md:col-span-7">
+            <article class="prose col-span-full md:col-span-7 relative">
+                <span v-if="data.article.dateUpdated" class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75">(Updated at: {{$formatDate(data.article.dateUpdated)}})</span>
                 <ContentDoc class="blog-content" />
             </article>
             <aside class="col-span-full md:col-span-3 blog-aside h-fit">
@@ -147,7 +148,7 @@ useHead({
                 headline: data.value.article.headline,
                 abstract: data.value.article.excerpt,
                 datePublished: data.value.article.date,
-                dateModified: data.value.article.date,
+                dateModified: data.value.article.dateUpdated || data.value.article.date,
                 author: authorData.value[data.value.article.author],
                 publisher: authorData.value['Gonzalo Hirsch']
             })

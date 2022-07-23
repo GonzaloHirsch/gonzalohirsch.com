@@ -4,6 +4,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 headline: "Test Blog #1"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam. Risus commodo viverra maecenas accumsan lacus."
 date: "2022-07-21T12:00:00"
+#dateUpdated: "2022-07-23T12:00:00"
 author: "Gonzalo Hirsch"
 authorUrl: "https://www.linkedin.com/in/gonzalo-hirsch/"
 image:
