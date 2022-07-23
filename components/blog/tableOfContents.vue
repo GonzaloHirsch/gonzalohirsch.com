@@ -7,7 +7,7 @@
         <ul :class="[isVisible ? 'block' : 'hidden']">
             <!-- render each link with depth class -->
             <li v-for="link of flattenLinks(links)" :key="link.id" :class="`toc-link_${link.depth} first:mt-0 mt-2 md:mt-1`">
-                <NuxtLink :to="`#${link.id}`" class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-200">
+                <NuxtLink :to="`#${link.id}`" class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-100">
                     {{ link.text }}
                 </NuxtLink>
             </li>

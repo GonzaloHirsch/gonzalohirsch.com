@@ -71,6 +71,7 @@
                     <BlogTableOfContents :links="data.article.body.toc.links"/>
                 </div>
                 <div
+                    v-if="data?.surround.filter(elem => elem !== null).length > 0"
                     class="blog-aside-wrapper"
                 >
                     <BlogRelatedArticles :surround="data.surround"/>

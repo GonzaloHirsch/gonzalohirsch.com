@@ -174,7 +174,7 @@ body {
 /* Blog Links */
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
-    @apply underline font-bold duration-200;
+    @apply underline font-bold duration-100;
 }
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {

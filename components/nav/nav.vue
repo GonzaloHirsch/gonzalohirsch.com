@@ -38,7 +38,7 @@
     </nav>
     <nav
         :class="[
-            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex lg:hidden flex-col items-center duration-200',
+            'side-menu h-full fixed bottom-0 right-0 border-l border-typography_primary_light dark:border-typography_primary_dark bg-background_light dark:bg-background_dark bg-opacity-[98%] flex lg:hidden flex-col items-center duration-100',
             isMenuVisible ? '' : 'translate-x-full'
         ]"
     >
@@ -145,7 +145,7 @@ const trackCVClick = () => {
 }
 
 .large-nav-item {
-    @apply cursor-pointer list-none mx-2 text-h5 rounded-md duration-200 text-typography_primary_light;
+    @apply cursor-pointer list-none mx-2 text-h5 rounded-md duration-100 text-typography_primary_light;
 }
 .large-nav-item a {
     @apply px-2 py-1;
@@ -154,7 +154,7 @@ const trackCVClick = () => {
     @apply bg-brand_primary_light text-typography_primary_dark;
 }
 .mobile-nav-item {
-    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 duration-200 text-typography_primary_light;
+    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 duration-100 text-typography_primary_light;
 }
 .mobile-nav-item a {
     @apply px-2 py-1;
