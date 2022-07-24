@@ -27,7 +27,7 @@ The objective of this challenge is to ace any programming interview or coding pr
 
 ## The Challenge
 
-The idea is to **solve at least two interview problems per day** from websites like [LeetCode](https://leetcode.com/problemset/algorithms/), [HackerRank](https://www.hackerrank.com/), and [InterviewBit](https://www.interviewbit.com/). I will update this post to add the problems I solve each day, and I'll publish one post per day with any question I solve, the solutions I find, and my insights on the algorithms.
+The idea is to **solve at least two interview problems per day** from websites like [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), and [InterviewBit](https://www.interviewbit.com/). I will update this post to add the problems I solve each day, and I'll publish one post per day with any question I solve, the solutions I find, and my insights on the algorithms.
 
 I'll be coding in Java, my favorite programming language for designing a data structure and solving algorithmic problems, for practice and any job interview.
 
