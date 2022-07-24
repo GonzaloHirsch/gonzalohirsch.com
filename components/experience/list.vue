@@ -7,7 +7,7 @@
                         class="col-span-full md:col-span-3 lg:col-span-2 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark overflow-x-scroll md:overflow-hidden"
                     >
                         <ul class="flex flex-row md:flex-col">
-                            <template v-for="(exp, index) in item.body" :key="index">
+                            <template v-for="(exp, index) in item.experience" :key="index">
                                 <li
                                     @click="() => toggleIndex(index)"
                                     :class="[
@@ -27,7 +27,7 @@
                     <div
                         class="experience-list col-span-full md:col-span-7 lg:col-span-8 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark p-4"
                     >
-                        <template v-for="(exp, index) in item.body" :key="index">
+                        <template v-for="(exp, index) in item.experience" :key="index">
                             <ExperienceItem :data="exp" :class="[currentIndex === index ? 'block' : 'hidden']" />
                         </template>
                     </div>
