@@ -1,5 +1,4 @@
 import { defineNuxtConfig } from 'nuxt';
-import axios from 'axios';
 
 const website = {
     '@context': 'http://schema.org',
@@ -49,7 +48,7 @@ const person = {
 const jsonLds = [website, person];
 
 const blogPageCount = 1;
-const routes = ['/', '/404', '/blog'];
+const routes = ['/', '/404'];
 for (let i = 1; i <= blogPageCount; i++){
     routes.push(`/blog/page/${i}`);
 }
@@ -61,7 +60,8 @@ export default defineNuxtConfig({
     ssr: true,
     generate: {
         routes: routes,
-        fallback: '404.html'
+        fallback: '404.html',
+        subFolders: false
     },
     // Sitemap
     // https://content.nuxtjs.org/guide/recipes/sitemap/
@@ -69,6 +69,10 @@ export default defineNuxtConfig({
         prerender: {
             routes: ['/sitemap.xml']
         }
+    },
+    router: {
+        trailingSlash: true,
+        strict: true
     },
     app: {
         head: {

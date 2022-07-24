@@ -15,8 +15,8 @@
                             itemscope
                             itemtype="https://schema.org/WebPage"
                             itemprop="item"
-                            itemid="https://gonzalohirsch.com/blog/"
-                            href="https://gonzalohirsch.com/blog/"
+                            itemid="https://gonzalohirsch.com/blog"
+                            href="https://gonzalohirsch.com/blog"
                         >
                             <span itemprop="name">Blog</span></a
                         >
@@ -65,7 +65,7 @@
             </aside>
             <article class="prose col-span-full md:col-span-7 relative">
                 <span v-if="data.article.dateUpdated" class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75">(Updated at: {{$formatDate(data.article.dateUpdated)}})</span>
-                <ContentDoc class="blog-content" />
+                <ContentDoc :path="path" class="blog-content" />
             </article>
             <aside class="col-span-full md:col-span-3 blog-aside h-fit">
                 <div class="!hidden blog-aside-wrapper md:!flex mb-4">
@@ -88,7 +88,7 @@ const { $formatDate } = useNuxtApp();
 const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, async () => {
     // fetch document where the document path matches with the cuurent route
-    let article = queryContent().where({ _path: path }).findOne();
+    let article = queryContent('/blog').where({ _path: path }).findOne();
     // get the surround information,
     // which is an array of documeents that come before and after the current document
     let surround = queryContent('/blog').sort({ date: -1 }).findSurround(path, { before: 1, after: 1 });
@@ -110,7 +110,7 @@ useHead({
         // OG
         { name: 'description', content: data.value.article.description },
         { hid: 'og:title', property: 'og:title', content: data.value.article.title },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + data.value.article._path + '/' },
+        { hid: 'og:url', property: 'og:url', content: baseUrl + data.value.article._path },
         { hid: 'og:description', property: 'og:description', content: data.value.article.description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -121,7 +121,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: data.value.article.title },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + data.value.article._path + '/' },
+        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + data.value.article._path },
         { hid: 'twitter:description', name: 'twitter:description', content: data.value.article.description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -130,7 +130,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + data.value.article._path + '/'
+            href: baseUrl + data.value.article._path
         }
     ],
     script: [
@@ -143,7 +143,7 @@ useHead({
                     '@type': 'WebPage',
                     '@id': 'https://gonzalohirsch.com/'
                 },
-                url: baseUrl + data.value.article._path + '/',
+                url: baseUrl + data.value.article._path,
                 image: [data.value.article?.image?.src || 'https://gonzalohirsch.com/meta-img.jpg'],
                 headline: data.value.article.headline,
                 abstract: data.value.article.excerpt,

@@ -9,7 +9,7 @@
                 :currentPage="data.pageNo"
                 :totalPages="data.totalPages"
                 :nextPage="data.nextPage"
-                baseUrl="/blog/"
+                baseUrl="/blog"
                 pageUrl="/blog/page/"
             />
         </Section>
@@ -21,7 +21,7 @@
                     <ButtonsButton
                         text="Blog Home"
                         format="white"
-                        href="/blog/"
+                        href="/blog"
                         target="_self"
                         aria="Go back to the blog homepage."
                         extraClass=""
@@ -70,7 +70,7 @@ const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
-    url: `${baseUrl}blog/page/${params.number}/`,
+    url: `${baseUrl}blog/page/${params.number}`,
     description: description,
     publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
@@ -81,7 +81,7 @@ useHead({
         // OG
         { name: 'description', content: description },
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:url', property: 'og:url', content: `${baseUrl}blog/page/${params.number}/` },
+        { hid: 'og:url', property: 'og:url', content: `${baseUrl}blog/page/${params.number}` },
         { hid: 'og:description', property: 'og:description', content: description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -92,7 +92,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:url', name: 'twitter:url', content: `${baseUrl}blog/page/${params.number}/` },
+        { hid: 'twitter:url', name: 'twitter:url', content: `${baseUrl}blog/page/${params.number}` },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -101,7 +101,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: `${baseUrl}blog/page/${params.number}/`
+            href: `${baseUrl}blog/page/${params.number}`
         }
     ],
     script: [

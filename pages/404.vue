@@ -15,7 +15,7 @@ useHead({
     meta: [
         // OG Card
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:url', property: 'og:url', content: url + '404/' },
+        { hid: 'og:url', property: 'og:url', content: url + '404' },
         { hid: 'og:description', property: 'og:description', content: description },
         { hid: 'og:image', property: 'og:image', content: url + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -27,7 +27,7 @@ useHead({
         // Twitter card
         { hid: 'twitter:card', name: 'twitter:card', content: "Summary" },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:url', name: 'twitter:url', content: url + '404/' },
+        { hid: 'twitter:url', name: 'twitter:url', content: url + '404' },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: url + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: "Gonzalo Hirsch" }
