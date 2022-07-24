@@ -30,13 +30,13 @@ jobs:
           run: for file in $(find ./.output/public -name "*.html"); do mv "$file" "${file%%.html}"; done
 
         - name: Deploy non-cached html files
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "*/*.xml" --exclude "*/*.pdf" --exclude "_nuxt/*" --exclude "api/*" --exclude "*/*.png" --exclude "*/*.jpg" --exclude "*/*.svg" --exclude "*/*.txt" --exclude "*/*.jpeg" --exclude "*/*.webp" --content-type "text/html" --cache-control max-age=0,public,must-revalidate --delete
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "*/*.xml" --exclude "*.xml" --exclude "*/*.pdf" --exclude "*.pdf" --exclude "_nuxt/*" --exclude "api/*" --exclude "*/*.png" --exclude "*.png" --exclude "*/*.jpg" --exclude "*.jpg" --exclude "*/*.svg"  --exclude "*.svg" --exclude "*/*.txt" --exclude "*.txt" --exclude "*/*.jpeg" --exclude "*.jpeg" --exclude "*/*.webp" --exclude "*.webp" --content-type "text/html" --cache-control max-age=0,public,must-revalidate --delete
 
         - name: Deploy non-cached non-html files
           run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "sitemap.xml" --include "Gonzalo-Hirsch-CV.pdf" --include "robots.txt" --cache-control max-age=0,public,must-revalidate
         
         - name: Deploy cached files
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "_nuxt/*" --include "api/*" --include "*/*.png" --include "*/*.jpg" --include "*/*.svg" --include "*/*.jpeg" --include "*/*.webp" --cache-control max-age=31536000,public,immutable
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "_nuxt/*" --include "api/*" --include "*/*.png" --include "*.png" --include "*/*.jpg" --include "*.jpg" --include "*/*.svg" --include "*.svg" --include "*/*.jpeg" --include "*.jpeg" --include "*/*.webp" --include "*.webp" --cache-control max-age=31536000,public,immutable
         
         - name: Invalidate dashboard cloudfront
           run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
