@@ -30,7 +30,7 @@ jobs:
           run: for file in $(find ./out -name "*.html"); do mv "$file" "${file%%.html}"; done
 
         - name: Deploy non-cached html files
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude --exclude "*/*.xml" --exclude "*/*.pdf" --exclude "_nuxt/*" --exclude "api/*" --exclude "*/*.png" --exclude "*/*.jpg" --exclude "*/*.svg" --exclude "*/*.txt" --exclude "*/*.jpeg" --exclude "*/*.webp" --content-type "text/html" --cache-control max-age=0,public,must-revalidate --delete
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "*/*.xml" --exclude "*/*.pdf" --exclude "_nuxt/*" --exclude "api/*" --exclude "*/*.png" --exclude "*/*.jpg" --exclude "*/*.svg" --exclude "*/*.txt" --exclude "*/*.jpeg" --exclude "*/*.webp" --content-type "text/html" --cache-control max-age=0,public,must-revalidate --delete
 
         - name: Deploy non-cached non-html files
           run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "sitemap.xml" --include "Gonzalo-Hirsch-CV.pdf" --include "robots.txt" --cache-control max-age=0,public,must-revalidate
