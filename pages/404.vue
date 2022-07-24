@@ -13,6 +13,7 @@ const url = 'https://gonzalohirsch.com/';
 
 useHead({
     meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' },
         // OG Card
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:url', property: 'og:url', content: url + '404' },

@@ -1,35 +1,39 @@
 <template>
     <main>
-        <BlogHero />
-        <Section v-if="data?.posts?.length > 0" id="main" class="!pt-0">
-            <BlogList :data="data.posts" />
-            <BlogPagination
-                v-if="data.totalPages > 1"
-                class="mt-8"
-                :currentPage="data.pageNo"
-                :totalPages="data.totalPages"
-                :nextPage="data.nextPage"
-                baseUrl="/blog"
-                pageUrl="/blog/page/"
-            />
-        </Section>
-        <Section v-else id="main" class="!pt-0">
-            <div class="text-center text-typography_primary_light dark:text-typography_primary_dark">
-                <h2>No posts were found</h2>
-                <p>Why don't you try going to the main blog page or go back home?.</p>
-                <div class="flex mt-8 justify-center">
-                    <ButtonsButton
-                        text="Blog Home"
-                        format="white"
-                        href="/blog"
-                        target="_self"
-                        aria="Go back to the blog homepage."
-                        extraClass=""
-                    />
-                    <ButtonsButton text="Home" format="white" href="/" target="_self" aria="Go back home." extraClass="ml-4" />
+        <template v-if="!error">
+            <BlogHero />
+            <Section id="main" class="!pt-0">
+                <BlogList :data="data?.posts || []" />
+                <BlogPagination
+                    v-if="data?.totalPages > 1"
+                    class="mt-8"
+                    :currentPage="data?.pageNo"
+                    :totalPages="data?.totalPages"
+                    :nextPage="data?.nextPage"
+                    baseUrl="/blog"
+                    pageUrl="/blog/page/"
+                />
+            </Section>
+        </template>
+        <template v-else>
+            <Section id="main" class="!pt-0">
+                <div class="text-center text-typography_primary_light dark:text-typography_primary_dark">
+                    <h2>No posts were found</h2>
+                    <p>Why don't you try going to the main blog page or go back home?.</p>
+                    <div class="flex mt-8 justify-center">
+                        <ButtonsButton
+                            text="Blog Home"
+                            format="white"
+                            href="/blog"
+                            target="_self"
+                            aria="Go back to the blog homepage."
+                            extraClass=""
+                        />
+                        <ButtonsButton text="Home" format="white" href="/" target="_self" aria="Go back home." extraClass="ml-4" />
+                    </div>
                 </div>
-            </div>
-        </Section>
+            </Section>
+        </template>
     </main>
 </template>
 
@@ -37,24 +41,53 @@
 // Fetching data
 const { path, params } = useRoute();
 const postCount = 6;
-const { data } = await useAsyncData(`content-${path}`, async () => {
-    const pageNo = parseInt(params.number);
-    const posts = await queryContent('/blog')
-        .sort({ date: -1 })
-        .only(['headline', 'excerpt', 'date', 'tags', '_path', 'image'])
-        .limit(postCount)
-        .skip(postCount * (pageNo - 1))
-        .find();
-    // Calculate total pages
-    const allPosts = await queryContent('/blog').find();
-    const totalPages = Math.ceil(allPosts.length / postCount);
+const { data, pending, error, refresh } = await useAsyncData(
+    `content-${path}`,
+    async () => {
+        const pageNo = parseInt(params.number);
+        console.log(pageNo);
+        const posts = await queryContent('/blog')
+            .sort({ date: -1 })
+            .only(['headline', 'excerpt', 'date', 'tags', '_path', 'image'])
+            .limit(postCount)
+            .skip(postCount * (pageNo - 1))
+            .find()
+            .catch((err) => {
+                console.log(err);
+            });
+        console.log('ALK');
+        // Calculate total pages
+        const allPosts = await queryContent('/blog')
+            .find()
+            .then((res) => {
+                console.log(res);
+                return res;
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        console.log('TOTAL');
+        const totalPages = Math.ceil(allPosts.length / postCount);
 
-    if (!posts.length) {
-        return { nextPage: false, posts: undefined, pageNo, allPostsLength: totalPages };
+        console.log(posts.length);
+        if (!posts.length) {
+            throw new Error('No posts found');
+            // return { nextPage: false, posts: undefined, pageNo, allPostsLength: totalPages };
+        }
+
+        const nextPage = pageNo < Math.ceil(totalPages / postCount);
+        return { nextPage, posts, pageNo, totalPages };
+    },
+    { server: false }
+);
+
+import { onMounted } from 'vue';
+onMounted(() => {
+    console.log(data.value, pending.value, error.value);
+    // const router = useRouter();
+    if (error.value || data.value === null || data.value.posts === undefined) {
+        // router.replace('/404')
     }
-
-    const nextPage = pageNo < Math.ceil(totalPages / postCount);
-    return { nextPage, posts, pageNo, totalPages };
 });
 
 // Set the meta
