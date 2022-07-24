@@ -1,5 +1,5 @@
 ---
-title: '30 Days of Interview Problems | Gonzalo Hirsch'
+title: '30 Days of Interview Problems | Gonzalo Hirsch'
 description: 'Tech interviews for software engineers are focused on solving coding problems in a short amount of time. The "30 Days of Interview Problems" challenge aims to improve my skills.'
 headline: '30 Days of Interview Problems'
 excerpt: 'Tech interviews for software engineers are focused on solving coding problems in a short amount of time. The "30 Days of Interview Problems" challenge aims to improve my skills.'
