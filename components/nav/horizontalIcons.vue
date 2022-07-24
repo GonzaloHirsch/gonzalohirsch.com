@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-row">
         <template v-for="icon in icons" :key="icon.href">
-            <a
-                :href="icon.href"
+            <NuxtLink
+                :to="icon.href"
                 target="_blank"
                 rel="noopener noreferer"
                 class="hover:scale-125 mx-2 text-typography_primary_light dark:text-typography_primary_dark hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-100"
             >
                 <component :is="icon.icon" :alt="icon.alt" :aria-label="icon.alt" class="w-6 h-6" width="24" height="24" />
-            </a>
+            </NuxtLink>
         </template>
     </div>
 </template>

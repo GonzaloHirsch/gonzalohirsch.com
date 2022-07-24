@@ -12,10 +12,10 @@
             </li>
         </ul>
         <div class="flex flex-row project-simple-external mt-4">
-            <a
+            <NuxtLink
                 v-if="project.url"
                 class="project-simple-external-link"
-                :href="project.url"
+                :to="project.url"
                 :alt="`See ${project.title} on an external URL.`"
                 :aria-label="`See ${project.title} on an external URL.`"
                 target="_blank"
@@ -27,18 +27,18 @@
                     :alt="`See ${project.title} on an external URL.`"
                     :aria-label="`See ${project.title} on an external URL.`"
                 />
-            </a>
-            <a
+            </NuxtLink>
+            <NuxtLink
                 v-if="project.github"
                 class="project-simple-external-link"
-                :href="project.github"
+                :to="project.github"
                 :alt="`See ${project.title} on Github.`"
                 :aria-label="`See ${project.title} on Github.`"
                 target="_blank"
                 rel="noopener noreferer"
             >
                 <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
-            </a>
+            </NuxtLink>
         </div>
     </div>
 </template>
