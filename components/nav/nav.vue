@@ -15,9 +15,9 @@
         <ul class="hidden lg:flex flex-row">
             <template v-for="link in links" :key="link.href">
                 <li class="large-nav-item">
-                    <a :href="link.href" :alt="link.alt" target="_self">
+                    <NuxtLink :to="link.href" :alt="link.alt" target="_self">
                         {{ link.text }}
-                    </a>
+                    </NuxtLink>
                 </li>
             </template>
         </ul>

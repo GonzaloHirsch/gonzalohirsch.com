@@ -5,7 +5,7 @@
             :key="article._path"
             class="col-span-full md:col-span-5 relative rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group duration-100"
         >
-            <a :href="article._path" class="p-4 block relative">
+            <NuxtLink :to="article._path" class="p-4 block relative">
                 <div class="wrapper">
                     <header>
                         <h2
@@ -22,7 +22,7 @@
                                         </ul> -->
                     </header>
                 </div>
-            </a>
+            </NuxtLink>
         </li>
     </ul>
 </template>
