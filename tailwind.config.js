@@ -19,10 +19,12 @@ module.exports = {
       colors: {
         'brand_primary_light': '#124BCF',
         'brand_secondary_light': '#5eceeb',
+        'brand_secondary_light_saturated': '#5eceeb',
         'typography_primary_light': '#000000',
         'background_light': '#ffffff',
         'brand_primary_dark': '#DF9A2C',
         'brand_secondary_dark': '#6e3129',
+        'brand_secondary_dark_saturated': '#cc5a4b',
         'typography_primary_dark': '#eeeeee',
         'background_dark': '#151515',
         'light': '#F7F7F7'
