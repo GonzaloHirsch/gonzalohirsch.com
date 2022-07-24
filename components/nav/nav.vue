@@ -86,7 +86,7 @@ const links = [
         alt: 'Check out the Contact section.'
     },
     {
-        href: '/blog/',
+        href: '/blog',
         text: 'Blog',
         alt: 'Check out the blog.'
     }

@@ -21,7 +21,7 @@
                 :currentPage="1"
                 :totalPages="data"
                 :nextPage="data > 1"
-                baseUrl="/blog/"
+                baseUrl="/blog"
                 pageUrl="/blog/page/"
             />
         </Section>
@@ -49,7 +49,7 @@ const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
-    url: baseUrl + 'blog/',
+    url: baseUrl + 'blog',
     description: description,
     publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
@@ -60,7 +60,7 @@ useHead({
         // OG
         { name: 'description', content: description },
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + 'blog/' },
+        { hid: 'og:url', property: 'og:url', content: baseUrl + 'blog' },
         { hid: 'og:description', property: 'og:description', content: description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -71,7 +71,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + 'blog/' },
+        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + 'blog' },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -80,7 +80,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + 'blog/'
+            href: baseUrl + 'blog'
         }
     ],
     script: [
