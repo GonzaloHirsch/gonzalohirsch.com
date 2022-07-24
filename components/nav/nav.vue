@@ -21,18 +21,20 @@
                 </li>
             </template>
         </ul>
-        <Menu
+        <IconsMenu
             :class="[
                 'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
                 isMenuVisible ? 'hidden' : ''
             ]"
+            width="32" height="32"
             @click="toggleMenu"
         />
-        <Close
+        <IconsClose
             :class="[
                 'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
                 isMenuVisible ? '' : 'hidden'
             ]"
+            width="32" height="32"
             @click="toggleMenu"
         />
     </nav>
@@ -93,8 +95,6 @@ const links = [
 ];
 
 // Menu visibility
-import Menu from '../icons/menu.vue';
-import Close from '../icons/close.vue';
 const isMenuVisible = ref(false);
 const toggleMenu = () => {
     isMenuVisible.value = !isMenuVisible.value;

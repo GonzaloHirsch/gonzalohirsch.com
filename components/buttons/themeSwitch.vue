@@ -1,14 +1,11 @@
 <template>
     <div class="flex flex-row items-center justify-center">
-        <Night v-show="currentTheme === 'light'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
-        <Light v-show="currentTheme === 'dark'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
+        <IconsNight v-show="currentTheme === 'light'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" width="28" height="28" @click="toggleTheme"/>
+        <IconsLight v-show="currentTheme === 'dark'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" width="28" height="28" @click="toggleTheme"/>
     </div>
 </template>
 
 <script setup>
-// Icons
-import Night from '../icons/night.vue';
-import Light from '../icons/light.vue';
 // Components
 import { ref, onMounted } from 'vue';
 

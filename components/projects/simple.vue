@@ -23,6 +23,7 @@
             >
                 <IconsExternal
                     class="w-7 h-7"
+                    width="28" height="28"
                     :alt="`See ${project.title} on an external URL.`"
                     :aria-label="`See ${project.title} on an external URL.`"
                 />
@@ -36,7 +37,7 @@
                 target="_blank"
                 rel="noopener noreferer"
             >
-                <IconsGithub class="w-6 h-6" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
+                <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
             </NuxtLink>
         </div>
     </div>
