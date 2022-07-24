@@ -14,8 +14,8 @@
 
 <script setup>
 // Scroll handling
-import { onUnmounted, ref } from 'vue';
-const isVisible = ref(true);
+import { onUnmounted, ref, nextTick } from 'vue';
+const isVisible = ref(false);
 const handleScroll = () => {
     // Only run the code if we are on the client
     if (typeof window !== 'undefined') {
@@ -25,6 +25,7 @@ const handleScroll = () => {
 };
 if (typeof window !== 'undefined') {
     window.addEventListener('scroll', handleScroll);
+    nextTick(() => handleScroll());
 }
 onUnmounted(() => {
     if (typeof window !== 'undefined') {

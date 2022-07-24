@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row items-center justify-center">
-        <Night v-if="currentTheme === 'light'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
-        <Light v-else class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
+        <Night v-show="currentTheme === 'light'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
+        <Light v-show="currentTheme === 'dark'" class="theme-icon text-typography_primary_light dark:text-typography_primary_dark" @click="toggleTheme"/>
     </div>
 </template>
 

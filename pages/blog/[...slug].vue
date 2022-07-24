@@ -24,61 +24,63 @@
                     </li>
                     <span>/</span>
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">{{ data.article.headline }}</span>
+                        <span itemprop="name">{{ data?.article?.headline }}</span>
                         <meta itemprop="position" content="3" />
                     </li>
                 </ol>
                 <span class="font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75 mt-2 md:mt-0">{{
-                    $formatDate(data.article.date)
+                    $formatDate(data?.article?.date)
                 }}</span>
             </div>
             <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">
-                {{ data.article.headline }}
+                {{ data?.article?.headline }}
             </h1>
-            <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data.article.excerpt }}</p>
+            <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data?.article?.excerpt }}</p>
             <div
                 class="border-b-2 pb-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between mt-12 md:mt-4"
             >
                 <div class="flex flex-row items-center justify-center">
                     <img
-                        :src="getImage(data.article.author)"
-                        :alt="`Image of ${data.article.author}`"
+                        :src="getImage(data?.article?.author)"
+                        :alt="`Image of ${data?.article?.author}`"
                         class="w-8 h-8 object-cover rounded-full mr-2"
                     />
                     <span class="text-lg leading-lg font-light"
                         >By
-                        <a class="hover:underline italic" :href="data.article.authorUrl" target="_blank" rel="noopener noreferrer">{{
-                            data.article.author
+                        <a class="hover:underline italic" :href="data?.article?.authorUrl" target="_blank" rel="noopener noreferrer">{{
+                            data?.article?.author
                         }}</a></span
                     >
                 </div>
                 <div class="mt-6 md:mt-0">
-                    <NavShareIcons :headline="data.article.headline" :excerpt="data.article.excerpt" :path="data.article._path" />
+                    <NavShareIcons :headline="data?.article?.headline" :excerpt="data?.article?.excerpt" :path="data?.article?._path" />
                 </div>
             </div>
         </Section>
         <Section id="main" class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12">
             <aside class="col-span-full md:col-span-3 md:hidden">
                 <div class="blog-aside-wrapper mb-2">
-                    <BlogTableOfContents :links="data.article.body.toc.links"/>
+                    <BlogTableOfContents :links="data?.article?.body?.toc?.links" />
                 </div>
             </aside>
             <article class="prose col-span-full md:col-span-7 relative">
-                <span :class="['italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75', data.article.dateUpdated ? 'block' : 'hidden']">(Updated at: {{data.article.dateUpdated ? $formatDate(data.article.dateUpdated) : undefined}})</span>
+                <span
+                    v-show="data?.article?.dateUpdated"
+                    class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75"
+                    >(Updated at: {{ $formatDate(data?.article?.dateUpdated) }})</span
+                >
                 <ContentDoc :path="path" class="blog-content" />
             </article>
             <aside class="col-span-full md:col-span-3 blog-aside h-fit">
                 <div class="!hidden blog-aside-wrapper md:!flex mb-4">
-                    <BlogTableOfContents :links="data.article.body.toc.links"/>
+                    <BlogTableOfContents :links="data?.article?.body?.toc?.links" />
                 </div>
-                <div
-                    :class="['blog-aside-wrapper', data?.surround.filter(elem => elem !== null).length > 0 ? '!flex' : '!hidden']"
-                >
-                    <BlogRelatedArticles :surround="data.surround"/>
+                <div v-if="data?.surround?.filter((elem) => elem !== null)?.length > 0" class="blog-aside-wrapper">
+                    <BlogRelatedArticles :surround="data?.surround" />
                 </div>
             </aside>
         </Section>
-    <NavScrollTopIcon/>
+        <NavScrollTopIcon />
     </main>
 </template>
 
@@ -86,11 +88,13 @@
 const { $formatDate } = useNuxtApp();
 const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, async () => {
+    // Remove a trailing slash in case the browser adds it, it might break the routing
+    const cleanPath = path.replace(/\/+$/, '');
     // fetch document where the document path matches with the cuurent route
-    let article = queryContent('/blog').where({ _path: path }).findOne();
+    let article = queryContent('/blog').where({ _path: cleanPath }).findOne();
     // get the surround information,
     // which is an array of documeents that come before and after the current document
-    let surround = queryContent('/blog').sort({ date: -1 }).findSurround(path, { before: 1, after: 1 });
+    let surround = queryContent('/blog').sort({ date: -1 }).findSurround(cleanPath, { before: 1, after: 1 });
     return {
         article: await article,
         surround: await surround
@@ -104,13 +108,13 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 const baseUrl = 'https://gonzalohirsch.com';
 const image = '/meta-img.jpg';
 useHead({
-    title: data.value.article.title,
+    title: data.value?.article?.title,
     meta: [
         // OG
-        { name: 'description', content: data.value.article.description },
-        { hid: 'og:title', property: 'og:title', content: data.value.article.title },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + data.value.article._path },
-        { hid: 'og:description', property: 'og:description', content: data.value.article.description },
+        { name: 'description', content: data.value?.article?.description },
+        { hid: 'og:title', property: 'og:title', content: data.value?.article?.title },
+        { hid: 'og:url', property: 'og:url', content: baseUrl + data.value?.article?._path },
+        { hid: 'og:description', property: 'og:description', content: data.value?.article?.description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpeg' },
@@ -119,9 +123,9 @@ useHead({
         { hid: 'og:image:alt', property: 'og:image:alt', content: 'Gonzalo Hirsch' },
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
-        { hid: 'twitter:title', name: 'twitter:title', content: data.value.article.title },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + data.value.article._path },
-        { hid: 'twitter:description', name: 'twitter:description', content: data.value.article.description },
+        { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },
+        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + data.value?.article?._path },
+        { hid: 'twitter:description', name: 'twitter:description', content: data.value?.article?.description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
     ],
@@ -129,7 +133,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + data.value.article._path
+            href: baseUrl + data.value?.article?._path
         }
     ],
     script: [
@@ -142,13 +146,13 @@ useHead({
                     '@type': 'WebPage',
                     '@id': 'https://gonzalohirsch.com/'
                 },
-                url: baseUrl + data.value.article._path,
-                image: [data.value.article?.image?.src || 'https://gonzalohirsch.com/meta-img.jpg'],
-                headline: data.value.article.headline,
-                abstract: data.value.article.excerpt,
-                datePublished: data.value.article.date,
-                dateModified: data.value.article.dateUpdated || data.value.article.date,
-                author: authorData.value[data.value.article.author],
+                url: baseUrl + data.value?.article?._path,
+                image: [data.value?.article?.image?.src || 'https://gonzalohirsch.com/meta-img.jpg'],
+                headline: data.value?.article?.headline,
+                abstract: data.value?.article?.excerpt,
+                datePublished: data.value?.article?.date,
+                dateModified: data.value?.article?.dateUpdated || data.value?.article?.date,
+                author: authorData.value[data.value?.article?.author],
                 publisher: authorData.value['Gonzalo Hirsch']
             })
         }
