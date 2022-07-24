@@ -1,97 +1,77 @@
 <template>
     <main>
-        <template v-if="!error">
-            <BlogHero />
-            <Section id="main" class="!pt-0">
-                <BlogList :data="data?.posts || []" />
-                <BlogPagination
-                    v-if="data?.totalPages > 1"
-                    class="mt-8"
-                    :currentPage="data?.pageNo"
-                    :totalPages="data?.totalPages"
-                    :nextPage="data?.nextPage"
-                    baseUrl="/blog"
-                    pageUrl="/blog/page/"
-                />
-            </Section>
-        </template>
-        <template v-else>
-            <Section id="main" class="!pt-0">
-                <div class="text-center text-typography_primary_light dark:text-typography_primary_dark">
-                    <h2>No posts were found</h2>
-                    <p>Why don't you try going to the main blog page or go back home?.</p>
-                    <div class="flex mt-8 justify-center">
-                        <ButtonsButton
-                            text="Blog Home"
-                            format="white"
-                            href="/blog"
-                            target="_self"
-                            aria="Go back to the blog homepage."
-                            extraClass=""
-                        />
-                        <ButtonsButton text="Home" format="white" href="/" target="_self" aria="Go back home." extraClass="ml-4" />
-                    </div>
-                </div>
-            </Section>
-        </template>
+        <ContentQuery
+            path="/blog"
+            :query="{
+                only: ['headline', 'excerpt', 'date', 'tags', '_path', 'image']
+            }"
+            :sort="{
+                date: -1
+            }"
+            :skip="blogCountLimit * (getPageNumber() - 1)"
+            :limit="blogCountLimit"
+        >
+            <template v-slot="{ data }">
+                <BlogHero />
+                <Section id="main" class="!pt-0">
+                    <BlogList :data="data" />
+                    <ContentQuery
+                        path="/blog"
+                        :query="{
+                            only: ['headline']
+                        }"
+                    >
+                        <template v-slot="{ data }">
+                            <BlogPagination
+                                v-if="getPageLimit(data.length) > 1"
+                                class="mt-8"
+                                :currentPage="getPageNumber()"
+                                :totalPages="getPageLimit(data.length)"
+                                :nextPage="getPageNumber() < getPageLimit(data.length)"
+                                baseUrl="/blog"
+                                pageUrl="/blog/page/"
+                            />
+                        </template>
+                        <template #not-found>
+                            <!-- Nothing -->
+                        </template>
+                    </ContentQuery>
+                </Section>
+            </template>
+            <template #not-found>
+                <SectionsError />
+            </template>
+        </ContentQuery>
     </main>
 </template>
 
 <script setup>
 // Fetching data
 const { path, params } = useRoute();
-const postCount = 6;
-const { data, pending, error, refresh } = await useAsyncData(
-    `content-${path}`,
-    async () => {
-        const pageNo = parseInt(params.number);
-        console.log(pageNo);
-        const posts = await queryContent('/blog')
-            .sort({ date: -1 })
-            .only(['headline', 'excerpt', 'date', 'tags', '_path', 'image'])
-            .limit(postCount)
-            .skip(postCount * (pageNo - 1))
-            .find()
-            .catch((err) => {
-                console.log(err);
-            });
-        console.log('ALK');
-        // Calculate total pages
-        const allPosts = await queryContent('/blog')
-            .find()
-            .then((res) => {
-                console.log(res);
-                return res;
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-        console.log('TOTAL');
-        const totalPages = Math.ceil(allPosts.length / postCount);
+const blogCountLimit = 6;
 
-        console.log(posts.length);
-        if (!posts.length) {
-            throw new Error('No posts found');
-            // return { nextPage: false, posts: undefined, pageNo, allPostsLength: totalPages };
-        }
+const getPageLimit = (totalPosts) => {
+    return Math.ceil(totalPosts / blogCountLimit);
+};
+const getPageNumber = () => {
+    return parseInt(params.number);
+};
 
-        const nextPage = pageNo < Math.ceil(totalPages / postCount);
-        return { nextPage, posts, pageNo, totalPages };
-    },
-    { server: false }
-);
-
-import { onMounted } from 'vue';
-onMounted(() => {
-    console.log(data.value, pending.value, error.value);
-    // const router = useRouter();
-    if (error.value || data.value === null || data.value.posts === undefined) {
-        // router.replace('/404')
+// Attempt to get the number
+const router = useRouter();
+let pageNo;
+try {
+    pageNo = getPageNumber();
+    if (isNaN(pageNo) || pageNo <= 0) {
+        router.replace('/404');
     }
-});
+} catch (err) {
+    console.error(err);
+    router.replace('/404');
+}
 
 // Set the meta
-const title = 'Blog | Gonzalo Hirsch';
+const title = `Page ${pageNo} | Blog | Gonzalo Hirsch`;
 const description =
     'A personal blog where Gonzalo Hirsch writes about programming and insights he gains on software engineering and different technologies from the industry.';
 const baseUrl = 'https://gonzalohirsch.com/';
