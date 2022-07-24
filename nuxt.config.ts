@@ -56,7 +56,7 @@ for (let i = 1; i <= blogPageCount; i++){
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
     css: ['/assets/css/main.css'],
-    target: 'server',
+    target: 'static',
     ssr: true,
     generate: {
         routes: routes,
