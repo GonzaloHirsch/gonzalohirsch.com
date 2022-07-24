@@ -22,7 +22,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         );
       };
   
-      if (to.hash) {
+      if (to.hash && to.hash !== '#') {
         const el = await findEl(to.hash);
         if (el) {
             const offset = el.getBoundingClientRect().top + window.scrollY - navHeight;
