@@ -64,7 +64,7 @@
                 </div>
             </aside>
             <article class="prose col-span-full md:col-span-7 relative">
-                <span v-if="data.article.dateUpdated" class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75">(Updated at: {{$formatDate(data.article.dateUpdated)}})</span>
+                <span :class="['italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75', data.article.dateUpdated ? 'block' : 'hidden']">(Updated at: {{data.article.dateUpdated ? $formatDate(data.article.dateUpdated) : undefined}})</span>
                 <ContentDoc :path="path" class="blog-content" />
             </article>
             <aside class="col-span-full md:col-span-3 blog-aside h-fit">
@@ -72,8 +72,7 @@
                     <BlogTableOfContents :links="data.article.body.toc.links"/>
                 </div>
                 <div
-                    v-if="data?.surround.filter(elem => elem !== null).length > 0"
-                    class="blog-aside-wrapper"
+                    :class="['blog-aside-wrapper', data?.surround.filter(elem => elem !== null).length > 0 ? '!flex' : '!hidden']"
                 >
                     <BlogRelatedArticles :surround="data.surround"/>
                 </div>
