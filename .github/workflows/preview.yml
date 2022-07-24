@@ -27,7 +27,7 @@ jobs:
             aws-region: ${{ secrets.S3_BUCKET_REGION }}
         
         - name: "Rename all html files"
-          run: for file in $(find ./out -name "*.html"); do mv "$file" "${file%%.html}"; done
+          run: for file in $(find ./.output/public -name "*.html"); do mv "$file" "${file%%.html}"; done
 
         - name: Deploy non-cached html files
           run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "*/*.xml" --exclude "*/*.pdf" --exclude "_nuxt/*" --exclude "api/*" --exclude "*/*.png" --exclude "*/*.jpg" --exclude "*/*.svg" --exclude "*/*.txt" --exclude "*/*.jpeg" --exclude "*/*.webp" --content-type "text/html" --cache-control max-age=0,public,must-revalidate --delete
