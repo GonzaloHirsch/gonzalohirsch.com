@@ -17,7 +17,7 @@
         </div>
         <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">Blog</h1>
         <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">
-            A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry.
+            A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry. You can expect to find coding challenges, tutorials, and insights on multiple stacks here.
         </p>
         <div
             class="border-t-2 mt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right"
