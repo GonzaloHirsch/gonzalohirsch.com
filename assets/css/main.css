@@ -124,11 +124,15 @@ body {
 /* Blog Breadcrumbs */
 
 .blog-breadcrumb {
-    @apply flex flex-row font-light;
+    @apply inline-block text-center font-light;
 }
 
 .blog-breadcrumb > span {
-    @apply mx-1;
+    @apply mx-1 inline;
+}
+
+.blog-breadcrumb > li {
+    @apply inline;
 }
 
 .blog-breadcrumb > li a {
