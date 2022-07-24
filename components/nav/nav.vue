@@ -6,11 +6,11 @@
             'bg-background_light dark:bg-background_dark bg-opacity-[98%] overflow-x-hidden overflow-y-clip'
         ]"
     >
-        <a
+        <NuxtLink
             class="text-h4 leading-h4 md:text-h3 md:leading-h3 font-semibold text-brand_primary_light dark:text-brand_primary_dark"
-            href="/#"
+            to="/#"
             target="_self"
-            >Gonzalo Hirsch</a
+            >Gonzalo Hirsch</NuxtLink
         >
         <ul class="hidden lg:flex flex-row">
             <template v-for="link in links" :key="link.href">
@@ -26,7 +26,8 @@
                 'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
                 isMenuVisible ? 'hidden' : ''
             ]"
-            width="32" height="32"
+            width="32"
+            height="32"
             @click="toggleMenu"
         />
         <IconsClose
@@ -34,7 +35,8 @@
                 'w-8 h-8 block lg:hidden cursor-pointer text-typography_primary_light dark:text-typography_primary_dark',
                 isMenuVisible ? '' : 'hidden'
             ]"
-            width="32" height="32"
+            width="32"
+            height="32"
             @click="toggleMenu"
         />
     </nav>
@@ -47,14 +49,22 @@
         <ul class="flex flex-col items-center mt-4">
             <template v-for="link in links" :key="link.href">
                 <li class="mobile-nav-item">
-                    <a :href="link.href" :alt="link.alt" target="_self">
+                    <NuxtLink :to="link.href" :alt="link.alt" target="_self">
                         {{ link.text }}
-                    </a>
+                    </NuxtLink>
                 </li>
             </template>
         </ul>
-        <ButtonsButton text="CV" @click="trackCVClick" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mt-6"/>
-        <NavHorizontalIcons class="mt-auto mb-6"/>
+        <ButtonsButton
+            text="CV"
+            @click="trackCVClick"
+            format="white"
+            href="/Gonzalo-Hirsch-CV.pdf"
+            target="_blank"
+            aria="Check out my CV."
+            extraClass="mt-6"
+        />
+        <NavHorizontalIcons class="mt-auto mb-6" />
     </nav>
     <div v-if="isMenuVisible" class="z-[5] absolute bottom-0 top-0 right-0 left-0 w-full h-full bg-gray-400 bg-opacity-25" @click="toggleMenu" />
 </template>
@@ -132,7 +142,7 @@ import { useGtag } from 'vue-gtag-next';
 const { event } = useGtag();
 const trackCVClick = () => {
     event('event', 'cv_view', {
-        event_label: 'Hero',
+        event_label: 'Hero'
     });
 };
 </script>

@@ -32,10 +32,10 @@
                     $formatDate(data?.article?.date)
                 }}</span>
             </div>
-            <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">
+            <h1 class="blog-post-text font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">
                 {{ data?.article?.headline }}
             </h1>
-            <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data?.article?.excerpt }}</p>
+            <p class="blog-post-text mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">{{ data?.article?.excerpt }}</p>
             <div
                 class="border-b-2 pb-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between mt-12 md:mt-4"
             >
@@ -45,7 +45,7 @@
                         :alt="`Image of ${data?.article?.author}`"
                         class="w-8 h-8 object-cover rounded-full mr-2"
                     />
-                    <span class="text-lg leading-lg font-light"
+                    <span class="blog-post-text text-lg leading-lg font-light"
                         >By
                         <a class="hover:underline italic" :href="data?.article?.authorUrl" target="_blank" rel="noopener noreferrer">{{
                             data?.article?.author
@@ -59,24 +59,24 @@
         </Section>
         <Section id="main" class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12">
             <aside class="col-span-full md:col-span-3 md:hidden">
-                <div class="blog-aside-wrapper mb-2">
+                <div class="blog-post-text blog-aside-wrapper mb-2">
                     <BlogTableOfContents :links="data?.article?.body?.toc?.links" />
                 </div>
             </aside>
-            <article class="prose col-span-full md:col-span-7 relative">
+            <article class="blog-post-text prose col-span-full md:col-span-7 relative">
                 <span
                     v-show="data?.article?.dateUpdated"
                     class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75"
                     >(Updated at: {{ $formatDate(data?.article?.dateUpdated) }})</span
                 >
-                <ContentDoc :path="path" class="blog-content" />
+                <ContentDoc :path="path" class="blog-post-text blog-content" />
             </article>
             <aside class="col-span-full md:col-span-3 blog-aside h-fit">
                 <div class="!hidden blog-aside-wrapper md:!flex mb-4">
-                    <BlogTableOfContents :links="data?.article?.body?.toc?.links" />
+                    <BlogTableOfContents :links="data?.article?.body?.toc?.links" class="blog-post-text"/>
                 </div>
                 <div v-if="data?.surround?.filter((elem) => elem !== null)?.length > 0" class="blog-aside-wrapper">
-                    <BlogRelatedArticles :surround="data?.surround" />
+                    <BlogRelatedArticles :surround="data?.surround" class="blog-post-text"/>
                 </div>
             </aside>
         </Section>
@@ -179,5 +179,12 @@ const getImage = (name) => {
 }
 .dark .blog-aside-wrapper {
     @apply border-typography_primary_dark;
+}
+
+.blog-post-text{
+    @apply text-typography_primary_light;
+}
+.dark .blog-post-text{
+    @apply text-typography_primary_dark;
 }
 </style>
