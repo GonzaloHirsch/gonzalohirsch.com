@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     ssr: true,
     generate: {
         routes: routes,
-        fallback: '404.html',
+        // fallback: '404.html',
         subFolders: false
     },
     // Sitemap
