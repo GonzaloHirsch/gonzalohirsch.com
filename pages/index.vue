@@ -2,6 +2,7 @@
     <main id="main">
         <SectionsHero />
         <SectionsAbout />
+        <SectionsBlogCta />
         <SectionsExperience />
         <SectionsPassion />
         <SectionsProjects />

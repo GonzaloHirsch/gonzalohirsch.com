@@ -49,7 +49,7 @@
         <ul class="flex flex-col items-center mt-4">
             <template v-for="link in links" :key="link.href">
                 <li class="mobile-nav-item">
-                    <NuxtLink :to="link.href" :alt="link.alt" target="_self">
+                    <NuxtLink :to="link.href" :alt="link.alt" target="_self" @click="handleNavClick">
                         {{ link.text }}
                     </NuxtLink>
                 </li>
@@ -57,7 +57,6 @@
         </ul>
         <ButtonsButton
             text="CV"
-            @click="trackCVClick"
             format="white"
             href="/Gonzalo-Hirsch-CV.pdf"
             target="_blank"
@@ -114,6 +113,10 @@ const toggleMenu = () => {
         document.body.classList.remove('menu-open');
     }
 };
+const handleNavClick = () => {
+    console.log("CLICK");
+    setTimeout(() => toggleMenu(), 100);
+}
 
 // Scroll handling
 import { onUnmounted, ref } from 'vue';
@@ -136,15 +139,6 @@ onUnmounted(() => {
         window.removeEventListener('scroll', handleScroll);
     }
 });
-
-// Gtag tracking
-import { useGtag } from 'vue-gtag-next';
-const { event } = useGtag();
-const trackCVClick = () => {
-    event('event', 'cv_view', {
-        event_label: 'Hero'
-    });
-};
 </script>
 
 <style scoped>
