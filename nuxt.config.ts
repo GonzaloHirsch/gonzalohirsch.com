@@ -113,6 +113,7 @@ export default defineNuxtConfig({
         // This is the option that works
         darkMode: 'class'
     },
+    sourcemap: false,
     // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
     content: {
         // https://content.nuxtjs.org/api/configuration
