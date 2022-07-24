@@ -1,7 +1,7 @@
 <template>
     <div class="pagination-list text-typography_primary_light dark:text-typography_primary_dark">
         <!-- Chevron -->
-        <nuxt-link v-show="currentPage > 1" class="pagination-item pagination-icon" :to="prevLink"><IconsChevronDown class="transform rotate-90 h-6 w-6"/></nuxt-link>
+        <nuxt-link v-show="currentPage > 1" class="pagination-item pagination-icon" :to="prevLink"><IconsChevronDown class="transform rotate-90 h-6 w-6" width="24" height="24"/></nuxt-link>
         <!-- First Page -->
         <nuxt-link :class="['pagination-item', currentPage === 1 ? 'active' : '']" :to="baseUrl">1</nuxt-link>
         <!-- ... -->
@@ -20,7 +20,7 @@
         <!-- Last Page -->
         <nuxt-link v-show="totalPages > 1" :class="['pagination-item', currentPage === totalPages ? 'active' : '']" :to="getPageUrl(totalPages)">{{ totalPages }}</nuxt-link>
         <!-- Chevron -->
-        <nuxt-link v-show="currentPage < totalPages" class="pagination-item pagination-icon" :to="getPageUrl(currentPage + 1)"><IconsChevronDown class="transform -rotate-90 h-6 w-6"/></nuxt-link>
+        <nuxt-link v-show="currentPage < totalPages" class="pagination-item pagination-icon" :to="getPageUrl(currentPage + 1)"><IconsChevronDown class="transform -rotate-90 h-6 w-6" width="24" height="24"/></nuxt-link>
     </div>
 </template>
 

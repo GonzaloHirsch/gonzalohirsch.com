@@ -7,7 +7,7 @@
     >
         <a href="#" aria-label="Scroll to Top" class="flex flex-col items-center py-1 text-center">
             <span class="text-xxs leading-xxs uppercase font-highlight sm:w-6/12">Scroll to Top</span>
-            <IconsArrowUp class="w-4 h-4" />
+            <IconsArrowUp class="w-4 h-4" width="16" height="16"/>
         </a>
     </div>
 </template>

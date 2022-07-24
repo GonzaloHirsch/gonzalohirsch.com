@@ -2,7 +2,7 @@
     <nav class="toc">
         <header :class="['flex flex-row justify-between items-center cursor-pointer', isVisible ? 'mb-2' : '']" @click="toggleToc" aria-label="Expand the table of contents.">
             <h3 class="blog-aside-title mb-0">Table of Contents</h3>
-            <IconsChevronDown :class="['w-6 h-6 transform duration-100', isVisible ? '' : 'rotate-180']"/>
+            <IconsChevronDown :class="['w-6 h-6 transform duration-100', isVisible ? '' : 'rotate-180']" width="24" height="24"/>
         </header>
         <ul v-if="links" :class="[isVisible ? 'block' : 'hidden']">
             <!-- render each link with depth class -->
