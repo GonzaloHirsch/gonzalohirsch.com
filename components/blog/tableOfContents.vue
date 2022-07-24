@@ -4,7 +4,7 @@
             <h3 class="blog-aside-title mb-0">Table of Contents</h3>
             <IconsChevronDown :class="['w-6 h-6 transform duration-100', isVisible ? '' : 'rotate-180']"/>
         </header>
-        <ul :class="[isVisible ? 'block' : 'hidden']">
+        <ul v-if="links" :class="[isVisible ? 'block' : 'hidden']">
             <!-- render each link with depth class -->
             <li v-for="link of flattenLinks(links)" :key="link.id" :class="`toc-link_${link.depth} first:mt-0 mt-2 md:mt-1`">
                 <NuxtLink :to="`#${link.id}`" class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark duration-100">

@@ -16,7 +16,7 @@
                 <BlogList :data="data" />
             </ContentQuery>
             <BlogPagination
-                v-show="data > 1"
+                v-if="data > 1"
                 class="mt-8"
                 :currentPage="1"
                 :totalPages="data"

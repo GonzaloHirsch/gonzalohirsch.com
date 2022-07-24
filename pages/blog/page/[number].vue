@@ -1,10 +1,11 @@
 <template>
     <main>
         <BlogHero />
-        <Section id="main" :class="['!pt-0', data?.posts?.length > 0 ? 'block' : 'hidden']">
+        <Section v-if="data?.posts?.length > 0" id="main" class="!pt-0">
             <BlogList :data="data.posts" />
             <BlogPagination
-                :class="['mt-8', data.totalPages > 1 ? 'block' : 'hidden']"
+                v-if="data.totalPages > 1"
+                class="mt-8"
                 :currentPage="data.pageNo"
                 :totalPages="data.totalPages"
                 :nextPage="data.nextPage"
@@ -12,12 +13,19 @@
                 pageUrl="/blog/page/"
             />
         </Section>
-        <Section :class="['!pt-0', data?.posts?.length > 0 ? 'hidden' : 'block']">
+        <Section v-else id="main" class="!pt-0">
             <div class="text-center text-typography_primary_light dark:text-typography_primary_dark">
                 <h2>No posts were found</h2>
                 <p>Why don't you try going to the main blog page or go back home?.</p>
                 <div class="flex mt-8 justify-center">
-                    <ButtonsButton text="Blog Home" format="white" href="/blog" target="_self" aria="Go back to the blog homepage." extraClass="" />
+                    <ButtonsButton
+                        text="Blog Home"
+                        format="white"
+                        href="/blog"
+                        target="_self"
+                        aria="Go back to the blog homepage."
+                        extraClass=""
+                    />
                     <ButtonsButton text="Home" format="white" href="/" target="_self" aria="Go back home." extraClass="ml-4" />
                 </div>
             </div>

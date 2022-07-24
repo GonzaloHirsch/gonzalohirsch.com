@@ -1,26 +1,26 @@
 <template>
     <div class="pagination-list text-typography_primary_light dark:text-typography_primary_dark">
         <!-- Chevron -->
-        <nuxt-link v-if="currentPage > 1" class="pagination-item pagination-icon" :to="prevLink"><IconsChevronDown class="transform rotate-90 h-6 w-6"/></nuxt-link>
+        <nuxt-link v-show="currentPage > 1" class="pagination-item pagination-icon" :to="prevLink"><IconsChevronDown class="transform rotate-90 h-6 w-6"/></nuxt-link>
         <!-- First Page -->
         <nuxt-link :class="['pagination-item', currentPage === 1 ? 'active' : '']" :to="baseUrl">1</nuxt-link>
         <!-- ... -->
-        <span v-if="currentPage > 2" class="pagination-extra"> ... </span>
+        <span v-show="currentPage > 2" class="pagination-extra"> ... </span>
         <template v-for="page in pageRange" :key="page">
             <nuxt-link
-                v-if="page !== 1 && page !== totalPages"
+                v-show="page !== 1 && page !== totalPages"
                 :class="['pagination-item', currentPage === page ? 'active' : '']"
                 :to="getPageUrl(page)"
                 >{{ page }}</nuxt-link
             >
         </template>
         <!-- ... -->
-        <span v-if="currentPage < totalPages - 1" class="pagination-extra"> ... </span>
+        <span v-show="currentPage < totalPages - 1" class="pagination-extra"> ... </span>
 
         <!-- Last Page -->
-        <nuxt-link v-if="totalPages > 1" :class="['pagination-item', currentPage === totalPages ? 'active' : '']" :to="getPageUrl(totalPages)">{{ totalPages }}</nuxt-link>
+        <nuxt-link v-show="totalPages > 1" :class="['pagination-item', currentPage === totalPages ? 'active' : '']" :to="getPageUrl(totalPages)">{{ totalPages }}</nuxt-link>
         <!-- Chevron -->
-        <nuxt-link v-if="currentPage < totalPages" class="pagination-item pagination-icon" :to="getPageUrl(currentPage + 1)"><IconsChevronDown class="transform -rotate-90 h-6 w-6"/></nuxt-link>
+        <nuxt-link v-show="currentPage < totalPages" class="pagination-item pagination-icon" :to="getPageUrl(currentPage + 1)"><IconsChevronDown class="transform -rotate-90 h-6 w-6"/></nuxt-link>
     </div>
 </template>
 
