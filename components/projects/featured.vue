@@ -41,10 +41,10 @@
                 </li>
             </ul>
             <div class="flex flex-row project-featured-external mt-2">
-                <NuxtLink
+                <a
                     v-if="project.url"
                     class="project-featured-external-link"
-                    :to="project.url"
+                    :href="project.url"
                     :alt="`See ${project.title} on an external URL.`"
                     :aria-label="`See ${project.title} on an external URL.`"
                     target="_blank"
@@ -56,18 +56,18 @@
                         :alt="`See ${project.title} on an external URL.`"
                         :aria-label="`See ${project.title} on an external URL.`"
                     />
-                </NuxtLink>
-                <NuxtLink
+                </a>
+                <a
                     v-if="project.github"
                     class="project-featured-external-link"
-                    :to="project.github"
+                    :href="project.github"
                     :alt="`See ${project.title} on Github.`"
                     :aria-label="`See ${project.title} on Github.`"
                     target="_blank"
                     rel="noopener noreferer"
                 >
                     <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
-                </NuxtLink>
+                </a>
             </div>
         </div>
     </div>
