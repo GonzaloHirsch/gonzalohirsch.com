@@ -4,7 +4,7 @@ description: 'Tech interviews for software engineers are focused on solving codi
 headline: '30 Days of Interview Problems'
 excerpt: 'Tech interviews for software engineers are focused on solving coding problems in a short amount of time. The "30 Days of Interview Problems" challenge aims to improve my skills.'
 date: '2022-07-24T12:00:00'
-#dateUpdated: "2022-07-23T12:00:00"
+dateUpdated: "2022-07-25T12:00:00"
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 # image:
@@ -40,5 +40,10 @@ The main focus of the challenge will be on interview preparation for any technic
 Each question will probably be in the algorithm category, which includes any data structure (like a binary tree), search algorithm (such as binary search or dynamic programming algorithms), or simply a coding question. I have seen questions on system design focused on concurrency, so I'll keep an eye on those. Data science is not my specialization, so solving any coding interview question in that field is not an option.
 
 ## Progress
+
+Problems:
+- **Day 1** problems, you can find the post [here](/blog/day-1-30-days-interview-problems):
+  - [Encrypt and Decrypt Strings](https://leetcode.com/problems/encrypt-and-decrypt-strings/)
+  - [Letter Tile Possibilities](https://leetcode.com/problems/letter-tile-possibilities/)
 
 I'll post my progress here, so stay tuned for my updates on the "**30 Days of Interview Problems**" coding challenge. If you have a coding problem or question you want to include in the challenge, find me on my social networks and send them my way.

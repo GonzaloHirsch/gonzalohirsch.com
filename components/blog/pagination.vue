@@ -74,7 +74,7 @@ const prevLink = computed(() => {
 }
 
 .pagination-item {
-    @apply rounded-md border border-typography_primary_light px-2 py-1 mx-1 w-8 text-center duration-100 h-full;
+    @apply rounded-md border border-typography_primary_light px-2 py-1 mx-1 w-8 text-center h-full;
 }
 
 .dark .pagination-item {
