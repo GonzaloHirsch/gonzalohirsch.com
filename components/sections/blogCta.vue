@@ -39,7 +39,7 @@
     @apply text-typography_primary_dark;
 }
 .about-text .link {
-    @apply font-bold duration-100;
+    @apply font-bold;
 }
 .about-text .link:hover {
     @apply bg-brand_primary_light text-typography_primary_dark;

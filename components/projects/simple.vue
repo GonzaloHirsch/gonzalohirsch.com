@@ -80,7 +80,7 @@ const props = defineProps({
     @apply mt-4;
 }
 .project-simple-content a {
-    @apply duration-100 font-bold;
+    @apply font-bold;
 }
 .project-simple-content a:hover {
     @apply bg-brand_primary_light text-typography_primary_dark;
@@ -90,7 +90,7 @@ const props = defineProps({
 }
 /* EXTERNAL LINK */
 .project-simple-external-link {
-    @apply w-fit flex text-typography_primary_light duration-100 mr-2;
+    @apply w-fit flex text-typography_primary_light mr-2;
 }
 .dark .project-simple-external-link {
     @apply text-typography_primary_dark;

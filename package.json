@@ -13,6 +13,7 @@
     "sitemap": "7.1.1"
   },
   "dependencies": {
+    "@vueuse/core": "8.9.4",
     "vue-gtag-next": "1.14.0"
   }
 }

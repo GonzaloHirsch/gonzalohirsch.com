@@ -1,5 +1,5 @@
 <template>
-    <main class="text-typography_primary_light dark:text-typography_primary_dark">
+    <main class="blog-post-text">
         <ContentDoc>
             <template v-slot="{ doc }">
                 <Section id="blog-title" type="header">
@@ -61,13 +61,13 @@
                             <BlogTableOfContents :links="doc.body?.toc?.links" />
                         </div>
                     </aside>
-                    <article class="blog-post-text prose col-span-full md:col-span-7 relative">
+                    <article class="prose col-span-full md:col-span-7 relative">
                         <span
                             v-show="doc.dateUpdated"
                             class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75"
                             >(Updated at: {{ $formatDate(doc.dateUpdated) }})</span
                         >
-                        <ContentRenderer :value="doc" class="blog-post-text blog-content" />
+                        <ContentRenderer :value="doc" class="blog-content blog-post-text" />
                     </article>
                     <aside class="col-span-full md:col-span-3 blog-aside h-fit">
                         <div class="!hidden blog-aside-wrapper md:!flex mb-4">

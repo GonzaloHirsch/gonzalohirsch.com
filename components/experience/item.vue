@@ -6,7 +6,7 @@
                 :to="data.company.url"
                 target="_blank"
                 rel="noopener noreferer"
-                class="text-brand_primary_light dark:text-brand_primary_dark hover:underline inline-block transition duration-100"
+                class="text-brand_primary_light dark:text-brand_primary_dark hover:underline inline-block"
                 >{{ data.company.name }}</NuxtLink
             >
         </h3>
