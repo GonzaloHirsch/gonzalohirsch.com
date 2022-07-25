@@ -33,7 +33,9 @@ h5 {
     @apply mt-0;
 }
 
-.blog-content > p + p {
+.blog-content > p + p,
+.blog-content > ul + p,
+.blog-content > ol + p {
     @apply mt-4;
 }
 
@@ -42,19 +44,19 @@ h5 {
 }
 
 .blog-content h2 {
-    @apply mt-4;
+    @apply mt-8;
 }
 
 .blog-content h3 {
-    @apply mt-4;
+    @apply mt-6;
 }
 
 .blog-content h4 {
-    @apply mt-2;
+    @apply mt-4;
 }
 
 .blog-content h5 {
-    @apply mt-2;
+    @apply mt-4;
 }
 
 @screen md {
@@ -161,32 +163,10 @@ body {
     @apply text-lg leading-h5;
 }
 
-/* Blog Code */
-
-.blog-content pre {
-    @apply w-full overflow-x-auto my-6 border rounded-md border-brand_primary_light/50 p-2 bg-background_dark;
-}
-
-.dark .blog-content pre {
-    @apply border-brand_primary_dark/50;
-}
-
-.blog-content pre > code .line {
-    @apply break-words;
-}
-
-/* .blog-content :not(pre) code {
-    @apply bg-background_dark text-typography_primary_dark;
-}
-
-.dark .blog-content :not(pre) code {
-    @apply bg-background_light text-typography_primary_light;
-} */
-
 /* Blog Links */
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
-    @apply underline font-bold duration-100;
+    @apply underline font-bold;
 }
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
