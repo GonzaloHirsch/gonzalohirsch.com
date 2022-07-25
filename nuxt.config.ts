@@ -118,7 +118,8 @@ export default defineNuxtConfig({
     content: {
         // https://content.nuxtjs.org/api/configuration
         highlight: {
-            theme: 'github-dark'
+            theme: 'github-dark',
+            preload: ['java']
         }
     }
 });

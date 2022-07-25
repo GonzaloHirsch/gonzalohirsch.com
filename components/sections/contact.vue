@@ -1,7 +1,7 @@
 <template>
     <Section id="contact" :fullHeight="true" :forcedHeight="true">
         <div
-            class="flex flex-col items-center justify-center h-full bg-brand_secondary_light/20 dark:bg-brand_secondary_dark/20 rounded-md border-brand_primary_light dark:border-brand_primary_dark duration-300 my-auto"
+            class="flex flex-col items-center justify-center h-full bg-brand_secondary_light/20 dark:bg-brand_secondary_dark/20 rounded-md border-brand_primary_light dark:border-brand_primary_dark my-auto"
         >
             <h2 class="section-title relative mb-6">Get in Touch</h2>
             <p class="contact-text w-10/12">

@@ -3,13 +3,13 @@
         <li
             v-for="article in data"
             :key="article._path"
-            class="col-span-full md:col-span-5 relative rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group duration-100"
+            class="col-span-full md:col-span-5 relative rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group"
         >
             <NuxtLink :to="article._path" class="p-4 block relative">
                 <div class="wrapper">
                     <header>
                         <h2
-                            class="text-h3 leading-h3 font-semibold mb-2 group-hover:text-brand_primary_light dark:group-hover:text-brand_primary_dark duration-100"
+                            class="text-h3 leading-h3 font-semibold mb-2 group-hover:text-brand_primary_light dark:group-hover:text-brand_primary_dark"
                         >
                             {{ article.headline }}
                         </h2>
