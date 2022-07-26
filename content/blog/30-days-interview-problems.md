@@ -45,5 +45,8 @@ Problems:
 - **Day 1** problems, you can find the post [here](/blog/day-1-30-days-interview-problems):
   - [Encrypt and Decrypt Strings](https://leetcode.com/problems/encrypt-and-decrypt-strings/)
   - [Letter Tile Possibilities](https://leetcode.com/problems/letter-tile-possibilities/)
+- **Day 2** problems, you can find the post [here](/blog/day-2-30-days-interview-problems):
+  - [Form Largest Integer With Digits That Add up to Target](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/)
+  - [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
 
 I'll post my progress here, so stay tuned for my updates on the "**30 Days of Interview Problems**" coding challenge. If you have a coding problem or question you want to include in the challenge, find me on my social networks and send them my way.

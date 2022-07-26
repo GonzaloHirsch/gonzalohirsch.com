@@ -47,9 +47,10 @@ const person = {
 };
 const jsonLds = [website, person];
 
+// Sitemap
 const blogPageCount = 1;
 const routes = ['/', '/404'];
-for (let i = 1; i <= blogPageCount; i++){
+for (let i = 1; i <= blogPageCount; i++) {
     routes.push(`/blog/page/${i}`);
 }
 
@@ -67,7 +68,7 @@ export default defineNuxtConfig({
     // https://content.nuxtjs.org/guide/recipes/sitemap/
     nitro: {
         prerender: {
-            routes: ['/sitemap.xml']
+            routes: ['/sitemap.xml', '/rss.xml']
         }
     },
     router: {

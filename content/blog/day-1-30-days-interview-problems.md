@@ -21,7 +21,7 @@ To avoid a bias in the problem selection, I used the "Pick One" option from [Lee
 
 ## Encrypt and Decrypt Strings
 
-This [problem](https://leetcode.com/problems/encrypt-and-decrypt-strings/) proved to be an interesting one in terms of a solution. I, initially, didn't give much thought to the performance; my mindset was to achieve a working solution and use that. The only aspect I was sure about was using a HashMap for the encryption and decryption. The main advantage of the [Hash Table](https://en.wikipedia.org/wiki/Hash_table) data structure is the fast access it provides, O(1).
+This [problem](https://leetcode.com/problems/encrypt-and-decrypt-strings/) proved to be an interesting one in terms of a solution. I, initially, didn't give much thought to the performance; my mindset was to achieve a working solution and use that. The only aspect I was sure about was using a HashMap for the encryption and decryption. The main advantage of the [Hash Table](https://en.wikipedia.org/wiki/Hash_table) data structure is the fast access it provides, [O(1)](https://www.freecodecamp.org/news/my-first-foray-into-technology-c5b6e83fe8f1/).
 
 After about 30 minutes, I managed to get a working solution, which worked well for the initial cases.
 
