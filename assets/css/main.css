@@ -35,7 +35,9 @@ h5 {
 
 .blog-content > p + p,
 .blog-content > ul + p,
-.blog-content > ol + p {
+.blog-content > ol + p,
+.blog-content > p + ul,
+.blog-content > p + ol {
     @apply mt-4;
 }
 
@@ -197,9 +199,12 @@ body {
 
 /* Blog Lists */
 
-.blog-content ul,
-.blog-content ol {
+.blog-content ul {
     @apply pl-4;
+}
+
+.blog-content ol {
+    @apply pl-5;
 }
 
 .blog-content ul {
