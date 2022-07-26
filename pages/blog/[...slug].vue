@@ -90,9 +90,9 @@
 <script setup>
 const { $formatDate } = useNuxtApp();
 const { path } = useRoute();
+const cleanPath = path.replace(/\/+$/, '');
 const { data, error } = await useAsyncData(`content-${path}`, async () => {
     // Remove a trailing slash in case the browser adds it, it might break the routing
-    const cleanPath = path.replace(/\/+$/, '');
     // fetch document where the document path matches with the cuurent route
     let article = queryContent('/blog').where({ _path: cleanPath }).findOne();
     // get the surround information,
@@ -116,7 +116,7 @@ useHead({
         // OG
         { name: 'description', content: data.value?.article?.description },
         { hid: 'og:title', property: 'og:title', content: data.value?.article?.title },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + data.value?.article?._path },
+        { hid: 'og:url', property: 'og:url', content: baseUrl + cleanPath },
         { hid: 'og:description', property: 'og:description', content: data.value?.article?.description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -127,7 +127,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + data.value?.article?._path },
+        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + cleanPath },
         { hid: 'twitter:description', name: 'twitter:description', content: data.value?.article?.description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -136,7 +136,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + data.value?.article?._path
+            href: baseUrl + cleanPath
         }
     ],
     script: [
@@ -149,7 +149,7 @@ useHead({
                     '@type': 'WebPage',
                     '@id': 'https://gonzalohirsch.com/'
                 },
-                url: baseUrl + data.value?.article?._path,
+                url: baseUrl + cleanPath,
                 image: [data.value?.article?.image?.src || 'https://gonzalohirsch.com/meta-img.jpg'],
                 headline: data.value?.article?.headline,
                 abstract: data.value?.article?.excerpt,
