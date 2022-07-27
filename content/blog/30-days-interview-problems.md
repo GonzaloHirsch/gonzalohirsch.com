@@ -4,7 +4,7 @@ description: 'Tech interviews for software engineers are focused on solving codi
 headline: '30 Days of Interview Problems'
 excerpt: 'Tech interviews for software engineers are focused on solving coding problems in a short amount of time. The "30 Days of Interview Problems" challenge aims to improve my skills.'
 date: '2022-07-24T12:00:00'
-dateUpdated: "2022-07-25T12:00:00"
+dateUpdated: "2022-07-27T12:00:00"
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 # image:
@@ -48,5 +48,8 @@ Problems:
 - **Day 2** problems, you can find the post [here](/blog/day-2-30-days-interview-problems):
   - [Form Largest Integer With Digits That Add up to Target](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/)
   - [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
+- **Day 3** problems, you can find the post [here](/blog/day-3-30-days-interview-problems):
+  - [Maximum XOR After Operations](https://leetcode.com/problems/maximum-xor-after-operations/)
+  - [Find a Peak Element II](https://leetcode.com/problems/find-a-peak-element-ii/)
 
 I'll post my progress here, so stay tuned for my updates on the "**30 Days of Interview Problems**" coding challenge. If you have a coding problem or question you want to include in the challenge, find me on my social networks and send them my way.
