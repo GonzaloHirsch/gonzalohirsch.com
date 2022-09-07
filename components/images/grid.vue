@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-8 grid-rows-8 gap-2">
         <div class="grid-image-wrapper row-start-5 row-span-1 col-start-3 col-span-3">
-            <img :src="props.imageTL.src" :alt="props.imageTL.alt" srcset="" class="grid-image" />
+            <img :src="props.imageTL.src" :alt="props.imageTL.alt" srcset="" class="grid-image"/>
             <div class="image-overlay bg-brand_primary_light dark:bg-brand_primary_dark"/>
         </div>
         <div class="grid-image-wrapper row-start-6 row-span-5 col-span-5">
@@ -38,7 +38,7 @@ const props = defineProps({
 
 <style scoped>
 .grid-image {
-    @apply object-cover h-full z-[1];
+    @apply object-cover z-[1] w-full h-full;
 }
 .grid-image-wrapper:hover {
     @apply shadow-lg;

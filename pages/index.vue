@@ -30,7 +30,26 @@ const webpage = {
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
 };
 useHead({
+    title: 'Gonzalo Hirsch | Software Engineer and Freelancer',
     meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+            hid: 'description',
+            name: 'description',
+            content:
+                "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences."
+        },
+        {
+            hid: 'keywords',
+            name: 'keywords',
+            content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences'
+        },
+        {
+            hid: 'author',
+            name: 'author',
+            content: 'Gonzalo Hirsch'
+        },
         // OG Card
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:url', property: 'og:url', content: url },

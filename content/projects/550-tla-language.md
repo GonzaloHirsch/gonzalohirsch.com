@@ -1,5 +1,5 @@
 ---
-title: 'Arr Programming'
+name: 'Arr Programming'
 github: 'https://github.com/GonzaloHirsch/arr-programming-language'
 tags: [
     'C', 'Lex', 'Yac', 'AST'

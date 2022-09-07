@@ -1,6 +1,6 @@
 <template>
     <div class="project-simple-wrapper flex w-full flex-col bg-brand_secondary_light dark:bg-brand_secondary_dark rounded-md p-4">
-        <h4 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.title }}</h4>
+        <h4 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.name }}</h4>
         <ContentDoc :path="project._path" class="project-simple-content" />
         <ul v-if="project.tags && project.tags.length > 0" class="flex flex-row flex-wrap list-none mt-2">
             <li
@@ -16,28 +16,28 @@
                 v-if="project.url"
                 class="project-simple-external-link"
                 :to="project.url"
-                :alt="`See ${project.title} on an external URL.`"
-                :aria-label="`See ${project.title} on an external URL.`"
+                :alt="`See ${project.name} on an external URL.`"
+                :aria-label="`See ${project.name} on an external URL.`"
                 target="_blank"
                 rel="noopener noreferer"
             >
                 <IconsExternal
                     class="w-7 h-7"
                     width="28" height="28"
-                    :alt="`See ${project.title} on an external URL.`"
-                    :aria-label="`See ${project.title} on an external URL.`"
+                    :alt="`See ${project.name} on an external URL.`"
+                    :aria-label="`See ${project.name} on an external URL.`"
                 />
             </NuxtLink>
             <NuxtLink
                 v-if="project.github"
                 class="project-simple-external-link"
                 :to="project.github"
-                :alt="`See ${project.title} on Github.`"
-                :aria-label="`See ${project.title} on Github.`"
+                :alt="`See ${project.name} on Github.`"
+                :aria-label="`See ${project.name} on Github.`"
                 target="_blank"
                 rel="noopener noreferer"
             >
-                <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
+                <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.name} on Github.`" :aria-label="`See ${project.name} on Github.`" />
             </NuxtLink>
         </div>
     </div>

@@ -1,5 +1,5 @@
 ---
-title: 'Simple OS'
+name: 'Simple OS'
 github: 'https://github.com/GonzaloHirsch/Arqui_TPE'
 tags: [
     'C', 'Assembly', 'x86', 'Qemu'

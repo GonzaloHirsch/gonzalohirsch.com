@@ -1,5 +1,5 @@
 ---
-title: 'Web Backend Course'
+name: 'Web Backend Course'
 github: 'https://github.com/csitba/curso-web-backend'
 url: 'https://csitba.github.io/curso-web-backend/'
 tags: [

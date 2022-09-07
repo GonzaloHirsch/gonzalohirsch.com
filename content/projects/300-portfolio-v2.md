@@ -1,5 +1,5 @@
 ---
-title: 'Portfolio V2'
+name: 'Portfolio V2'
 github: 'https://github.com/GonzaloHirsch/gonzalohirsch.com'
 tags: [
     'Nuxt 3', 'Vue', 'AWS'

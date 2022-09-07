@@ -1,5 +1,5 @@
 ---
-title: 'Tutory App'
+name: 'Tutory App'
 github: 'https://github.com/GonzaloHirsch/tutory-app'
 url: 'https://play.google.com/store/apps/details?id=ar.edu.itba.ingesoft'
 tags: [

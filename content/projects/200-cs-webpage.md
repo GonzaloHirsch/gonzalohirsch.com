@@ -1,5 +1,5 @@
 ---
-title: 'CS ITBA Webpage'
+name: 'CS ITBA Webpage'
 github: 'https://github.com/csitba/webpage'
 url: 'https://csitba.web.app/'
 tags: [

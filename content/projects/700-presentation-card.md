@@ -1,5 +1,5 @@
 ---
-title: 'Digital Presentation Card'
+name: 'Digital Presentation Card'
 github: 'https://github.com/GonzaloHirsch/me.gonzalohirsch.com'
 url: 'https://me.gonzalohirsch.com/'
 tags: [
