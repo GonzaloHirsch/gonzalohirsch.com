@@ -1,5 +1,5 @@
 ---
-title: 'Interview Problems'
+name: 'Interview Problems'
 github: 'https://github.com/GonzaloHirsch/Java-Projects'
 tags: [
     'Java', 'Algorithms'

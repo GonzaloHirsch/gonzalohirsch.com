@@ -1,5 +1,5 @@
 ---
-title: 'Portfolio V1'
+name: 'Portfolio V1'
 github: 'https://github.com/GonzaloHirsch/PersonalWebsite'
 tags: [
     'Vue', 'SPA', 'AWS'

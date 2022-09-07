@@ -1,5 +1,5 @@
 ---
-title: 'SOCKSv5 Proxy'
+name: 'SOCKSv5 Proxy'
 github: 'https://github.com/GonzaloHirsch/pc-proxy-socks-v5'
 tags: [
     'C', 'Proxy', 'Server'

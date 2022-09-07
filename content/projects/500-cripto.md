@@ -1,5 +1,5 @@
 ---
-title: 'Steganography'
+name: 'Steganography'
 github: 'https://github.com/GonzaloHirsch/crypto-steganography'
 tags: [
     'Python', 'Steganography'

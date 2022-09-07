@@ -159,9 +159,13 @@ const getImage = (url) => {
 /* LINK */
 .project-featured-left .feature-project-image-link {
     @apply -translate-x-[10%] right-0;
+    max-height: 300px;
+    height: 300px;
 }
 .project-featured-right .feature-project-image-link {
     @apply translate-x-[10%] left-0;
+    max-height: 300px;
+    height: 300px;
 }
 .project-featured-right .project-featured-external {
     @apply justify-end ml-auto;

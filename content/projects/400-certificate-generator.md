@@ -1,5 +1,5 @@
 ---
-title: 'Certificate Generator'
+name: 'Certificate Generator'
 github: 'https://github.com/csitba/certificate-generator'
 tags: [
     'Python', 'Email', 'Education'

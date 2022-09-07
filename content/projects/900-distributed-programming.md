@@ -1,5 +1,5 @@
 ---
-title: 'Distributed Programming'
+name: 'Distributed Programming'
 github: 'https://github.com/GonzaloHirsch/Programacion-de-Objetos-Distribuidos'
 url: 'https://gonzalohirsch.github.io/Programacion-de-Objetos-Distribuidos/'
 tags: [
