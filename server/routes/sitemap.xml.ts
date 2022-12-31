@@ -5,7 +5,7 @@ import minimatch from 'minimatch';
 // Exclusion patterns
 const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/projects/**'];
 // URLs to include
-const include = ['/', '/Gonzalo-Hirsch-CV.pdf', '/blog'];
+const include = ['/', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog'];
 // Adding blog pages
 const blogPageCount = 1;
 for (let i = 1; i <= blogPageCount; i++){

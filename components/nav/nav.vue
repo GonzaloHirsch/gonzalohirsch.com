@@ -58,7 +58,7 @@
         <ButtonsButton
             text="CV"
             format="white"
-            href="/Gonzalo-Hirsch-CV.pdf"
+            href="/Gonzalo_Hirsch-Software_Engineer-CV.pdf"
             target="_blank"
             aria="Check out my CV."
             extraClass="mt-6"
