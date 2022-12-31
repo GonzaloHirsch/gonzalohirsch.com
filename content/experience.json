@@ -21,6 +21,21 @@
             ]
         },
         {
+            "position": "Teaching Assistant in Machine Learning",
+            "company": {
+                "short": "ITBA",
+                "name": "Instituto Tecnológico de Buenos Aires",
+                "url": "https://www.itba.edu.ar/"
+            },
+            "volunteer": true,
+            "time": "July 2022 - December 2022",
+            "description": "Assistant in coursework evaluation and grading; designed practical coursework for around 30 students. Analyzed multiple machine learning methods for coursework.",
+            "items": [
+                "Designed and graded practical coursework.",
+                "Taught a class on Self-Organized Maps (Kohonen Method) for unsupervised machine learning."
+            ]
+        },
+        {
             "position": "Game Developer (freelance)",
             "company": {
                 "short": "NONCO",
@@ -28,10 +43,10 @@
                 "url": "https://nonconformistducks.com/"
             },
             "volunteer": false,
-            "time": "January 2022 - April 2022",
+            "time": "January 2022 - December 2022",
             "description": "NFT Collection of Nonconformist Ducks. Games were developed as a means to generate content for the Discord community.",
             "items": [
-                "Designed and developed two standalone 2D games for content creation.",
+                "Designed and developed three standalone 2D games for content creation.",
                 "Deployed Unity WebGL games on AWS S3 as standalone pages."
             ]
         },

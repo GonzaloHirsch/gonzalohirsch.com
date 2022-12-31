@@ -7,12 +7,12 @@
         ]"
     >
         <div class="w-full z-[2]">
-            <h3 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.title }}</h3>
+            <h3 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.name }}</h3>
             <div class="relative w-full z-[2]">
                 <div
                     class="project-featured-description bg-brand_secondary_light dark:bg-brand_secondary_dark p-4 rounded-md shadow-lg z-[2] lg:w-6/12 relative"
                 >
-                    <ContentDoc :path="project._path" class="project-featured-content" />
+                    <ContentDoc :path="project._path" class="project-featured-content" :head="false"/>
                 </div>
                 <component :is="project.url || project.github ? 'a' : 'div'"
                     :href="project.url || project.github"
@@ -45,28 +45,28 @@
                     v-if="project.url"
                     class="project-featured-external-link"
                     :to="project.url"
-                    :alt="`See ${project.title} on an external URL.`"
-                    :aria-label="`See ${project.title} on an external URL.`"
+                    :alt="`See ${project.name} on an external URL.`"
+                    :aria-label="`See ${project.name} on an external URL.`"
                     target="_blank"
                     rel="noopener noreferer"
                 >
                     <IconsExternal
                         class="w-7 h-7"
                         width="28" height="28"
-                        :alt="`See ${project.title} on an external URL.`"
-                        :aria-label="`See ${project.title} on an external URL.`"
+                        :alt="`See ${project.name} on an external URL.`"
+                        :aria-label="`See ${project.name} on an external URL.`"
                     />
                 </NuxtLink>
                 <NuxtLink
                     v-if="project.github"
                     class="project-featured-external-link"
                     :to="project.github"
-                    :alt="`See ${project.title} on Github.`"
-                    :aria-label="`See ${project.title} on Github.`"
+                    :alt="`See ${project.name} on Github.`"
+                    :aria-label="`See ${project.name} on Github.`"
                     target="_blank"
                     rel="noopener noreferer"
                 >
-                    <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.title} on Github.`" :aria-label="`See ${project.title} on Github.`" />
+                    <IconsGithub class="w-6 h-6" width="24" height="24" :alt="`See ${project.name} on Github.`" :aria-label="`See ${project.name} on Github.`" />
                 </NuxtLink>
             </div>
         </div>

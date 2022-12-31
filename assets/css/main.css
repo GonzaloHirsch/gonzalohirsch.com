@@ -83,6 +83,17 @@ h5 {
     }
 }
 
+.title-decor::before {
+    @apply bg-typography_primary_light block mx-auto absolute left-0;
+    content: '';
+    width: 150px;
+    height: 2px;
+    top: -50px;
+}
+.dark .title-decor::before {
+    @apply bg-typography_primary_dark;
+}
+
 /* Body Text */
 
 p {

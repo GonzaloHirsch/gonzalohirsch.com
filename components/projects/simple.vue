@@ -1,7 +1,7 @@
 <template>
     <div class="project-simple-wrapper flex w-full flex-col bg-brand_secondary_light dark:bg-brand_secondary_dark rounded-md p-4">
         <h4 class="text-typography_primary_light dark:text-typography_primary_dark font-semibold">{{ project.name }}</h4>
-        <ContentDoc :path="project._path" class="project-simple-content" />
+        <ContentDoc :path="project._path" class="project-simple-content" :head="false"/>
         <ul v-if="project.tags && project.tags.length > 0" class="flex flex-row flex-wrap list-none mt-2">
             <li
                 v-for="tag in project.tags"

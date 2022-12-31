@@ -1,5 +1,5 @@
 ---
-title: 'AI and ML'
+name: 'AI and ML'
 image: {
     url: 'ai-ml.webp',
     alt: "AI & ML repository."

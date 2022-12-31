@@ -8,11 +8,11 @@
                 class="text-h3_sm leading-h3_sm md:text-h3 md:leading-h3 md:w-9/12 mx-auto mt-2 md:mt-8 text-typography_primary_light dark:text-typography_primary_dark"
             >
                 I'm an Argentina-based
-                <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Software Engineering Student</span> and
-                <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Full-Stack Developer</span> focused on developing clean,
+                <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Software Engineer (BS, MEng)</span> and
+                <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Full-Stack Engineer</span> focused on developing clean,
                 user-friendly, and fast experiences.
             </h2>
-            <ButtonsButton text="CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
+            <ButtonsButton text="Get My CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
         </div>
     </Section>
 </template>

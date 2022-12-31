@@ -1,5 +1,5 @@
 ---
-title: 'Redirect API'
+name: 'Redirect API'
 image: {
     url: 'redirect-api.webp',
     alt: "Redirect API."

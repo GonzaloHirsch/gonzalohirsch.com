@@ -1,5 +1,5 @@
 ---
-title: 'Smart NFTs'
+name: 'Smart NFTs'
 tags: [
     'AWS', 'Serverless', 'MongoDB', 'ERC-721', 'Vue', 'TypeScript'
 ]

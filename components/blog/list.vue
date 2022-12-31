@@ -25,6 +25,7 @@
             </NuxtLink>
         </li>
     </ul>
+    <p v-if="data.length == 0" class="w-full md:w-7/12 text-h3 leading-h3 font-bold dark:text-white">There are no posts right now, but stay tuned for newer releases in the future.</p>
 </template>
 
 <script setup>
