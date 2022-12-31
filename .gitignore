@@ -13,4 +13,5 @@ assets/img/.DS_Store
 
 assets/img/projects/.DS_Store
 
-.DS_Store
+**/**.DS_Store
+**/.DS_Store

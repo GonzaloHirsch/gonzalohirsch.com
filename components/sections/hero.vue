@@ -12,7 +12,7 @@
                 <span class="impact text-brand_primary_light dark:text-brand_primary_dark">Full-Stack Engineer</span> focused on developing clean,
                 user-friendly, and fast experiences.
             </h2>
-            <ButtonsButton text="Get My CV" format="white" href="/Gonzalo-Hirsch-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
+            <ButtonsButton text="Get My CV" format="white" href="/Gonzalo_Hirsch-Software_Engineer-CV.pdf" target="_blank" aria="Check out my CV." extraClass="mx-auto mt-4" />
         </div>
     </Section>
 </template>

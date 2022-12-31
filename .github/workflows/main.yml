@@ -27,10 +27,10 @@ jobs:
             aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
         - name: Deploy cached files
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "index.html" --exclude "*/*.html" --exclude "sitemap.xml" --exclude "rss.xml" --exclude "Gonzalo-Hirsch-CV.pdf" --exclude "api/*" --cache-control max-age=31536000,public,immutable --delete
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --include "*" --exclude "index.html" --exclude "*/*.html" --exclude "sitemap.xml" --exclude "rss.xml" --exclude "Gonzalo_Hirsch-Software_Engineer-CV.pdf" --exclude "api/*" --cache-control max-age=31536000,public,immutable --delete
         
         - name: Deploy non-cached files
-          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "index.html" --include "*/*.html" --include "sitemap.xml" --include "rss.xml" --include "Gonzalo-Hirsch-CV.pdf" --include "api/*" --cache-control max-age=0,public,must-revalidate
+          run: aws s3 sync ./.output/public s3://${{ secrets.S3_BUCKET }} --exclude "*" --include "index.html" --include "*/*.html" --include "sitemap.xml" --include "rss.xml" --include "Gonzalo_Hirsch-Software_Engineer-CV.pdf" --include "api/*" --cache-control max-age=0,public,must-revalidate
 
         - name: Invalidate dashboard cloudfront
           run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
