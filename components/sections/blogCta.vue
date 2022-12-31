@@ -14,21 +14,6 @@
 </template>
 
 <style scoped>
-.about-title::before {
-    @apply bg-typography_primary_light block mx-auto absolute left-0;
-    content: '';
-    width: 15%;
-    height: 2px;
-    top: -25px;
-}
-@screen md {
-    .about-title::before {
-        top: -50px;
-    }
-}
-.dark .about-title::before {
-    @apply bg-typography_primary_dark;
-}
 .about-text {
     @apply text-h5 leading-h4 relative text-typography_primary_light;
 }

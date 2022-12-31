@@ -7,13 +7,16 @@
         <SectionsPassion />
         <SectionsProjects />
         <SectionsContact />
+        <ClientOnly>
+            <SectionsFilms />
+        </ClientOnly>
     </main>
 </template>
 
 <script setup>
 const title = 'Gonzalo Hirsch | Software Engineer and Freelancer';
 const description =
-    "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.";
+    "I'm an Argentina-based Software Engineer (BS, MEng) and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
 const image = 'meta-img.jpg';
 const url = 'https://gonzalohirsch.com/';
 
@@ -22,23 +25,21 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
+    name: title,
     url: url,
-    description:
-        "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences.",
+    description: description,
     publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
 };
 useHead({
-    title: 'Gonzalo Hirsch | Software Engineer and Freelancer',
+    title: title,
     meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
             hid: 'description',
             name: 'description',
-            content:
-                "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences."
+            content: description
         },
         {
             hid: 'keywords',

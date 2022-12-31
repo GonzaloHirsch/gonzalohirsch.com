@@ -1,5 +1,5 @@
 ---
-title: 'Snippit'
+name: 'Snippit'
 tags: [
     'React', 'Java', 'Spring', 'Jersey', 'Apache', 'PostgreSQL', 'REST'
 ]

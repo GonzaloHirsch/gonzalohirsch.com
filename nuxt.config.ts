@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt';
-
 const website = {
     '@context': 'http://schema.org',
     '@type': 'WebSite',
@@ -49,20 +47,17 @@ const jsonLds = [website, person];
 
 // Sitemap
 const blogPageCount = 1;
-const routes = ['/', '/404'];
+const routes: String[] = ['/', '/404'];
 for (let i = 1; i <= blogPageCount; i++) {
-    routes.push(`/blog/page/${i}`);
+    routes.push(`/blog/page/${i}` as string);
 }
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
     css: ['/assets/css/main.css'],
-    target: 'static',
     ssr: true,
     generate: {
-        routes: routes,
-        fallback: '404/index.html',
-        subFolders: false
+        routes: routes
     },
     // Sitemap
     // https://content.nuxtjs.org/guide/recipes/sitemap/
@@ -72,8 +67,9 @@ export default defineNuxtConfig({
         }
     },
     router: {
-        trailingSlash: true,
-        strict: true
+        options: {
+            strict: true
+        }
     },
     app: {
         head: {
@@ -88,12 +84,12 @@ export default defineNuxtConfig({
                     hid: 'description',
                     name: 'description',
                     content:
-                        "I'm an Argentina-based Software Engineering Student and Full-Stack Developer focused on developing clean, user-friendly, and fast experiences."
+                        "I'm an Argentina-based Software Engineer (BS, MEng) and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences."
                 },
                 {
                     hid: 'keywords',
                     name: 'keywords',
-                    content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences'
+                    content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng'
                 },
                 {
                     hid: 'author',
@@ -110,10 +106,10 @@ export default defineNuxtConfig({
             })
         }
     },
-    tailwindcss: {
-        // This is the option that works
-        darkMode: 'class'
-    },
+    // tailwindcss: {
+    //     // This is the option that works
+    //     darkMode: 'class'
+    // },
     sourcemap: false,
     // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
     content: {

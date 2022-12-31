@@ -1,5 +1,5 @@
 ---
-title: 'Game Development'
+name: 'Game Development'
 image: {
     url: 'gamedev.webp',
     alt: "Multiple games."
