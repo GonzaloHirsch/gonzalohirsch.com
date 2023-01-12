@@ -6,7 +6,7 @@
             :class="[
                 extraClass,
                 format === 'white'
-                    ? 'bg-transparent border-typography_primary_dark dark:border-typography_primary_light text-typography_primary_dark dark:text-typography_primary_light hover:bg-typography_primary_dark dark:hover:typography_primary_light hover:text-brand_primary_light dark:hover:text-brand_primary_dark'
+                    ? 'bg-transparent border-typography_primary_dark dark:border-typography_primary_light text-typography_primary_dark dark:text-typography_primary_light hover:bg-typography_primary_dark dark:hover:bg-typography_primary_light hover:text-brand_primary_light dark:hover:text-brand_primary_dark'
                     : '',
                 format === 'primary'
                     ? 'bg-transparent border-brand_primary_light dark:border-brand_primary_dark text-brand_primary_light dark:text-brand_primary_dark hover:bg-brand_primary_light hover:text-typography_primary_dark dark:hover:text-background_dark dark:hover:bg-brand_primary_dark'

@@ -109,7 +109,7 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 
 // Set the meta
 const baseUrl = 'https://gonzalohirsch.com';
-const image = '/meta-img.jpg';
+const image = data.value?.article?.image.src || '/meta-img.jpg';
 useHead({
     title: data.value?.article?.title,
     meta: [
