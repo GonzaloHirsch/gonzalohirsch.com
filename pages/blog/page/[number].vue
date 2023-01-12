@@ -63,11 +63,11 @@ let pageNo;
 try {
     pageNo = getPageNumber();
     if (isNaN(pageNo) || pageNo <= 0) {
-        router.replace('/404');
+        router.replace('/blog');
     }
 } catch (err) {
     console.error(err);
-    router.replace('/404');
+    router.replace('/blog');
 }
 
 // Set the meta
