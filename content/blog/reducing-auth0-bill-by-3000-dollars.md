@@ -1,7 +1,7 @@
 ---
-title: 'How I reduced my auth0 bill by $3,000 | Gonzalo Hirsch'
+title: 'How I reduced my Auth0 bill by $3,000 | Gonzalo Hirsch'
 description: 'By analyzing our M2M token usage in Auth0 and implementing a quick (and free) change, I managed to reduce our Auth0 bill by $3,000 per year.'
-headline: 'How I reduced my auth0 bill by $3,000'
+headline: 'How I reduced my Auth0 bill by $3,000'
 excerpt: 'By analyzing our M2M token usage in Auth0 and implementing a quick (and free) change, I managed to reduce our Auth0 bill by $3,000 per year.'
 date: '2023-01-12T12:00:00'
 dateUpdated: ""
