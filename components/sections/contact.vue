@@ -9,7 +9,7 @@
             </p>
             <ButtonsButton
                 text="Send an Email"
-                format="white"
+                format="primary"
                 href="mailto:hirschgonzalo@gmail.com?subject=Let's build together"
                 aria="Send me an email."
                 extraClass="mx-auto mt-6"

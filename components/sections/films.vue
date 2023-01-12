@@ -20,12 +20,11 @@ fetch(RSS_URL)
     .then((response) => response.text())
     .then((str) => new window.DOMParser().parseFromString(str, 'text/xml'))
     .then((data) => {
-        films.value = [...data.querySelectorAll('item')].splice(0, 8).map((el) => {
+        films.value = [...data.querySelectorAll('item')].splice(0, 10).map((el) => {
             let imgStr = el.querySelector('description').innerHTML.replace(' ]]>', '').replace('<![CDATA[ <p><img src=\"', '');
             return {
                 title: el.getElementsByTagName('letterboxd:filmTitle')[0].innerHTML,
                 year: el.getElementsByTagName('letterboxd:filmYear')[0].innerHTML,
-                date: el.getElementsByTagName('letterboxd:watchedDate')[0].innerHTML,
                 url: el.querySelector('link').innerHTML,
                 img: imgStr.substring(0, imgStr.indexOf("\"/></p>"))
             };
