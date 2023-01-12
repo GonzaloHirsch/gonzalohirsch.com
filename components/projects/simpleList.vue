@@ -10,7 +10,7 @@
                 </template>
             </ContentRenderer>
         </div>
-        <ButtonsButton text="Load More" :format="loadAll ? 'disabled' : 'white'" @click="loadMoreProjects" aria="Load more projects." :extraClass="`mx-auto mt-8 ${loadAll ? '' : 'cursor-pointer' }`" />
+        <ButtonsButton text="Load More" :format="loadAll ? 'disabled' : 'primary'" @click="loadMoreProjects" aria="Load more projects." :extraClass="`mx-auto mt-8 ${loadAll ? '' : 'cursor-pointer' }`" />
     </div>
 </template>
 

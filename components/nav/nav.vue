@@ -56,8 +56,8 @@
             </template>
         </ul>
         <ButtonsButton
-            text="CV"
-            format="white"
+            text="Get My CV"
+            format="primary"
             href="/Gonzalo_Hirsch-Software_Engineer-CV.pdf"
             target="_blank"
             aria="Check out my CV."
