@@ -7,8 +7,9 @@ date: '2023-01-12T12:00:00'
 dateUpdated: ""
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
-image:
+socialImage:
     src: '/img/blog--reducing-auth0-bill-by-3000-dollars.webp'
+    mime: 'webp'
     alt: 'Illustration with the text "How I reduced my Auth0 bill by $3,000"'
     width: 1200
     height: 630

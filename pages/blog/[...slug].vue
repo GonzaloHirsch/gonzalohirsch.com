@@ -109,7 +109,7 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 
 // Set the meta
 const baseUrl = 'https://gonzalohirsch.com';
-const image = data.value?.article?.image.src || '/meta-img.jpg';
+const image = baseUrl + (data.value?.article?.socialImage.src || '/meta-img.jpg');
 useHead({
     title: data.value?.article?.title,
     meta: [
@@ -120,19 +120,19 @@ useHead({
         { hid: 'og:title', property: 'og:title', content: data.value?.article?.headline },
         { hid: 'og:url', property: 'og:url', content: baseUrl + cleanPath },
         { hid: 'og:description', property: 'og:description', content: data.value?.article?.description },
-        { hid: 'og:image', name: 'image', property: 'og:image', content: baseUrl + image },
+        { hid: 'og:image', name: 'image', property: 'og:image', content: image },
         { hid: 'og:type', property: 'og:type', content: 'Article' },
-        { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpeg' },
-        { hid: 'og:image:width', property: 'og:image:width', content: '800' },
-        { hid: 'og:image:height', property: 'og:image:height', content: '418' },
-        { hid: 'og:image:alt', property: 'og:image:alt', content: data.value?.article?.image.alt },
+        { hid: 'og:image:type', property: 'og:image:type', content: `image/${data.value?.article?.socialImage.mime}` },
+        { hid: 'og:image:width', property: 'og:image:width', content: data.value?.article?.socialImage.width || 190 },
+        { hid: 'og:image:height', property: 'og:image:height', content: data.value?.article?.socialImage.height || 190 },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: data.value?.article?.socialImage.alt },
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.headline },
         { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + cleanPath },
         { hid: 'twitter:description', name: 'twitter:description', content: data.value?.article?.description },
-        { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
-        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.image.alt }
+        { hid: 'twitter:image', name: 'twitter:image', content: image },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.socialImage.alt }
     ],
     link: [
         {
@@ -152,7 +152,7 @@ useHead({
                     '@id': 'https://gonzalohirsch.com/'
                 },
                 url: baseUrl + cleanPath,
-                image: [data.value?.article?.image?.src || 'https://gonzalohirsch.com/meta-img.jpg'],
+                image: image,
                 headline: data.value?.article?.headline,
                 abstract: data.value?.article?.excerpt,
                 datePublished: data.value?.article?.date,
