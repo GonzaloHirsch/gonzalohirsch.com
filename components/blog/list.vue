@@ -25,7 +25,7 @@
             </NuxtLink>
         </li>
     </ul>
-    <p v-if="data.length == 0" class="w-full md:w-7/12 text-h3 leading-h3 font-bold dark:text-white">There are no posts right now, but stay tuned for newer releases in the future.</p>
+    <p v-if="data.length == 0" class="w-full md:w-7/12 text-h3 leading-h3 font-bold dark:text-white">{{message}}</p>
 </template>
 
 <script setup>
@@ -33,6 +33,10 @@ const props = defineProps({
     data: {
         type: Array,
         required: true
+    },
+    message: {
+        type: String,
+        default: "There are no posts right now, but stay tuned for newer releases in the future."
     }
 });
 const { $formatDate } = useNuxtApp();

@@ -39,7 +39,10 @@
                 </Section>
             </template>
             <template #not-found>
-                <SectionsError />
+                <BlogHero />
+                <Section id="main" class="!pt-0">
+                    <BlogList :data="[]" message="There are no posts in this page, maybe try searching on another one."/>
+                </Section>
             </template>
         </ContentQuery>
     </main>
@@ -53,8 +56,9 @@ const blogCountLimit = 6;
 const getPageLimit = (totalPosts) => {
     return Math.ceil(totalPosts / blogCountLimit);
 };
+
 const getPageNumber = () => {
-    return parseInt(params.number);
+    return Number(params.number);
 };
 
 // Attempt to get the number
