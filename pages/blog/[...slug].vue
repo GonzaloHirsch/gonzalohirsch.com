@@ -113,24 +113,26 @@ const image = data.value?.article?.image.src || '/meta-img.jpg';
 useHead({
     title: data.value?.article?.title,
     meta: [
-        // OG
+        { name: 'author', content: data.value?.article?.author },
         { name: 'description', content: data.value?.article?.description },
-        { hid: 'og:title', property: 'og:title', content: data.value?.article?.title },
+        { property: 'article:published_time', content: data.value?.article?.date.split("T")[0] },
+        // OG
+        { hid: 'og:title', property: 'og:title', content: data.value?.article?.headline },
         { hid: 'og:url', property: 'og:url', content: baseUrl + cleanPath },
         { hid: 'og:description', property: 'og:description', content: data.value?.article?.description },
-        { hid: 'og:image', property: 'og:image', content: baseUrl + image },
-        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:image', name: 'image', property: 'og:image', content: baseUrl + image },
+        { hid: 'og:type', property: 'og:type', content: 'Article' },
         { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpeg' },
         { hid: 'og:image:width', property: 'og:image:width', content: '800' },
         { hid: 'og:image:height', property: 'og:image:height', content: '418' },
-        { hid: 'og:image:alt', property: 'og:image:alt', content: 'Gonzalo Hirsch' },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: data.value?.article?.image.alt },
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
-        { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },
+        { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.headline },
         { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + cleanPath },
         { hid: 'twitter:description', name: 'twitter:description', content: data.value?.article?.description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
-        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.image.alt }
     ],
     link: [
         {
