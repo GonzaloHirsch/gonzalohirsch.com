@@ -5,7 +5,7 @@
             <template v-for="(other, index) in surround" :key="index">
                 <li v-if="other" class="first:mt-0 mt-4 md:mt-1">
                     <NuxtLink
-                        :to="other._path"
+                        :to="other._path + '/'"
                         class="hover:underline hover:text-brand_primary_light dark:hover:text-brand_primary_dark"
                         :aria-label="other.headline"
                     >

@@ -5,11 +5,11 @@ import minimatch from 'minimatch';
 // Exclusion patterns
 const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/projects/**'];
 // URLs to include
-const include = ['/', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog'];
+const include = ['/', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog/'];
 // Adding blog pages
 const blogPageCount = 1;
 for (let i = 1; i <= blogPageCount; i++){
-    include.push(`/blog/page/${i}`);
+    include.push(`/blog/page/${i}/`);
 }
 
 export default defineEventHandler(async (event) => {
@@ -33,12 +33,12 @@ export default defineEventHandler(async (event) => {
         // Do not write if it's excluded
         if (!excludeFromList) {
             sitemap.write({
-                url: doc._path,
+                url: (doc._path + '/').replace(/\/+$/, '/'),
                 changefreq: 'monthly'
             });
             // Verify if the url to include is already there or not
             include.forEach((url) => {
-                if (url === doc._path) {
+                if (url === (doc._path + '/').replace(/\/+$/, '/')) {
                     inclusionMap[url] = true;
                 }
             });

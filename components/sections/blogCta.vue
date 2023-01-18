@@ -8,7 +8,7 @@
             </p>
         </div>
         <div class="mt-6">
-            <ButtonsButton text="Read The Blog" format="white" href="/blog" target="_self" aria="Check out the blog." extraClass="mx-auto" />
+            <ButtonsButton text="Read The Blog" format="white" href="/blog/" target="_self" aria="Check out the blog." extraClass="mx-auto" />
         </div>
     </Section>
 </template>

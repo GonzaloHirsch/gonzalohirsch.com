@@ -49,14 +49,14 @@ const props = defineProps({
 });
 
 const getPageUrl = (pageNo) => {
-    return `${props.pageUrl}${pageNo}`;
+    return `${props.pageUrl}${pageNo}/`;
 };
 // Calculate the page range to show
 const pageRange = [Math.max(1, props.currentPage - 1), props.currentPage, Math.min(props.totalPages, props.currentPage + 1)];
 
 import { computed } from 'vue';
 const prevLink = computed(() => {
-    return props.currentPage === 2 ? props.baseUrl : `${props.pageUrl}${props.currentPage - 1}`;
+    return props.currentPage === 2 ? props.baseUrl : `${props.pageUrl}${props.currentPage - 1}/`;
 });
 </script>
 

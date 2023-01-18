@@ -4,9 +4,7 @@
         <Section id="main" class="!pt-0">
             <ContentQuery
                 path="/blog"
-                :query="{
-                    only: ['headline', 'excerpt', 'date', 'tags', '_path', 'image']
-                }"
+                :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
                 :sort="{
                     date: -1
                 }"
@@ -21,7 +19,7 @@
                 :currentPage="1"
                 :totalPages="data"
                 :nextPage="data > 1"
-                baseUrl="/blog"
+                baseUrl="/blog/"
                 pageUrl="/blog/page/"
             />
         </Section>
@@ -32,7 +30,7 @@
 // Find the number of blogs present
 const blogCountLimit = 6;
 const { data } = await useAsyncData(`content-/blog`, async () => {
-    const _posts = await queryContent('/blog').only(['headline']).find();
+    const _posts = await queryContent('/blog').only('headline').find()
     return Math.ceil(_posts.length / blogCountLimit);
 });
 
@@ -42,6 +40,7 @@ const description =
     'A personal blog where Gonzalo Hirsch writes about programming and insights he gains on software engineering and different technologies from the industry.';
 const baseUrl = 'https://gonzalohirsch.com/';
 const image = 'meta-img.jpg';
+const canonicalPath = baseUrl + 'blog/';
 
 // Get the authors
 const { data: authorData } = await useAsyncData('home', () => queryContent('/authors').findOne());
@@ -49,7 +48,7 @@ const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
-    url: baseUrl + 'blog',
+    url: canonicalPath,
     description: description,
     publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
@@ -60,7 +59,7 @@ useHead({
         // OG
         { name: 'description', content: description },
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + 'blog' },
+        { hid: 'og:url', property: 'og:url', content: canonicalPath },
         { hid: 'og:description', property: 'og:description', content: description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -71,7 +70,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + 'blog' },
+        { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -80,7 +79,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + 'blog'
+            href: canonicalPath
         }
     ],
     script: [

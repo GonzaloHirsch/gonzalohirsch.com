@@ -49,7 +49,7 @@ const jsonLds = [website, person];
 const blogPageCount = 1;
 const routes: String[] = ['/'];
 for (let i = 1; i <= blogPageCount; i++) {
-    routes.push(`/blog/page/${i}` as string);
+    routes.push(`/blog/page/${i}/` as string);
 }
 
 export default defineNuxtConfig({
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
     },
     router: {
         options: {
-            strict: false
+            strict: false,
         }
     },
     app: {

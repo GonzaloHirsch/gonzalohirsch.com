@@ -97,7 +97,7 @@ const links = [
         alt: 'Check out the Contact section.'
     },
     {
-        href: '/blog',
+        href: '/blog/',
         text: 'Blog',
         alt: 'Check out the blog.'
     }
@@ -114,7 +114,6 @@ const toggleMenu = () => {
     }
 };
 const handleNavClick = () => {
-    console.log("CLICK");
     setTimeout(() => toggleMenu(), 100);
 }
 

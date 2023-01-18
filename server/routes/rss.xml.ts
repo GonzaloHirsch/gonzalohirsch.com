@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
             id: doc._id,
             title: doc.title,
             description: doc.description,
-            link: new URL(doc._path, blogUrl).href,
+            link: (new URL(doc._path, blogUrl).href + '/').replace(/\/+$/, '/'),
             date: new Date(doc.date),
             author: [
                 authors[doc.author]

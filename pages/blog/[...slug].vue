@@ -17,8 +17,8 @@
                                     itemscope
                                     itemtype="https://schema.org/WebPage"
                                     itemprop="item"
-                                    itemid="https://gonzalohirsch.com/blog"
-                                    href="https://gonzalohirsch.com/blog"
+                                    itemid="https://gonzalohirsch.com/blog/"
+                                    href="https://gonzalohirsch.com/blog/"
                                 >
                                     <span itemprop="name">Blog</span></a
                                 >
@@ -51,7 +51,7 @@
                             >
                         </div>
                         <div class="mt-6 md:mt-0">
-                            <NavShareIcons :headline="doc.headline" :excerpt="doc.excerpt" :path="doc._path" />
+                            <NavShareIcons :headline="doc.headline" :excerpt="doc.excerpt" :path="doc._path + '/'" />
                         </div>
                     </div>
                 </Section>
@@ -91,13 +91,13 @@
 const { $formatDate } = useNuxtApp();
 const { path } = useRoute();
 const cleanPath = path.replace(/\/+$/, '');
-const { data, error } = await useAsyncData(`content-${path}`, async () => {
+const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
     // Remove a trailing slash in case the browser adds it, it might break the routing
     // fetch document where the document path matches with the cuurent route
     let article = queryContent('/blog').where({ _path: cleanPath }).findOne();
     // get the surround information,
     // which is an array of documeents that come before and after the current document
-    let surround = queryContent('/blog').sort({ date: -1 }).findSurround(cleanPath, { before: 1, after: 1 });
+    let surround = queryContent('/blog').sort({ date: -1 }).only(['_path', 'headline', 'excerpt']).findSurround(cleanPath, { before: 1, after: 1 });
     return {
         article: await article,
         surround: await surround
@@ -109,16 +109,17 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 
 // Set the meta
 const baseUrl = 'https://gonzalohirsch.com';
+const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/');
 const image = baseUrl + (data.value?.article?.socialImage.src || '/meta-img.jpg');
 useHead({
     title: data.value?.article?.title,
     meta: [
         { name: 'author', content: data.value?.article?.author },
         { name: 'description', content: data.value?.article?.description },
-        { property: 'article:published_time', content: data.value?.article?.date.split("T")[0] },
+        { property: 'article:published_time', content: data.value?.article?.date.split('T')[0] },
         // OG
         { hid: 'og:title', property: 'og:title', content: data.value?.article?.headline },
-        { hid: 'og:url', property: 'og:url', content: baseUrl + cleanPath },
+        { hid: 'og:url', property: 'og:url', content: canonicalPath },
         { hid: 'og:description', property: 'og:description', content: data.value?.article?.description },
         { hid: 'og:image', name: 'image', property: 'og:image', content: image },
         { hid: 'og:type', property: 'og:type', content: 'Article' },
@@ -129,7 +130,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.headline },
-        { hid: 'twitter:url', name: 'twitter:url', content: baseUrl + cleanPath },
+        { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },
         { hid: 'twitter:description', name: 'twitter:description', content: data.value?.article?.description },
         { hid: 'twitter:image', name: 'twitter:image', content: image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.socialImage.alt }
@@ -138,7 +139,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: baseUrl + cleanPath
+            href: canonicalPath
         }
     ],
     script: [
@@ -151,7 +152,7 @@ useHead({
                     '@type': 'WebPage',
                     '@id': 'https://gonzalohirsch.com/'
                 },
-                url: baseUrl + cleanPath,
+                url: canonicalPath,
                 image: image,
                 headline: data.value?.article?.headline,
                 abstract: data.value?.article?.excerpt,

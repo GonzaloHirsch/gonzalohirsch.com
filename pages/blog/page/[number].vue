@@ -2,9 +2,7 @@
     <main>
         <ContentQuery
             path="/blog"
-            :query="{
-                only: ['headline', 'excerpt', 'date', 'tags', '_path', 'image']
-            }"
+            :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
             :sort="{
                 date: -1
             }"
@@ -17,9 +15,7 @@
                     <BlogList :data="data" />
                     <ContentQuery
                         path="/blog"
-                        :query="{
-                            only: ['headline']
-                        }"
+                        :only="['headline']"
                     >
                         <template v-slot="{ data }">
                             <BlogPagination
@@ -28,7 +24,7 @@
                                 :currentPage="getPageNumber()"
                                 :totalPages="getPageLimit(data.length)"
                                 :nextPage="getPageNumber() < getPageLimit(data.length)"
-                                baseUrl="/blog"
+                                baseUrl="/blog/"
                                 pageUrl="/blog/page/"
                             />
                         </template>
@@ -67,27 +63,27 @@ let pageNo;
 try {
     pageNo = getPageNumber();
     if (isNaN(pageNo) || pageNo <= 0) {
-        router.replace('/blog');
+        router.replace('/blog/');
     }
 } catch (err) {
     console.error(err);
-    router.replace('/blog');
+    router.replace('/blog/');
 }
 
 // Set the meta
 const title = `Page ${pageNo} | Blog | Gonzalo Hirsch`;
 const description =
     'A personal blog where Gonzalo Hirsch writes about programming and insights he gains on software engineering and different technologies from the industry.';
-const baseUrl = 'https://gonzalohirsch.com/';
 const image = 'meta-img.jpg';
-
+const baseUrl = 'https://gonzalohirsch.com/';
+const canonicalPath = `${baseUrl}blog/page/${params.number}/`;
 // Get the authors
 const { data: authorData } = await useAsyncData('home', () => queryContent('/authors').findOne());
 const webpage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
-    url: `${baseUrl}blog/page/${params.number}`,
+    url: canonicalPath,
     description: description,
     publisher: authorData.value['Gonzalo Hirsch'],
     license: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US'
@@ -98,7 +94,7 @@ useHead({
         // OG
         { name: 'description', content: description },
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:url', property: 'og:url', content: `${baseUrl}blog/page/${params.number}` },
+        { hid: 'og:url', property: 'og:url', content: canonicalPath },
         { hid: 'og:description', property: 'og:description', content: description },
         { hid: 'og:image', property: 'og:image', content: baseUrl + image },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -109,7 +105,7 @@ useHead({
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:url', name: 'twitter:url', content: `${baseUrl}blog/page/${params.number}` },
+        { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'twitter:image', name: 'twitter:image', content: baseUrl + image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Gonzalo Hirsch' }
@@ -118,7 +114,7 @@ useHead({
         {
             hid: 'canonical',
             rel: 'canonical',
-            href: `${baseUrl}blog/page/${params.number}`
+            href: canonicalPath
         }
     ],
     script: [
