@@ -1,22 +1,26 @@
 import { serverQueryContent } from '#content/server';
 import { SitemapStream, streamToPromise } from 'sitemap';
+import replace from 'buffer-replace';
 import minimatch from 'minimatch';
 
 // Exclusion patterns
 const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/projects/**'];
 // URLs to include
-const include = ['/', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog/'];
+const include = ['https://gonzalohirsch.com', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog/'];
 // Adding blog pages
 const blogPageCount = 1;
-for (let i = 1; i <= blogPageCount; i++){
+for (let i = 1; i <= blogPageCount; i++) {
     include.push(`/blog/page/${i}/`);
 }
+// Datemod
+const datemod = new Date().toISOString().split('T')[0];
 
 export default defineEventHandler(async (event) => {
     // Fetch all documents
     const docs = await serverQueryContent(event).find();
     const sitemap = new SitemapStream({
-        hostname: 'https://gonzalohirsch.com'
+        hostname: 'https://gonzalohirsch.com',
+        lastmodDateOnly: true
     });
 
     const inclusionMap = {};
@@ -34,7 +38,9 @@ export default defineEventHandler(async (event) => {
         if (!excludeFromList) {
             sitemap.write({
                 url: (doc._path + '/').replace(/\/+$/, '/'),
-                changefreq: 'monthly'
+                changefreq: 'monthly',
+                lastmod: datemod,
+                priority: 1
             });
             // Verify if the url to include is already there or not
             include.forEach((url) => {
@@ -50,12 +56,16 @@ export default defineEventHandler(async (event) => {
         if (!inclusionMap[url]) {
             sitemap.write({
                 url: url,
-                changefreq: 'monthly'
+                changefreq: 'monthly',
+                lastmod: datemod,
+                priority: 1
             });
         }
     });
 
     sitemap.end();
 
-    return streamToPromise(sitemap);
+    return streamToPromise(sitemap).then((buffer) =>
+        replace(buffer, '<loc>https://gonzalohirsch.com/</loc>', '<loc>https://gonzalohirsch.com</loc>')
+    );
 });

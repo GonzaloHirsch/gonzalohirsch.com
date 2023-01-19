@@ -7,7 +7,7 @@ const authors = {
     "Gonzalo Hirsch": {
         email: "hirschgonzalo@gmail.com",
         name: "Gonzalo Hirsch",
-        link: "https://gonzalohirsch.com/"
+        link: "https://gonzalohirsch.com"
     }
 }
 

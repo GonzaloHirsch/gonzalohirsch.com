@@ -66,9 +66,12 @@ export default defineNuxtConfig({
             routes: ['/sitemap.xml', '/rss.xml']
         }
     },
+    experimental: {
+        payloadExtraction: false
+    },
     router: {
         options: {
-            strict: false,
+            strict: false
         }
     },
     app: {
@@ -89,7 +92,8 @@ export default defineNuxtConfig({
                 {
                     hid: 'keywords',
                     name: 'keywords',
-                    content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng'
+                    content:
+                        'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng'
                 },
                 {
                     hid: 'author',

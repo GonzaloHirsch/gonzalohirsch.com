@@ -17,8 +17,8 @@
 const title = 'Gonzalo Hirsch | Software Engineer and Freelancer';
 const description =
     "I'm an Argentina-based Software Engineer (BS, MEng) and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
-const image = 'meta-img.jpg';
-const url = 'https://gonzalohirsch.com/';
+const image = '/meta-img.jpg';
+const url = 'https://gonzalohirsch.com';
 
 // Get the authors
 const { data: authorData } = await useAsyncData('home', () => queryContent('/authors').findOne());
