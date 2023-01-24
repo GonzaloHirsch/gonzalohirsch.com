@@ -26,7 +26,15 @@
                             class="link"
                             aria-label="Check out Gonzalo Hirsch's profile at Toptal."
                             >Toptal</a
-                        >. I'm also the first and former vice president and co-founder of
+                        >. I'm also a certified
+                        <a
+                            href="https://www.credly.com/badges/9bcea4aa-826b-46c9-a711-64f5f314aeab/public_url"
+                            target="_blank"
+                            rel="noopener noreferer"
+                            class="link"
+                            >Solutions Architect Associate</a
+                        >
+                        from AWS. I'm also the first and former vice president and co-founder of
                         <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Check out IEEE's website."
                             >IEEE</a
                         >'s

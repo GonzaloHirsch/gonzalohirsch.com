@@ -16,7 +16,7 @@
 <script setup>
 const title = 'Gonzalo Hirsch | Software Engineer and Freelancer';
 const description =
-    "I'm an Argentina-based Software Engineer (BS, MEng) and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
+    "I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
 const image = '/meta-img.jpg';
 const url = 'https://gonzalohirsch.com';
 
@@ -44,7 +44,7 @@ useHead({
         {
             hid: 'keywords',
             name: 'keywords',
-            content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences'
+            content: 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, AWS, Solutions Architect Associate, SAA-C03'
         },
         {
             hid: 'author',
