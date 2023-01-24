@@ -1,8 +1,8 @@
 ---
 title: 'How to crack the AWS Solutions Architect Associate certification | Gonzalo Hirsch'
-description: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, and tips and tricks, you'll crack the certification exam."
+description: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, tips, and tricks, you'll crack the certification exam."
 headline: 'How to crack the AWS Solutions Architect Associate certification'
-excerpt: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, and tips and tricks, you'll crack the certification exam."
+excerpt: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, tips, and tricks, you'll crack the certification exam."
 date: '2023-01-24T12:00:00'
 dateUpdated: ""
 author: 'Gonzalo Hirsch'
@@ -91,7 +91,7 @@ Using all these strategies can definitely help you become a certified Solutions 
 
 ### Have a strategy to study
 
-It has been proven by psychology many times that **mixing up how you study can help you get a deeper understanding**. Having notes to review and practice exams lets you mix up how you prepare. Try reading the notes during one day, practicing exams on another, reading the text out loud, or practicing while reviewing answers. There are multiple approaches to studying, so mix them to improve your performance and become a Certified Solutions Architect.
+It has been proven by psychology many times that **mixing up how you study can help you get a deeper understanding**. Having notes to review and practice exams lets you mix up how you prepare. Try reading the notes during one day, practicing exams on another, reading the text out loud, having someone test you, or practicing while reviewing answers. There are multiple approaches to studying, so mix them to improve your performance and become a Certified Solutions Architect.
 
 ### Try out the AWS platform
 
