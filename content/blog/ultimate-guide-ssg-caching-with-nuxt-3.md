@@ -8,7 +8,7 @@ dateUpdated: ""
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--ultimate-guide-ssg-caching-with-nuxt-3.webp'
+    src: '/img/blog--ultimate-guide-ssg-caching-with-nuxt-3-2.webp'
     mime: 'webp'
     alt: 'Illustration with the text "Ultimate guide on SSG caching for Nuxt 3"'
     width: 1200

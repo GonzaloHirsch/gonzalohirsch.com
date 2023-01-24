@@ -121,6 +121,18 @@ export default defineNuxtConfig({
         highlight: {
             theme: 'github-dark',
             preload: ['java']
+        },
+        markdown: {
+            // https://github.com/rehypejs/rehype-external-links
+            rehypePlugins: [
+                [
+                    'rehype-external-links',
+                    {
+                        target: '_blank',
+                        rel: 'noopener noreferer'
+                    }
+                ]
+            ]
         }
     }
 });
