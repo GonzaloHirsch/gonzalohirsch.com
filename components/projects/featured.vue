@@ -89,12 +89,16 @@ import SmartNfts from '../../assets/img/projects/smart-nfts.webp';
 import Snippit from '../../assets/img/projects/snippit.webp';
 import AIML from '../../assets/img/projects/ai-ml.webp';
 import RedirectAPI from '../../assets/img/projects/redirect-api.webp';
+import ProxyAPI from '../../assets/img/projects/proxy-api.webp';
+import ProfileViewsAPI from '../../assets/img/projects/profile-views-api.webp';
 import Gamedev from '../../assets/img/projects/gamedev.webp';
 const assets = {
     'smart-nfts.webp': SmartNfts,
     'snippit.webp': Snippit,
     'ai-ml.webp': AIML,
     'redirect-api.webp': RedirectAPI,
+    'proxy-api.webp': ProxyAPI,
+    'profile-views-api.webp': ProfileViewsAPI,
     'gamedev.webp': Gamedev
 };
 const getImage = (url) => {
