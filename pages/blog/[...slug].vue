@@ -65,7 +65,7 @@
                         <span
                             v-show="doc.dateUpdated"
                             class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary_light/75 dark:text-typography_primary_dark/75"
-                            >(Updated at: {{ $formatDate(doc.dateUpdated) }})</span
+                            >(Updated: {{ $formatDate(doc.dateUpdated) }})</span
                         >
                         <ContentRenderer :value="doc" class="blog-content blog-post-text" />
                     </article>
