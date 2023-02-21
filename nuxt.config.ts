@@ -1,3 +1,6 @@
+const keywords = 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng';
+const description =
+"I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
 const website = {
     '@context': 'http://schema.org',
     '@type': 'WebSite',
@@ -43,7 +46,18 @@ const person = {
         'https://www.toptal.com/resume/gonzalo-hirsch'
     ]
 };
-const jsonLds = [website, person];
+const logos = {
+    '@context': 'http://www.schema.org',
+    '@type': 'Organization',
+    url: 'https://gonzalohirsch.com/',
+    logo: 'https://gonzalohirsch.com/logo.webp',
+    email: 'hirschgonzalo@gmail.com',
+    name: 'Gonzalo Hirsch | Software Engineer and Freelancer',
+    description: description,
+    founder: person,
+    keywords: keywords
+};
+const jsonLds = [website, person, logos];
 
 // Sitemap
 const blogPageCount = 1;
@@ -86,14 +100,12 @@ export default defineNuxtConfig({
                 {
                     hid: 'description',
                     name: 'description',
-                    content:
-                        "I'm an Argentina-based Software Engineer (BS, MEng) and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences."
+                    content: description
                 },
                 {
                     hid: 'keywords',
                     name: 'keywords',
-                    content:
-                        'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng'
+                    content: keywords
                 },
                 {
                     hid: 'author',
