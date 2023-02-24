@@ -1,7 +1,7 @@
 ---
 name: 'Web Backend Course'
-github: 'https://github.com/csitba/curso-web-backend'
-url: 'https://csitba.github.io/curso-web-backend/'
+github: 'https://github.com/GonzaloHirsch/web-backend-course'
+url: 'https://web-backend.gonzalohirsch.com/'
 tags: [
     'Python', 'Django', 'REST API', 'Github Pages', 'Course'
 ]

@@ -1,5 +1,5 @@
 ---
-title: 'Delegating a .com.ar domain using Cloudflare | Gonzalo Hirsch'
+title: 'Delegating a .com.ar domain with Cloudflare | Gonzalo Hirsch'
 description: "Delegating a .com.ar domain using Cloudflare might be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
 headline: 'Delegating a .com.ar domain using Cloudflare'
 excerpt: "Delegating a .com.ar domain using Cloudflare might be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."

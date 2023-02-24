@@ -1,5 +1,5 @@
 ---
-title: 'How to crack the AWS Solutions Architect Associate certification | Gonzalo Hirsch'
+title: 'Cracking the AWS SAA certification | Gonzalo Hirsch'
 description: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, tips, and tricks, you'll crack the certification exam."
 headline: 'How to crack the AWS Solutions Architect Associate certification'
 excerpt: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, tips, and tricks, you'll crack the certification exam."
