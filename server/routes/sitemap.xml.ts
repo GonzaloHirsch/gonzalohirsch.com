@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
         if (!excludeFromList) {
             sitemap.write({
                 url: (doc._path + '/').replace(/\/+$/, '/'),
-                changefreq: 'monthly',
+                changefreq: 'weekly',
                 lastmod: datemod,
                 priority: 1
             });
@@ -56,7 +56,7 @@ export default defineEventHandler(async (event) => {
         if (!inclusionMap[url]) {
             sitemap.write({
                 url: url,
-                changefreq: 'monthly',
+                changefreq: 'weekly',
                 lastmod: datemod,
                 priority: 1
             });
