@@ -4,7 +4,7 @@ description: "Delegating a .com.ar domain using Cloudflare might be daunting, bu
 headline: 'Delegating a .com.ar domain using Cloudflare'
 excerpt: "Delegating a .com.ar domain using Cloudflare might be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
 date: '2023-02-07T12:00:00'
-dateUpdated: ""
+dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
@@ -13,6 +13,13 @@ socialImage:
     alt: 'Illustration with the text "Delegating a .com.ar domain using Cloudflare"'
     width: 1200
     height: 630
+faq:
+    - question: 'Where to register a domain name in Argentina?'
+      answer: "Nic.ar is the most significant authority in Argentina that offers domain name registrations. Registering a domain is simple enough, and the site walks you through the entire process. There's a caveat though if you are a non-Argentinian resident, you need to validate your identity."
+    - question: 'How to delegate a .com.ar name?'
+      answer: 'Delegating is a simple process too. After buying the custom domain and logging in to the Nic.ar registrar page, you can select the option to delegate your domain. You will then need to choose to start a new delegation. You need to add your DNS server names and save them.'
+    - question: 'What if you already have some existing infrastructure?'
+      answer: "<p>In my personal experience, I have infrastructure running on AWS, and I wanted my domain to redirect (with a CNAME record) to another. I didn't want to pay for another hosted zone, so I used Cloudflare DNS. More configurations are required to keep serving traffic with SSL under those conditions:<ol><li>An SSL certificate that includes both your .com and .com.ar domains. Because AWS CloudFront doesn't support adding multiple SSL certificates to a distribution, a single certificate is required.</li><li>Configure the SSL/TLS encryption mode to Full (strict) to correctly use SSL/TLS. It ensures communication is always via HTTPS so that your visitors and traffic are safe.</li><li>A new CNAME record for your apex zone because you don't have a public IP address for your CloudFront distribution. Cloudflare supports CNAME flattening on the apex zone.</li></ol></p>"
 # tags: []
 ---
 
@@ -34,7 +41,7 @@ You can select the option to delegate your domain. You will then need to choose 
 
 ![Create a new delegation option in Nic.ar](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-2.webp)
 
-The only missing step is to add your DNS server names and save them. You might not have your nameservers yet, so keep reading to learn how to obtain them from Cloudflare. 
+The only missing step is to add your DNS server names and save them. You might not have your nameservers yet, so keep reading to learn how to obtain them from Cloudflare.
 
 ![Adding the nameservers to the delegation](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-3.webp)
 

@@ -4,7 +4,7 @@ description: "The AWS Solutions Architect Associate certification is perfect to 
 headline: 'How to crack the AWS Solutions Architect Associate certification'
 excerpt: "The AWS Solutions Architect Associate certification is perfect to prove your knowledge. With my experience, tips, and tricks, you'll crack the certification exam."
 date: '2023-01-24T12:00:00'
-dateUpdated: ""
+dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
@@ -13,6 +13,11 @@ socialImage:
     alt: 'Illustration with the text "How to crack the AWS Solutions Architect Associate certification"'
     width: 1200
     height: 630
+faq:
+    - question: 'What is the AWS Solutions Architect Associate certification?'
+      answer: 'The AWS Solutions Architect, at an associate level, is a certification that AWS offers for individuals with some experience in AWS technology or other cloud services. Although it might not be impossible to achieve if you have no prior experience with any cloud provider, I recommend you have at least some hands-on experience with one cloud provider. The main objective is to prove that you have the knowledge and skills in cloud architecture design using AWS services. They require you to distinguish their services, determine when to use one over the other and build highly-available, scalable, and secure architectures. It is the perfect way to showcase your AWS competence and familiarity. Especially when compared to the AWS Certified Cloud Practitioner and the AWS professionals certifications, where the associate exam lies in between the difficulty curve.'
+    - question: 'How did I get certified?'
+      answer: '<p>I got my AWS Solutions Architect certification on January 2023. I started studying and practicing one month before taking the exam.</p><p>As part of my degree, I attended a Cloud Computing course at university. During this course, we used AWS Educate as the platform to get all the knowledge about AWS services. This platform had two main advantages, the first one being that the content was easily digestible, and the second one was the AWS Management Console Simulator.</p><p>To practice, I bought practice exams from Udemy, which were definitely worth it. They include six practice exams, 390 questions in total. It is the perfect certification training material. All this practice material is more than enough for your AWS certification training. I recommend you practice the exams until you consistently get an 80% or more score each time.</p><p>As part of my study material, I created a set of notes from where I would study everything. It has all the contents from the AWS Educate course, FAQs, and User Guides I read. Besides, it has a directory with all the services included in the Certified Solutions Architect exam.</p>'
 # tags: []
 ---
 
@@ -53,10 +58,11 @@ I recommend reading User Guides, FAQs for other services, and whitepapers only i
 Although it's not required, **learning general IT knowledge has a huge advantage when taking the exam**. Some of the questions, especially the networking ones, might require knowledge of some protocols, ports, and the behaviors of outbound connections. For instance, knowing the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) port or the underlying protocol can help solve questions that rely on that knowledge. Although it might seem trivial, this knowledge can help solve at least a couple of questions per exam quickly.
 
 The most important general knowledge topics are:
-- Which are the ports of widely used protocols ([HTTPS](https://en.wikipedia.org/wiki/HTTPS), [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [SSH](https://en.wikipedia.org/wiki/Secure_Shell)).
-- Underlying protocols of widely used protocols ([TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol), [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol)).
-- Classless Inter-Domain Routing ([CIDR](https://es.wikipedia.org/wiki/Classless_Inter-Domain_Routing)).
-- The [OSI Model](https://en.wikipedia.org/wiki/OSI_model).
+
+-   Which are the ports of widely used protocols ([HTTPS](https://en.wikipedia.org/wiki/HTTPS), [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [SSH](https://en.wikipedia.org/wiki/Secure_Shell)).
+-   Underlying protocols of widely used protocols ([TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol), [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol)).
+-   Classless Inter-Domain Routing ([CIDR](https://es.wikipedia.org/wiki/Classless_Inter-Domain_Routing)).
+-   The [OSI Model](https://en.wikipedia.org/wiki/OSI_model).
 
 Knowing these things can help you quickly eliminate wrong answers in seconds from the certification exam, increasing your chances of success.
 
@@ -73,8 +79,9 @@ Practice is helpful for two main reasons here. First, you will be used to the "A
 AWS certification exams offer the option to **flag questions for review later**. It means you can mark the questions and review them at the end of the exam. At the end of the exam, it offers a screen to review all the flagged questions.
 
 Moreover, the **questions can appear in two different formats**:
-- Multiple choice: These questions present several options, from which only one is correct.
-- Multiple responses: These questions contain several options, from which you might need to select two or more.
+
+-   Multiple choice: These questions present several options, from which only one is correct.
+-   Multiple responses: These questions contain several options, from which you might need to select two or more.
 
 Knowing this is beneficial if you know the strategies to solve the exam.
 
@@ -82,10 +89,10 @@ Knowing this is beneficial if you know the strategies to solve the exam.
 
 **Strategies to solve the exam can help you increase your possibility of success**. Putting these to practice is major when preparing for the practice and the certification exam.
 
-- **Eliminate options**. Most questions have at least two options you can easily discard at first glance. You can realize this when reading the options' services, features, or deployments. Worst case scenario, if you don't know the answer, you reduce picking one in four to one in two.
-- **Flag questions for review**. Don't spend five minutes thinking about the response to a question. Given you have 130 minutes (2 hours and 10 minutes), the average time per question should be two minutes. If you don't know the answer to a question, flag it and skip it. You can go back to it later.
-- **Read the questions twice**. Read the questions twice to be sure you understand the solution and know what the question is asking. Reading twice is virtually free, and the benefits are infinite.
-- **Use questions to solve other questions**. It may happen you don't know the solution to a question. You mark it and then review it at the end. It is possible, and I have seen it, that a question has the answer to another one. The question statement is generally correct. You can base your solution on that.
+-   **Eliminate options**. Most questions have at least two options you can easily discard at first glance. You can realize this when reading the options' services, features, or deployments. Worst case scenario, if you don't know the answer, you reduce picking one in four to one in two.
+-   **Flag questions for review**. Don't spend five minutes thinking about the response to a question. Given you have 130 minutes (2 hours and 10 minutes), the average time per question should be two minutes. If you don't know the answer to a question, flag it and skip it. You can go back to it later.
+-   **Read the questions twice**. Read the questions twice to be sure you understand the solution and know what the question is asking. Reading twice is virtually free, and the benefits are infinite.
+-   **Use questions to solve other questions**. It may happen you don't know the solution to a question. You mark it and then review it at the end. It is possible, and I have seen it, that a question has the answer to another one. The question statement is generally correct. You can base your solution on that.
 
 Using all these strategies can definitely help you become a certified Solutions Architect.
 
@@ -97,10 +104,10 @@ It has been proven by psychology many times that **mixing up how you study can h
 
 To be an AWS Solutions Architect, you should have experience working with cloud computing. It is a reality that not everyone might have the option of having worked with AWS in a production environment. Regardless, creating an AWS account is free. You don't need to spend money on the AWS Management Console to try it out.
 
-You can **experiment with the console to see the configuration of any service** included in the Solution Architect exam. There's no need to spend money on an EC2 to see what's required to configure it. Besides, you can always carefully use the AWS Free Tier to develop an AWS Certified Solution. Trying out the AWS CLI is also an option, which is free to install.
-Use that to your advantage and experiment with the tools an AWS Solutions Architect works.
+You can **experiment with the console to see the configuration of any service** included in the Solution Architect exam. There's no need to spend money on an EC2 to see what's required to configure it. Besides, you can always carefully use the AWS Free Tier to develop an AWS Certified Solution. Trying out the AWS CLI is also an option, which is free to install. Use that to your advantage and experiment with the tools an AWS Solutions Architect works.
 
 ### Optional: Obtain an AWS Certified Cloud Practitioner certification
+
 Optionally, if you feel uncertain about your preparation for the AWS Solution Architect Certification, **you can change the scope to the AWS Certified Cloud Practitioner**. That AWS certification is less challenging and can give you the confidence to tackle the certified Solutions Architect exam later.
 
 ## How did I get certified?

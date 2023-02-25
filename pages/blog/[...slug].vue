@@ -111,6 +111,49 @@ const { data: authorData } = await useAsyncData('home', () => queryContent('/aut
 const baseUrl = 'https://gonzalohirsch.com';
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/');
 const image = baseUrl + (data.value?.article?.socialImage.src || '/meta-img.jpg');
+
+// JSON+LD
+const jsonScripts = [
+    {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': 'https://gonzalohirsch.com/'
+            },
+            url: canonicalPath,
+            image: image,
+            headline: data.value?.article?.headline,
+            abstract: data.value?.article?.excerpt,
+            datePublished: data.value?.article?.date,
+            dateModified: data.value?.article?.dateUpdated || data.value?.article?.date,
+            author: authorData.value[data.value?.article?.author],
+            publisher: authorData.value['Gonzalo Hirsch']
+        })
+    }
+];
+// Adding the FAQ schema
+if (data.value?.article?.faq) {
+    jsonScripts.push({
+        type: 'application/ld+json',
+        children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: data.value?.article?.faq.map((elem) => {
+                return {
+                    '@type': 'Question',
+                    name: elem.question,
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: elem.answer
+                    }
+                };
+            })
+        })
+    });
+}
 useHead({
     title: data.value?.article?.title,
     meta: [
@@ -142,27 +185,7 @@ useHead({
             href: canonicalPath
         }
     ],
-    script: [
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'BlogPosting',
-                mainEntityOfPage: {
-                    '@type': 'WebPage',
-                    '@id': 'https://gonzalohirsch.com/'
-                },
-                url: canonicalPath,
-                image: image,
-                headline: data.value?.article?.headline,
-                abstract: data.value?.article?.excerpt,
-                datePublished: data.value?.article?.date,
-                dateModified: data.value?.article?.dateUpdated || data.value?.article?.date,
-                author: authorData.value[data.value?.article?.author],
-                publisher: authorData.value['Gonzalo Hirsch']
-            })
-        }
-    ]
+    script: jsonScripts
 });
 
 // Author image
