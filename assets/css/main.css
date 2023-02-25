@@ -196,7 +196,7 @@ body {
 .blog-content h3:hover ::after,
 .blog-content h4:hover ::after,
 .blog-content h5:hover ::after {
-    @apply ml-2 opacity-40 text-brand_secondary_light;
+    @apply ml-2 opacity-40 text-brand_secondary_light absolute;
     content: "#"
 }
 
