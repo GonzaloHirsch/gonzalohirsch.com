@@ -25,7 +25,7 @@ Working for Toptal can be a breath of fresh air for experienced freelancers and 
 
 ## What is Toptal?
 
-[Toptal](https://www.toptal.com/), funded by [Taso Du Val](https://www.linkedin.com/in/tasod/), is a **globally remote freelancing platform** that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. From the outside, it seems simple, it is a freelance marketplace, but it is a much more complicated system. 
+[Toptal](https://www.toptal.com/), founded by [Taso Du Val](https://www.linkedin.com/in/tasod/), is a **globally remote freelancing platform** that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. From the outside, it seems simple, it is a freelance marketplace, but it is a much more complicated system. 
 
 Toptal is proud to be working with the [top 3%](https://www.toptal.com/top-3-percent) of tech talent, and it offers many advantages to both the client and developer sides. It has a rigorous [hiring process](https://www.toptal.com/top-3-percent) with multiple steps, making it hard for talent not already working as a freelancer to make the switch.
 
