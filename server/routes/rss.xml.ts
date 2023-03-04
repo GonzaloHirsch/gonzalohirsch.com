@@ -1,5 +1,4 @@
 import { Feed } from 'feed';
-import { toHtml } from 'hast-util-to-html';
 import { serverQueryContent } from '#content/server';
 import minimatch from 'minimatch';
 
@@ -48,17 +47,15 @@ export default defineEventHandler(async (event) => {
             return node;
         };
         doc.body.children = doc.body.children.map(recursivelyPatchChildren);
-        const content = toHtml(doc.body);
         feed.addItem({
             id: doc._id,
-            title: doc.title,
+            title: doc.headline,
             description: doc.description,
             link: (new URL(doc._path, blogUrl).href + '/').replace(/\/+$/, '/'),
             date: new Date(doc.date),
             author: [
                 authors[doc.author]
-            ],
-            content
+            ]
         });
     }
     appendHeader(event, 'Content-Type', 'application/xml');

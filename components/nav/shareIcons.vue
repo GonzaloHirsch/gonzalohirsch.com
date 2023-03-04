@@ -34,6 +34,7 @@ import Pinterest from '../icons/pinterest.vue';
 import Linkedin from '../icons/linkedin.vue';
 import Facebook from '../icons/facebook.vue';
 import Gmail from '../icons/gmail.vue';
+import Rss from '../icons/rss.vue';
 
 const baseUrl = 'https://gonzalohirsch.com';
 const encodedUrl = encodeURIComponent(baseUrl + props.path);
@@ -76,6 +77,13 @@ const icons = [
         alt: 'Share this story on Pinterest.',
         getHref: () => {
             return `https://pinterest.com/pin/create/button/?url=${encodedUrl}`;
+        }
+    },
+    {
+        icon: Rss,
+        alt: 'Get the RSS feed.',
+        getHref: () => {
+            return `/rss.xml`;
         }
     }
 ];

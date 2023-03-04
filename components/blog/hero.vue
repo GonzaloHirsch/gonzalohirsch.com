@@ -16,8 +16,13 @@
             </ol>
         </div>
         <h1 class="font-bold mb-4 md:mb-6 text-h3 leading-h3 md:text-h1 md:leading-h1 text-center md:text-left">Blog</h1>
-        <p class="mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">
-            A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry. You can find coding challenges, tutorials, and insights on multiple stacks. I might share my experiences and lessons learned from working in the industry.
+        <p class="mb-3 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left">
+            A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry.
+            You can find coding challenges, tutorials, and insights on multiple stacks. I might share my experiences and lessons learned from working
+            in the industry.
+        </p>
+        <p class="mb-8 text-sm leading-sm text-center md:text-left">
+            <a href="/rss.xml" target="_blank" class="hover:underline"><em>Get the RSS feed!</em></a>
         </p>
         <div
             class="border-t-2 mt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right"
