@@ -8,7 +8,7 @@ const exclude = ['/experience**', '/authors**', '/featured-projects/**', '/proje
 // URLs to include
 const include = ['https://gonzalohirsch.com', '/Gonzalo_Hirsch-Software_Engineer-CV.pdf', '/blog/'];
 // Adding blog pages
-const blogPageCount = 1;
+const blogPageCount = 2;
 for (let i = 1; i <= blogPageCount; i++) {
     include.push(`/blog/page/${i}/`);
 }
