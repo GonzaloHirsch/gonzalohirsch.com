@@ -15,12 +15,14 @@ export default defineEventHandler(async (event) => {
     // Feed setup
     const blogUrl = 'https://gonzalohirsch.com';
     const feed = new Feed({
-        id: 'rss',
+        id: blogUrl,
         title: "Gonzalo Hirsch's Blog",
         description:
             'A personal blog where Gonzalo Hirsch writes about programming and insights he gains on software engineering and different technologies from the industry.',
         link: blogUrl,
-        copyright: "2022-present Gonzalo Hirsch's Blog"
+        copyright: `All rights reserved ${new Date().getFullYear()}, Gonzalo Hirsch`,
+        generator: "awesome",
+        favicon: new URL('favicon.png', blogUrl).href,
     });
     // Recovering the docs and filtering for only blogs
     let docs = await serverQueryContent(event).find();
@@ -53,6 +55,7 @@ export default defineEventHandler(async (event) => {
             description: doc.description,
             link: (new URL(doc._path, blogUrl).href + '/').replace(/\/+$/, '/'),
             date: new Date(doc.date),
+            image: new URL(doc.socialImage.src, blogUrl).href,
             author: [
                 authors[doc.author]
             ]

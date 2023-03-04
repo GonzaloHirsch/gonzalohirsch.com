@@ -14,6 +14,13 @@
 </template>
 
 <script setup>
+import Twitter from '../icons/twitter.vue';
+import Pinterest from '../icons/pinterest.vue';
+import Linkedin from '../icons/linkedin.vue';
+import Facebook from '../icons/facebook.vue';
+import Gmail from '../icons/gmail.vue';
+import Rss from '../icons/rss.vue';
+
 const props = defineProps({
     headline: {
         type: String,
@@ -28,13 +35,6 @@ const props = defineProps({
         required: true
     }
 });
-
-import Twitter from '../icons/twitter.vue';
-import Pinterest from '../icons/pinterest.vue';
-import Linkedin from '../icons/linkedin.vue';
-import Facebook from '../icons/facebook.vue';
-import Gmail from '../icons/gmail.vue';
-import Rss from '../icons/rss.vue';
 
 const baseUrl = 'https://gonzalohirsch.com';
 const encodedUrl = encodeURIComponent(baseUrl + props.path);
