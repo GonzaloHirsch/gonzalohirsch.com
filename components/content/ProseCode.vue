@@ -40,6 +40,12 @@ const props = withDefaults(
 const languageMap: Record<string, { text: string }> = {
     java: {
         text: 'Java'
+    },
+    javascript: {
+        text: 'JavaScript'
+    },
+    python: {
+        text: 'Python'
     }
 };
 
