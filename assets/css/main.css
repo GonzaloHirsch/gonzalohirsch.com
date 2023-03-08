@@ -225,3 +225,21 @@ body {
 .blog-content ol {
     @apply list-decimal;
 }
+
+/* Blog Headings */
+
+.blog-content h2 {
+    @apply text-h2_sm leading-h2_sm mb-4;
+}
+
+.blog-content h3 {
+    @apply text-h3_sm leading-h3_sm mb-4;
+}
+
+.blog-content h4 {
+    @apply text-h4_sm leading-h4_sm mb-2;
+}
+
+.blog-content h5 {
+    @apply text-h5_sm leading-h5_sm mb-1;
+}

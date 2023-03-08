@@ -35,15 +35,15 @@ Currently, [Nic.ar](https://nic.ar/es) is the most significant authority in Arge
 
 Delegating is a simple process too. After buying the custom domain and logging in to the Nic.ar registrar page, you will see the following:
 
-![Delegate option in Nic.ar](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-1.webp)
+![Delegate option in Nic.ar.](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-1.webp)
 
 You can select the option to delegate your domain. You will then need to choose to start a new delegation, as shown here:
 
-![Create a new delegation option in Nic.ar](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-2.webp)
+![Create a new delegation option in Nic.ar.](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-2.webp)
 
 The only missing step is to add your DNS server names and save them. You might not have your nameservers yet, so keep reading to learn how to obtain them from Cloudflare.
 
-![Adding the nameservers to the delegation](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-3.webp)
+![Adding the nameservers to the delegation.](/img/blog--delegating-com-ar-domains-using-cloudflare--ar-step-3.webp)
 
 You can list as many nameservers as you want. The delegation process might take up to 1 hour to start working.
 
@@ -53,15 +53,15 @@ Nic.ar also offers a [tutorial](https://nic.ar/es/ayuda/instructivos/delegacion-
 
 The first step to using [Cloudflare](https://www.cloudflare.com/)'s free DNS is to create an account in Cloudflare. Once you have an account, you can head into the "Websites" option in the menu and add a site.
 
-![Creating a new website in Cloudflare](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-1.webp)
+![Creating a new website in Cloudflare.](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-1.webp)
 
 After using the same domain name you registered, Cloudflare will run some checks and prompt you to select a pricing plan. I recommend you choose the free plan they offer.
 
-![Selecting the free Cloudflare princing plan](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-2.webp)
+![Selecting the free Cloudflare princing plan.](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-2.webp)
 
 After choosing the plan, Cloudflare will run some checks for any existing DNS configuration, and you will have access to the management console for your site. When you access a configured site for the first time, it shows you Cloudflare's nameservers you should use. In my case, they were `tosana.ns.cloudflare.com` and `ziggy.ns.cloudflare.com`, but yours might differ.
 
-![Cloudflare's DNS nameservers](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-3.webp)
+![Cloudflare's DNS nameservers.](/img/blog--delegating-com-ar-domains-using-cloudflare--cf-step-3.webp)
 
 The nameservers you see are the ones you should use in your `.com.ar` domain delegation. Note that **it might take 24 hours** for the nameservers to notice updates.
 
