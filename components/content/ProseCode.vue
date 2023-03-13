@@ -46,6 +46,9 @@ const languageMap: Record<string, { text: string }> = {
     },
     python: {
         text: 'Python'
+    },
+    html: {
+        text: 'HTML'
     }
 };
 
