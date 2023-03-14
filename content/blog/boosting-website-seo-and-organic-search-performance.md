@@ -46,7 +46,7 @@ In the tech industry, SEO is a term that probably everyone heard of at least onc
 
 A simple website owner, such as a developer with a portfolio or a startup, won't have the resources to create an entire SEO strategy or pay for the latest research and analysis tools. This guide is aimed at those owners and describes how you can take **three simple actions** to boost your website's SEO quickly and easily. Search engine optimization should be a focus point, even at different scales. I will describe how by implementing the correct schema markups, SEO checks, and blog posting strategy, you will be able to boost SEO and organic search performance.
 
-IMAGE_GOES_HERE
+![Personal portfolio organic search impressions and clicks in the last 3 months.](/img/blog--boosting-website-seo-and-organic-search-performance--chart-1.webp)
 
 As you can see in the image above, my portfolio has significantly improved in organic search traffic, search result performance, and search engine ranking after implementing these actions.
 
@@ -187,11 +187,11 @@ I have been working on my portfolio for years, implementing Google Analytics and
 
 As you can see in the image below, after implementing blog posts and publishing each post, engagement, and impressions from organic search results increase.
 
-IMAGE GOES HERE
+![Personal portfolio organic search impressions, clicks, and blog posts (yellow) in the last 3 months.](/img/blog--boosting-website-seo-and-organic-search-performance--chart-2.webp)
 
-Correcting schemas and implementing the Logos schema have improved my search engine results.
+Correcting schemas and implementing the Logos and FAQ schemas have improved my search engine results.
 
-IMAGE GOES HERE
+![Personal portfolio organic search impressions, clicks, blog posts, and schemas (red) in the last 3 months.](/img/blog--boosting-website-seo-and-organic-search-performance--chart-3.webp)
 
 Consistently uploading blog posts drives more engagement for my content and portfolio, improving my presence and authority in the topics I discuss.
 
