@@ -1,5 +1,5 @@
 <template>
-    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="custom-icon">
         <title>RSS Feed</title>
         <path
             fill="currentColor"

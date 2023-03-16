@@ -5,26 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Unsetting what the default adds */
+p,
+a,
+span,
+li,
+code {
+    font-size: unset;
+}
+
+/* Code */
+
+code {
+    display: unset;
+    overflow: visible;
+}
+
+.custom-icon {
+    margin: unset;
+}
+
 html {
     scroll-behavior: smooth;
 }
-
 h1 {
     @apply font-highlight text-h1_sm leading-h1_sm mb-6;
 }
-
 h2 {
     @apply font-highlight text-h2_sm leading-h2_sm mb-4;
 }
-
 h3 {
     @apply font-highlight text-h3_sm leading-h3_sm mb-4;
 }
-
 h4 {
     @apply font-highlight text-h4_sm leading-h4_sm mb-2;
 }
-
 h5 {
     @apply font-highlight text-h5_sm leading-h5_sm mb-1;
 }
@@ -65,19 +80,15 @@ h5 {
     h1 {
         @apply text-h1 leading-h1;
     }
-
     h2 {
         @apply text-h2 leading-h2;
     }
-
     h3 {
         @apply text-h3 leading-h3;
     }
-
     h4 {
         @apply text-h4 leading-h4;
     }
-
     h5 {
         @apply text-h5 leading-h5;
     }
@@ -197,7 +208,7 @@ body {
 .blog-content h4:hover ::after,
 .blog-content h5:hover ::after {
     @apply ml-2 opacity-40 text-brand_secondary_light absolute;
-    content: "#"
+    content: '#';
 }
 
 .dark .blog-content h2:hover ::after,
@@ -205,7 +216,7 @@ body {
 .dark .blog-content h4:hover ::after,
 .dark .blog-content h5:hover ::after {
     @apply text-brand_secondary_dark;
-    content: "#"
+    content: '#';
 }
 
 /* Blog Lists */
@@ -229,15 +240,15 @@ body {
 /* Blog Headings */
 
 .blog-content h2 {
-    @apply text-h3 leading-h3 mb-4;
+    @apply text-h3_sm leading-h3_sm mb-4;
 }
 
 .blog-content h3 {
-    @apply text-h4 leading-h4 mb-4;
+    @apply text-h4_sm leading-h4_sm mb-4;
 }
 
 .blog-content h4 {
-    @apply text-h5 leading-h5 mb-2;
+    @apply text-h5_sm leading-h5_sm mb-2;
 }
 
 .blog-content h5 {
@@ -248,15 +259,15 @@ body {
     .blog-content h2 {
         @apply text-h2_sm leading-h2_sm mb-4;
     }
-    
+
     .blog-content h3 {
         @apply text-h3_sm leading-h3_sm mb-4;
     }
-    
+
     .blog-content h4 {
         @apply text-h4_sm leading-h4_sm mb-2;
     }
-    
+
     .blog-content h5 {
         @apply text-h5_sm leading-h5_sm mb-1;
     }
