@@ -10,8 +10,11 @@ p,
 a,
 span,
 li,
-code {
+code,
+figcaption {
     font-size: unset;
+    margin: unset;
+    display: unset;
 }
 
 /* Code */
