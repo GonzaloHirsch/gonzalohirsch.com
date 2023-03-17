@@ -1,7 +1,7 @@
 <template>
-    <figure>
+    <figure class="block my-6">
         <img :src="refinedSrc" :alt="alt" :width="width" :height="height" class="mx-auto"/>
-        <figcaption class="text-base leading-base text-center mt-2 opacity-70">{{ alt }}</figcaption>    
+        <figcaption class="text-base leading-base text-center mt-2 opacity-70 block">{{ alt }}</figcaption>    
     </figure>
 </template>
 
