@@ -678,7 +678,7 @@ The last missing step for the blog is adding the blog content. In the content fo
 
 ## Deploying the blog with Nuxt 3
 
-After using the starter template, you might want to deploy your blog for everyone to read. Before deploying it, I recommend checking out [my SEO guide]() to improve your blog and page SEO for better organic growth. 
+After using the starter template, you might want to deploy your blog for everyone to read. Before deploying it, I recommend checking out [my SEO guide](/blog/boosting-website-seo-and-organic-search-performance/) to improve your blog and page SEO for better organic growth. 
 
 Note that the `package.json` file includes a command called Generate. This command generates all the static files ready for deployment in any static hosting like Netlify, Vercel, or AWS. Nuxt offers a [comprehensive guide](https://nuxtjs.org/deployments/) to deploying sites in different providers. I recommend reading that guide and checking [my guide on caching](/blog/ultimate-guide-ssg-caching-with-nuxt-3/) for Nuxt sites.
 
