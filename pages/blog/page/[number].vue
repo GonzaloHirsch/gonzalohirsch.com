@@ -13,10 +13,7 @@
                 <BlogHero />
                 <Section id="main" class="!pt-0">
                     <BlogList :data="data" />
-                    <ContentQuery
-                        path="/blog"
-                        :only="['headline']"
-                    >
+                    <ContentQuery path="/blog" :only="['headline']">
                         <template v-slot="{ data }">
                             <BlogPagination
                                 v-if="getPageLimit(data.length) > 1"
@@ -33,11 +30,14 @@
                         </template>
                     </ContentQuery>
                 </Section>
+                <SectionsNewsletterCta :tags="['2824862', '2824865']" class="!pt-0">
+                    <template #title>Unlock Valuable Tech Knowledge!</template>
+                </SectionsNewsletterCta>
             </template>
             <template #not-found>
                 <BlogHero />
                 <Section id="main" class="!pt-0">
-                    <BlogList :data="[]" message="There are no posts in this page, maybe try searching on another one."/>
+                    <BlogList :data="[]" message="There are no posts in this page, maybe try searching on another one." />
                 </Section>
             </template>
         </ContentQuery>

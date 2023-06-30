@@ -23,6 +23,9 @@
                 pageUrl="/blog/page/"
             />
         </Section>
+        <SectionsNewsletterCta :tags="['2824862','2824865']" class="!pt-0">
+            <template #title>Unlock Valuable Tech Knowledge!</template>
+        </SectionsNewsletterCta>
     </main>
 </template>
 

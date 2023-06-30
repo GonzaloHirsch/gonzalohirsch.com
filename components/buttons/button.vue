@@ -24,17 +24,17 @@
             >{{ text }}</NuxtLink
         >
         <div
-            v-else
+            v-else-if="!value"
             :class="[
                 extraClass,
                 format === 'white'
-                    ? 'bg-transparent border-typography_primary_dark dark:border-typography_primary_light text-typography_primary_dark dark:text-typography_primary_light hover:bg-typography_primary_dark dark:hover:typography_primary_light hover:text-brand_primary_light dark:hover:text-brand_primary_dark'
+                    ? 'bg-transparent border-typography_primary_dark dark:border-typography_primary_light text-typography_primary_dark dark:text-typography_primary_light hover:bg-typography_primary_dark dark:hover:bg-typography_primary_light hover:text-brand_primary_light dark:hover:text-brand_primary_dark'
                     : '',
                 format === 'primary'
                     ? 'bg-transparent border-brand_primary_light dark:border-brand_primary_dark text-brand_primary_light dark:text-brand_primary_dark hover:bg-brand_primary_light hover:text-typography_primary_dark dark:hover:text-background_dark dark:hover:bg-brand_primary_dark'
                     : '',
                 format === 'secondary'
-                    ? 'bg-brand_secondary_light dark:bg_brand_secondary:dark text-typography_primary_dark dark:text-typography_primary_light border-brand_secondary_light dark:border-brand_secondary_dark hover:bg-transparent hover:text-brand_secondary_light dark:hover:text-brand_secondary_dark'
+                    ? 'bg-brand_secondary_light dark:bg-brand_secondary_dark text-typography_primary_dark dark:text-typography_primary_light border-brand_secondary_light dark:border-brand_secondary_dark hover:bg-transparent dark:hover:bg-transparent hover:text-brand_secondary_light dark:hover:text-brand_secondary_dark'
                     : '',
                 format === 'disabled' ? 'button-disabled' : '',
                 'button'
@@ -44,6 +44,28 @@
         >
             {{ text }}
         </div>
+        <input
+            v-else
+            :class="[
+                extraClass,
+                format === 'white'
+                    ? 'bg-transparent border-typography_primary_dark dark:border-typography_primary_light text-typography_primary_dark dark:text-typography_primary_light hover:bg-typography_primary_dark dark:hover:bg-typography_primary_light hover:text-brand_primary_light dark:hover:text-brand_primary_dark'
+                    : '',
+                format === 'primary'
+                    ? 'bg-transparent border-brand_primary_light dark:border-brand_primary_dark text-brand_primary_light dark:text-brand_primary_dark hover:bg-brand_primary_light hover:text-typography_primary_dark dark:hover:text-background_dark dark:hover:bg-brand_primary_dark'
+                    : '',
+                format === 'secondary'
+                    ? 'bg-brand_secondary_light dark:bg-brand_secondary_dark text-typography_primary_dark dark:text-typography_primary_light border-brand_secondary_light dark:border-brand_secondary_dark hover:bg-transparent dark:hover:bg-transparent hover:text-brand_secondary_light dark:hover:text-brand_secondary_dark'
+                    : '',
+                format === 'disabled' ? 'button-disabled' : '',
+                'button'
+            ]"
+            :aria-label="aria"
+            :value="value"
+            :text="text"
+            :type="type"
+            :aria-disabled="format === 'disabled'"
+        />
     </div>
 </template>
 
@@ -56,6 +78,14 @@ const props = defineProps({
     aria: {
         type: String,
         required: true
+    },
+    value: {
+        type: String,
+        required: false
+    },
+    type: {
+        type: String,
+        required: false
     },
     target: {
         type: String,
@@ -80,7 +110,7 @@ const props = defineProps({
 
 <style scoped>
 .button {
-    @apply px-4 py-2 rounded-lg border-2;
+    @apply px-4 py-2 rounded-lg border-2 cursor-pointer;
     width: fit-content;
 }
 

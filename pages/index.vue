@@ -3,6 +3,7 @@
         <SectionsHero />
         <SectionsAbout />
         <SectionsBlogCta />
+        <SectionsNewsletterCta :tags="['2824862','2823217']" class="!pb-0"/>
         <SectionsExperience />
         <SectionsPassion />
         <SectionsProjects />

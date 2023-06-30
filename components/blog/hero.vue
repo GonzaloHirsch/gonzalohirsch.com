@@ -22,7 +22,7 @@
             in the industry.
         </p>
         <p class="mb-8 text-sm leading-sm text-center md:text-left">
-            <a href="/rss.xml" target="_blank" class="hover:underline"><em>Get the RSS feed!</em></a>
+            <a href="/rss.xml" target="_blank" class="hover:underline"><em>Get the RSS feed</em></a> or <a href="#signup" target="_self" class="hover:underline"><em>sign up for updates!</em></a>
         </p>
         <div
             class="border-t-2 mt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right"

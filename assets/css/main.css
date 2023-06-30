@@ -11,7 +11,7 @@ a,
 span,
 li,
 code,
-figcaption {
+figcaption, .base-text {
     font-size: unset;
     margin: unset;
 }
@@ -109,7 +109,7 @@ h5 {
 
 /* Body Text */
 
-p {
+p, .base-text {
     @apply font-text text-base leading-base;
 }
 

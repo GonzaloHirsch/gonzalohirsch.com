@@ -57,6 +57,13 @@
                 </Section>
                 <Section id="main" class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12">
                     <aside class="col-span-full md:col-span-3 md:hidden">
+                        <SectionsMinimalNewsletterCta :tags="['2824862', '2824866']" class="mb-4">
+                            <template #title>Don't Miss Out!</template>
+                            <template #description
+                                >Gain access to <strong>technical insider knowledge</strong>, <strong>thought-provoking articles</strong>, and
+                                <strong>actionable advice</strong>.</template
+                            >
+                        </SectionsMinimalNewsletterCta>
                         <div class="blog-post-text blog-aside-wrapper mb-2">
                             <BlogTableOfContents :links="doc.body?.toc?.links" />
                         </div>
@@ -70,6 +77,13 @@
                         <ContentRenderer :value="doc" class="blog-content blog-post-text" />
                     </article>
                     <aside class="col-span-full md:col-span-3 blog-aside h-fit">
+                        <SectionsMinimalNewsletterCta :tags="['2824862', '2824866']" class="mb-4">
+                            <template #title>Don't Miss Out!</template>
+                            <template #description
+                                >Gain access to <strong>technical insider knowledge</strong>, <strong>thought-provoking articles</strong>, and
+                                <strong>actionable advice</strong>.</template
+                            >
+                        </SectionsMinimalNewsletterCta>
                         <div class="!hidden blog-aside-wrapper md:!flex mb-4">
                             <BlogTableOfContents :links="doc.body?.toc?.links" class="blog-post-text" />
                         </div>
