@@ -57,7 +57,7 @@ const props = defineProps({
     height: 300px;
 }
 .project-simple-content {
-    @apply text-typography_primary_light mb-auto;
+    @apply text-typography_primary_light dark:text-typography_primary_dark mb-auto;
     word-break: break-word;
 }
 @screen md {
@@ -70,9 +70,6 @@ const props = defineProps({
         height: 300px;
     }
 }
-.dark .project-simple-content {
-    @apply text-typography_primary_dark;
-}
 .project-simple-content ul {
     @apply list-disc mt-2 pl-6;
 }
@@ -83,17 +80,11 @@ const props = defineProps({
     @apply font-bold;
 }
 .project-simple-content a:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
-}
-.dark .project-simple-content a:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 /* EXTERNAL LINK */
 .project-simple-external-link {
-    @apply w-fit flex text-typography_primary_light mr-2;
-}
-.dark .project-simple-external-link {
-    @apply text-typography_primary_dark;
+    @apply w-fit flex text-typography_primary_light dark:text-typography_primary_dark mr-2;
 }
 .project-simple-external-link:hover {
     @apply scale-125;

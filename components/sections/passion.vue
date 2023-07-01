@@ -13,16 +13,10 @@
 
 <style scoped>
 .passion-text {
-    @apply text-h3 leading-h3 relative text-center my-auto text-typography_primary_light;
-}
-.dark .passion-text {
-    @apply text-typography_primary_dark;
+    @apply text-h3 leading-h3 relative text-center my-auto text-typography_primary_light dark:text-typography_primary_dark;
 }
 .passion-text strong {
-    @apply text-brand_primary_light font-semibold;
-}
-.dark .passion-text strong {
-    @apply text-brand_primary_dark;
+    @apply text-brand_primary_light dark:text-brand_primary_dark font-semibold;
 }
 @screen md {
     .passion-text {

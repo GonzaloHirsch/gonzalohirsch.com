@@ -108,11 +108,8 @@ const getImage = (url) => {
 
 <style>
 .project-featured-content {
-    @apply text-typography_primary_light;
+    @apply text-typography_primary_light dark:text-typography_primary_dark;
     word-break: break-word;
-}
-.dark .project-featured-content {
-    @apply text-typography_primary_dark;
 }
 .project-featured-content ul {
     @apply list-disc mt-2;
@@ -124,10 +121,7 @@ const getImage = (url) => {
     @apply font-bold;
 }
 .project-featured-content a:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
-}
-.dark .project-featured-content a:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 .project-featured-left {
     @apply text-left;
@@ -179,7 +173,7 @@ const getImage = (url) => {
 }
 /* EXTERNAL LINK */
 .project-featured-external-link {
-    @apply w-fit flex text-typography_primary_light;
+    @apply w-fit flex text-typography_primary_light dark:text-typography_primary_dark;
 }
 .project-featured-right .project-featured-external-link {
     @apply ml-2;
@@ -187,13 +181,7 @@ const getImage = (url) => {
 .project-featured-left .project-featured-external-link {
     @apply mr-2;
 }
-.dark .project-featured-external-link {
-    @apply text-typography_primary_dark;
-}
 .project-featured-external-link:hover {
-    @apply scale-125 text-brand_primary_light;
-}
-.dark .project-featured-external-link:hover {
-    @apply text-brand_primary_dark;
+    @apply scale-125 text-brand_primary_light dark:text-brand_primary_dark;
 }
 </style>

@@ -57,11 +57,7 @@ const languageText = computed(() => (props.language ? languageMap[props.language
 
 <style scoped>
 .container {
-    @apply w-full my-6 rounded-md bg-background_dark border border-brand_primary_light/50 pt-8 relative overflow-hidden;
-}
-
-.dark .container {
-    @apply border-brand_primary_dark/50;
+    @apply w-full my-6 rounded-md bg-background_dark border border-brand_primary_light/50 dark:border-brand_primary_dark/50 pt-8 relative overflow-hidden;
 }
 
 :slotted(pre) {
@@ -105,12 +101,9 @@ const languageText = computed(() => (props.language ? languageMap[props.language
 }
 
 .language-text {
-    @apply absolute right-0 top-0 bg-brand_primary_light text-background_light px-2 py-1 rounded-bl-md;
+    @apply absolute right-0 top-0 bg-brand_primary_light text-background_light dark:bg-brand_primary_dark dark:text-background_dark px-2 py-1 rounded-bl-md;
 }
 
-.dark .language-text {
-    @apply bg-brand_primary_dark text-background_dark;
-}
 
 :slotted(pre code) {
     @apply w-full flex flex-col;
@@ -129,12 +122,8 @@ const languageText = computed(() => (props.language ? languageMap[props.language
 }
 
 :slotted(pre code .highlight) {
-    @apply block -mx-4 pr-4 pl-3 border-l-4 border-brand_primary_light;
+    @apply block -mx-4 pr-4 pl-3 border-l-4 border-brand_primary_light dark:border-brand_primary_dark;
     content: '';
     background-color: #363b46;
-}
-
-.dark :slotted(pre code .highlight) {
-    @apply border-brand_primary_dark;
 }
 </style>

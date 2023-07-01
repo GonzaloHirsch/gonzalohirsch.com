@@ -97,14 +97,11 @@ h5 {
 }
 
 .title-decor::before {
-    @apply bg-typography_primary_light block mx-auto absolute left-0;
+    @apply bg-typography_primary_light dark:bg-typography_primary_dark block mx-auto absolute left-0;
     content: '';
     width: 150px;
     height: 2px;
     top: -50px;
-}
-.dark .title-decor::before {
-    @apply bg-typography_primary_dark;
 }
 
 /* Body Text */
@@ -122,11 +119,7 @@ p, .base-text {
 /* Section */
 
 .section-title {
-    @apply text-brand_primary_light font-bold;
-}
-
-.dark .section-title {
-    @apply text-brand_primary_dark;
+    @apply text-brand_primary_light dark:text-brand_primary_dark font-bold;
 }
 
 /* Menu & Body */
@@ -142,11 +135,7 @@ body.menu-open {
 }
 
 body {
-    @apply bg-background_light;
-}
-
-.dark body {
-    @apply bg-background_dark;
+    @apply bg-background_light dark:bg-background_dark;
 }
 
 /* Blog Breadcrumbs */
@@ -164,11 +153,7 @@ body {
 }
 
 .blog-breadcrumb > li a {
-    @apply text-brand_primary_light;
-}
-
-.dark .blog-breadcrumb > li a {
-    @apply text-brand_primary_dark;
+    @apply text-brand_primary_light dark:text-brand_primary_dark;
 }
 
 .blog-breadcrumb > li a:hover {
@@ -196,11 +181,7 @@ body {
 }
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
-    @apply text-brand_primary_light;
-}
-
-.dark .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
-    @apply text-brand_primary_dark;
+    @apply text-brand_primary_light dark:text-brand_primary_dark;
 }
 
 /* Blog Headings */
@@ -209,15 +190,7 @@ body {
 .blog-content h3:hover ::after,
 .blog-content h4:hover ::after,
 .blog-content h5:hover ::after {
-    @apply ml-2 opacity-40 text-brand_secondary_light absolute;
-    content: '#';
-}
-
-.dark .blog-content h2:hover ::after,
-.dark .blog-content h3:hover ::after,
-.dark .blog-content h4:hover ::after,
-.dark .blog-content h5:hover ::after {
-    @apply text-brand_secondary_dark;
+    @apply ml-2 opacity-40 text-brand_secondary_light dark:text-brand_secondary_dark absolute;
     content: '#';
 }
 

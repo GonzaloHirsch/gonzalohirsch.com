@@ -148,33 +148,21 @@ onUnmounted(() => {
 }
 
 .large-nav-item {
-    @apply cursor-pointer list-none mx-2 text-h5 rounded-md text-typography_primary_light;
+    @apply cursor-pointer list-none mx-2 text-h5 rounded-md text-typography_primary_light dark:text-typography_primary_dark;
 }
 .large-nav-item a {
     @apply px-2 py-1;
 }
 .large-nav-item:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 .mobile-nav-item {
-    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 text-typography_primary_light;
+    @apply cursor-pointer list-none my-2 text-h5 rounded-md px-2 py-1 text-typography_primary_light dark:text-typography_primary_dark;
 }
 .mobile-nav-item a {
     @apply px-2 py-1;
 }
 .mobile-nav-item:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
-}
-.dark .large-nav-item {
-    @apply text-typography_primary_dark;
-}
-.dark .large-nav-item:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
-}
-.dark .mobile-nav-item {
-    @apply text-typography_primary_dark;
-}
-.dark .mobile-nav-item:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 </style>

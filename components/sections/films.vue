@@ -37,9 +37,6 @@ fetch(RSS_URL)
     @apply font-bold;
 }
 .film-content a:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
-}
-.dark .film-content a:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 </style>

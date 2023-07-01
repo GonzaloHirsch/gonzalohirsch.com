@@ -83,22 +83,16 @@ import imageBL from '../../assets/img/edinburgh.webp';
 
 <style scoped>
 .about-text {
-    @apply text-h5 leading-h4 relative text-typography_primary_light;
+    @apply text-h5 leading-h4 relative text-typography_primary_light dark:text-typography_primary_dark;;
 }
 .about-text:not(:last-of-type) {
     @apply mb-6;
-}
-.dark .about-text {
-    @apply text-typography_primary_dark;
 }
 .about-text .link {
     @apply font-bold;
 }
 .about-text .link:hover {
-    @apply bg-brand_primary_light text-typography_primary_dark;
-}
-.dark .about-text .link:hover {
-    @apply bg-brand_primary_dark text-typography_primary_light;
+    @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
 }
 @screen md {
     .about-text {

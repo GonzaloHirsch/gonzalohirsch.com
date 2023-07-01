@@ -42,7 +42,7 @@
 
 <style scoped>
 .home-title::before {
-    @apply bg-typography_primary_light block mx-auto absolute left-0 right-0;
+    @apply bg-typography_primary_light dark:bg-typography_primary_dark block mx-auto absolute left-0 right-0;
     content: '';
     width: 15%;
     height: 2px;
@@ -52,9 +52,6 @@
     .home-title::before {
         top: -50px;
     }
-}
-.dark .home-title::before {
-    @apply bg-typography_primary_dark;
 }
 .home-title {
     @apply text-h3_sm leading-h3_sm relative;

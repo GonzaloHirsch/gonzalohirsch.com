@@ -9,15 +9,12 @@
 // Components
 import { ref, onMounted } from 'vue';
 
+const colorMode = useColorMode();
 const currentTheme = ref('light');
 
 const updatePageTheme = (theme) => {
-    if (theme === 'dark') {
-        document.querySelector('html').classList.add('dark');
-    } else {
-        document.querySelector('html').classList.remove('dark');
-    }
     currentTheme.value = theme;
+    colorMode.preference = theme
 };
 
 const updateStoredTheme = (theme) => {

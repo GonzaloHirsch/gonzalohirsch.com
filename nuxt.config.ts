@@ -1,6 +1,6 @@
 const keywords = 'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng';
 const description =
-"I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
+    "I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
 const website = {
     '@context': 'http://schema.org',
     '@type': 'WebSite',
@@ -67,7 +67,12 @@ for (let i = 1; i <= blogPageCount; i++) {
 }
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/color-mode'],
+    colorMode: {
+        classSuffix: '',
+        preference: 'light',
+        fallback: 'light'
+    },
     css: ['/assets/css/main.css'],
     ssr: true,
     generate: {
@@ -117,17 +122,13 @@ export default defineNuxtConfig({
             })
         }
     },
-    // tailwindcss: {
-    //     // This is the option that works
-    //     darkMode: 'class'
-    // },
     sourcemap: false,
     // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
     content: {
         // https://content.nuxtjs.org/api/configuration
         highlight: {
             theme: 'github-dark',
-            preload: ['java','javascript','python','html']
+            preload: ['java', 'javascript', 'python', 'html']
         },
         markdown: {
             // https://github.com/rehypejs/rehype-external-links

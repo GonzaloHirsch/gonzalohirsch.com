@@ -80,29 +80,13 @@ const props = defineProps({
 .mc-field-group {
     @apply flex-grow mr-1 text-left;
 }
-
 .mc-field-group input {
-    @apply rounded-md border-brand_primary_light border bg-background_light text-typography_primary_light px-4 py-2 text-center text-lg;
+    @apply rounded-md border-brand_primary_light dark:border-brand_primary_dark border bg-background_light text-typography_primary_light dark:bg-background_dark dark:text-typography_primary_dark px-4 py-2 text-center text-lg;
 }
-
-.dark .mc-field-group input {
-    @apply bg-background_dark text-typography_primary_dark;
-}
-
 .mc-field-group input:focus,
 .mc-field-group input:focus-visible {
-    @apply outline-brand_primary_light;
+    @apply outline-brand_primary_light dark:outline-brand_primary_dark;
 }
-
-.dark .mc-field-group input {
-    @apply border-brand_primary_dark;
-}
-
-.dark .mc-field-group input:focus,
-.dark .mc-field-group input:focus-visible {
-    @apply outline-brand_primary_dark;
-}
-
 .mc-field-group > * {
     @apply w-full;
 }

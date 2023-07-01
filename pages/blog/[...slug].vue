@@ -92,6 +92,11 @@
                         </div>
                     </aside>
                 </Section>
+                <Section id="comments">
+                    <div class="!bg-background_light !text-typography_primary_light p-8 border-t-2 border-b-2 border-typography_primary_light">
+                        <div id="disqus_thread" />
+                    </div>
+                </Section>
                 <NavScrollTopIcon />
             </template>
             <template #not-found>
@@ -210,6 +215,14 @@ const authors = {
 const getImage = (name) => {
     return authors[name];
 };
+
+// Script loading for comments
+import { onMounted } from 'vue';
+onMounted(() => {
+    const script = document.createElement('script');
+    script.innerHTML = `var disqus_config = function () {this.page.url = "${canonicalPath}";this.page.identifier = "${data.value.article.id}";this.page.title = "${data.value.article.headline}"};(function () {var d = document,s = d.createElement('script');s.src = "https://gonzalohirsch.disqus.com/embed.js";s.setAttribute('data-timestamp', new Date());(d.head || d.body).appendChild(s);})();`;
+    document.body.appendChild(script);
+});
 </script>
 
 <style scoped>
@@ -218,19 +231,11 @@ const getImage = (name) => {
     top: calc(theme('spacing.nav') + 0.25rem);
 }
 .blog-aside-wrapper {
-    @apply flex flex-col border-t-2 border-b-2 border-typography_primary_light py-4;
+    @apply flex flex-col border-t-2 border-b-2 border-typography_primary_light dark:border-typography_primary_dark py-4;
 }
-.dark .blog-aside-wrapper {
-    @apply border-typography_primary_dark;
-}
-
 .blog-post-text {
-    @apply text-typography_primary_light;
+    @apply text-typography_primary_light dark:text-typography_primary_dark;
 }
-.dark .blog-post-text {
-    @apply text-typography_primary_dark;
-}
-
 .separator {
     @apply mx-1;
 }

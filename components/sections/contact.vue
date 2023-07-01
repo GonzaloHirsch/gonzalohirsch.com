@@ -20,10 +20,7 @@
 
 <style scoped>
 .contact-text {
-    @apply text-h4 leading-h4 relative text-center text-typography_primary_light;
-}
-.dark .contact-text {
-    @apply text-typography_primary_dark;
+    @apply text-h4 leading-h4 relative text-center text-typography_primary_light dark:text-typography_primary_dark;
 }
 @screen md {
     .contact-text {

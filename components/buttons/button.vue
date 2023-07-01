@@ -115,10 +115,6 @@ const props = defineProps({
 }
 
 .button-disabled {
-    @apply border-2 border-background_dark text-background_dark bg-transparent opacity-50;
-}
-
-.dark .button-disabled {
-    @apply border-2 border-background_light text-background_light bg-transparent opacity-50;
+    @apply border-2 border-background_dark text-background_dark dark:border-background_light dark:text-background_light bg-transparent opacity-50;
 }
 </style>
