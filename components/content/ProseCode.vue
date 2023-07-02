@@ -44,6 +44,12 @@ const languageMap: Record<string, { text: string }> = {
     javascript: {
         text: 'JavaScript'
     },
+    typescript: {
+        text: 'TypeScript'
+    },
+    bash: {
+        text: 'Bash'
+    },
     python: {
         text: 'Python'
     },
