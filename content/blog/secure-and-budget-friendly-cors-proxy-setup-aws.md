@@ -172,6 +172,6 @@ Funnily enough, you can secure your proxy using the CORS allow origin header and
 
 **A self-hosted AWS Lambda proxy is the best option to get security and keep costs within your budget**. You can probably deploy this entire solution in less than 1 hour, so it's worth trying it to explore more options to solve your CORS issue. I hope this (virtually) free CORS proxy solution can help you!
 
-You can find a working example in this public repository on my GitHub account. Last, a gentle reminder to configure the OPTIONS request response so the CORS preflight request goes through.
+You can find a working example in this [public repository](https://github.com/GonzaloHirsch/proxy-serverless-api) on my GitHub account. Last, a gentle reminder to configure the OPTIONS request response so the CORS preflight request goes through.
 
 If you are interested in other technology topics, [check out the rest of the blog](/blog/)! You can find more insights into [reducing Auth0 costs](/blog/reducing-auth0-bill-by-3000-dollars/) or help to [crack the AWS Solution Architect Associate examination](/blog/cracking-the-aws-solutions-architect-associate-certification/).
