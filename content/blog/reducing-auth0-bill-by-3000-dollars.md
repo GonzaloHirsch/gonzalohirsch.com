@@ -1,4 +1,5 @@
 ---
+dqid: 'reducing-auth0-bill-3000-dollars'
 title: 'How I reduced my Auth0 bill by $3,000 | Gonzalo Hirsch'
 description: 'By analyzing our M2M token usage in Auth0 and implementing a quick (and free) change, I managed to reduce our Auth0 bill by $3,000 per year.'
 headline: 'How I reduced my Auth0 bill by $3,000'
@@ -8,20 +9,20 @@ dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--reducing-auth0-bill-by-3000-dollars-2.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "How I reduced my Auth0 bill by $3,000"'
-    width: 1200
-    height: 630
+  src: '/img/blog--reducing-auth0-bill-by-3000-dollars-2.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "How I reduced my Auth0 bill by $3,000"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is Auth0?'
-      answer: 'Auth0 is an Argentinian-born unicorn that provides authentication and authorization as a service. They offer developers and companies a way to secure their applications quickly. Some Auth0 use cases and sectors are the public sector, B2B SaaS, passwordless logins, Customer Identity Access Management (CIAM), and healthcare.'
-    - question: 'What is an M2M token exactly?'
-      answer: "Given your application architecture or requirements, you might need one of your processes or back-end systems (origin system) to communicate with another system (destination system). This communication might happen without users filling in a user and a password, so you need a secure way to authenticate to the destination system. Here's where M2M tokens come into play. You can create an M2M application (for your origin system) in Auth0 and set its permissions (grants, actions it can perform) to allow interaction with your destination system."
-    - question: 'Why is it important to keep an eye on your M2M token usage?'
-      answer: 'The monthly M2M limit for "Free" and "Essential" users in Auth0 is 1,000 tokens per month. This allowance means you could average using ~33 M2M tokens per day without upgrading your account. If you have multiple distributed systems, and each might require multiple M2M authentications per day, you can imagine that going over that daily average is simple. Upgrading your account to a "Professional" plan could be the solution to get 5,000 tokens in total, but it costs about $3,000 per month (at the least).'
-    - question: 'What is the outcome of this approach?'
-      answer: "The main impact is on the use of M2M tokens. In the Auth0 dashboard, you can verify that the authentication token consumption doesn't exceed one M2M token per day in your reports. It improves the system's performance as authentication will be faster when using the cached token. Your information is still secured, and your platform usage will always be limited. Reducing one of the causes of M2M token consumption has another advantage because it leaves more authentication tokens for the management API free for consumption."
+  - question: 'What is Auth0?'
+    answer: 'Auth0 is an Argentinian-born unicorn that provides authentication and authorization as a service. They offer developers and companies a way to secure their applications quickly. Some Auth0 use cases and sectors are the public sector, B2B SaaS, passwordless logins, Customer Identity Access Management (CIAM), and healthcare.'
+  - question: 'What is an M2M token exactly?'
+    answer: "Given your application architecture or requirements, you might need one of your processes or back-end systems (origin system) to communicate with another system (destination system). This communication might happen without users filling in a user and a password, so you need a secure way to authenticate to the destination system. Here's where M2M tokens come into play. You can create an M2M application (for your origin system) in Auth0 and set its permissions (grants, actions it can perform) to allow interaction with your destination system."
+  - question: 'Why is it important to keep an eye on your M2M token usage?'
+    answer: 'The monthly M2M limit for "Free" and "Essential" users in Auth0 is 1,000 tokens per month. This allowance means you could average using ~33 M2M tokens per day without upgrading your account. If you have multiple distributed systems, and each might require multiple M2M authentications per day, you can imagine that going over that daily average is simple. Upgrading your account to a "Professional" plan could be the solution to get 5,000 tokens in total, but it costs about $3,000 per month (at the least).'
+  - question: 'What is the outcome of this approach?'
+    answer: "The main impact is on the use of M2M tokens. In the Auth0 dashboard, you can verify that the authentication token consumption doesn't exceed one M2M token per day in your reports. It improves the system's performance as authentication will be faster when using the cached token. Your information is still secured, and your platform usage will always be limited. Reducing one of the causes of M2M token consumption has another advantage because it leaves more authentication tokens for the management API free for consumption."
 # tags: []
 ---
 

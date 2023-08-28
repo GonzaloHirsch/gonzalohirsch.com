@@ -1,4 +1,5 @@
 ---
+dqid: "improving-seo-organic-search"
 title: 'Boosting site SEO and search performance | Gonzalo Hirsch'
 description: "Learn how to improve your website's SEO quickly and easily with three simple actions. Boost your organic search performance and gain more visibility with these tips."
 headline: "Boosting your website's SEO and organic search performance"
@@ -70,10 +71,10 @@ On another end, **schema markups enable special SERPs** (Search Engine Results P
 
 [Google uses only a subset](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) of the many structured data types on the [Schema.org](https://schema.org/docs/full.html) page. I'll list a few of them (the ones I use), but I recommend reading the entire list on Google's documentation:
 
--   [Article](https://developers.google.com/search/docs/appearance/structured-data/article): Used for articles, news, and blog post. Enables Google to offer better title text, images, and date information results on Google Search.
--   [Breadcrumb](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb): Used to indicate the position in a site's hierarchy and helps users navigate a website effectively.
--   [FAQ](https://developers.google.com/search/docs/appearance/structured-data/faqpage): Used when the page contains questions and answers for a particular topic.
--   [Logo](https://developers.google.com/search/docs/appearance/structured-data/logo): Specify the organization's logo and general information for the Google Search knowledge panel.
+- [Article](https://developers.google.com/search/docs/appearance/structured-data/article): Used for articles, news, and blog post. Enables Google to offer better title text, images, and date information results on Google Search.
+- [Breadcrumb](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb): Used to indicate the position in a site's hierarchy and helps users navigate a website effectively.
+- [FAQ](https://developers.google.com/search/docs/appearance/structured-data/faqpage): Used when the page contains questions and answers for a particular topic.
+- [Logo](https://developers.google.com/search/docs/appearance/structured-data/logo): Specify the organization's logo and general information for the Google Search knowledge panel.
 
 These are the most commonly used ones, but if your website justifies using any of the others, you should go ahead and implement them.
 
@@ -83,34 +84,34 @@ You can quickly implement schema markup in self-hosted and most hosting-based de
 
 ```html
 <html>
-    <head>
-        <title>Example Site - Frequently Asked Questions(FAQ)</title>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What should FAQ include?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "An FAQ page (short for Frequently Asked Question page) is a part of your website that provides answers to common questions, assuages concerns, and overcomes objections. It's a space where customers can delve into the finer details of your product or service, away from your sales-focused landing pages and homepage."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the difference between FAQ and Q&A?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "In FAQ Schema one question has only one answer but in Q&A schema, one question may have multiple answers. For example, let's take the example of What are the top 11 SEO Tools Every Marketer Should Use in 2020."
-                        }
-                    }
-                ]
+  <head>
+    <title>Example Site - Frequently Asked Questions(FAQ)</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What should FAQ include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An FAQ page (short for Frequently Asked Question page) is a part of your website that provides answers to common questions, assuages concerns, and overcomes objections. It's a space where customers can delve into the finer details of your product or service, away from your sales-focused landing pages and homepage."
             }
-        </script>
-    </head>
-    <body></body>
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between FAQ and Q&A?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In FAQ Schema one question has only one answer but in Q&A schema, one question may have multiple answers. For example, let's take the example of What are the top 11 SEO Tools Every Marketer Should Use in 2020."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -126,11 +127,11 @@ It is **essential to monitor your current site's SEO status continuously**. It p
 
 SEO audits involve checking for multiple factors like:
 
--   **Broken links** lead search engines to believe your site has poor quality and might frustrate users.
--   [Page speed is a ranking factor](https://developers.google.com/search/blog/2010/04/using-site-speed-in-web-search-ranking). It can impact your search engine performance.
--   **On-page optimization factors** like the meta title, meta description, and other header tags improve search appearance. Content keyword research is critical as well.
--   **Mobile-friendliness** of pages is a factor taken into account by Google Search Console. Non-mobile-friendly pages won't get mobile results, which account for [60% of traffic](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet).
--   **Accessibility and [core web vitals](https://web.dev/vitals/)** help improve user experience on your web page. Tools like [PageSpeed Insights](https://pagespeed.web.dev/) and [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) can assist you when identifying issues with the Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS). Accessibility features like alt text for images are essential for the accessibility tests. You can read about my guide to Nuxt 3 caching to improve performance and boost your page speed result.
+- **Broken links** lead search engines to believe your site has poor quality and might frustrate users.
+- [Page speed is a ranking factor](https://developers.google.com/search/blog/2010/04/using-site-speed-in-web-search-ranking). It can impact your search engine performance.
+- **On-page optimization factors** like the meta title, meta description, and other header tags improve search appearance. Content keyword research is critical as well.
+- **Mobile-friendliness** of pages is a factor taken into account by Google Search Console. Non-mobile-friendly pages won't get mobile results, which account for [60% of traffic](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet).
+- **Accessibility and [core web vitals](https://web.dev/vitals/)** help improve user experience on your web page. Tools like [PageSpeed Insights](https://pagespeed.web.dev/) and [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) can assist you when identifying issues with the Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS). Accessibility features like alt text for images are essential for the accessibility tests. You can read about my guide to Nuxt 3 caching to improve performance and boost your page speed result.
 
 Note that it is not an exhaustive list of verifications, but a **comprehensive SEO check can discover issues that affect your organic search results**. Fixing these issues should be your top priority before optimizing the content itself. Tools like [checkbot.io](https://www.checkbot.io/) allow you to perform a comprehensive SEO check on existing websites for free! The next step in your SEO strategy after conducting a local SEO check to verify implementation errors is to perform keyword research and analysis.
 
@@ -142,9 +143,9 @@ By performing this analysis before (or after) creating your content, you can res
 
 There are several types of analysis available (not an exhaustive list):
 
--   **Keyword research and discovery** are possible with tools like Google Ads' [Google Keyword Planner](https://ads.google.com/intl/en_us/home/tools/keyword-planner/) and [MarketMuse](https://www.marketmuse.com/keyword-research/), where you can explore and test keywords. Although those tools can be expensive, they provide free tiers that are more than capable of getting the job done, with limitations. These tools perform a competitive analysis too.
--   **Search term analysis** is available in [Google Analytics](https://analytics.google.com/analytics/web/) and the [Google Search Console](https://search.google.com/search-console/about). You can analyze the terms with which people are searching and landing on your page. By understanding how users find your page, you can optimize it further on those terms and gain authority. [Google Trends](https://trends.google.com/home) is another tool that can help you understand the popularity of a search term.
--   A **competitive keyword analysis** is available using the above tools for keyword research. A more rudimentary approach is possible too. You can search for the term in Google and copy the complete content of the first 10 to 20 results. Using a word cloud generator with that content can yield a keyword phrase analysis on your competitors, but it is more time-consuming.
+- **Keyword research and discovery** are possible with tools like Google Ads' [Google Keyword Planner](https://ads.google.com/intl/en_us/home/tools/keyword-planner/) and [MarketMuse](https://www.marketmuse.com/keyword-research/), where you can explore and test keywords. Although those tools can be expensive, they provide free tiers that are more than capable of getting the job done, with limitations. These tools perform a competitive analysis too.
+- **Search term analysis** is available in [Google Analytics](https://analytics.google.com/analytics/web/) and the [Google Search Console](https://search.google.com/search-console/about). You can analyze the terms with which people are searching and landing on your page. By understanding how users find your page, you can optimize it further on those terms and gain authority. [Google Trends](https://trends.google.com/home) is another tool that can help you understand the popularity of a search term.
+- A **competitive keyword analysis** is available using the above tools for keyword research. A more rudimentary approach is possible too. You can search for the term in Google and copy the complete content of the first 10 to 20 results. Using a word cloud generator with that content can yield a keyword phrase analysis on your competitors, but it is more time-consuming.
 
 After performing a keyword analysis and discovery, gathering all the information you need to create content that will attract organic search traffic, content optimization is the next step.
 
@@ -172,12 +173,12 @@ With all this research, you should be able to write compelling content for your 
 
 The optimization of a blog post is a process that makes use of everything I mentioned above. The following are the main actions you can take to take your blogs to the next level:
 
--   **Implement schema markups**. The `Article` schema should be present to signal search engines that your content is a blog post. Blog pages are a fantastic opportunity to include `Breadcrumb` schemas on your page. Blog posts have the potential for `FAQ` and `How-To` schemas. `FAQ` schemas are generally more appropriate, although it depends on the content.
--   **Perform keyword research and analysis on competitive terms**. Analyzing keywords and competitive phrases can help you create high-quality content.
--   **Link building with both external and internal links**. Leverage the relationships between your existing content by linking to your internal pages to drive engagement. Adding a "Read Next" section where you link to other posts can drive engagement up too.
--   **Implement a Table of Contents (ToC) to improve your SERP**. According to [Search Engine Land](https://searchengineland.com/pro-tip-table-of-contents-can-provide-additional-link-options-in-organic-search-336615), including a ToC can help Google create specialized SERPs for your search results. It is a simple yet effective way to improve user experience as well.
--   **Index your pages on Google Search Console** to yield better search engine results.
--   **Implement the correct tags for OpenGraph and Twitter cards**. Tools like [opengraph.xyz](https://opengraph.xyz/) allow you to visualize all your web page share cards. It is a fantastic tool for debugging social media share cards.
+- **Implement schema markups**. The `Article` schema should be present to signal search engines that your content is a blog post. Blog pages are a fantastic opportunity to include `Breadcrumb` schemas on your page. Blog posts have the potential for `FAQ` and `How-To` schemas. `FAQ` schemas are generally more appropriate, although it depends on the content.
+- **Perform keyword research and analysis on competitive terms**. Analyzing keywords and competitive phrases can help you create high-quality content.
+- **Link building with both external and internal links**. Leverage the relationships between your existing content by linking to your internal pages to drive engagement. Adding a "Read Next" section where you link to other posts can drive engagement up too.
+- **Implement a Table of Contents (ToC) to improve your SERP**. According to [Search Engine Land](https://searchengineland.com/pro-tip-table-of-contents-can-provide-additional-link-options-in-organic-search-336615), including a ToC can help Google create specialized SERPs for your search results. It is a simple yet effective way to improve user experience as well.
+- **Index your pages on Google Search Console** to yield better search engine results.
+- **Implement the correct tags for OpenGraph and Twitter cards**. Tools like [opengraph.xyz](https://opengraph.xyz/) allow you to visualize all your web page share cards. It is a fantastic tool for debugging social media share cards.
 
 Sharing your blog posts on social media can boost your organic search too. A compelling title tag and meta description are essential for your share cards to drive click-through performance results.
 

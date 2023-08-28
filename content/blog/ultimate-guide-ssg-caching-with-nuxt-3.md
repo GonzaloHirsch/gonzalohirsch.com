@@ -1,4 +1,5 @@
 ---
+dqid: 'nuxt-ssg-caching-guide'
 title: 'Ultimate guide on SSG caching for Nuxt 3 | Gonzalo Hirsch'
 description: 'SSG leverages the benefits of SSR in terms of SEO while keeping costs down and providing a fast user experience. Proper cache configuration can make the user experience of your site far better.'
 headline: 'Ultimate guide on SSG caching for Nuxt 3'
@@ -8,26 +9,26 @@ dateUpdated: '2023-02-20T12:00:00'
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--ultimate-guide-ssg-caching-with-nuxt-3-2.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Ultimate guide on SSG caching for Nuxt 3"'
-    width: 1200
-    height: 630
+  src: '/img/blog--ultimate-guide-ssg-caching-with-nuxt-3-2.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Ultimate guide on SSG caching for Nuxt 3"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is Server Side Rendering?'
-      answer: 'SSR is the process of rendering your application files on your servers. It means that whenever someone accesses a route in your app, the request goes to the server, the server generates the content, and you get a static HTML file. Almost no Javascript code runs on the client side.'
-    - question: 'What is a Single Page Application?'
-      answer: 'In a SPA, there is only one actual route within your app, but your application router simulates different pages by changing the components. This rendering scheme works for a web application requiring rich client-side interaction.'
-    - question: 'What is Static Site Generation?'
-      answer: "In SSG, you use a Static Site Generator framework to pre-render your static website offline and then upload all the files to a distribution platform. The process of rendering the site produces multiple static files. Dynamic content can run on the client side, so it doesn't affect the user experience when loading content. These frameworks offer specific components to allow this."
-    - question: 'How can you use SSG in a Nuxt App?'
-      answer: "I recommend following the Nuxt 3 tutorial on installing the framework, but once that is taken care of, you can render the static website content with the nuxt generate command. In my experience with this Javascript framework, a crucial configuration is missing. The 'nuxt.config.ts' file needs to have the 'ssr: true' set. It makes the framework generate the content properly; otherwise, some route errors appear. This flag expands the possibilities of writing your NuxtJS Modules for added behaviors."
-    - question: 'How can I deploy the site content myself?'
-      answer: "There are some free and no-code options to deploy and serve your site, such as Netlify. I offer some details on deploying your static page using AWS and GitHub Actions. When deploying your site in AWS, you need an S3 bucket, a CloudFront distribution, and Route 53 for DNS. The idea is to upload the '.output/public' contents to an S3 bucket. Then you point the CloudFront distribution origin to the bucket and configure the Route 53 DNS to point to the distribution. Uploading the content to the bucket can be automated using GitHub Actions (for free!), where the configuration matters. There you can configure the cache control header for each file."
-    - question: 'What am I deploying?'
-      answer: "<p><ul><li>'_nuxt' is a folder that contains components, icons, fonts, CSS, and everything the site needs to hydrate. A hydration process that happens on the client side; helps add interactivity to the site. All the files within this folder are named using a content hash.</li><li>'api/_content' is a folder generated using the Nuxt Content plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is here.</li><li>'_payload.js' is a file used similarly to the 'api/_content' folder. Note that the name doesn't change, but the content might.</li><li>There are other standard HTML and XML files. Any static file added to the public folder will be there.</li></ul></p>"
-    - question: 'How do I configure the cache?'
-      answer: "When configuring your GitHub Action, you can specify the cache headers for files uploaded to S3. As a rule of thumb, you should only cache (long-term) files whose name contains a content digest. If the file contents change, the file name will change, thus changing the import on the file that requires it. Given the explanation of the generated content, we can safely cache the _nuxt folder with a cache header of 'max-age=31536000,public,immutable'. The rest of the files can use a cache policy of 'max-age=0,public,must-revalidate' so that the browser shouldn't load the file on the disk."
+  - question: 'What is Server Side Rendering?'
+    answer: 'SSR is the process of rendering your application files on your servers. It means that whenever someone accesses a route in your app, the request goes to the server, the server generates the content, and you get a static HTML file. Almost no Javascript code runs on the client side.'
+  - question: 'What is a Single Page Application?'
+    answer: 'In a SPA, there is only one actual route within your app, but your application router simulates different pages by changing the components. This rendering scheme works for a web application requiring rich client-side interaction.'
+  - question: 'What is Static Site Generation?'
+    answer: "In SSG, you use a Static Site Generator framework to pre-render your static website offline and then upload all the files to a distribution platform. The process of rendering the site produces multiple static files. Dynamic content can run on the client side, so it doesn't affect the user experience when loading content. These frameworks offer specific components to allow this."
+  - question: 'How can you use SSG in a Nuxt App?'
+    answer: "I recommend following the Nuxt 3 tutorial on installing the framework, but once that is taken care of, you can render the static website content with the nuxt generate command. In my experience with this Javascript framework, a crucial configuration is missing. The 'nuxt.config.ts' file needs to have the 'ssr: true' set. It makes the framework generate the content properly; otherwise, some route errors appear. This flag expands the possibilities of writing your NuxtJS Modules for added behaviors."
+  - question: 'How can I deploy the site content myself?'
+    answer: "There are some free and no-code options to deploy and serve your site, such as Netlify. I offer some details on deploying your static page using AWS and GitHub Actions. When deploying your site in AWS, you need an S3 bucket, a CloudFront distribution, and Route 53 for DNS. The idea is to upload the '.output/public' contents to an S3 bucket. Then you point the CloudFront distribution origin to the bucket and configure the Route 53 DNS to point to the distribution. Uploading the content to the bucket can be automated using GitHub Actions (for free!), where the configuration matters. There you can configure the cache control header for each file."
+  - question: 'What am I deploying?'
+    answer: "<p><ul><li>'_nuxt' is a folder that contains components, icons, fonts, CSS, and everything the site needs to hydrate. A hydration process that happens on the client side; helps add interactivity to the site. All the files within this folder are named using a content hash.</li><li>'api/_content' is a folder generated using the Nuxt Content plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is here.</li><li>'_payload.js' is a file used similarly to the 'api/_content' folder. Note that the name doesn't change, but the content might.</li><li>There are other standard HTML and XML files. Any static file added to the public folder will be there.</li></ul></p>"
+  - question: 'How do I configure the cache?'
+    answer: "When configuring your GitHub Action, you can specify the cache headers for files uploaded to S3. As a rule of thumb, you should only cache (long-term) files whose name contains a content digest. If the file contents change, the file name will change, thus changing the import on the file that requires it. Given the explanation of the generated content, we can safely cache the _nuxt folder with a cache header of 'max-age=31536000,public,immutable'. The rest of the files can use a cache policy of 'max-age=0,public,must-revalidate' so that the browser shouldn't load the file on the disk."
 # tags: []
 ---
 
@@ -120,20 +121,20 @@ The contents of `.output/public` look like this:
 
 Let us review what those files and folders mean:
 
--   `_nuxt` is a folder that contains components, icons, fonts, CSS, and everything the site needs to hydrate. A hydration process that happens on the client side; helps add interactivity to the site. All the files within this folder are named using a content hash.
--   `api/_content` is a folder generated using the [Nuxt Content](https://content.nuxtjs.org/) plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is [here](https://github.com/nuxt/framework/issues/6151#issuecomment-1196684149).
--   `_payload.js` is a file used similarly to the `api/_content` folder. Note that the name doesn't change, but the content might.
--   There are other standard HTML and XML files. Any static file added to the `public` folder will be there.
+- `_nuxt` is a folder that contains components, icons, fonts, CSS, and everything the site needs to hydrate. A hydration process that happens on the client side; helps add interactivity to the site. All the files within this folder are named using a content hash.
+- `api/_content` is a folder generated using the [Nuxt Content](https://content.nuxtjs.org/) plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is [here](https://github.com/nuxt/framework/issues/6151#issuecomment-1196684149).
+- `_payload.js` is a file used similarly to the `api/_content` folder. Note that the name doesn't change, but the content might.
+- There are other standard HTML and XML files. Any static file added to the `public` folder will be there.
 
 You can avoid generating `_payload.js` files by setting the following property in the `nuxt.config.ts` file. It is optional, and as far as I've seen, it would only reduce the size of the HTML files, but it simplifies file management in your deployed site.
 
 ```javascript
 export default defineNuxtConfig({
-    //...
-    experimental: {
-        payloadExtraction: false
-    }
-    //...
+  //...
+  experimental: {
+    payloadExtraction: false,
+  },
+  //...
 });
 ```
 

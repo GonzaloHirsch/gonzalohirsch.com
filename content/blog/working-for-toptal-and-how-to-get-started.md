@@ -1,23 +1,24 @@
 ---
+dqid: 'working-for-toptal-and-getting-started'
 title: 'Working for Toptal and how to get started | Gonzalo Hirsch'
-description: "Toptal is the biggest remote freelance platform in the world. Learn more about my experience working as a freelancer for it and how you can get started."
+description: 'Toptal is the biggest remote freelance platform in the world. Learn more about my experience working as a freelancer for it and how you can get started.'
 headline: 'Working for Toptal and how to get started'
-excerpt: "Toptal is the biggest remote freelance platform in the world. Learn more about my experience working as a freelancer for it and how you can get started."
+excerpt: 'Toptal is the biggest remote freelance platform in the world. Learn more about my experience working as a freelancer for it and how you can get started.'
 date: '2023-02-28T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--working-for-toptal-and-how-to-get-started.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Working for Toptal and how to get started"'
-    width: 1200
-    height: 630
+  src: '/img/blog--working-for-toptal-and-how-to-get-started.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Working for Toptal and how to get started"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is Toptal?'
-      answer: 'Toptal is a globally remote freelancing platform that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. Toptal is proud to be working with the top 3% of tech talent, and it offers many advantages to both the client and developer sides.'
-    - question: 'What is the interview process in detail?'
-      answer: '<p>The Toptal hiring process (as a freelancer) involves four main steps.<ul><li>Interview 1: Screening process</li><li>Interview 2: Offline coding interview</li><li>Interview 3: Online coding interview</li></li>Interview 4: Test project</li></ul></p>'
+  - question: 'What is Toptal?'
+    answer: 'Toptal is a globally remote freelancing platform that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. Toptal is proud to be working with the top 3% of tech talent, and it offers many advantages to both the client and developer sides.'
+  - question: 'What is the interview process in detail?'
+    answer: '<p>The Toptal hiring process (as a freelancer) involves four main steps.<ul><li>Interview 1: Screening process</li><li>Interview 2: Offline coding interview</li><li>Interview 3: Online coding interview</li></li>Interview 4: Test project</li></ul></p>'
 # tags: []
 ---
 
@@ -25,7 +26,7 @@ Working for Toptal can be a breath of fresh air for experienced freelancers and 
 
 ## What is Toptal?
 
-[Toptal](https://www.toptal.com/), founded by [Taso Du Val](https://www.linkedin.com/in/tasod/), is a **globally remote freelancing platform** that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. From the outside, it seems simple, it is a freelance marketplace, but it is a much more complicated system. 
+[Toptal](https://www.toptal.com/), founded by [Taso Du Val](https://www.linkedin.com/in/tasod/), is a **globally remote freelancing platform** that connects clients with professionals. Toptal offers career paths as a software developer, project management, product manager, data scientist, UX designer, and finance expert, among other specializations. From the outside, it seems simple, it is a freelance marketplace, but it is a much more complicated system.
 
 Toptal is proud to be working with the [top 3%](https://www.toptal.com/top-3-percent) of tech talent, and it offers many advantages to both the client and developer sides. It has a rigorous [hiring process](https://www.toptal.com/top-3-percent) with multiple steps, making it hard for talent not already working as a freelancer to make the switch.
 

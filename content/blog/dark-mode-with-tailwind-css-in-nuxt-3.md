@@ -1,23 +1,24 @@
 ---
+dqid: 'nuxt-tailwind-dark-mode'
 title: 'Configuring Dark Mode for Tailwind CSS in Nuxt 3 | Gonzalo Hirsch'
 description: "Learn how to configure Dark Mode for Tailwind CSS in Nuxt 3 with this comprehensive tutorial, enhancing your website's aesthetics and user experience."
-headline: "Step-by-Step Guide: Configuring Dark Mode for Tailwind CSS in Nuxt 3"
+headline: 'Step-by-Step Guide: Configuring Dark Mode for Tailwind CSS in Nuxt 3'
 excerpt: "Learn how to configure Dark Mode for Tailwind CSS in Nuxt 3 with this comprehensive tutorial, enhancing your website's aesthetics and user experience."
 date: '2023-07-02T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--dark-mode-with-tailwind-css-in-nuxt-3.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Configuring Dark Mode for Tailwind CSS in Nuxt 3"'
-    width: 1200
-    height: 630
+  src: '/img/blog--dark-mode-with-tailwind-css-in-nuxt-3.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Configuring Dark Mode for Tailwind CSS in Nuxt 3"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is Tailwind CSS?'
-      answer: "Tailwind CSS is an open-source, utility-first CSS framework that simplifies web development by providing ready-to-use utility classes. You can quickly build responsive and customizable user interfaces without writing custom CSS from scratch. The latest version of Tailwind CSS natively supports the Dark Theme (and Light Mode, of course!), so it's perfect for this. Also, Tailwind natively supports media breakpoints, so it helps you define a media strategy for your application."
-    - question: 'What is Nuxt?'
-      answer: "Nuxt is an open-source web JavaScript framework built over Vue that offers an improved developer experience and optimized user experience. It has a very active community and a comprehensive list of plugins, some of which help seamlessly integrate Tailwind CSS into your Nuxt 3 app."
+  - question: 'What is Tailwind CSS?'
+    answer: "Tailwind CSS is an open-source, utility-first CSS framework that simplifies web development by providing ready-to-use utility classes. You can quickly build responsive and customizable user interfaces without writing custom CSS from scratch. The latest version of Tailwind CSS natively supports the Dark Theme (and Light Mode, of course!), so it's perfect for this. Also, Tailwind natively supports media breakpoints, so it helps you define a media strategy for your application."
+  - question: 'What is Nuxt?'
+    answer: 'Nuxt is an open-source web JavaScript framework built over Vue that offers an improved developer experience and optimized user experience. It has a very active community and a comprehensive list of plugins, some of which help seamlessly integrate Tailwind CSS into your Nuxt 3 app.'
 # tags: []
 ---
 
@@ -158,10 +159,10 @@ Note that the only necessary code to import the Nuxt Color Mode plugin is this:
 
 ```html
 <script setup>
-const colorMode = useColorMode();
-const toggleTheme = () => {
+  const colorMode = useColorMode();
+  const toggleTheme = () => {
     colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark';
-};
+  };
 </script>
 ```
 

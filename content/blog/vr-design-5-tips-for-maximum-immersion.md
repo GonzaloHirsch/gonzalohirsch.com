@@ -1,4 +1,5 @@
 ---
+dqid: 'vr-design-tips-immersive'
 title: '5 Tips for Immersive Virtual Reality Design | Gonzalo Hirsch'
 description: 'Learn how to design immersive virtual reality experiences. Get an overview of the VR hardware market and understand why proper VR design is crucial to provide maximum immersion.'
 headline: 'Virtual Reality Design: 5 Tips for Maximum Immersion'
@@ -8,18 +9,18 @@ dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--vr-design-5-tips-for-maximum-immersion.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Virtual Reality Design: 5 Tips for Maximum Immersion"'
-    width: 1200
-    height: 630
+  src: '/img/blog--vr-design-5-tips-for-maximum-immersion.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Virtual Reality Design: 5 Tips for Maximum Immersion"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What existing hardware is on the market?'
-      answer: "There are multiple hardware options for many different consumer profiles and backing hardware. Meta, PlayStation, Google, Pico, and HTC are the principal players in the VR ecosystem, capturing more than 97% of the consumer market."
+  - question: 'What existing hardware is on the market?'
+    answer: 'There are multiple hardware options for many different consumer profiles and backing hardware. Meta, PlayStation, Google, Pico, and HTC are the principal players in the VR ecosystem, capturing more than 97% of the consumer market.'
 # tags: []
 ---
 
-Virtual reality is considered the future of entertainment and gaming. Since the consumer release of Oculus Rift in 2016 and Google Cardboard in 2014, virtual reality technology companies have paved the way for this to become a reality. Although virtual reality is still not seen as a commodity, constant developments are happening to improve VR technology and reduce its price. Improvements in technology drive immersion, but without virtual reality design focused on user experience in-game, consumers won't catch on. 
+Virtual reality is considered the future of entertainment and gaming. Since the consumer release of Oculus Rift in 2016 and Google Cardboard in 2014, virtual reality technology companies have paved the way for this to become a reality. Although virtual reality is still not seen as a commodity, constant developments are happening to improve VR technology and reduce its price. Improvements in technology drive immersion, but without virtual reality design focused on user experience in-game, consumers won't catch on.
 
 Let's start by getting an overview of the current state of VR hardware, and then we'll dive into tips to provide maximum user immersion.
 
@@ -53,7 +54,7 @@ Object and interaction design plays a significant role during VR development. Ba
 
 Virtual reality motion sickness is a significant problem that users face when going through a virtual reality experience. Although it is inherent to some users, you can reduce those effects. We can blame this problem on two causes: the **visual-vestibular conflict** and the **vergence-accommodation conflict**.
 
-The visual-vestibular conflict occurs when the **acceleration perceived by the inner ear system is different than that by the eye**. To reduce this conflict, we can use **natural locomotion** (if available, depending on the headset) or the **teleportation pattern** (implemented in most VR SDKs). 
+The visual-vestibular conflict occurs when the **acceleration perceived by the inner ear system is different than that by the eye**. To reduce this conflict, we can use **natural locomotion** (if available, depending on the headset) or the **teleportation pattern** (implemented in most VR SDKs).
 
 Another option is to use the **Dynamic FOV pattern**, reducing the Field of View when the user is experiencing acceleration.
 
@@ -74,7 +75,7 @@ The [optimal frame rate](https://help.irisvr.com/hc/en-us/articles/215884547-The
 - [Light mapping](https://docs.unity3d.com/Manual/Lightmapping.html) to simulate a ray-traced virtual environment. Light mapping pre-computes ray tracing from light sources into texture maps. During playtime, textures load, and no real-time tracing is required.
 - Baking [reflection probes](https://docs.unity3d.com/Manual/class-ReflectionProbe.html) for static reflections and sky spheres can save processing. Well-placed reflection probes for static objects reduce unnecessary processing.
 - [Occlusion Culling](https://docs.unity3d.com/Manual/OcclusionCulling.html) reduces the rendering of hidden objects. Engines like Unity offer computing Occlusion Culling areas, avoiding the rendering of hidden objects.
-- **Optimizing objects in scenes** reduces CPU load. Use different [levels of detail](https://docs.unity3d.com/Manual/LevelOfDetail.html) to reduce polygon counts. Reduce shadow amount. Reduce the number of dynamic lights and mark entities and lights as static. Use billboarding for far-plane objects. 
+- **Optimizing objects in scenes** reduces CPU load. Use different [levels of detail](https://docs.unity3d.com/Manual/LevelOfDetail.html) to reduce polygon counts. Reduce shadow amount. Reduce the number of dynamic lights and mark entities and lights as static. Use billboarding for far-plane objects.
 - **Optimize object counts** in scenes to reduce instancing. [GPU instancing](https://docs.unity3d.com/Manual/GPUInstancing.html) can offload instancing to the GPU, which is faster. [Object pooling](https://learn.unity.com/tutorial/introduction-to-object-pooling) pre-instances objects to offer consistent performance.
 - **Optimize textures** depending on the use case and context.
 

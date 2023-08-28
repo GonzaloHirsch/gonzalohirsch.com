@@ -1,4 +1,5 @@
 ---
+dqid: 'nuxt-building-a-blog'
 title: 'From zero to blog: Building with Nuxt 3 | Gonzalo Hirsch'
 description: "Create a professional-looking blog with Nuxt 3 using my simple, yet effective guide. With our step-by-step instructions, you'll be able to build a fully-functional blog in no time."
 headline: 'From zero to blog: Building with Nuxt 3'
@@ -8,14 +9,14 @@ dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--zero-to-blog-building-with-nuxt-3.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "From zero to blog: Building with Nuxt 3"'
-    width: 1200
-    height: 630
+  src: '/img/blog--zero-to-blog-building-with-nuxt-3.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "From zero to blog: Building with Nuxt 3"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is Nuxt?'
-      answer: 'Nuxt is an open source web framework built over Vue that offers an improved developer experience and optimized user experience. You can build sites using Single Page Applications (SPA), Static Site Generation (SSG), or Server Side Rendering (SSR) schemes. It has an active community and plenty of plugins and extensions available. Leveraging SSG deployments for static websites can boost your SEO without the burdens of SSR, especially in monetary terms.'
+  - question: 'What is Nuxt?'
+    answer: 'Nuxt is an open source web framework built over Vue that offers an improved developer experience and optimized user experience. You can build sites using Single Page Applications (SPA), Static Site Generation (SSG), or Server Side Rendering (SSR) schemes. It has an active community and plenty of plugins and extensions available. Leveraging SSG deployments for static websites can boost your SEO without the burdens of SSR, especially in monetary terms.'
 # tags: []
 ---
 
@@ -678,7 +679,7 @@ The last missing step for the blog is adding the blog content. In the content fo
 
 ## Deploying the blog with Nuxt 3
 
-After using the starter template, you might want to deploy your blog for everyone to read. Before deploying it, I recommend checking out [my SEO guide](/blog/boosting-website-seo-and-organic-search-performance/) to improve your blog and page SEO for better organic growth. 
+After using the starter template, you might want to deploy your blog for everyone to read. Before deploying it, I recommend checking out [my SEO guide](/blog/boosting-website-seo-and-organic-search-performance/) to improve your blog and page SEO for better organic growth.
 
 Note that the `package.json` file includes a command called Generate. This command generates all the static files ready for deployment in any static hosting like Netlify, Vercel, or AWS. Nuxt offers a [comprehensive guide](https://nuxtjs.org/deployments/) to deploying sites in different providers. I recommend reading that guide and checking [my guide on caching](/blog/ultimate-guide-ssg-caching-with-nuxt-3/) for Nuxt sites.
 
@@ -686,4 +687,4 @@ Note that the `package.json` file includes a command called Generate. This comma
 
 Creating a blog with Nuxt 3 is a simple process. In this particular example, I provide many files and configurations for the starter template. Nuxt 3 and Nuxt Content offer many configuration options and the possibility of expansion with custom components. In this case, I provided custom components for code blocks and images, but you can even write custom Vue components to import directly into a blog Markdown file. I invite you to continue working on the starter template, set your style to the blog and extend it.
 
-*You can find the entire code [here](https://github.com/GonzaloHirsch/nuxt-blog-starter).*
+_You can find the entire code [here](https://github.com/GonzaloHirsch/nuxt-blog-starter)._

@@ -1,4 +1,5 @@
 ---
+dqid: 'student-organization-tips'
 title: 'Starting and sustaining a student organization | Gonzalo Hirsch'
 description: 'Learn how to create and grow a successful student organization. Find a co-founder, define a mission and vision, and launch your organization with funding and student involvement.'
 headline: 'Student-led initiatives: Tips for starting and sustaining a university organization'
@@ -8,16 +9,16 @@ dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--student-led-initiatives-starting-and-sustaining-university-organizations.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Starting and sustaining a student organization"'
-    width: 1200
-    height: 630
+  src: '/img/blog--student-led-initiatives-starting-and-sustaining-university-organizations.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Starting and sustaining a student organization"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'How to get started?'
-      answer: "The first step is to find a co-founder you can trust. The key to success is to start this journey with someone organized and determined to create a prospering organization. The next step is to define the mission and vision of the society. Identifying what you want to achieve via student activities and why you should be a recognized student organization is necessary. The last step is to find a faculty advisor and register the organization at the university's student services. Find an advisor that can vouch for you and your society. Investigate how your university deals with this kind of student affairs. Prepare a statement on how your student club differs from other student organizations and what campus activities you will host."
-    - question: 'How to grow the organization?'
-      answer: "The first step in growing your student organization is to be organized and collaborate with other registered student organizations. Continuously creating events and student organization workshops will improve your presence on campus. Fundraising and recruitment will keep your organization running in the long term."
+  - question: 'How to get started?'
+    answer: "The first step is to find a co-founder you can trust. The key to success is to start this journey with someone organized and determined to create a prospering organization. The next step is to define the mission and vision of the society. Identifying what you want to achieve via student activities and why you should be a recognized student organization is necessary. The last step is to find a faculty advisor and register the organization at the university's student services. Find an advisor that can vouch for you and your society. Investigate how your university deals with this kind of student affairs. Prepare a statement on how your student club differs from other student organizations and what campus activities you will host."
+  - question: 'How to grow the organization?'
+    answer: 'The first step in growing your student organization is to be organized and collaborate with other registered student organizations. Continuously creating events and student organization workshops will improve your presence on campus. Fundraising and recruitment will keep your organization running in the long term.'
 # tags: []
 ---
 
@@ -31,8 +32,8 @@ The first step is to **find a co-founder you can trust**. The key to success is 
 
 The next step is to **define the mission and vision of the society**. Identifying what you want to achieve via student activities and why you should be a recognized student organization is necessary. Leading a group of people without knowing what you want to be is impossible. I had the opportunity to open a branch of the world-renowned IEEE Computer Society, so we had the following:
 
--   _Mission_: "Spark interest and spread knowledge about technology-related topics."
--   _Vision_: "Complement academic training using current tools and technologies to train better professionals."
+- _Mission_: "Spark interest and spread knowledge about technology-related topics."
+- _Vision_: "Complement academic training using current tools and technologies to train better professionals."
 
 The last step is to **find a faculty advisor and register the organization at the university's student services**. Find an advisor that can vouch for you and your society. Investigate how your university deals with this kind of student affairs. Prepare a statement on how your student club differs from other student organizations and what campus activities you will host.
 
@@ -86,9 +87,9 @@ During my time as a founder and part of the student leaders, we grew the organiz
 
 The road to founding a new organization powered by the interest of its members was long and bumpy. We learned many things along the way and created a legacy for ourselves at the university. My main takeaways from this are:
 
--   **Lead by example**. Don't delegate work you hate to other members. Show them how to do it and set an example and do it yourself.
--   **Communication is essential**. Talk with the students that work with you, understand their needs, and listen to their ideas. Most of the time, great ideas came from them.
--   **Leadership skills are necessary**. Leading a non-profit, new student organization is no joke.
+- **Lead by example**. Don't delegate work you hate to other members. Show them how to do it and set an example and do it yourself.
+- **Communication is essential**. Talk with the students that work with you, understand their needs, and listen to their ideas. Most of the time, great ideas came from them.
+- **Leadership skills are necessary**. Leading a non-profit, new student organization is no joke.
 
 The main challenges were growing the organization and having its members trust us during an impossible time like the pandemic. They confided us with our time, and we made it worth it.
 

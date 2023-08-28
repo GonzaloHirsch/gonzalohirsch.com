@@ -1,21 +1,22 @@
 ---
+dqid: 'hackathon-success-tips'
 title: 'Hackathon tips and tricks for success | Gonzalo Hirsch'
-description: "Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed."
+description: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed.'
 headline: 'Hackathon success: Tips and tricks for improving your performance'
-excerpt: "Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed."
+excerpt: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed.'
 date: '2023-03-04T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-    src: '/img/blog--hackathon-success-tips-and-tricks-for-improving-your-performance.webp'
-    mime: 'webp'
-    alt: 'Illustration with the text "Hackathon tips and tricks for a successful team"'
-    width: 1200
-    height: 630
+  src: '/img/blog--hackathon-success-tips-and-tricks-for-improving-your-performance.webp'
+  mime: 'webp'
+  alt: 'Illustration with the text "Hackathon tips and tricks for a successful team"'
+  width: 1200
+  height: 630
 faq:
-    - question: 'What is a hackathon?'
-      answer: 'Hackathons are competitions where teams engage in speed and collaborative engineering for 24 to 48 hours. These competitions come in different flavors; a hackathon can be short (24 to 48 hours) or long-term (2 to 3 weeks), idea or prototype-oriented, and game or technology-based. A hackathon is usually hosted by a company or an educational organization, targeting a specific demographic (i.e., students, recent grads, experienced programmers), offering prizes, and proposing a panel of judges for different stages of the competition.'
+  - question: 'What is a hackathon?'
+    answer: 'Hackathons are competitions where teams engage in speed and collaborative engineering for 24 to 48 hours. These competitions come in different flavors; a hackathon can be short (24 to 48 hours) or long-term (2 to 3 weeks), idea or prototype-oriented, and game or technology-based. A hackathon is usually hosted by a company or an educational organization, targeting a specific demographic (i.e., students, recent grads, experienced programmers), offering prizes, and proposing a panel of judges for different stages of the competition.'
 # tags: []
 ---
 
@@ -23,11 +24,11 @@ What is a hackathon? **Hackathons** are competitions where teams engage in speed
 
 In my personal experience as a software developer, I started attending hackathons in 2018 and have been successful in many cases. Each hackathon has helped me develop a specific skill set to identify opportunities to have a successful hackathon. For instance:
 
--   **Third place** at the Instituto Tecnológico de Buenos Aires hackathon in 2018.
--   **Special mention** in the Instituto Tecnológico de Buenos Aires game jam in 2018.
--   [Winner](https://www.infobae.com/tecno/2019/05/18/estudiantes-ganan-un-concurso-para-crear-una-plataforma-de-orientacion-vocacional-con-inteligencia-artificial-y-un-sistema-de-mentorias/) of JP Morgan's "Code for Good" hackathon in Argentina in 2019.
--   **Special mention** in the Global Game Jam 2019, Buenos Aires' center location.
--   **Finalist** at Bellatrix's "Hackatrix" hackathon in Argentina in 2019.
+- **Third place** at the Instituto Tecnológico de Buenos Aires hackathon in 2018.
+- **Special mention** in the Instituto Tecnológico de Buenos Aires game jam in 2018.
+- [Winner](https://www.infobae.com/tecno/2019/05/18/estudiantes-ganan-un-concurso-para-crear-una-plataforma-de-orientacion-vocacional-con-inteligencia-artificial-y-un-sistema-de-mentorias/) of JP Morgan's "Code for Good" hackathon in Argentina in 2019.
+- **Special mention** in the Global Game Jam 2019, Buenos Aires' center location.
+- **Finalist** at Bellatrix's "Hackatrix" hackathon in Argentina in 2019.
 
 You can expect to find insights on leveraging the hackathon event to network with participants and organizers, identify a successful idea, pick your team, and lead a successful hackathon project. An insight into my experience winning an important hackathon can help you kickstart your next hackathon idea.
 
@@ -45,17 +46,17 @@ We can all agree that **the most significant constraint of a hackathon is time**
 
 **Balance creativity with feasibility**. An innovative solution that is not feasible by any means is worth nothing. Back your project with real-life information and technology. If coding can take you there within the time frame, go ahead. Think of it as a product in the market, and try to answer the following questions:
 
--   Which customer stories are targeted by your project?
--   How will you gather analytics and a way to visualize them?
--   How will administrators and users use this?
--   How can you monetize and scale this project?
+- Which customer stories are targeted by your project?
+- How will you gather analytics and a way to visualize them?
+- How will administrators and users use this?
+- How can you monetize and scale this project?
 
 After coming up with your big idea, use your project management skills to designate the following tasks:
 
--   Up to two developers work on the prototype or prototypes.
--   One team member prepares a pitch and presentation.
--   Another team member talks with organizers, other participants, and the judges (if possible).
--   Have an extra team member to help with any of the previous tasks.
+- Up to two developers work on the prototype or prototypes.
+- One team member prepares a pitch and presentation.
+- Another team member talks with organizers, other participants, and the judges (if possible).
+- Have an extra team member to help with any of the previous tasks.
 
 This set of roles can help you communicate and test your innovation before presentation time. **Iterate with people and your hackathon team to tune your idea to the competitio**n. Communication is the basis of a successful hackathon project and team.
 
@@ -65,12 +66,12 @@ This set of roles can help you communicate and test your innovation before prese
 
 Your 10 to 15-minute pitch decides the fate of your project, so **spend all the time possible perfecting and practicing it**. Before spending all night working on your pitch, talk to the organizers, understand what they see as a good idea, and tailor your presentation. Your presentation should be able to clearly and concisely answer the following questions:
 
--   What is the problem you are trying to solve?
--   Why are you solving that problem?
--   What is your idea, and how it works?
--   How your idea tackles that problem?
--   How your project differs from others, and how it adds value?
--   How can you scale your project and make it viable?
+- What is the problem you are trying to solve?
+- Why are you solving that problem?
+- What is your idea, and how it works?
+- How your idea tackles that problem?
+- How your project differs from others, and how it adds value?
+- How can you scale your project and make it viable?
 
 **Your presentation should be visually appealing and communicate your idea**. Don't spend time on coding details that the judges won't understand or account for when evaluating you. The presentation should tell a simple, coherent, and cohesive story. Don't throw buzzwords like artificial intelligence, blockchain, or machine learning without justification. The presentation should highlight why your project is an innovation and how it adds value to the world.
 

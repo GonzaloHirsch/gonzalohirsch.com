@@ -1,4 +1,5 @@
 ---
+dqid: 'cors-proxy-aws-setup'
 title: 'Secure and Budget-Friendly CORS Proxy Setup in AWS | Gonzalo Hirsch'
 description: 'Build robust and cost-efficient CORS proxies on AWS with our comprehensive guide, ensuring smooth cross-origin interaction for your applications.'
 headline: 'Secure and Budget-Friendly CORS Proxy Setup in AWS'
