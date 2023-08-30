@@ -20,7 +20,7 @@ faq:
 # tags: []
 ---
 
-What is a hackathon? **Hackathons** are competitions where teams engage in speed and collaborative engineering for 24 to 48 hours. These competitions come in different flavors; a hackathon can be short (24 to 48 hours) or long-term (2 to 3 weeks), idea or prototype-oriented, and game or technology-based. A hackathon is usually hosted by a company or an educational organization, targeting a specific demographic (i.e., students, recent grads, experienced programmers), offering prizes, and proposing a panel of judges for different stages of the competition.
+**What is a hackathon?** **Hackathons** are competitions where teams engage in speed and collaborative engineering for 24 to 48 hours. These competitions come in different flavors; a hackathon can be short (24 to 48 hours) or long-term (2 to 3 weeks), idea or prototype-oriented, and game or technology-based. A hackathon is usually hosted by a company or an educational organization, targeting a specific demographic (i.e., students, recent grads, experienced programmers), offering prizes, and proposing a panel of judges for different stages of the competition.
 
 In my personal experience as a software developer, I started attending hackathons in 2018 and have been successful in many cases. Each hackathon has helped me develop a specific skill set to identify opportunities to have a successful hackathon. For instance:
 

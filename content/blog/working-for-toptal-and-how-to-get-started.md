@@ -5,7 +5,7 @@ description: 'Toptal is the biggest remote freelance platform in the world. Lear
 headline: 'Working for Toptal and how to get started'
 excerpt: 'Toptal is the biggest remote freelance platform in the world. Learn more about my experience working as a freelancer for it and how you can get started.'
 date: '2023-02-28T12:00:00'
-dateUpdated: ''
+dateUpdated: '2023-08-30T12:00:00'
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
@@ -71,7 +71,7 @@ Before getting the previously mentioned job, I spent less than one week looking 
 
 My involvement with Toptal is not limited to my freelance developer experience there. I have taken part in many activities with them:
 
-- Writing for the Toptal Engineering Blog, which is not released yet, but will be anytime.
+- Writing for the Toptal Engineering Blog. You can find this [here](https://www.toptal.com/json/jwt-nodejs-security).
 - Participating in social events with other Argentinean Toptal experts, I met and networked with freelance designers, finance experts, and other remote workers.
 - Used programs that fostered AWS certifications and got [my AWS Solutions Architect Associate certification](/blog/cracking-the-aws-solutions-architect-associate-certification/).
 - I attended webinars by the Toptal team on how to become a successful freelancer and improve communication.
@@ -118,7 +118,7 @@ Most projects revolve around a [CRUD](https://developer.mozilla.org/en-US/docs/G
 
 The key to nailing the process and starting freelancing for Toptal is the following. Practice your problem-solving skills and algorithms, know your stack well before even facing the test project, have answers to all the questions I mentioned before, assume you are always speaking with a client on a job, and apply with a [referral](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent). Starting the process through an existing Toptal member can give you an advantage.
 
-You can use [my referral](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity.
+You can use [my referral](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity. I have referred colleagues, and they have all passed the screening process.
 
 ## Toptal alternatives
 
