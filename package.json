@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@vueuse/core": "9.9.0",
+    "uuid": "9.0.0",
     "vue-gtag-next": "1.14.0"
   }
 }
