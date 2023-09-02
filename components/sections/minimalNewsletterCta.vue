@@ -101,18 +101,14 @@
 
 <script setup>
 import { v4 as uuidv4 } from 'uuid';
-import { ref, onBeforeMount } from 'vue';
-const uid = ref(null);
+import { ref } from 'vue';
+const uid = ref(uuidv4());
 
 const props = defineProps({
   tags: {
     type: Array,
     default: ['2824862'],
   },
-});
-
-onBeforeMount(() => {
-  uid.value = uuidv4();
 });
 </script>
 
