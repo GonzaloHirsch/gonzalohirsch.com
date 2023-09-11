@@ -5,7 +5,7 @@ description: "Semantic Release and branch protection rules in GitHub don't alway
 headline: 'Semantic Release and Branch Protection Rules'
 excerpt: "Semantic Release and branch protection rules in GitHub don't always work well. By using a GitHub App and a GitHub Action, you can effortlessly deploy a new version."
 date: '2023-09-09T12:00:00'
-dateUpdated: ''
+dateUpdated: '2023-09-11T12:00:00'
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
@@ -19,6 +19,8 @@ faq:
     answer: 'Semantic Release automates the package release workflow, including determining version numbers, generating a release note, and publishing the package. Not limited to those capabilities, you can extend Semantic Release using plugins. In automated, git-based environments, Semantic Release looks at previous releases and your commit message since the latest release to generate a changelog (using the Conventional Commit standard) and determine the following semantic version number (for a new git tag). When given credentials to publish packages, Semantic Release will also upload your package following your instructions.'
   - question: 'Why should I use Semantic Release?'
     answer: 'Automatic releases have become a standard in the industry in the past few years, much like Conventional Commits. No matter the scale at which you work, you will always benefit from an automated release pipeline. It includes generating a changelog, a new release on GitHub, a new git tag (with said version). Semantic Release provides a way to integrate that behavior into your continuous deployment and integration pipelines. Integration is seamless and fast; it can take you 10 minutes to add this to your workflow.'
+  - question: How should I use Semantic Release?'
+    answer: 'In your development workflow, you probably have a source branch (which has the latest version of your code), a release branch, and other feature branches (any hotfix branch accounted for here). Your workflow with Semantic Release would involve developing over a feature branch (or hotfix branch or development branch) and, if satisfied, a merge to the source branch in your GitHub repo (a protected branch in your repo). Once those changes are in the source branch (generally main or master), you can merge them into the release branch (another protected branch in your GitHub repo). It will trigger the automatic workflow so that the release candidate is published and the rest of the semantic release plugins take effect. So, for instance, the version is updated based on the commit messages.'
   - question: 'What are GitHub Actions?'
     answer: 'GitHub Actions is a Continuous Integration and Continuous Delivery (CI/CD) platform that allows you to automate your software development pipelines (build, test, deploy, etc.). Using a declarative language (YAML), you define workflows and triggers for them, and then GitHub handles running those pipelines when it meets the specified conditions.'
   - question: 'Why should I use GitHub Actions?'
@@ -51,6 +53,14 @@ In automated, git-based environments, Semantic Release looks at previous release
 **Automatic releases have become a standard in the industry in the past few years**, much like Conventional Commits. No matter the scale at which you work, you will always benefit from an automated release pipeline. It includes generating a changelog, a new release on GitHub, a new git tag (with said version).
 
 Semantic Release provides a way to integrate that behavior into your continuous deployment and integration pipelines. Integration is seamless and fast; it can take you 10 minutes to add this to your workflow.
+
+### How should I use Semantic Release?
+
+In your development workflow, you probably have a source branch (which has the latest version of your code), a release branch, and other feature branches (any hotfix branch accounted for here).
+
+Your workflow with Semantic Release would involve developing over a feature branch (or hotfix branch or development branch) and, if satisfied, a merge to the source branch in your GitHub repo (a protected branch in your repo).
+
+Once those changes are in the source branch (generally main or master), you can merge them into the release branch (another protected branch in your GitHub repo). It will trigger the automatic workflow so that the release candidate is published and the rest of the semantic release plugins take effect. So, for instance, the version is updated based on the commit messages.
 
 ## GitHub Actions
 
@@ -211,7 +221,7 @@ You don't need it to deploy a new version, but you can change the Semantic Relea
 
 You can specify what happens on a new release, such as changelog generation, which commit message generates version bumps, and which version range you are working with, among many others.
 
-Here are some examples for the configuration of both files (including commit analyzer, release note generation, GitHub package version update, and `package.json` version update):
+Here are some examples of the configuration of both files (including commit analyzer, release note generation, GitHub package version update, and `package.json` version update):
 
 ```json[package.json]
 "release": {
