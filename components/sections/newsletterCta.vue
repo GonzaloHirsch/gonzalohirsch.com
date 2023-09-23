@@ -86,6 +86,7 @@
                         aria="Subscribe to the blog."
                         value="Subscribe"
                         extraClass="mx-auto"
+                        @click="track"
                       />
                     </div>
                   </div>
@@ -106,6 +107,18 @@ const props = defineProps({
     default: ['2824862'],
   },
 });
+
+import { useGtag } from 'vue-gtag-next';
+const { event } = useGtag();
+const { path } = useRoute();
+const cleanPath = path.replace(/\/+$/, '');
+const track = () => {
+  event('subscription', {
+    event_page: cleanPath,
+    event_label: 'subscription',
+    event_name: 'subscription',
+  });
+};
 </script>
 
 <style scoped>
