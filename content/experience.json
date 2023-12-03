@@ -1,6 +1,22 @@
 {
     "experience": [
         {
+            "position": "Senior Software Engineer",
+            "company": {
+                "short": "Croud",
+                "name": "Croud (UK)",
+                "url": "https://croud.com/en-gb/"
+            },
+            "volunteer": false,
+            "time": "April 2023 - Present",
+            "description": "Croud is a global, full-service digital agency that grows ambitious brands through reinvention.",
+            "items": [
+                "Designed and developed MLOps pipelines supporting propensity models, along with Google engineers and data scientists.",
+                "Reduced Data Engineering deployment times to 3 minutes instead of hours or days by migrating infrastructure deployments to Terraform.",
+                "Improved Data Science operational margins by 50% by standardising data warehousing for Google Analytics data."
+            ]
+        },
+        {
             "position": "Full-Stack Developer (freelance)",
             "company": {
                 "short": "TWP",
@@ -8,7 +24,7 @@
                 "url": "https://www.linkedin.com/company/winstonproject/"
             },
             "volunteer": false,
-            "time": "February 2021 - Present",
+            "time": "February 2021 - January 2023",
             "description": "The Winston Project is a digital marketing consulting company based in New York, United States.",
             "items": [
                 "Built multiple websites using Gridsome's SSR for Vue.js and styled websites for various universities in the United States using Tailwind CSS.",
@@ -23,7 +39,7 @@
         {
             "position": "Teaching Assistant in Machine Learning",
             "company": {
-                "short": "ITBA",
+                "short": "ML Teacher",
                 "name": "Instituto Tecnológico de Buenos Aires",
                 "url": "https://www.itba.edu.ar/"
             },
@@ -68,7 +84,7 @@
                 "name": "IEEE Computer Society ITBA",
                 "url": "https://csitba.web.app/"
             },
-            "volunteer": false,
+            "volunteer": true,
             "time": "September 2019 - July 2021",
             "description": "Technology-focused organization made up of students and alumni of ITBA, dedicated to inspiring and educating in various areas of technology related to software engineering and technology. It's an academic sub-branch of the IEEE Computer Society, one of the largest networks connecting professionals in the world.",
             "items": [
