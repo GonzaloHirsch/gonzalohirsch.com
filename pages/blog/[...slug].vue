@@ -194,7 +194,7 @@ const { data: authorData } = await useAsyncData('home', () =>
 const baseUrl = 'https://gonzalohirsch.com';
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/');
 const image =
-  baseUrl + (data.value?.article?.socialImage.src || '/meta-img.jpg');
+  baseUrl + (data.value?.article?.socialImage.src || '/meta-img.webp');
 
 // JSON+LD
 const jsonScripts = [
