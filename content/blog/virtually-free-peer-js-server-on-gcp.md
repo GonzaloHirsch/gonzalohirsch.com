@@ -310,7 +310,7 @@ resource "google_billing_budget" "budget" {
 
 Note that to assign the budget, you first need to get the billing account associated with the project.
 
-## Configuring Terraform outputs
+### Configuring Terraform outputs
 
 Create an output file for Terraform so you can more easily get the values of the server URI and the server key.
 
