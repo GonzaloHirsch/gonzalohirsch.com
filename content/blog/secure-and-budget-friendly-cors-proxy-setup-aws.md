@@ -9,7 +9,7 @@ dateUpdated: ''
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
-  src: '/img/secure-and-budget-friendly-cors-proxy-setup-aws.webp'
+  src: '/img/blog--secure-and-budget-friendly-cors-proxy-setup-aws.webp'
   mime: 'webp'
   alt: 'Illustration with the text "Secure and Budget-Friendly CORS Proxy Setup in AWS"'
   width: 1200

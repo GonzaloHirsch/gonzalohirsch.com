@@ -24,7 +24,7 @@ faq:
 # tags: []
 ---
 
-**Registering a domain in Argentina can be inexpensiv**e. When writing this post, the [price for a `.com.ar` domain](https://nic.ar/es/dominios/dominios_y_aranceles) is around **855 ARS** (**less than 3 USD**). It can be a cheap way for someone to start branding their websites. Registering a domain name is useless unless you have access to a public DNS server to delegate your domain. Generally, DNS servers can be pricey, depending on your providers. In this guide, I'll show you can start delegating a `.com.ar` domain using Cloudflare, taking advantage of their free DNS.
+**Registering a domain in Argentina can be inexpensive**. When writing this post, the [price for a `.com.ar` domain](https://nic.ar/es/dominios/dominios_y_aranceles) is around **855 ARS** (**less than 3 USD**). It can be a cheap way for someone to start branding their websites. Registering a domain name is useless unless you have access to a public DNS server to delegate your domain. Generally, DNS servers can be pricey, depending on your providers. In this guide, I'll show you can start delegating a `.com.ar` domain using Cloudflare, taking advantage of their free DNS.
 
 A **domain registrar** offers domain name registrations. A registrar is an entity that allows you to register and purchase a domain. To have control of the response from the DNS service, you need to perform a delegation. A **delegation** is a process of defining alternate DNS servers that respond when looking for the authority of your domain or subdomain. You define a set of servers that take care of those queries.
 
