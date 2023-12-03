@@ -129,7 +129,15 @@ export default defineNuxtConfig({
     // https://content.nuxtjs.org/api/configuration
     highlight: {
       theme: 'github-dark',
-      preload: ['java', 'javascript', 'typescript', 'bash', 'python', 'html'],
+      preload: [
+        'java',
+        'javascript',
+        'typescript',
+        'bash',
+        'python',
+        'html',
+        'hcl',
+      ],
     },
     markdown: {
       // https://github.com/rehypejs/rehype-external-links
