@@ -7,6 +7,10 @@
     <SectionsExperience />
     <SectionsPassion />
     <SectionsProjects />
+    <ClientOnly>
+      <SectionsGithubSummary />
+    </ClientOnly>
+    <SectionsProjectsExtended />
     <SectionsContact />
     <ClientOnly>
       <SectionsFilms />
