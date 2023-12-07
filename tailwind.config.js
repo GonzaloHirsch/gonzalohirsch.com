@@ -71,7 +71,7 @@ module.exports = {
         'section_x_sm': '1.5rem',
         'section_x': '5rem',
         'section_y_sm': '3rem',
-        'section_y': '5rem'
+        'section_y': '5rem',
       },
       boxShadow: {
         // One example using shadow-lg -> shadow-lg-invert
@@ -80,6 +80,10 @@ module.exports = {
       spacing: {
         'nav': '4rem',
         'section_x': '5rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem'
       }
     },
   },

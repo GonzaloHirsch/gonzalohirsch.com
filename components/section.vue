@@ -38,12 +38,14 @@ const props = defineProps({
 <style scoped>
 .full-height.full-height--forced {
   height: calc(100vh - theme('spacing.nav'));
-  min-height: calc(35rem);
+  min-height: 35rem;
+  max-height: 55rem;
 }
 @screen md {
   .full-height:not(.full-height--forced) {
     height: calc(100vh - theme('spacing.nav'));
-    min-height: calc(35rem);
+    min-height: 35rem;
+    max-height: 55rem;
   }
 }
 </style>
