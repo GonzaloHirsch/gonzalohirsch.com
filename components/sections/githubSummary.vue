@@ -1,12 +1,14 @@
 <template>
   <Section id="github">
     <div
-      class="p-4 sm:p-8 md:p-16 relative flex flex-col items-start justify-between h-full bg-brand_secondary_light/20 dark:bg-brand_secondary_dark/20 rounded-md border-brand_primary_light dark:border-brand_primary_dark my-auto"
+      class="p-4 sm:p-8 md:p-16 relative flex flex-col items-start justify-between h-full bg-brand_primary_light dark:bg-brand_primary_dark rounded-md border-brand_primary_light dark:border-brand_primary_dark my-auto"
     >
       <div class="grid grid-cols-10 w-full gap-4 lg:gap-8">
-        <div class="col-span-10 lg:col-span-5 stats">
+        <div
+          class="col-span-10 lg:col-span-5 stats text-typography_primary_dark dark:text-typography_primary_light"
+        >
           <h3
-            class="section-title relative mb-3 flex flex-row items-center flex-wrap break-words"
+            class="font-bold relative mb-3 flex flex-row items-center flex-wrap break-words text-typography_primary_dark dark:text-typography_primary_light"
           >
             GitHub Stats for
             <a
@@ -18,51 +20,45 @@
               >@GonzaloHirsch</a
             >
           </h3>
-          <!-- {{ stats }} -->
-          <p v-if="stats?.stars">Total Stars: {{ stats.stars }}</p>
-          <p v-if="stats?.forks">Total Forks: {{ stats.forks }}</p>
-          <p v-if="stats?.size">Total Size: {{ stats.size }} GBs</p>
-          <p v-if="stats?.mostStars">
-            Most Starred Repo:
-            <a
-              :href="stats.mostStars.html_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ stats.mostStars.full_name }}</a
-            >
-            ({{ stats.mostStars.stargazers_count }})
-          </p>
-          <p v-if="stats?.mostForks">
-            Most Forked Repo:
-            <a
-              :href="stats.mostForks.html_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ stats.mostForks.full_name }}</a
-            >
-            ({{ stats.mostStars.forks_count }})
-          </p>
+          <GithubStat text="Total Stars:" :stat="stats?.stars" />
+          <GithubStat text="Total Forks:" :stat="stats?.forks" />
+          <GithubStat text="Total Size:" :stat="stats?.size" />
+          <GithubRepo
+            text="Most Starred Repo:"
+            :name="stats?.mostStars?.full_name"
+            :uri="stats?.mostStars?.html_url"
+            :stat="stats?.mostStars?.stargazers_count"
+          />
+          <GithubRepo
+            text="Most Forked Repo:"
+            :name="stats?.mostForks?.full_name"
+            :uri="stats?.mostForks?.html_url"
+            :stat="stats?.mostForks?.forks_count"
+          />
+          <GithubRepo
+            text="Biggest Repo:"
+            :name="stats?.mostSize?.full_name"
+            :uri="stats?.mostSize?.html_url"
+            :stat="stats?.mostSize?.size"
+          />
         </div>
         <div
-          class="col-span-10 lg:col-span-5 flex flex-row items-center justify-center"
+          class="col-span-10 lg:col-span-5 grid grid-cols-4 gap-2 text-typography_primary_dark dark:text-typography_primary_light"
         >
-          <div class="bg-brand_primary_light/25 rounded-md w-full h-full p-4">
-            <p class="mb-2">
-              <a
-                :href="stats.mostForks.html_url"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><strong>{{ stats.mostForks.full_name }}</strong></a
-              >
-            </p>
-            <p>
-              <em>"{{ stats.mostStars.description }}"</em>
-            </p>
-          </div>
+          <GithubRepoDescription
+            class="col-span-full p-4"
+            :repo="stats?.mostStars"
+            :stat="stats?.mostStars?.stargazers_count"
+          />
+          <GithubRepoDescription
+            class="col-span-full p-4"
+            :repo="stats?.mostSize"
+            :stat="stats?.mostSize.size"
+          />
         </div>
         <div class="col-span-10">
           <p
-            class="text-sm leading-sm dark:text-typography_primary_dark stats-footer"
+            class="text-sm leading-sm text-typography_primary_dark dark:text-typography_primary_light stats-footer"
           >
             <em
               >This report contains up to date information on my GitHub stats.
@@ -118,6 +114,7 @@ fetch(USER_URL)
     const interestingRepos = allRepos.filter(
       (repo) => repo.stargazers_count > 0 || repo.forks_count > 0
     );
+    // Overall stats
     const totalStars = interestingRepos.reduce(
       (accum, curr) => accum + curr.stargazers_count,
       0
@@ -126,21 +123,32 @@ fetch(USER_URL)
       (accum, curr) => accum + curr.forks_count,
       0
     );
-    // Total size in GBs
-    const totalGbs =
-      allRepos.reduce((accum, curr) => accum + curr.size, 0) / (1000 * 1000);
+    const totalGbs = `${
+      Math.round(
+        (allRepos.reduce((accum, curr) => accum + curr.size, 0) /
+          (1000 * 1000)) *
+          100
+      ) / 100
+    } GBs`;
+    // Repo stats
     const mostStarredRepo = interestingRepos.sort(
       (a, b) => b.stargazers_count - a.stargazers_count
     )[0];
     const mostForkedRepo = interestingRepos.sort(
       (a, b) => b.forks_count - a.forks_count
     )[0];
+    const biggestRepo = allRepos.sort((a, b) => b.size - a.size)[0];
+    biggestRepo.size = `${
+      Math.round((biggestRepo?.size / (1000 * 1000)) * 100) / 100
+    } GBs`;
+    // Changes to repos
     stats.value = {
       stars: totalStars,
       forks: totalForks,
-      size: Math.round(totalGbs * 100) / 100,
+      size: totalGbs,
       mostStars: mostStarredRepo,
       mostForks: mostForkedRepo,
+      mostSize: biggestRepo,
     };
   });
 </script>
@@ -153,6 +161,6 @@ fetch(USER_URL)
   @apply font-bold;
 }
 .stats-footer a:hover {
-  @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
+  @apply bg-background_light text-typography_primary_light dark:bg-background_dark dark:text-typography_primary_dark;
 }
 </style>
