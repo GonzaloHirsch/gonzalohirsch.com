@@ -129,7 +129,7 @@ It is no secret that becoming a Toptal freelancer can take time and effort. If a
 - [Fiverr](https://www.fiverr.com/)
 - [Turing](https://www.turing.com/)
 - [Andela](https://andela.com/)
-- [Torre](https://torre.co/)
+- [Torre](https://torre.ai/)
 - Many others
 
 Although I don't know much about any Toptal alternative, I know about their existence and know they get used.

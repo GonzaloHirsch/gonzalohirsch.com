@@ -42,7 +42,7 @@ These tips are helpful even if you have no experience with the AWS Cloud or have
 
 The first step to becoming an AWS Certified Solutions Architect is to **complete an AWS Solutions Architect Associate course**. It is regardless of whether you have experience in the AWS cloud. It can make a difference in knowing the approximate scope of the exam topics. You can use AWS Training, such as [AWS Academy](https://aws.amazon.com/training/awsacademy/?nc2=sb_ep_aca) or [AWS Educate](https://aws.amazon.com/education/awseducate/?nc2=sb_ep_edu).
 
-There are other resources for courses, such as [A Cloud Guru](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c03), [Tutorials Dojo](https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/), and [Udemy](https://www.udemy.com/topic/aws-certified-solutions-architect-associate/). In the end, I will detail my preparation and experience for the exam and the resources I've used.
+There are other resources for courses, such as [A Cloud Guru](https://www.pluralsight.com/cloud-guru/courses/aws-certified-solutions-architect-associate-saa-c03), [Tutorials Dojo](https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/), and [Udemy](https://www.udemy.com/topic/aws-certified-solutions-architect-associate/). In the end, I will detail my preparation and experience for the exam and the resources I've used.
 
 The main goal of taking a course is to learn about the exam's scope and the services that you might've not used in your prior experience.
 
@@ -119,7 +119,7 @@ As part of my degree, I attended a Cloud Computing course at university. During 
 
 To practice, I bought [practice exams from Udemy](https://www.udemy.com/share/1064nS3@b83602eIf5g20083SejI__H0lbQmoEUzgmf9kzVfDcK927aYC_lUSaouquSTc6LEPQ==/), which were definitely worth it. They include six practice exams, 390 questions in total. It is the perfect certification training material. The course provides temporary access to the [Tutorials Dojo exam simulator](https://portal.tutorialsdojo.com/product/exam-simulator-aws-certified-solutions-architect-associate/), which accounts for roughly 95 more questions. The main advantage of the Udemy exams is that each solution has an explanation. AWS also provides a [sample question dataset](https://aws.amazon.com/certification/certified-solutions-architect-associate/#:~:text=What%20does%20it%20take%20to%20earn%20this%20certification%3F) with responses explained. All this practice material is more than enough for your AWS certification training. I recommend you practice the exams until you consistently get an 80% or more score each time.
 
-As part of my study material, I created a set of [notes](https://www.notion.so/gonzalo-hirsch/Solutions-Architect-Summary-d0f4cf01ddde4094b380528a852a46bb) from where I would study everything. It has all the contents from the AWS Educate course, FAQs, and User Guides I read. Besides, it has a directory with all the services included in the Certified Solutions Architect exam.
+As part of my study material, I created a set of [notes](https://gonzalo-hirsch.notion.site/Solutions-Architect-Summary-d0f4cf01ddde4094b380528a852a46bb) from where I would study everything. It has all the contents from the AWS Educate course, FAQs, and User Guides I read. Besides, it has a directory with all the services included in the Certified Solutions Architect exam.
 
 ## Closing thoughts
 
