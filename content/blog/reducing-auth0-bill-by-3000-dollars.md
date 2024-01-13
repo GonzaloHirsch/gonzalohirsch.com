@@ -32,7 +32,7 @@ Before explaining how I reduced my auth0 bill by $3,000, let's review what Auth0
 
 ## What is Auth0?
 
-In a nutshell, Auth0 is an Argentinian-born [unicorn](https://auth0.com/blog/so-you-want-to-be-a-unicorn/) that provides authentication and authorization as a service. They offer developers and companies a way to secure their applications quickly. Some Auth0 use cases and sectors are the public sector, [B2B SaaS](https://auth0.com/b2b-saas), [passwordless logins](https://auth0.com/passwordless), [Customer Identity Access Management](https://auth0.com/ciam) (CIAM), and [healthcare](https://auth0.com/healthcare). You can connect any application, define the identity providers you will use, and each time a user enters your application, Auth0 verifies their identity and calls back to you.
+In a nutshell, Auth0 is an Argentinian-born [unicorn](https://auth0.com/blog/so-you-want-to-be-a-unicorn/) that provides authentication and authorization as a service. They offer developers and companies a way to secure their applications quickly. Some Auth0 use cases and sectors are the public sector, [B2B SaaS](https://auth0.com/b2b-saas), [passwordless logins](https://www.okta.com/customer-identity/passwordless/), [Customer Identity Access Management](https://auth0.com/ciam) (CIAM), and [healthcare](https://auth0.com/healthcare). You can connect any application, define the identity providers you will use, and each time a user enters your application, Auth0 verifies their identity and calls back to you.
 
 ### What is an M2M token exactly?
 
@@ -50,7 +50,7 @@ Although the solution is simple, it might not be apparent at first. The main iss
 
 ## Caching the tokens with Redis
 
-For those unfamiliar with it, [Redis](https://redis.io/) is an open-source, in-memory data store that supports a variety of data structures. Given Redis' speed and versatile in-memory data structures, it works well as a distributed cache and real-time data store. As part of their cloud offering, [Redis Cloud](https://redis.com/redis-enterprise-cloud/overview/) offers a free tier that is more than enough for this use case.
+For those unfamiliar with it, [Redis](https://redis.io/) is an open-source, in-memory data store that supports a variety of data structures. Given Redis' speed and versatile in-memory data structures, it works well as a distributed cache and real-time data store. As part of their cloud offering, [Redis Cloud](https://redis.com/cloud/overview/) offers a free tier that is more than enough for this use case.
 
 In this case, we can use Redis to keep a copy of the latest token requested as long as it's still valid and use that M2M token in subsequent operations in any other system. We implement a [lazy loading](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html) strategy in which we write to the cache once we have requested an M2M token for the first time or the previous one has expired. The second time the system requires an authentication token, it will be already cached. If there is no need for an authentication token, we don't obtain and store it. Because Redis can store key-value pairs, we can directly store the M2M token with a unified key name and access it using the cluster credentials.
 

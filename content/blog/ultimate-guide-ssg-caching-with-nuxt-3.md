@@ -36,7 +36,7 @@ It is no secret that Server Side Rendering (SSR) sites have a huge SEO advantage
 
 With SSG, you can render your static site offline, upload it to object storage, and serve it. This approach leverages the benefits of SSR in terms of SEO while keeping costs down and providing a fast user experience. Proper cache configuration can make the user experience of your site far better.
 
-[Nuxt.js](https://nuxt.com/docs/getting-started/introduction) has been around for some time, but [recently they launched](https://nuxt.com/v3) their 3.0.0 stable version of the framework. Although the product is fantastic, they lack one main documentation item: how to cache your static site and its static files. Let me give you my ultimate guide on SSG caching for Nuxt 3.
+[Nuxt.js](https://nuxt.com/docs/getting-started/introduction) has been around for some time, but [recently they launched](https://nuxt.com/blog/v3) their 3.0.0 stable version of the framework. Although the product is fantastic, they lack one main documentation item: how to cache your static site and its static files. Let me give you my ultimate guide on SSG caching for Nuxt 3.
 
 ## What is Server Side Rendering?
 
@@ -60,7 +60,7 @@ Dynamic content can run on the client side, so it doesn't affect the user experi
 
 The static assets get copied to the `public` folder in the same way as in SSR or SPA frameworks.
 
-Some framework options for SSG are [Gridsome](https://gridsome.org/) (Vue.js) and [Gatsby](https://www.gatsbyjs.com/) (React). Platforms for deploying your static websites are [Netlify](https://www.netlify.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/), or doing it yourself in AWS.
+Some framework options for SSG are [Gridsome](https://gridsome.org/) (Vue.js) and [Gatsby](https://www.gatsbyjs.com/) (React). Platforms for deploying your static websites are [Netlify](https://www.netlify.com/), [Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/), or doing it yourself in AWS.
 
 Nuxt has recently launched its 3.0.0 stable version, which includes a mode for SSG. We can leverage all the NuxtJS Modules and Vue 3 to build our static website.
 
@@ -78,7 +78,7 @@ Executing the `generate` command again renders the site content and leaves the r
 
 There are some free and no-code options to deploy and serve your site, such as Netlify. But nothing can beat the satisfaction of deploying your site on infrastructure created by yourself. I offer some details on deploying your static page using AWS and GitHub Actions.
 
-When deploying your site in AWS, you need an S3 bucket, a CloudFront distribution, and Route 53 for DNS. I will not go into the details myself because there are [resources](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serve-static-website/) explaining this.
+When deploying your site in AWS, you need an S3 bucket, a CloudFront distribution, and Route 53 for DNS. I will not go into the details myself because there are [resources](https://repost.aws/knowledge-center/cloudfront-serve-static-website) explaining this.
 
 The idea is to upload the `.output/public` contents to an S3 bucket. Then you point the CloudFront distribution origin to the bucket and configure the Route 53 DNS to point to the distribution. Uploading the content to the bucket can be automated using GitHub Actions (for free!), where the configuration matters. There you can configure the cache control header for each file.
 
@@ -122,7 +122,7 @@ The contents of `.output/public` look like this:
 Let us review what those files and folders mean:
 
 - `_nuxt` is a folder that contains components, icons, fonts, CSS, and everything the site needs to hydrate. A hydration process that happens on the client side; helps add interactivity to the site. All the files within this folder are named using a content hash.
-- `api/_content` is a folder generated using the [Nuxt Content](https://content.nuxtjs.org/) plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is [here](https://github.com/nuxt/framework/issues/6151#issuecomment-1196684149).
+- `api/_content` is a folder generated using the [Nuxt Content](https://content.nuxt.com/) plugin, which I recommend to build blogs. It has the results for the content queries used to add interactivity. The files are named based on the query results, not the content. A reference to this is [here](https://github.com/nuxt/nuxt/issues/14444#issuecomment-1196684149).
 - `_payload.js` is a file used similarly to the `api/_content` folder. Note that the name doesn't change, but the content might.
 - There are other standard HTML and XML files. Any static file added to the `public` folder will be there.
 
