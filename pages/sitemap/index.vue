@@ -7,7 +7,7 @@
       >
         General
       </h2>
-      <SitemapList :data="[{ headline: 'Homepage', _path: '/' }]" />
+      <SitemapList :data="[{ headline: 'Homepage', _path: '' }]" />
       <h2
         class="mt-12 text-typography_primary_light dark:text-typography_primary_dark"
       >
@@ -30,10 +30,10 @@
       </h2>
       <SitemapList
         :data="[
-          { headline: 'Blog', _path: '/blog/' },
-          { headline: 'Blog Page 1', _path: '/blog/page/1/' },
-          { headline: 'Blog Page 2', _path: '/blog/page/2/' },
-          { headline: 'Blog Page 3', _path: '/blog/page/3/' },
+          { headline: 'Blog', _path: '/blog' },
+          { headline: 'Blog Page 1', _path: '/blog/page/1' },
+          { headline: 'Blog Page 2', _path: '/blog/page/2' },
+          { headline: 'Blog Page 3', _path: '/blog/page/3' },
         ]"
       />
     </Section>
