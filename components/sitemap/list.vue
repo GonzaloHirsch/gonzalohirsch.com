@@ -7,7 +7,10 @@
       :key="link._path"
       class="col-span-full md:col-span-5 relative rounded-md border-2 border-typography_primary_light dark:border-typography_primary_dark hover:border-brand_primary_light hover:dark:border-brand_primary_dark group"
     >
-      <NuxtLink :to="link._path + '/'" class="p-4 block relative">
+      <NuxtLink
+        :to="link._path + (link._path.slice(-1) === '/' ? '' : '/')"
+        class="p-4 block relative"
+      >
         <div class="wrapper">
           <header>
             <h3
