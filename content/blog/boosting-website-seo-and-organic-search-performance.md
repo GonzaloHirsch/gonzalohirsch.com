@@ -1,9 +1,9 @@
 ---
 dqid: "improving-seo-organic-search"
 title: 'Boosting site SEO and search performance | Gonzalo Hirsch'
-description: "Learn how to improve your website's SEO quickly and easily with three simple actions. Boost your organic search performance and gain more visibility with these tips."
+description: "Learn how to improve your website's SEO quickly and easily with three simple actions. Boost organic search performance and gain more visibility with these tips."
 headline: "Boosting your website's SEO and organic search performance"
-excerpt: "Learn how to improve your website's SEO quickly and easily with three simple actions. Boost your organic search performance and gain more visibility with these tips."
+excerpt: "Learn how to improve your website's SEO quickly and easily with three simple actions. Boost organic search performance and gain more visibility with these tips."
 date: '2023-03-15T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

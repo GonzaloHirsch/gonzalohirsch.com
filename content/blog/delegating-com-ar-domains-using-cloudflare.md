@@ -1,9 +1,9 @@
 ---
 dqid: 'com-ar-domain-delegation'
 title: 'Delegating a .com.ar domain with Cloudflare | Gonzalo Hirsch'
-description: "Delegating a .com.ar domain using Cloudflare might be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
+description: "Delegating a .com.ar domain using Cloudflare can be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
 headline: 'Delegating a .com.ar domain using Cloudflare'
-excerpt: "Delegating a .com.ar domain using Cloudflare might be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
+excerpt: "Delegating a .com.ar domain using Cloudflare can be daunting, but you might realize it's easier than you expected. Leverage their FREE DNS to power your sites."
 date: '2023-02-07T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

@@ -1,9 +1,9 @@
 ---
 dqid: 'nuxt-ssg-caching-guide'
 title: 'Ultimate guide on SSG caching for Nuxt 3 | Gonzalo Hirsch'
-description: 'SSG leverages the benefits of SSR in terms of SEO while keeping costs down and providing a fast user experience. Proper cache configuration can make the user experience of your site far better.'
+description: 'SSG has the benefits of SSR in SEO while being cheap and providing a fast user experience. Proper cache configuration can make the UX of your site far better.'
 headline: 'Ultimate guide on SSG caching for Nuxt 3'
-excerpt: 'SSG leverages the benefits of SSR in terms of SEO while keeping costs down and providing a fast user experience. Proper cache configuration can make the user experience of your site far better.'
+excerpt: 'SSG has the benefits of SSR in SEO while being cheap and providing a fast user experience. Proper cache configuration can make the UX of your site far better.'
 date: '2023-01-14T12:00:00'
 dateUpdated: '2023-02-20T12:00:00'
 author: 'Gonzalo Hirsch'
@@ -66,7 +66,7 @@ Nuxt has recently launched its 3.0.0 stable version, which includes a mode for S
 
 ## How can you use SSG in a Nuxt App?
 
-I recommend following the Nuxt 3 [tutorial](https://nuxt.com/docs/getting-started/installation) on installing the framework, but once that is taken care of, you can render the static website content with the `nuxt generate` command.
+I recommend following the [Nuxt 3](/blog/zero-to-blog-building-with-nuxt-3/) [tutorial](https://nuxt.com/docs/getting-started/installation) on installing the framework, but once that is taken care of, you can render the static website content with the `nuxt generate` command.
 
 Although that is the command your Nuxt Application needs to render the page content, it is not enough. In my experience with this Javascript framework, a crucial configuration is missing. The `nuxt.config.ts` file needs to have the `ssr: true` set. It makes the framework generate the content properly; otherwise, some route errors appear. This flag expands the possibilities of writing your NuxtJS Modules for added behaviors.
 

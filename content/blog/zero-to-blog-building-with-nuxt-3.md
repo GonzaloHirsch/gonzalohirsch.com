@@ -1,9 +1,9 @@
 ---
 dqid: 'nuxt-building-a-blog'
 title: 'From zero to blog: Building with Nuxt 3 | Gonzalo Hirsch'
-description: "Create a professional-looking blog with Nuxt 3 using my simple, yet effective guide. With our step-by-step instructions, you'll be able to build a fully-functional blog in no time."
+description: "Create a professional-looking blog in Nuxt 3 with this simple and effective guide. With step-by-step instructions, you'll quickly have a fully-functional blog."
 headline: 'From zero to blog: Building with Nuxt 3'
-excerpt: "Create a professional-looking blog with Nuxt 3 using my simple, yet effective guide. With our step-by-step instructions, you'll be able to build a fully-functional blog in no time."
+excerpt: "Create a professional-looking blog in Nuxt 3 with this simple and effective guide. With step-by-step instructions, you'll quickly have a fully-functional blog."
 date: '2023-03-22T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

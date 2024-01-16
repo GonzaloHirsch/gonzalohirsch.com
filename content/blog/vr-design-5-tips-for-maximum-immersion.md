@@ -1,9 +1,9 @@
 ---
 dqid: 'vr-design-tips-immersive'
 title: '5 Tips for Immersive Virtual Reality Design | Gonzalo Hirsch'
-description: 'Learn how to design immersive virtual reality experiences. Get an overview of the VR hardware market and understand why proper VR design is crucial to provide maximum immersion.'
+description: 'Learn how to design immersive virtual reality experiences. Understand the VR hardware market and why proper VR design is crucial to provide maximum immersion.'
 headline: 'Virtual Reality Design: 5 Tips for Maximum Immersion'
-excerpt: 'Learn how to design immersive virtual reality experiences. Get an overview of the VR hardware market and understand why proper VR design is crucial to provide maximum immersion.'
+excerpt: 'Learn how to design immersive virtual reality experiences. Understand the VR hardware market and why proper VR design is crucial to provide maximum immersion.'
 date: '2023-03-08T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

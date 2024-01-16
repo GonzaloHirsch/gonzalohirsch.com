@@ -1,9 +1,9 @@
 ---
 dqid: 'semantic-release-gh-action-branch-protection'
 title: 'Semantic Release and Branch Protection Rules | Gonzalo Hirsch'
-description: "Semantic Release and branch protection rules in GitHub don't always work well. By using a GitHub App and a GitHub Action, you can effortlessly deploy a new version."
+description: "Semantic Release and branch protection rules in GitHub don't always work well. By using a GitHub App and a GitHub Action, you can effortlessly deploy versions."
 headline: 'Semantic Release and Branch Protection Rules'
-excerpt: "Semantic Release and branch protection rules in GitHub don't always work well. By using a GitHub App and a GitHub Action, you can effortlessly deploy a new version."
+excerpt: "Semantic Release and branch protection rules in GitHub don't always work well. By using a GitHub App and a GitHub Action, you can effortlessly deploy versions."
 date: '2023-09-09T12:00:00'
 dateUpdated: '2023-09-11T12:00:00'
 author: 'Gonzalo Hirsch'

@@ -1,9 +1,9 @@
 ---
 dqid: 'serverless-cnn-tensorflow'
 title: 'Deploying a serverless CNN with TensorFlow | Gonzalo Hirsch'
-description: 'Publishing a machine learning model can be expensive with traditional computing resources. Deploying a serverless computing model with TensorFlow can be the way to go.'
+description: 'Publishing a machine learning model can be expensive with traditional computing. Deploying a serverless computing model with TensorFlow can be the way to go.'
 headline: 'Deploying a serverless CNN with TensorFlow'
-excerpt: 'Publishing a machine learning model can be expensive with traditional computing resources. Deploying a serverless computing model with TensorFlow can be the way to go.'
+excerpt: 'Publishing a machine learning model can be expensive with traditional computing. Deploying a serverless computing model with TensorFlow can be the way to go.'
 date: '2023-02-19T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

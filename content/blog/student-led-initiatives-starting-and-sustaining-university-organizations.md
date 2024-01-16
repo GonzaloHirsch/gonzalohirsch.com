@@ -1,9 +1,9 @@
 ---
 dqid: 'student-organization-tips'
 title: 'Starting and sustaining a student organization | Gonzalo Hirsch'
-description: 'Learn how to create and grow a successful student organization. Find a co-founder, define a mission and vision, and launch your organization with funding and student involvement.'
+description: 'Create and grow a successful student organization. Find a co-founder, define your goals, and launch the organization with funding and student involvement.'
 headline: 'Student-led initiatives: Tips for starting and sustaining a university organization'
-excerpt: 'Learn how to create and grow a successful student organization. Find a co-founder, define a mission and vision, and launch your organization with funding and student involvement.'
+excerpt: 'Create and grow a successful student organization. Find a co-founder, define your goals, and launch the organization with funding and student involvement.'
 date: '2023-03-05T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'

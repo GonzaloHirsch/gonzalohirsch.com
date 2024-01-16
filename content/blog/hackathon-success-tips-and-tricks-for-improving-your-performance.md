@@ -1,9 +1,9 @@
 ---
 dqid: 'hackathon-success-tips'
 title: 'Hackathon tips and tricks for success | Gonzalo Hirsch'
-description: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed.'
+description: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation.'
 headline: 'Hackathon success: Tips and tricks for improving your performance'
-excerpt: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation. Prepare for the challenge and succeed.'
+excerpt: 'Learn tips and tricks to enhance your hackathon performance. Gain insights on team formation, idea identification, and project presentation.'
 date: '2023-03-04T12:00:00'
 dateUpdated: ''
 author: 'Gonzalo Hirsch'
