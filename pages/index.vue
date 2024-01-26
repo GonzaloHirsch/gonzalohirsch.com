@@ -21,7 +21,7 @@
 <script setup>
 const title = 'Gonzalo Hirsch | Software Engineer and Freelancer';
 const description =
-  "I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
+  'UK-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on creating performant and clean experiences.';
 const image = '/meta-img.webp';
 const url = 'https://gonzalohirsch.com';
 

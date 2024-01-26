@@ -1,7 +1,7 @@
 const keywords =
   'Development, Developer, Software, Engineer, Software Engineer, Engineering, Full-Stack, Freelancer, Experiences, BS, MEng';
 const description =
-  "I'm an Argentina-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on developing clean, user-friendly, and fast experiences.";
+  'UK-based Software Engineer (BS, MEng), AWS Certified Solutions Architect Associate and Full-Stack Engineer focused on creating performant and clean experiences.';
 const website = {
   '@context': 'http://schema.org',
   '@type': 'WebSite',
