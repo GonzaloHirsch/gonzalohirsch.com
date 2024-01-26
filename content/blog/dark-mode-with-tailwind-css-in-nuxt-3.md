@@ -61,7 +61,7 @@ module.exports = {
 }
 ```
 
-That's all you need to do! If you want extra guidance on some more complex configurations, go to the Nuxt Tailwind plugin [site](https://tailwindcss.nuxtjs.org/getting-started/setup/). With this minimal Tailwind config, you can use the Tailwind classes in your Nuxt project. Note that by default, your Tailwind config is working on Light Mode. Later on, we'll add a Dark Mode switcher to our application so you can experience the Dark Mode variant. Head to the Tailwind site for a [comprehensive list](https://tailwindcss.com/docs/aspect-ratio) of all the Tailwind CSS classes that you have available.
+That's all you need to do! If you want extra guidance on some more complex configurations, go to the Nuxt Tailwind plugin [site](https://tailwindcss.nuxtjs.org/getting-started/configuration). With this minimal Tailwind config, you can use the Tailwind classes in your Nuxt project. Note that by default, your Tailwind config is working on Light Mode. Later on, we'll add a Dark Mode switcher to our application so you can experience the Dark Mode variant. Head to the Tailwind site for a [comprehensive list](https://tailwindcss.com/docs/aspect-ratio) of all the Tailwind CSS classes that you have available.
 
 ## Adding Nuxt Color Mode to a Nuxt 3 application
 
