@@ -19,7 +19,7 @@
         :currentPage="1"
         :totalPages="data"
         :nextPage="data > 1"
-        baseUrl="/blog/"
+        baseUrl="/blog/page/1/"
         pageUrl="/blog/page/"
       />
     </Section>

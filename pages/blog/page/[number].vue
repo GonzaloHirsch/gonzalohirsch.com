@@ -21,7 +21,7 @@
                 :currentPage="getPageNumber()"
                 :totalPages="getPageLimit(data.length)"
                 :nextPage="getPageNumber() < getPageLimit(data.length)"
-                baseUrl="/blog/"
+                baseUrl="/blog/page/1/"
                 pageUrl="/blog/page/"
               />
             </template>
