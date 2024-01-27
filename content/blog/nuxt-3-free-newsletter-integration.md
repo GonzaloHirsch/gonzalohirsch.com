@@ -48,7 +48,7 @@ Furthermore, **newsletters allow you to build a dedicated readership that apprec
 
 The list of email marketing platforms out there is endless. However, **the list of companies that offer comprehensive suites of tools that simplify your newsletter management is minute.** Platforms like [Mailgun](https://www.mailgun.com/) offer copious free options, but you build the acquisition forms and codebase yourself. There aren't many platforms that simplify the newsletter process or are easy to integrate with a Nuxt application.
 
-In my research on platforms before building my newsletter, I found [Mailchimp](https://mailchimp.com/?currency=GBP). **They offer a very comprehensive suite of tools for free that includes building forms for user acquisition and handling all your email campaigns.** It is the perfect tool for someone looking to build their audience or grow their social media campaigns.
+In my research on platforms before building my newsletter, I found [Mailchimp](https://mailchimp.com/). **They offer a very comprehensive suite of tools for free that includes building forms for user acquisition and handling all your email campaigns.** It is the perfect tool for someone looking to build their audience or grow their social media campaigns.
 
 On the downside, automation features from Mailchimp are behind a paywall, but it is a simple and easy way to get started with your email marketing campaigns in your Nuxt 3 app. **It even integrates easily with Nuxt 3 SSG (Universal Rendering) or Single Page Application (SPA, Client Side Rendering) sites!**
 

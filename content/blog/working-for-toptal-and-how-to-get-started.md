@@ -116,9 +116,9 @@ Most projects revolve around a [CRUD](https://developer.mozilla.org/en-US/docs/G
 
 ### What is my recommendation?
 
-The key to nailing the process and starting freelancing for Toptal is the following. Practice your problem-solving skills and algorithms, know your stack well before even facing the test project, have answers to all the questions I mentioned before, assume you are always speaking with a client on a job, and apply with a [referral](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent). Starting the process through an existing Toptal member can give you an advantage.
+The key to nailing the process and starting freelancing for Toptal is the following. Practice your problem-solving skills and algorithms, know your stack well before even facing the test project, have answers to all the questions I mentioned before, assume you are always speaking with a client on a job, and apply with a [referral](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent). Starting the process through an existing Toptal member can give you an advantage.
 
-You can use [my referral](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity. I have referred colleagues, and they have all passed the screening process.
+You can use [my referral](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity. I have referred colleagues, and they have all passed the screening process.
 
 ## Toptal alternatives
 
@@ -138,4 +138,4 @@ Although I don't know much about any Toptal alternative, I know about their exis
 
 Toptal is a great platform where you will find talented freelancers specialized in their fields. Most surely, any freelancer you find is friendly, keen to work, and eager to lend a helping hand. All the interactions I had in our private Slack were rewarding.
 
-Take advantage of [referrals](https://www.toptal.com/talent/apply/XpxkeW/worlds-top-talent) to have the upper hand when applying (both as a client and talent) to maximize your chances of success. I hope you find my experience working for Toptal and how to get started helpful, and I look forward to seeing you in the network. Feel free to send me a [LinkedIn](https://www.linkedin.com/in/gonzalo-hirsch/) DM for more tips and insights on this topic.
+Take advantage of [referrals](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent) to have the upper hand when applying (both as a client and talent) to maximize your chances of success. I hope you find my experience working for Toptal and how to get started helpful, and I look forward to seeing you in the network. Feel free to send me a [LinkedIn](https://www.linkedin.com/in/gonzalo-hirsch/) DM for more tips and insights on this topic.

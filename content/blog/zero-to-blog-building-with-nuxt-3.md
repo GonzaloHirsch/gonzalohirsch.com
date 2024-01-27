@@ -675,7 +675,7 @@ Both pages use components and plugins defined above.
 
 ### Adding blog content
 
-The last missing step for the blog is adding the blog content. In the content folder, you can add your [Markdown](https://content.nuxt.com/usage/markdown) files (`/content/blog/example.md`). These files from the content folder use the blog template from above to render the complete article.
+The last missing step for the blog is adding the blog content. In the content folder, you can add your [Markdown](https://content.nuxt.com/usage/markdown/) files (`/content/blog/example.md`). These files from the content folder use the blog template from above to render the complete article.
 
 ## Deploying the blog with Nuxt 3
 
