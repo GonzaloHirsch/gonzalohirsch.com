@@ -75,7 +75,11 @@ useHead({
     },
 
     // Twitter card
-    { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
     { hid: 'twitter:site', name: 'twitter:site', content: '@GonzaloHirsch' },
     {
       hid: 'twitter:creator',
