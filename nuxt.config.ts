@@ -146,7 +146,7 @@ export default defineNuxtConfig({
           'rehype-external-links',
           {
             target: '_blank',
-            rel: 'noopener noreferer nofollow',
+            rel: 'noopener noreferer',
           },
         ],
       ],
