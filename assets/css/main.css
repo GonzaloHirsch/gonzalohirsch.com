@@ -182,6 +182,11 @@ body {
   @apply text-lg leading-h5;
 }
 
+.blog-content p,
+.blog-content li {
+  @apply font-text leading-base;
+}
+
 /* Blog Links */
 
 .blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
