@@ -1,54 +1,60 @@
 <template>
   <main>
-    <SitemapHero />
-    <Section id="main" class="!pt-0">
-      <h2
-        class="text-typography_primary_light dark:text-typography_primary_dark"
-      >
-        General
-      </h2>
-      <SitemapList :data="[{ headline: 'Homepage', _path: '' }]" />
-      <h2
-        class="mt-12 text-typography_primary_light dark:text-typography_primary_dark"
-      >
-        Blog
-      </h2>
+    <BlogHero
+      class="pb-5 md:pb-6"
+      currentPage="Search Blog Posts"
+      title="Search Blog Posts"
+      description="A personal blog where I write about programming and insights I gain on software engineering and different technologies from the industry. You can find coding challenges, tutorials, and insights on multiple stacks. Search for the blog posts through the search bar!"
+    />
+    <Section
+      id="search"
+      class="!pt-0 !pb-0 sticky md:relative top-nav md:top-0 z-10 md:bg-transparent"
+    >
+      <input
+        type="text"
+        placeholder="Search for a blog title or tag..."
+        v-model="filter"
+        class="w-full border-2 rounded-md px-4 py-2 bg-opacity-[98%] border-background_dark dark:border-background_light bg-background_light text-typography_primary_light dark:bg-background_dark dark:text-typography_primary_dark ring-0 ring-offset-0 outline-none"
+      />
+    </Section>
+    <Section id="main" class="!pt-4">
       <ContentQuery
         path="/blog"
-        :only="['headline', 'excerpt', '_path', 'image']"
+        :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
         :sort="{
-          headline: 1,
+          date: -1,
+        }"
+        :where="{
+          $or: [
+            { headline: { $regex: `/${filter}/ig` } },
+            { tags: { $regex: `/${filter}/ig` } },
+          ],
         }"
         v-slot="{ data }"
       >
-        <SitemapList :data="data" />
+        <BlogList
+          :data="data"
+          message="No blog posts found. Try searching for something different."
+        />
       </ContentQuery>
-      <h2
-        class="mt-12 text-typography_primary_light dark:text-typography_primary_dark"
-      >
-        Blog Pages
-      </h2>
-      <SitemapList
-        :data="[
-          { headline: 'Blog', _path: '/blog' },
-          { headline: 'Blog Search', _path: '/search' },
-          { headline: 'Blog Page 1', _path: '/blog/page/1' },
-          { headline: 'Blog Page 2', _path: '/blog/page/2' },
-          { headline: 'Blog Page 3', _path: '/blog/page/3' },
-        ]"
-      />
     </Section>
+    <SectionsNewsletterCta :tags="['2824862', '2824865']" class="!pt-0">
+      <template #title>Unlock Valuable Tech Knowledge!</template>
+    </SectionsNewsletterCta>
   </main>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+const filter = ref('');
+
 // Set the meta
-const title = 'Sitemap | Gonzalo Hirsch';
+const title = 'Search for Blog Posts | Gonzalo Hirsch';
 const description =
-  'Explore my site for insights from the software engineering landscape, tech discussions, and diverse projects. Gain valuable industry insights from my journey.';
+  'A personal blog where Gonzalo Hirsch writes about programming and insights he gains on software engineering and different technologies from the industry.';
 const baseUrl = 'https://gonzalohirsch.com/';
 const image = 'meta-img.webp';
-const canonicalPath = baseUrl + 'sitemap/';
+const canonicalPath = baseUrl + 'search/';
 
 // Get the authors
 const { data: authorData } = await useAsyncData('home', () =>
