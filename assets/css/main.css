@@ -56,9 +56,6 @@ h5 {
 .blog-content > ol + p,
 .blog-content > p + ul,
 .blog-content > p + ol,
-.blog-content > p + .custom_content_component,
-.blog-content > ul + .custom_content_component,
-.blog-content > ol + .custom_content_component,
 .blog-content > .custom_content_component + p,
 .blog-content > .custom_content_component + ul,
 .blog-content > .custom_content_component + ol {
