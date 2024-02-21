@@ -126,10 +126,10 @@ export default defineNuxtConfig({
   sourcemap: false,
   // Inspired on https://blog.openreplay.com/power-your-blog-with-nuxt-content
   content: {
-    experimental: {
-      clientDB: true,
-      stripQueryParameters: false,
-    },
+    // experimental: {
+    //   clientDB: true,
+    //   stripQueryParameters: false,
+    // },
     // https://content.nuxtjs.org/api/configuration
     highlight: {
       theme: 'github-dark',
