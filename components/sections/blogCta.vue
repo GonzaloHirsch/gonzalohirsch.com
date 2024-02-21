@@ -21,14 +21,14 @@
         aria="Check out the blog."
         extraClass="mx-auto mr-2"
       />
-      <ButtonsButton
+      <!-- <ButtonsButton
         text="Search Posts"
         format="white"
         href="/search/"
         target="_self"
         aria="Search for blog posts."
         extraClass="mx-auto ml-2"
-      />
+      /> -->
     </div>
   </Section>
 </template>

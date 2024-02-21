@@ -18,25 +18,10 @@
       />
     </Section>
     <Section id="main" class="!pt-4">
-      <ContentQuery
-        path="/blog"
-        :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
-        :sort="{
-          date: -1,
-        }"
-        :where="{
-          $or: [
-            { headline: { $regex: `/${filter}/ig` } },
-            { tags: { $regex: `/${filter}/ig` } },
-          ],
-        }"
-        v-slot="{ data }"
-      >
-        <BlogList
-          :data="data"
-          message="No blog posts found. Try searching for something different."
-        />
-      </ContentQuery>
+      <BlogList
+        :data="data"
+        message="No blog posts found. Try searching for something different."
+      />
     </Section>
     <SectionsNewsletterCta :tags="['2824862', '2824865']" class="!pt-0">
       <template #title>Unlock Valuable Tech Knowledge!</template>
@@ -47,6 +32,25 @@
 <script setup>
 import { ref } from 'vue';
 const filter = ref('');
+
+const { data } = await useAsyncData(
+  `search`,
+  async () => {
+    return await queryContent('/blog')
+      .where({
+        $or: [
+          { headline: { $regex: `/${filter.value}/ig` } },
+          { tags: { $regex: `/${filter.value}/ig` } },
+        ],
+      })
+      .sort({ date: -1 })
+      .only(['headline', 'excerpt', 'date', 'tags', '_path'])
+      .find();
+  },
+  {
+    watch: [filter],
+  }
+);
 
 // Set the meta
 const title = 'Search for Blog Posts | Gonzalo Hirsch';

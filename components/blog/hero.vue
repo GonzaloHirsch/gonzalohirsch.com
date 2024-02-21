@@ -48,9 +48,9 @@
       <a href="#signup" target="_self" class="hover:underline"
         ><em>sign up for updates!</em></a
       >
-      Search for blog posts
+      <!-- Search for blog posts
       <a href="/search/" target="_self" class="hover:underline"><em>here</em></a
-      >!
+      >! -->
     </p>
     <div
       class="border-t-2 mt-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between md:text-right"
