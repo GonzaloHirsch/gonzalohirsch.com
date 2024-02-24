@@ -15,7 +15,7 @@ const include = [
   'https://gonzalohirsch.com',
   '/Gonzalo_Hirsch-Software_Engineer-CV.pdf',
   '/blog/',
-  '/search/',
+  //'/search/',
   '/sitemap/',
 ];
 // Adding blog pages
