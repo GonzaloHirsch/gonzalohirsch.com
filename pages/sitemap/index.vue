@@ -31,10 +31,10 @@
       <SitemapList
         :data="[
           { headline: 'Blog', _path: '/blog' },
-          // { headline: 'Blog Search', _path: '/search' },
           { headline: 'Blog Page 1', _path: '/blog/page/1' },
           { headline: 'Blog Page 2', _path: '/blog/page/2' },
           { headline: 'Blog Page 3', _path: '/blog/page/3' },
+          { headline: 'Blog Page 4', _path: '/blog/page/4' },
         ]"
       />
     </Section>
