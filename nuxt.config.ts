@@ -140,7 +140,9 @@ export default defineNuxtConfig({
         'bash',
         'python',
         'html',
+        'yaml',
         'hcl',
+        'docker',
       ],
     },
     markdown: {

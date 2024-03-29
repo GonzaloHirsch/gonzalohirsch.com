@@ -61,6 +61,12 @@ const languageMap: Record<string, { text: string }> = {
   hcl: {
     text: 'Terraform',
   },
+  docker: {
+    text: 'Docker',
+  },
+  yaml: {
+    text: 'YAML',
+  },
 };
 
 const languageText = computed(() =>

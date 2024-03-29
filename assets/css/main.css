@@ -186,20 +186,20 @@ body {
 
 /* Blog Links */
 
-.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
+.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) > a {
   @apply underline font-bold;
 }
 
-.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a:hover {
+.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) > a:hover {
   @apply text-brand_primary_light dark:text-brand_primary_dark;
 }
 
 /* Blog Headings */
 
-.blog-content h2:hover ::after,
-.blog-content h3:hover ::after,
-.blog-content h4:hover ::after,
-.blog-content h5:hover ::after {
+.blog-content *:not(.no-anchor) > h2:hover ::after,
+.blog-content *:not(.no-anchor) > h3:hover ::after,
+.blog-content *:not(.no-anchor) > h4:hover ::after,
+.blog-content *:not(.no-anchor) > h5:hover ::after {
   @apply ml-2 opacity-40 text-brand_secondary_light dark:text-brand_secondary_dark absolute;
   content: '#';
 }
