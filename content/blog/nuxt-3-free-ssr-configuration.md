@@ -5,7 +5,7 @@ description: 'Hosting an SSR website is expensive. It is possible to host your N
 headline: 'Free Nuxt SSR Configuration on GCP & AWS'
 excerpt: 'Hosting an SSR website is expensive. It is possible to host your Nuxt SSR website for virtually nothing using a multi-cloud approach with GCP and AWS.'
 date: '2024-03-29T12:00:00'
-dateUpdated: ''
+dateUpdated: '2024-04-03T12:00:00'
 author: 'Gonzalo Hirsch'
 authorUrl: 'https://www.linkedin.com/in/gonzalo-hirsch/'
 socialImage:
@@ -474,7 +474,7 @@ Ideally, **you should build a pipeline around it to automate deployments to Clou
 
 We use **Workload Identity Federation to secure access by limiting access to only our repository**, and we create all the resources in the Terraform stack dedicated to it. In this case, a Service Account will push images to the Artifact Registry and deploy new Cloud Run revisions.
 
-The GitHub Actions workflow is combined with Semantic Release to ensure Docker images have the version tag. The complete workflow file is here:
+The GitHub Actions workflow is combined with [semantic release](/blog/semantic-release-and-branch-protection-rules/) to ensure Docker images have the version tag. The complete workflow file is here:
 
 ```yaml [.github/workflows/automatic-release.yml]
 # Info on the action
@@ -616,7 +616,7 @@ permissions:
 #...
 ```
 
-The only step left is configuring the following secrets in GitHub Actions following this [guide](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) and using what I explain in my post about Semantic Release GitHub Actions.
+The only step left is configuring the following secrets in GitHub Actions following this [guide](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) and using what I explain in my post about [Semantic Release](/blog/semantic-release-and-branch-protection-rules/) GitHub Actions.
 
 ```bash [GitHub repository secrets]
 IMAGE_URI = URI FOR THE DOCKER IMAGE ("$REGISTRY_LOCATION-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$SSR_IMAGE")

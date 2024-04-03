@@ -118,7 +118,7 @@ Most projects revolve around a [CRUD](https://developer.mozilla.org/en-US/docs/G
 
 The key to nailing the process and starting freelancing for Toptal is the following. Practice your problem-solving skills and algorithms, know your stack well before even facing the test project, have answers to all the questions I mentioned before, assume you are always speaking with a client on a job, and apply with a [referral](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent). Starting the process through an existing Toptal member can give you an advantage.
 
-You can use [my referral](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity. I have referred colleagues, and they have all passed the screening process.
+You can use [my referral](https://www.toptal.com/talent/apply/xpxkew/worlds-top-talent) to have the upper hand. According to Toptal, "Referred talent are 5x more likely to pass the Toptal screening process than the average applicant.", so take that opportunity. I have referred colleagues, and they have all passed the [Toptal screening process](/blog/remote-work-my-complete-toptal-experience/).
 
 ## Toptal alternatives
 
