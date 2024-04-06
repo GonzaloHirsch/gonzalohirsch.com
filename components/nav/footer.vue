@@ -14,12 +14,12 @@
         width="24"
         height="24"
       />
-      by Gonzalo Hirsch. Sitemap
+      by Gonzalo Hirsch.
       <NuxtLink
         to="/sitemap/"
         class="text-typography_primary_light dark:text-typography_primary_dark hover:text-brand_primary_light dark:hover:text-brand_primary_dark"
       >
-        here</NuxtLink
+        Sitemap</NuxtLink
       >.
     </p>
     <ButtonsThemeSwitch
