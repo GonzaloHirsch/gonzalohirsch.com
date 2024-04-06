@@ -20,26 +20,26 @@
               >@GonzaloHirsch</a
             >
           </h3>
-          <GithubStat text="Total Stars:" :stat="stats?.stars" />
-          <GithubStat text="Total Forks:" :stat="stats?.forks" />
-          <GithubStat text="Total Size:" :stat="stats?.size" />
+          <GithubStat text="Total Stars:" :stat="`${stats?.stars}`" />
+          <GithubStat text="Total Forks:" :stat="`${stats?.forks}`" />
+          <GithubStat text="Total Size:" :stat="`${stats?.size}`" />
           <GithubRepo
             text="Most Starred Repo:"
             :name="stats?.mostStars?.full_name"
             :uri="stats?.mostStars?.html_url"
-            :stat="stats?.mostStars?.stargazers_count"
+            :stat="`${stats?.mostStars?.stargazers_count}`"
           />
           <GithubRepo
             text="Most Forked Repo:"
             :name="stats?.mostForks?.full_name"
             :uri="stats?.mostForks?.html_url"
-            :stat="stats?.mostForks?.forks_count"
+            :stat="`${stats?.mostForks?.forks_count}`"
           />
           <GithubRepo
             text="Biggest Repo:"
             :name="stats?.mostSize?.full_name"
             :uri="stats?.mostSize?.html_url"
-            :stat="stats?.mostSize?.size"
+            :stat="`${stats?.mostSize?.size}`"
           />
         </div>
         <div
@@ -48,12 +48,12 @@
           <GithubRepoDescription
             class="col-span-full p-4"
             :repo="stats?.mostStars"
-            :stat="stats?.mostStars?.stargazers_count"
+            :stat="`${stats?.mostStars?.stargazers_count}`"
           />
           <GithubRepoDescription
             class="col-span-full p-4"
             :repo="stats?.mostSize"
-            :stat="stats?.mostSize.size"
+            :stat="`${stats?.mostSize.size}`"
           />
         </div>
         <div class="col-span-10">
