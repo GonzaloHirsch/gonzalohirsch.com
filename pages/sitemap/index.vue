@@ -15,7 +15,7 @@
       </h2>
       <ContentQuery
         path="/blog"
-        :only="['headline', 'excerpt', '_path', 'image']"
+        :only="['headline', 'description', '_path', 'image']"
         :sort="{
           headline: 1,
         }"

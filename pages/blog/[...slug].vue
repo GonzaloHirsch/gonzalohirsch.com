@@ -61,7 +61,7 @@
           <p
             class="blog-post-text mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left"
           >
-            {{ doc.excerpt }}
+            {{ doc.description }}
           </p>
           <div
             class="border-b-2 pb-8 border-typography_primary_light dark:border-typography_primary_dark flex flex-col md:flex-row items-center md:justify-between mt-12 md:mt-4"
@@ -86,7 +86,7 @@
             <div class="mt-6 md:mt-0">
               <NavShareIcons
                 :headline="doc.headline"
-                :excerpt="doc.excerpt"
+                :excerpt="doc.description"
                 :path="doc._path + '/'"
               />
             </div>
@@ -177,7 +177,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   // which is an array of documeents that come before and after the current document
   let surround = queryContent('/blog')
     .sort({ date: -1 })
-    .only(['_path', 'headline', 'excerpt'])
+    .only(['_path', 'headline', 'description'])
     .findSurround(cleanPath, { before: 1, after: 1 });
   return {
     article: await article,
@@ -210,7 +210,7 @@ const jsonScripts = [
       url: canonicalPath,
       image: image,
       headline: data.value?.article?.headline,
-      abstract: data.value?.article?.excerpt,
+      abstract: data.value?.article?.description,
       datePublished: data.value?.article?.date,
       dateModified:
         data.value?.article?.dateUpdated || data.value?.article?.date,

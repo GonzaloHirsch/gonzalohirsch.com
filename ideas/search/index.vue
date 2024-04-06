@@ -44,7 +44,7 @@ const { data } = await useAsyncData(
         ],
       })
       .sort({ date: -1 })
-      .only(['headline', 'excerpt', 'date', 'tags', '_path'])
+      .only(['headline', 'description', 'date', 'tags', '_path'])
       .find();
   },
   {

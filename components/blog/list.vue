@@ -20,7 +20,7 @@
             >
               {{ $formatDate(article.date) }}
             </p>
-            <p>{{ article.excerpt }}</p>
+            <p>{{ article.description }}</p>
             <!-- <ul class="article-tags">
                                             <li class="tag !py-0.5" v-for="(tag, n) in article.tags" :key="n">{{ tag }}</li>
                                         </ul> -->

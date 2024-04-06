@@ -16,12 +16,12 @@
             <h3
               :class="[
                 'text-h4 leading-h4 font-semibold group-hover:text-brand_primary_light dark:group-hover:text-brand_primary_dark',
-                link.excerpt ? 'mb-2' : 'mb-0',
+                link.description ? 'mb-2' : 'mb-0',
               ]"
             >
               {{ link.headline }}
             </h3>
-            <p v-if="link.excerpt">{{ link.excerpt }}</p>
+            <p v-if="link.description">{{ link.description }}</p>
           </header>
         </div>
       </NuxtLink>

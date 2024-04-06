@@ -4,7 +4,7 @@
     <Section id="main" class="!pt-0">
       <ContentQuery
         path="/blog"
-        :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
+        :only="['headline', 'description', 'date', 'tags', '_path', 'image']"
         :sort="{
           date: -1,
         }"
