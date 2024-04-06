@@ -68,7 +68,12 @@ for (let i = 1; i <= blogPageCount; i++) {
 }
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@nuxt/image',
+  ],
   colorMode: {
     classSuffix: '',
     preference: 'light',

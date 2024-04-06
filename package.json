@@ -7,17 +7,21 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/content": "2.3.0",
+    "@nuxt/content": "2.12.0",
+    "@nuxt/image": "1.5.0",
     "@nuxtjs/color-mode": "3.3.0",
     "@nuxtjs/tailwindcss": "6.2.0",
     "buffer-replace": "1.0.0",
     "feed": "4.2.2",
-    "nuxt": "3.0.0",
+    "nuxt": "3.11.2",
     "sitemap": "7.1.1"
   },
   "dependencies": {
     "@vueuse/core": "9.9.0",
     "uuid": "9.0.0",
     "vue-gtag-next": "1.14.0"
+  },
+  "overrides": {
+    "consola": "^3.0.1"
   }
 }
