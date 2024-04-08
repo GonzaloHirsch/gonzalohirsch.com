@@ -8,12 +8,12 @@
     <SectionsPassion />
     <SectionsProjects />
     <ClientOnly>
-      <SectionsGithubSummary />
+      <LazySectionsGithubSummary />
     </ClientOnly>
     <SectionsProjectsExtended />
     <SectionsContact />
     <ClientOnly>
-      <SectionsFilms />
+      <LazySectionsFilms />
     </ClientOnly>
   </main>
 </template>
