@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const stats = ref(undefined);
 const user = ref({});
 //https://api.github.com/users/GonzaloHirsch/repos?per_page=100
@@ -91,66 +91,68 @@ const arrayRange = (start, stop, step) =>
     (_, index) => start + index * step
   );
 
-const USER_URL = `https://api.github.com/users/GonzaloHirsch`;
-const PAGE_SIZE = 100;
-fetch(USER_URL)
-  .then((response) => response.json())
-  .then((data) => {
-    user.value.avatar = data.avatar_url;
-    user.value.uri = data.html_url;
-    return data.public_repos;
-  })
-  .then((repo_count) => {
-    return Promise.all(
-      arrayRange(1, repo_count, PAGE_SIZE).map((page) => {
-        return fetch(
-          `${USER_URL}/repos?page=${page}&per_page=${PAGE_SIZE}`
-        ).then((response) => response.json());
-      })
-    );
-  })
-  .then((repoPages) => {
-    const allRepos = [].concat(...repoPages);
-    const interestingRepos = allRepos.filter(
-      (repo) => repo.stargazers_count > 0 || repo.forks_count > 0
-    );
-    // Overall stats
-    const totalStars = interestingRepos.reduce(
-      (accum, curr) => accum + curr.stargazers_count,
-      0
-    );
-    const totalForks = interestingRepos.reduce(
-      (accum, curr) => accum + curr.forks_count,
-      0
-    );
-    const totalGbs = `${
-      Math.round(
-        (allRepos.reduce((accum, curr) => accum + curr.size, 0) /
-          (1000 * 1000)) *
-          100
-      ) / 100
-    } GBs`;
-    // Repo stats
-    const mostStarredRepo = interestingRepos.sort(
-      (a, b) => b.stargazers_count - a.stargazers_count
-    )[0];
-    const mostForkedRepo = interestingRepos.sort(
-      (a, b) => b.forks_count - a.forks_count
-    )[0];
-    const biggestRepo = allRepos.sort((a, b) => b.size - a.size)[0];
-    biggestRepo.size = `${
-      Math.round((biggestRepo?.size / (1000 * 1000)) * 100) / 100
-    } GBs`;
-    // Changes to repos
-    stats.value = {
-      stars: totalStars,
-      forks: totalForks,
-      size: totalGbs,
-      mostStars: mostStarredRepo,
-      mostForks: mostForkedRepo,
-      mostSize: biggestRepo,
-    };
-  });
+onMounted(() => {
+  const USER_URL = `https://api.github.com/users/GonzaloHirsch`;
+  const PAGE_SIZE = 100;
+  fetch(USER_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      user.value.avatar = data.avatar_url;
+      user.value.uri = data.html_url;
+      return data.public_repos;
+    })
+    .then((repo_count) => {
+      return Promise.all(
+        arrayRange(1, repo_count, PAGE_SIZE).map((page) => {
+          return fetch(
+            `${USER_URL}/repos?page=${page}&per_page=${PAGE_SIZE}`
+          ).then((response) => response.json());
+        })
+      );
+    })
+    .then((repoPages) => {
+      const allRepos = [].concat(...repoPages);
+      const interestingRepos = allRepos.filter(
+        (repo) => repo.stargazers_count > 0 || repo.forks_count > 0
+      );
+      // Overall stats
+      const totalStars = interestingRepos.reduce(
+        (accum, curr) => accum + curr.stargazers_count,
+        0
+      );
+      const totalForks = interestingRepos.reduce(
+        (accum, curr) => accum + curr.forks_count,
+        0
+      );
+      const totalGbs = `${
+        Math.round(
+          (allRepos.reduce((accum, curr) => accum + curr.size, 0) /
+            (1000 * 1000)) *
+            100
+        ) / 100
+      } GBs`;
+      // Repo stats
+      const mostStarredRepo = interestingRepos.sort(
+        (a, b) => b.stargazers_count - a.stargazers_count
+      )[0];
+      const mostForkedRepo = interestingRepos.sort(
+        (a, b) => b.forks_count - a.forks_count
+      )[0];
+      const biggestRepo = allRepos.sort((a, b) => b.size - a.size)[0];
+      biggestRepo.size = `${
+        Math.round((biggestRepo?.size / (1000 * 1000)) * 100) / 100
+      } GBs`;
+      // Changes to repos
+      stats.value = {
+        stars: totalStars,
+        forks: totalForks,
+        size: totalGbs,
+        mostStars: mostStarredRepo,
+        mostForks: mostForkedRepo,
+        mostSize: biggestRepo,
+      };
+    });
+});
 </script>
 
 <style>
