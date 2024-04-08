@@ -24,13 +24,13 @@
           <GithubStat text="Total Forks:" :stat="`${stats?.forks}`" />
           <GithubStat text="Total Size:" :stat="`${stats?.size}`" />
           <GithubRepo
-            text="Most Starred Repo:"
+            text="Most Starred:"
             :name="stats?.mostStars?.full_name"
             :uri="stats?.mostStars?.html_url"
             :stat="`${stats?.mostStars?.stargazers_count}`"
           />
           <GithubRepo
-            text="Most Forked Repo:"
+            text="Most Forked:"
             :name="stats?.mostForks?.full_name"
             :uri="stats?.mostForks?.html_url"
             :stat="`${stats?.mostForks?.forks_count}`"

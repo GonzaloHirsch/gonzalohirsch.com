@@ -70,23 +70,23 @@
         </div>
       </div>
       <div
-        class="col-span-full sm:col-span-6 sm:col-start-3 lg:col-start-auto lg:col-span-4"
+        class="col-span-full sm:col-span-8 sm:col-start-2 lg:col-start-auto lg:col-span-4"
       >
         <ImagesGrid
           :imageTR="{
-            src: imageTR,
+            src: '/img/date.webp',
             alt: 'Gonzalo on a date.',
           }"
           :imageBR="{
-            src: imageBR,
+            src: '/img/park.webp',
             alt: 'Gonzalo on a park.',
           }"
           :imageTL="{
-            src: imageTL,
+            src: '/img/cambridge.webp',
             alt: 'Gonzalo in Cambridge.',
           }"
           :imageBL="{
-            src: imageBL,
+            src: '/img/edinburgh.webp',
             alt: 'Gonzalo in Edinburgh.',
           }"
         />
@@ -94,13 +94,6 @@
     </div>
   </Section>
 </template>
-
-<script setup>
-import imageTR from '../../assets/img/date.webp';
-import imageBR from '../../assets/img/park.webp';
-import imageTL from '../../assets/img/cambridge.webp';
-import imageBL from '../../assets/img/edinburgh.webp';
-</script>
 
 <style scoped>
 .about-text {

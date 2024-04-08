@@ -3,22 +3,24 @@
     <div
       class="grid-image-wrapper row-start-2 row-span-3 col-start-2 col-span-3"
     >
-      <img
+      <NuxtImg
         :src="props.imageTL.src"
         :alt="props.imageTL.alt"
-        srcset=""
+        sizes="150px md:250px lg:400px"
         class="grid-image"
+        loading="lazy"
       />
       <div
         class="image-overlay bg-brand_primary_light dark:bg-brand_primary_dark"
       />
     </div>
     <div class="grid-image-wrapper row-start-5 row-span-4 col-span-4">
-      <img
+      <NuxtImg
         :src="props.imageBL.src"
         :alt="props.imageBL.alt"
-        srcset=""
+        sizes="150px md:250px lg:400px"
         class="grid-image"
+        loading="lazy"
       />
       <div
         class="image-overlay bg-brand_primary_light dark:bg-brand_primary_dark"
@@ -27,11 +29,12 @@
     <div
       class="grid-image-wrapper row-start-1 row-span-5 col-start-5 col-span-3"
     >
-      <img
+      <NuxtImg
         :src="props.imageTR.src"
         :alt="props.imageTR.alt"
-        srcset=""
+        sizes="150px md:250px lg:400px"
         class="grid-image"
+        loading="lazy"
       />
       <div
         class="image-overlay bg-brand_primary_light dark:bg-brand_primary_dark"
@@ -40,11 +43,12 @@
     <div
       class="grid-image-wrapper row-start-6 row-span-2 col-start-5 col-span-2"
     >
-      <img
+      <NuxtImg
         :src="props.imageBR.src"
         :alt="props.imageBR.alt"
-        srcset=""
+        sizes="150px md:250px lg:400px"
         class="grid-image"
+        loading="lazy"
       />
       <div
         class="image-overlay bg-brand_primary_light dark:bg-brand_primary_dark"
