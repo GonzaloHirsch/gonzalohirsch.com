@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     'nuxt-delay-hydration',
   ],
   delayHydration: {
-    mode: 'init',
+    mode: 'manual',
     debug: process.env.NODE_ENV === 'development',
   },
   colorMode: {

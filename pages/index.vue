@@ -8,12 +8,18 @@
     <SectionsPassion />
     <SectionsProjects />
     <ClientOnly>
-      <LazySectionsGithubSummary />
+      <DelayHydration>
+        <HydrationStatus />
+        <LazySectionsGithubSummary />
+      </DelayHydration>
     </ClientOnly>
     <SectionsProjectsExtended />
     <SectionsContact />
     <ClientOnly>
-      <LazySectionsFilms />
+      <DelayHydration>
+        <HydrationStatus />
+        <LazySectionsFilms />
+      </DelayHydration>
     </ClientOnly>
   </main>
 </template>

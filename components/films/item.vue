@@ -11,6 +11,7 @@
       :src="movie.img"
       :alt="`Poster for ${movie.title}.`"
       loading="lazy"
+      class="w-full"
     />
     <div
       class="absolute bottom-0 left-0 w-full bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light px-2 py-1 movie-info translate-y-full transform transition-transform duration-200 group-hover:translate-y-0"

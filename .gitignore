@@ -15,3 +15,5 @@ assets/img/projects/.DS_Store
 
 **/**.DS_Store
 **/.DS_Store
+
+.unlighthouse
