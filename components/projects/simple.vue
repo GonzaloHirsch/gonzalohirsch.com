@@ -80,12 +80,12 @@ const props = defineProps({
   @apply text-typography_primary_light dark:text-typography_primary_dark mb-auto;
   word-break: break-word;
 }
-@screen md {
+@screen sm {
   .project-simple-wrapper {
     height: 250px;
   }
 }
-@screen lg {
+@screen md {
   .project-simple-wrapper {
     height: 300px;
   }

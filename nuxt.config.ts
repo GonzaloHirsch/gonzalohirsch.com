@@ -73,7 +73,12 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxt/image',
+    'nuxt-delay-hydration',
   ],
+  delayHydration: {
+    mode: 'init',
+    debug: process.env.NODE_ENV === 'development',
+  },
   colorMode: {
     classSuffix: '',
     preference: 'light',
