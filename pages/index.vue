@@ -12,8 +12,12 @@
         <LazySectionsGithubSummary />
       </DelayHydration>
     </ClientOnly>
-    <SectionsProjectsExtended />
-    <SectionsContact />
+    <DelayHydration>
+      <SectionsProjectsExtended />
+    </DelayHydration>
+    <DelayHydration>
+      <SectionsContact />
+    </DelayHydration>
     <ClientOnly>
       <DelayHydration>
         <LazySectionsFilms />
