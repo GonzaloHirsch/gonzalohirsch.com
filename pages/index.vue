@@ -9,7 +9,6 @@
     <SectionsProjects />
     <ClientOnly>
       <DelayHydration>
-        <HydrationStatus />
         <LazySectionsGithubSummary />
       </DelayHydration>
     </ClientOnly>
@@ -17,7 +16,6 @@
     <SectionsContact />
     <ClientOnly>
       <DelayHydration>
-        <HydrationStatus />
         <LazySectionsFilms />
       </DelayHydration>
     </ClientOnly>
