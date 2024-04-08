@@ -2,7 +2,7 @@
 name: 'Snippit'
 tags: ['React', 'Java', 'Spring', 'Jersey', 'Apache', 'PostgreSQL', 'REST']
 github: 'https://github.com/GonzaloHirsch/paw-snippit'
-image: { url: 'snippit.webp', alt: 'Snippit site.' }
+image: { url: '/img/projects/snippit.webp', alt: 'Snippit site.' }
 ---
 
 Social network to share code snippets. Users can share and vote on code snippets uploaded by anyone, a rating system backs both the snippets and the users in order to boost confidence in the system. It offers high filtering capacities with the ability to perform fuzzy searches among the uploaded code.

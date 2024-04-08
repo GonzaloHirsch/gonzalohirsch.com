@@ -4,7 +4,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "analyze": "nuxt analyze"
   },
   "devDependencies": {
     "@nuxt/content": "2.12.0",

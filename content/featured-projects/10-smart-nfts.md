@@ -1,13 +1,8 @@
 ---
 name: 'Smart NFTs'
-tags: [
-    'AWS', 'Serverless', 'MongoDB', 'ERC-721', 'Vue', 'TypeScript'
-]
+tags: ['AWS', 'Serverless', 'MongoDB', 'ERC-721', 'Vue', 'TypeScript']
 url: 'https://smart-nfts.gonzalohirsch.com/'
-image: {
-    url: 'smart-nfts.webp',
-    alt: "Smart NFTs editor."
-}
+image: { url: '/img/projects/smart-nfts.webp', alt: 'Smart NFTs editor.' }
 ---
 
 [Web App](https://smart-nfts.gonzalohirsch.com/) to automatically create, deploy, test, and view custom NFT Smart Contracts in just minutes. You can mint tokens and share them via Testnets and marketplaces like OpenSea.
