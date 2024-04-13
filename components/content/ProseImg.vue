@@ -7,7 +7,7 @@
       :height="height"
       class="mx-auto"
       loading="lazy"
-      sizes="450px md:650px lg:1080px"
+      sizes="450px md:600px lg:750px"
     />
     <figcaption
       class="text-base leading-base text-center mt-2 opacity-70 block"
