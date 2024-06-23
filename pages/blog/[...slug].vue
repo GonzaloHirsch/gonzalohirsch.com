@@ -341,7 +341,7 @@ onMounted(() => {
       // Add the script
       const script = document.createElement('script');
       script.id = targetId;
-      script.innerHTML = `var disqus_config = function () {this.page.url = "${canonicalPath}";this.page.identifier = "${data.value.article.dqid}";this.page.title = "${data.value.article.headline}"};(function () {var d = document,s = d.createElement('script');s.addEventListener("load", function() {loaded=true;});s.src = "https://gonzalohirsch.disqus.com/embed.js";s.setAttribute('data-timestamp', new Date());(d.head || d.body).appendChild(s);})(); /* * * Disqus Reset Function * * */var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {DISQUS.reset({reload: true,config: function () {this.page.identifier = newIdentifier;this.page.url = newUrl;this.page.title = newTitle;this.language = newLanguage;}});};`;
+      script.innerHTML = `var disqus_config = function () {this.page.url = "${canonicalPath}";this.page.identifier = "${data.value.article.dqid}";this.page.title = "${data.value.article.headline}"};(function () {var d = document,s = d.createElement('script');s.addEventListener("load", function() {loaded=true;});s.async=true;s.src = "https://gonzalohirsch.disqus.com/embed.js";s.setAttribute('data-timestamp', new Date());(d.head || d.body).appendChild(s);})(); /* * * Disqus Reset Function * * */var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {DISQUS.reset({reload: true,config: function () {this.page.identifier = newIdentifier;this.page.url = newUrl;this.page.title = newTitle;this.language = newLanguage;}});};`;
       document.body.appendChild(script);
     } else {
       window.reset(
