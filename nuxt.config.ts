@@ -61,7 +61,7 @@ const logos = {
 const jsonLds = [website, person, logos];
 
 // Sitemap
-const blogPageCount = 4;
+const blogPageCount = 5;
 const routes: String[] = ['/'];
 for (let i = 1; i <= blogPageCount; i++) {
   routes.push(`/blog/page/${i}/` as string);

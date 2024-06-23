@@ -19,7 +19,7 @@ const include = [
   '/sitemap/',
 ];
 // Adding blog pages
-const blogPageCount = 4;
+const blogPageCount = 5;
 for (let i = 1; i <= blogPageCount; i++) {
   include.push(`/blog/page/${i}/`);
 }
