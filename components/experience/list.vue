@@ -3,7 +3,7 @@
     <div class="grid grid-cols-10 gap-8">
       <template v-for="item in list" :key="item._path">
         <div
-          class="col-span-full md:col-span-3 lg:col-span-2 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark overflow-x-scroll md:overflow-hidden"
+          class="experience-container col-span-full md:col-span-3 lg:col-span-2 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark overflow-x-scroll md:overflow-hidden"
         >
           <ul class="flex flex-row md:flex-col">
             <template v-for="(exp, index) in item.experience" :key="index">
@@ -24,7 +24,7 @@
       </template>
       <template v-for="item in list" :key="item._path">
         <div
-          class="experience-list col-span-full md:col-span-7 lg:col-span-8 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark p-4"
+          class="experience-list experience-container col-span-full md:col-span-7 lg:col-span-8 rounded-md border-2 border-brand_primary_light dark:border-brand_primary_dark px-4 pb-4"
         >
           <template v-for="(exp, index) in item.experience" :key="index">
             <ExperienceItem
@@ -51,6 +51,10 @@ const list = await queryContent('/experience').find();
 
 <style scoped>
 .experience-list {
-  min-height: 55vh;
+  min-height: 60vh;
+}
+.experience-container {
+  max-height: 65vh;
+  overflow-y: auto;
 }
 </style>

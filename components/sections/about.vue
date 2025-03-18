@@ -7,7 +7,7 @@
             About Me
           </h2>
           <p class="about-text">
-            I'm a Full-Stack Software Engineer with more than five years of
+            I'm a Full-Stack Software Engineer with more than six years of
             professional experience working on front-end and back-end projects.
             I have a passion for technology, incredible ideas, and teaching
             programming.
@@ -24,12 +24,12 @@
             >
             (ITBA) and work as a Senior Software Engineer at
             <a
-              href="https://croud.com/en-gb/"
+              href="https://www.meta.com/gb/"
               target="_blank"
               rel="noopener"
               class="link"
-              aria-label="Check out Croud's site."
-              >Croud (UK)</a
+              aria-label="Check out Meta's site."
+              >Meta (UK)</a
             >. I'm also a certified Full-Stack Freelancer at
             <a
               href="https://www.toptal.com/"

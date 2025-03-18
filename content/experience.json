@@ -3,17 +3,37 @@
         {
             "position": "Senior Software Engineer",
             "company": {
+                "short": "Meta",
+                "name": "Meta (UK)",
+                "url": "https://www.meta.com/gb/"
+            },
+            "volunteer": false,
+            "time": "February 2025 - Present",
+            "description": "Part of the \"Ticketing\" team at Meta. This is one of the Enterprise Products used by global datacenter operations at Meta.",
+            "items": []
+        },
+        {
+            "position": "Senior Software Engineer",
+            "company": {
                 "short": "Croud",
                 "name": "Croud (UK)",
                 "url": "https://croud.com/en-gb/"
             },
             "volunteer": false,
-            "time": "April 2023 - Present",
+            "time": "April 2023 - February 2025",
             "description": "Croud is a global, full-service digital agency that grows ambitious brands through reinvention.",
             "items": [
-                "Designed and developed MLOps pipelines supporting propensity models, along with Google engineers and data scientists.",
-                "Reduced Data Engineering deployment times to 3 minutes instead of hours or days by migrating infrastructure deployments to Terraform.",
-                "Improved Data Science operational margins by 50% by standardising data warehousing for Google Analytics data."
+                "Reduced deployment time by 90% by migrating infrastructure deployments into Terraform (GCP, Docker).",
+                "Saved more than £15,000 per year in GCP by actively identifying and removing unused resources.",
+                "Migrated local workloads into purpose-built serverless system architectures in GCP, leading to at least a 10x increase in processing power (Python, Docker, Cloud Run, Pub/Sub, Cloud Tasks, Redis).",
+                "Delivered more than £1.3M in revenue by designing and implementing cloud-based architectures (GCP).",
+                "Integrated LLMs (OpenAI, Gemini) into GCP-based workloads, reducing manual tasks by 50%.",
+                "Migrated data storage solutions into optimized alternatives in system architectures, reducing cost by 90%.",
+                "Spearheaded security, fostered the adoption of Workload Identity Federation and Secret Management across cloud providers, and identified vulnerabilities in cloud workloads (AWS, GCP, GitHub Actions).",
+                "Optimized build strategies in GitHub Actions, decreasing billable time by more than 50% (Docker, git, Bash).",
+                "Designed real-time architectures for clients, handling up to 250 RPS (GCP, Terraform, Cloud Run, Firestore).",
+                "Overhauled MLOps pipelines to standardize deployment and development of models (GCP, VertexAI, Python).",
+                "Conducted code reviews for a team of 4 engineers, ensuring adherence to best practices and reducing code-related defects by 50% through automated testing tools (SonarQube, Pytest) over a period of 12 months."
             ]
         },
         {
