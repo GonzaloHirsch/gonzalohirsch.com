@@ -257,3 +257,10 @@ body {
     @apply text-h5_sm leading-h5_sm mb-1;
   }
 }
+
+.external-content-grid *:not(.external-content-list) a {
+  @apply font-bold;
+}
+.external-content-grid *:not(.external-content-list) a:hover {
+  @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
+}

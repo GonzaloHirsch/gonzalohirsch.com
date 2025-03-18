@@ -22,6 +22,9 @@
       <DelayHydration>
         <LazySectionsFilms />
       </DelayHydration>
+      <DelayHydration>
+        <LazySectionsBooks class="!pt-0" />
+      </DelayHydration>
     </ClientOnly>
   </main>
 </template>

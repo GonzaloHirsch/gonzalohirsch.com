@@ -1,5 +1,5 @@
 <template>
-  <Section id="films" class="film-content">
+  <Section id="films" class="external-content-grid">
     <h2 class="section-title title-decor relative mb-6">
       Bonus! I love movies!
     </h2>
@@ -14,7 +14,7 @@
       >
       to view more activity.
     </p>
-    <FilmsList v-if="films.length > 0" :movies="films" class="my-6" />
+    <ExternalContentList v-if="items.length > 0" :items="items" class="my-6" />
     <p v-else class="dark:text-typography_primary_dark my-6">
       Loading watch list...
     </p>
@@ -35,7 +35,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-const films = ref([]);
+const items = ref([]);
 
 onMounted(() => {
   const RSS_URL = `https://proxy.gonzalohirsch.com/letterboxd`;
@@ -43,7 +43,7 @@ onMounted(() => {
     .then((response) => response.text())
     .then((str) => new window.DOMParser().parseFromString(str, 'text/xml'))
     .then((data) => {
-      films.value = [...data.querySelectorAll('item')]
+      items.value = [...data.querySelectorAll('item')]
         .splice(0, 10)
         .map((el) => {
           let imgStr = el
@@ -60,12 +60,3 @@ onMounted(() => {
     });
 });
 </script>
-
-<style scoped>
-.film-content a {
-  @apply font-bold;
-}
-.film-content a:hover {
-  @apply bg-brand_primary_light text-typography_primary_dark dark:bg-brand_primary_dark dark:text-typography_primary_light;
-}
-</style>
